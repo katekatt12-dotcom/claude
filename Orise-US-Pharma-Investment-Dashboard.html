@@ -930,7 +930,7 @@ document.addEventListener('input', e=>{
 document.addEventListener('click', e=>{
   if(e.target.id==='btn-export-csv') exportCSV();
 });
-function exportCSV(){
+async function exportCSV(){
   const cols = ['Account','Site Name','City','State','Latitude','Longitude','Project Type','Modality','Investment (USD)','Jobs','Status','Expected Start','Opportunity Status','Technical Scope','Orise Offering Fit','Incumbent Vendors','Sources','Notes'];
   const rows = filteredSites().map(s=>{
     const acc = accountById(s.account);
@@ -940,6 +940,21 @@ function exportCSV(){
   });
   const csvLines = [cols.join(',')].concat(rows.map(r=> r.map(csvCell).join(',') ));
   const blob = new Blob([csvLines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
+
+  // Published as a Claude Artifact: script-driven <a download> is inert there,
+  // so offer the file through the platform's downloads capability instead.
+  if (window.claude && typeof window.claude.use === 'function') {
+    try {
+      const downloads = await window.claude.use('downloads');
+      if (downloads) {
+        await downloads.save({ filename: 'us-projects.csv', data: blob });
+        return;
+      }
+    } catch (e) {
+      return; // viewer declined / rate-limited / etc — do not fall through to the inert anchor trick
+    }
+  }
+  // Standalone file (opened locally, emailed, or hosted on GitHub/Pages): normal browser download.
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url; a.download = 'us-projects.csv';
