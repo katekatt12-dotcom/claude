@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orise DACH Pharma Investment Dashboard</title>
+<style>
+:root{
+  --teal:#205369;
+  --teal-dark:#163c4d;
+  --aubergine:#4B2446;
+  --blue:#5F82FF;
+  --mint:#D0ECEC;
+  --grey:#B7B8C0;
+  --black:#000000;
+  --white:#FFFFFF;
+  --ink:#16232a;
+  --ink-soft:#4b5b63;
+  --bg:#FFFFFF;
+  --panel:#F7FBFB;
+  --border:#e2e6e6;
+  --shadow:0 4px 20px rgba(32,83,105,0.12);
+  --radius:10px;
+  --font: "Innovator Grotesk","Inter","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--font);margin:0 0 8px 0;color:var(--teal);font-weight:700;}
+a{color:var(--blue);}
+button{font-family:var(--font);cursor:pointer;}
+.wrap{max-width:1400px;margin:0 auto;padding:0 24px;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+/* ===== HEADER ===== */
+header.top{
+  background:var(--teal);
+  color:var(--white);
+  padding:20px 0 0 0;
+  position:relative;
+}
+header.top .headrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-bottom:20px;}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-logo{
+  font-size:26px;font-weight:800;letter-spacing:0.5px;color:var(--white);
+  border:2px solid var(--white);border-radius:6px;padding:4px 10px;
+  font-family:var(--font);
+}
+.brand-title{font-size:13px;color:var(--mint);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.headline{max-width:640px;}
+.headline h1{color:var(--white);font-size:26px;margin-bottom:4px;}
+.headline p{color:var(--mint);font-size:14px;margin:0;}
+.asof{font-size:12px;color:var(--mint);opacity:0.85;}
+
+nav.tabs{
+  background:var(--teal-dark);
+  display:flex;gap:4px;overflow-x:auto;
+}
+nav.tabs a{
+  color:var(--mint);text-decoration:none;font-size:13.5px;font-weight:600;
+  padding:12px 18px;white-space:nowrap;border-bottom:3px solid transparent;
+  letter-spacing:0.3px;
+}
+nav.tabs a:hover,nav.tabs a.active{color:var(--white);border-bottom-color:var(--blue);background:rgba(255,255,255,0.04);}
+
+/* ===== KPI ROW ===== */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;
+  margin:18px auto 28px auto;max-width:1400px;padding:0 24px;position:relative;z-index:5;
+}
+.kpi-card{
+  background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:18px 20px;border-top:4px solid var(--blue);
+}
+.kpi-card .kpi-value{font-size:28px;font-weight:800;color:var(--teal);line-height:1.1;}
+.kpi-card .kpi-label{font-size:12.5px;color:var(--ink-soft);margin-top:4px;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;}
+.kpi-card .kpi-sub{font-size:12px;color:var(--ink-soft);margin-top:6px;}
+.kpi-split{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:10px;background:var(--border);}
+.kpi-split span.gf{background:var(--aubergine);}
+.kpi-split span.bf{background:var(--blue);}
+.kpi-legend-row{display:flex;gap:14px;margin-top:6px;font-size:11.5px;color:var(--ink-soft);}
+.kpi-legend-row i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle;}
+
+/* ===== SECTIONS ===== */
+section{padding:34px 0;border-top:1px solid var(--border);}
+section:first-of-type{border-top:none;}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
+.section-head h2{font-size:21px;}
+.section-head p.desc{color:var(--ink-soft);font-size:13.5px;margin:0;max-width:640px;}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;}
+
+/* ===== FILTER BAR ===== */
+.filterbar{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
+  padding:12px 14px;margin-bottom:20px;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.filterbar .fb-label{font-size:11.5px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.4px;margin-right:2px;}
+.msel{position:relative;}
+.msel-btn{
+  background:var(--white);border:1.5px solid var(--grey);border-radius:7px;
+  padding:7px 12px;font-size:13px;color:var(--ink);display:flex;align-items:center;gap:6px;
+}
+.msel-btn:hover{border-color:var(--blue);}
+.msel-btn.active-filter{border-color:var(--blue);background:#eef2ff;color:var(--teal);}
+.msel-btn .chip-count{background:var(--blue);color:var(--white);border-radius:10px;font-size:10.5px;font-weight:700;padding:1px 6px;}
+.msel-panel{
+  display:none;position:absolute;top:calc(100% + 6px);left:0;background:var(--white);
+  border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);
+  padding:8px;min-width:230px;max-height:280px;overflow-y:auto;z-index:40;
+}
+.msel.open .msel-panel{display:block;}
+.msel-panel label{display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 6px;border-radius:5px;cursor:pointer;}
+.msel-panel label:hover{background:var(--mint);}
+.msel-panel .msel-actions{display:flex;justify-content:space-between;padding:4px 6px 8px 6px;border-bottom:1px solid var(--border);margin-bottom:4px;}
+.msel-panel .msel-actions button{background:none;border:none;color:var(--blue);font-size:11.5px;font-weight:700;padding:0;}
+.btn-clear-all{background:var(--white);border:1.5px solid var(--grey);border-radius:7px;padding:7px 12px;font-size:12.5px;color:var(--ink-soft);font-weight:600;}
+.btn-clear-all:hover{border-color:var(--teal);color:var(--teal);}
+.result-count{margin-left:auto;font-size:12.5px;color:var(--ink-soft);font-weight:600;}
+
+/* ===== MAP ===== */
+.map-layout{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;}
+@media (max-width:900px){.map-layout{grid-template-columns:1fr;}}
+.map-controls{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.seg-btn{background:var(--white);border:1.5px solid var(--grey);padding:6px 12px;font-size:12.5px;border-radius:6px;color:var(--ink-soft);font-weight:600;}
+.seg-btn.active{background:var(--teal);border-color:var(--teal);color:var(--white);}
+.country-lbl{font-size:11.5px;font-weight:800;color:var(--teal);letter-spacing:0.6px;text-transform:uppercase;padding:6px 0 2px;}
+.us-grid{
+  max-width:640px;display:grid;grid-template-columns:repeat(9,1fr);gap:5px;
+  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:18px;
+}
+.state-tile{
+  aspect-ratio:1;border-radius:6px;position:relative;background:#f2f5f5;border:1px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.state-tile:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(32,83,105,0.25);z-index:2;}
+.state-tile .st-code{font-size:11px;font-weight:800;letter-spacing:0.3px;}
+.state-tile .st-count{font-size:9px;font-weight:600;opacity:0.85;}
+.state-tile .opp-badge{
+  position:absolute;top:-6px;right:-6px;background:var(--blue);color:var(--white);
+  font-size:9.5px;font-weight:800;border-radius:9px;min-width:17px;height:17px;
+  display:flex;align-items:center;justify-content:center;padding:0 4px;border:2px solid var(--white);
+}
+.state-tile .dotwrap{position:absolute;bottom:3px;left:0;right:0;display:flex;justify-content:center;gap:2px;flex-wrap:wrap;padding:0 3px;}
+.state-tile .dot{width:5px;height:5px;border-radius:50%;}
+.state-tile .dot.GREENFIELD{background:var(--aubergine);}
+.state-tile .dot.BROWNFIELD{background:var(--blue);}
+.state-tile.empty{background:var(--white);cursor:default;opacity:0.5;}
+.state-tile.empty:hover{transform:none;box-shadow:none;}
+.state-tile .inset-lbl{position:absolute;bottom:-14px;font-size:8px;color:var(--ink-soft);font-weight:700;}
+
+.map-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12px;color:var(--ink-soft);align-items:center;}
+.map-legend .lg-item{display:flex;align-items:center;gap:6px;}
+.map-legend .sw{width:12px;height:12px;border-radius:3px;display:inline-block;}
+.map-legend .sw.dot{border-radius:50%;}
+.scale-bar{display:flex;height:10px;width:120px;border-radius:5px;overflow:hidden;}
+
+.side-panel{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;max-height:640px;overflow-y:auto;}
+.side-panel h3{font-size:14.5px;}
+.side-panel .placeholder{color:var(--ink-soft);font-size:13px;}
+.opp-mini{border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;cursor:pointer;}
+.opp-mini:hover{border-color:var(--blue);background:#f7f9ff;}
+.opp-mini .om-title{font-weight:700;font-size:13px;color:var(--teal);}
+.opp-mini .om-meta{font-size:11.5px;color:var(--ink-soft);margin-top:2px;}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:0.3px;}
+.tag.GREENFIELD{background:rgba(75,36,70,0.12);color:var(--aubergine);}
+.tag.BROWNFIELD{background:rgba(95,130,255,0.14);color:#3a5cd6;}
+.tag.open{background:rgba(95,130,255,0.9);color:var(--white);}
+.tag.monitor{background:var(--border);color:var(--ink-soft);}
+.tag.closed{background:#eee;color:#999;}
+
+/* ===== DETAIL DRAWER ===== */
+.overlay{position:fixed;inset:0;background:rgba(10,20,25,0.45);display:none;z-index:100;}
+.overlay.show{display:block;}
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;width:min(560px,92vw);background:var(--white);
+  z-index:101;box-shadow:-8px 0 30px rgba(0,0,0,0.25);transform:translateX(100%);
+  transition:transform .22s ease;overflow-y:auto;
+}
+.drawer.show{transform:translateX(0);}
+.drawer-head{background:var(--teal);color:var(--white);padding:20px 24px;position:sticky;top:0;z-index:2;}
+.drawer-head .dh-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--white);font-size:22px;line-height:1;}
+.drawer-head h3{color:var(--white);font-size:18px;margin-bottom:6px;padding-right:30px;}
+.drawer-head .dh-meta{font-size:12.5px;color:var(--mint);}
+.drawer-body{padding:22px 24px;}
+.drawer-body h4{font-size:12.5px;text-transform:uppercase;letter-spacing:0.5px;color:var(--teal);margin:20px 0 8px 0;border-bottom:1px solid var(--border);padding-bottom:6px;}
+.drawer-body h4:first-child{margin-top:0;}
+.drawer-body p{font-size:13.5px;color:var(--ink);margin:0 0 8px 0;}
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.kv-grid .kv{font-size:12.5px;}
+.kv-grid .kv b{display:block;color:var(--ink-soft);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.3px;}
+.fit-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:8px;padding:6px 10px;margin:0 6px 6px 0;font-size:12.5px;}
+.fit-chip .fs{width:9px;height:9px;border-radius:50%;}
+.fs.Strong{background:var(--teal);}
+.fs.Moderate{background:var(--blue);}
+.fs.Weak{background:var(--mint);border:1px solid var(--grey);}
+.src-item{font-size:12px;padding:8px 0;border-bottom:1px dashed var(--border);}
+.src-item:last-child{border-bottom:none;}
+.conf{font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;margin-left:6px;}
+.conf.High{background:rgba(32,83,105,0.12);color:var(--teal);}
+.conf.Medium{background:rgba(95,130,255,0.14);color:#3a5cd6;}
+.conf.Low{background:rgba(183,184,192,0.3);color:#6b6c73;}
+
+/* ===== FIT MATRIX ===== */
+.fit-table-wrap{overflow-x:auto;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);}
+table.fit-table{border-collapse:collapse;width:100%;font-size:12.8px;min-width:900px;}
+table.fit-table th,table.fit-table td{padding:9px 10px;text-align:center;border-bottom:1px solid var(--border);}
+table.fit-table thead th{background:var(--teal);color:var(--white);font-size:11.5px;position:sticky;top:0;white-space:normal;line-height:1.25;}
+table.fit-table thead th.acct-col,table.fit-table td.acct-cell{text-align:left;position:sticky;left:0;background:var(--white);z-index:3;box-shadow:2px 0 4px rgba(0,0,0,0.04);}
+table.fit-table thead th.acct-col{background:var(--teal-dark);z-index:5;cursor:pointer;}
+table.fit-table td.acct-cell{font-weight:700;color:var(--teal);}
+table.fit-table td.acct-cell .tier-badge{display:block;font-size:10px;font-weight:600;color:var(--ink-soft);margin-top:2px;}
+table.fit-table td.fit-cell{cursor:pointer;font-weight:700;color:var(--white);}
+table.fit-table td.fit-cell:hover{outline:2px solid var(--teal);outline-offset:-2px;}
+table.fit-table td.fit-cell.f0{background:var(--white);color:var(--grey);font-weight:400;}
+table.fit-table td.fit-cell.f1{background:var(--mint);color:var(--teal-dark);}
+table.fit-table td.fit-cell.f2{background:var(--blue);color:var(--white);}
+table.fit-table td.fit-cell.f3{background:var(--teal);color:var(--white);}
+th.sortable{cursor:pointer;}
+th.sortable:hover{background:var(--teal-dark);}
+.matrix-legend{display:flex;gap:14px;margin-top:12px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap;align-items:center;}
+
+/* ===== ACCOUNTS ===== */
+.acct-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;}
+.acct-card-head{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:14px;flex-wrap:wrap;}
+.acct-card-head:hover{background:var(--panel);}
+.acct-card-head .ach-left{display:flex;align-items:center;gap:12px;}
+.acct-num{width:30px;height:30px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12.5px;flex-shrink:0;}
+.acct-name{font-size:16px;font-weight:800;color:var(--teal);}
+.acct-quicksum{font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.tier-pill{font-size:10.5px;font-weight:800;padding:3px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:0.3px;}
+.tier-pill.T1{background:var(--teal);color:var(--white);}
+.tier-pill.T2{background:var(--blue);color:var(--white);}
+.tier-pill.T3{background:var(--grey);color:var(--white);}
+.chev{transition:transform .15s ease;color:var(--teal);font-size:14px;}
+.acct-card.open .chev{transform:rotate(90deg);}
+.acct-card-body{display:none;padding:0 20px 22px 20px;border-top:1px solid var(--border);}
+.acct-card.open .acct-card-body{display:block;}
+.acct-card-body .sub-h{font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;color:var(--teal);margin:18px 0 8px 0;font-weight:800;}
+.acct-card-body p{font-size:13.5px;color:var(--ink);}
+table.site-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+table.site-table th{text-align:left;background:var(--panel);padding:7px 9px;font-size:11px;color:var(--teal);text-transform:uppercase;letter-spacing:0.3px;}
+table.site-table td{padding:8px 9px;border-bottom:1px solid var(--border);}
+table.site-table tr.opp-row{cursor:pointer;}
+table.site-table tr.opp-row:hover{background:var(--panel);}
+.vendor-line{font-size:12.5px;color:var(--ink-soft);}
+.src-list-inline{font-size:12px;color:var(--ink-soft);}
+.src-list-inline a{color:var(--blue);text-decoration:none;}
+.src-list-inline a:hover{text-decoration:underline;}
+
+/* ===== DATA TABLE ===== */
+.table-toolbar{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+.search-input{flex:1;min-width:200px;padding:9px 12px;border:1.5px solid var(--grey);border-radius:7px;font-size:13.5px;font-family:var(--font);}
+.search-input:focus{outline:none;border-color:var(--blue);}
+.btn-primary{background:var(--teal);color:var(--white);border:none;border-radius:7px;padding:9px 16px;font-size:13px;font-weight:700;}
+.btn-primary:hover{background:var(--teal-dark);}
+.table-scroll{overflow-x:auto;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);max-height:640px;overflow-y:auto;}
+table.master-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:1300px;}
+table.master-table thead th{position:sticky;top:0;background:var(--teal);color:var(--white);padding:9px 10px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.3px;cursor:pointer;white-space:nowrap;}
+table.master-table thead th:hover{background:var(--teal-dark);}
+table.master-table tbody td{padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;}
+table.master-table tbody tr{cursor:pointer;}
+table.master-table tbody tr:hover{background:var(--panel);}
+.rowcount{font-size:12.5px;color:var(--ink-soft);margin-top:8px;}
+
+footer{background:var(--teal-dark);color:var(--mint);padding:28px 0;margin-top:20px;font-size:12.5px;}
+footer a{color:var(--white);}
+footer .fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+/* dark-header contrast helper classes assigned via JS */
+.txt-dark{color:var(--ink)!important;}
+.txt-light{color:var(--white)!important;}
+
+@media (max-width:640px){
+  .kv-grid{grid-template-columns:1fr;}
+  .us-grid{grid-template-columns:repeat(9,minmax(20px,1fr));}
+  .state-tile .st-code{font-size:8.5px;}
+  .state-tile .st-count{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap headrow">
+    <div class="brand">
+      <div class="brand-logo">ORISE</div>
+      <div>
+        <div class="brand-title">Digital &middot; Orise / ATS Corporation</div>
+      </div>
+    </div>
+    <div class="headline">
+      <h1>DACH Pharma Investment Landscape</h1>
+      <p>Germany, Austria and Switzerland: manufacturing capital projects across 46 target accounts &mdash; where Orise's automation, MES and digitalization offerings fit.</p>
+    </div>
+    <div class="asof">Data as of <span id="asof-date"></span></div>
+  </div>
+  <nav class="tabs wrap" style="padding-left:0;padding-right:0;">
+    <a href="#map-section">Investment Map</a>
+    <a href="#matrix-section">Fit Matrix</a>
+    <a href="#accounts-section">Account Detail</a>
+    <a href="#table-section">Data Table &amp; Export</a>
+    <a href="#gaps-section">Gaps &amp; Methodology</a>
+  </nav>
+</header>
+
+<div class="wrap kpi-row" id="kpi-row"></div>
+
+<main class="wrap">
+
+  <section id="map-section">
+    <div class="section-head">
+      <div>
+        <h2>DACH Investment Map</h2>
+        <p class="desc">Tiles for the 16 German L&auml;nder, 9 Austrian Bundesl&auml;nder and 26 Swiss cantons, shaded by pharma manufacturing activity. Equal-size tiles keep small cantons and city-states easy to see and click. Click a tile for its site list; investment shading uses euro-equivalents at indicative rates (1 CHF = 1.07 EUR, 1 USD = 0.86 EUR; see Methodology).</p>
+      </div>
+    </div>
+
+    <div class="filterbar" id="filterbar">
+      <span class="fb-label">Filters</span>
+      <div class="msel" data-filter="account"><button class="msel-btn" type="button">Account</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="project_type"><button class="msel-btn" type="button">Greenfield / Brownfield</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="modality"><button class="msel-btn" type="button">Modality</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="opportunity_status"><button class="msel-btn" type="button">Opportunity Status</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="offering_area"><button class="msel-btn" type="button">Orise Offering Area</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="country"><button class="msel-btn" type="button">Country</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="state"><button class="msel-btn" type="button">Region (Land / Kanton)</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="window"><button class="msel-btn" type="button">2026&ndash;27 window</button><div class="msel-panel"></div></div>
+      <button class="btn-clear-all" id="btn-clear-filters" type="button">Clear all</button>
+      <span class="result-count" id="result-count"></span>
+    </div>
+
+    <div class="map-layout">
+      <div>
+        <div class="map-controls">
+          <span style="font-size:12px;color:var(--ink-soft);font-weight:600;margin-right:4px;">Shade by:</span>
+          <button class="seg-btn active" data-shade="sites">Site count</button>
+          <button class="seg-btn" data-shade="opps">Open opportunities</button>
+          <button class="seg-btn" data-shade="investment">Investment (&euro;-equiv.)</button>
+        </div>
+        <div class="us-grid" id="us-grid"></div>
+        <div class="map-legend">
+          <div class="lg-item"><span class="sw dot" style="background:var(--aubergine);"></span> Greenfield site</div>
+          <div class="lg-item"><span class="sw dot" style="background:var(--blue);"></span> Brownfield site</div>
+          <div class="lg-item"><span class="sw" style="background:var(--blue);border-radius:9px;width:16px;height:14px;color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:800;">N</span> Open opportunities (badge)</div>
+          <div class="lg-item">Low <span class="scale-bar" id="scale-bar-legend"></span> High</div>
+        </div>
+      </div>
+      <div class="side-panel" id="side-panel">
+        <h3>Select a region or marker</h3>
+        <p class="placeholder">Hover a tile for a quick summary, or click a tile to see its sites and opportunities here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="matrix-section">
+    <div class="section-head">
+      <div>
+        <h2>Focus-Area Fit Matrix</h2>
+        <p class="desc">Accounts &times; Orise offering areas. Each cell shows the number of matching opportunities, color-coded by strongest fit present. Click a cell to list the opportunities. Click "Account" to sort rows by total fit score.</p>
+      </div>
+    </div>
+    <div class="fit-table-wrap">
+      <table class="fit-table" id="fit-table">
+        <thead><tr id="fit-thead-row"></tr></thead>
+        <tbody id="fit-tbody"></tbody>
+      </table>
+    </div>
+    <div class="matrix-legend">
+      <span style="font-weight:700;color:var(--ink-soft);">Fit:</span>
+      <div class="lg-item"><span class="sw" style="background:var(--white);border:1px solid var(--grey);"></span> None</div>
+      <div class="lg-item"><span class="sw" style="background:var(--mint);"></span> Weak</div>
+      <div class="lg-item"><span class="sw" style="background:var(--blue);"></span> Moderate</div>
+      <div class="lg-item"><span class="sw" style="background:var(--teal);"></span> Strong</div>
+    </div>
+  </section>
+
+  <section id="accounts-section">
+    <div class="section-head">
+      <div>
+        <h2>Account Project Detail</h2>
+        <p class="desc">DACH manufacturing footprint, capital projects and Orise entry points for each target account (including accounts with no project found). Click a row to open full opportunity detail.</p>
+      </div>
+    </div>
+    <div id="accounts-list"></div>
+  </section>
+
+  <section id="table-section">
+    <div class="section-head">
+      <div>
+        <h2>Master Data Table</h2>
+        <p class="desc">Every site and project record behind this dashboard. Search, sort, and export.</p>
+      </div>
+    </div>
+    <div class="table-toolbar">
+      <input type="text" class="search-input" id="table-search" placeholder="Search account, site, city, region, country, modality...">
+      <button class="btn-primary" id="btn-export-csv" type="button">&#8681; Download CSV</button>
+    </div>
+    <div class="table-scroll">
+      <table class="master-table" id="master-table">
+        <thead><tr id="master-thead-row"></tr></thead>
+        <tbody id="master-tbody"></tbody>
+      </table>
+    </div>
+    <div class="rowcount" id="table-rowcount"></div>
+  </section>
+
+  <section id="gaps-section">
+    <div class="section-head"><div><h2>Gaps &amp; Methodology</h2></div></div>
+    <div class="panel" id="gaps-panel"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap fl">
+    <div>Prepared by Orise Digital for internal sales &amp; business development use. Not for external distribution.</div>
+    <div>Sources verified through <span id="asof-date2"></span>. See Data Table for full source list per record.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <button class="dh-close" id="drawer-close" aria-label="Close">&times;</button>
+    <h3 id="dh-title">&nbsp;</h3>
+    <div class="dh-meta" id="dh-meta"></div>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</div>
+
+<script>
+/* ============================================================
+   DATA (injected by build script)
+   ============================================================ */
+const ACCOUNTS = [{"id": "roche", "name": "Roche (incl. Genentech/Diagnostics)", "group": "A", "ownership_note": "Roche Diagnostics (Penzberg, Mannheim) and Roche Pharma (Basel, Kaiseraugst) are separate buyers inside one group; Genentech has no DACH site.", "footprint_summary": "Largest DACH pharma footprint: Penzberg (biotech + diagnostics raw-materials, ~7,700 staff), Mannheim (diagnostics), Basel and Kaiseraugst (pharma R&D / production), plus Grenzach-Wyhlen and Ludwigshafen-area sites.", "investment_strategy_summary": "Roche says it has invested >EUR 3.5B in German sites since 2020 (about half in Penzberg) and pairs a USD 50B US pledge with continued European R&D builds; Kaiseraugst is being restructured (Rocephin production to end by decade-end, ~230 jobs cut).", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Penzberg's EUR 600M+ diagnostics production centre is the single largest Roche investment in Germany and is mid-construction with commissioning 2027-28: a near-term automation/MES/validation entry point.", "incumbent_vendors_general": ""}, {"id": "lonza", "name": "Lonza", "group": "A", "ownership_note": "", "footprint_summary": "Visp (VS) is Lonza's biggest site (biologics, small molecules, ADC bioconjugation); Stein (AG) is adding a commercial aseptic ADC drug-product plant; Basel is HQ.", "investment_strategy_summary": "H1 2026 results were strong and margin guidance was raised; Lonza says its new large-scale mammalian facility in Visp started commercial operation in H1 2026, with the Stein ADC drug-product plant (2027) and Visp bioconjugation facility (2028) under construction.", "priority_tier": "Tier 1", "priority_reason": "3 open opportunities, 3 in the 2026-27 window, 2 with a Strong fit. Three concurrent capital projects at Visp/Stein with 2027-28 start-up dates, at a CDMO that buys automation and MES per suite.", "incumbent_vendors_general": ""}, {"id": "bayer", "name": "Bayer", "group": "A", "ownership_note": "Pharmaceuticals division only; Crop Science/Consumer Health sites excluded.", "footprint_summary": "Pharma production at Bergkamen, Berlin, Leverkusen, Weimar and Wuppertal; Berlin Nordhafen campus hosts cell/gene therapy build-out.", "investment_strategy_summary": "Bayer committed >EUR 1.4B (part of ~EUR 2B) to German pharma technology, new production facilities and digitalization, and is positioning each site as a Centre of Excellence (Bergkamen contrast media/hormones, Leverkusen non-hormonal solids, Wuppertal launch production).", "priority_tier": "Tier 2", "priority_reason": "2 open opportunities, 1 in the 2026-27 window, 0 with a Strong fit. Network-wide modernisation plus a new combined warehouse (ops Q1 2026) and Berlin cell/gene therapy centre (target 2028): multiple site-level digitalization entry points.", "incumbent_vendors_general": ""}, {"id": "takeda", "name": "Takeda", "group": "A", "ownership_note": "", "footprint_summary": "Vienna-Donaustadt (plasma fractionation to packaging), Linz (prefilled syringes / biologics), Orth an der Donau (QC lab); Oranienburg (DE) is a small production site.", "investment_strategy_summary": "Takeda put ~EUR 100M into Linz through 2025 (new syringe line, FY2024 start) and built a new R&D laboratory in Vienna Seestadt; no new 2026 DACH capital project was found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Main Linz project is completed; follow-on lifecycle/validation work only. No new announcements located.", "incumbent_vendors_general": ""}, {"id": "merckkgaa", "name": "Merck KGaA (Darmstadt)", "group": "A", "ownership_note": "Merck KGaA (Darmstadt; US name EMD) is NOT Merck & Co./MSD. Swiss sites are held via Merck & Cie (Schaffhausen, Altdorf) and Merck Biotech Development Center (Corsier-sur-Vevey).", "footprint_summary": "Darmstadt HQ and production; Swiss API / pharma-chemicals sites in Buchs, Schaffhausen, Altdorf; biotech development centre in Corsier-sur-Vevey (opened June 2023, EUR 250M).", "investment_strategy_summary": "EUR 1B+ Darmstadt investment programme and ~EUR 418M new Swiss production capacity in the last two years; a new quality-control building in Darmstadt was announced. 2026 outlook was raised in May 2026.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Several live projects but amounts, dates and automation scope are only thinly documented in this pass.", "incumbent_vendors_general": ""}, {"id": "boehringer", "name": "Boehringer Ingelheim", "group": "A", "ownership_note": "Privately owned; Animal Health is part of the group.", "footprint_summary": "Ingelheim (HQ/production), Biberach (largest R&D site, ~8,000 staff, biopharma production), Dortmund (production), Vienna (biopharma and R&D).", "investment_strategy_summary": "In June 2026 Boehringer stopped planned German investments of EUR 900M for 2027-2030 (citing health-cost savings law and US pressure) but keeps an EUR 85M QC lab building in Biberach (completion 2027) and an EUR 100M+ Vienna office build.", "priority_tier": "Tier 2", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 0 with a Strong fit. German capex freeze lowers near-term site-build demand; QC lab (LIMS/validation) in Biberach is the concrete item.", "incumbent_vendors_general": ""}, {"id": "octapharma", "name": "Octapharma", "group": "A", "ownership_note": "Privately held, headquartered in Lachen (SZ).", "footprint_summary": "Vienna-Favoriten (main plasma fractionation), Dessau-Rosslau (DE), Springe (DE), Lachen (CH) HQ.", "investment_strategy_summary": "EUR 200M Vienna expansion (groundbreaking Sept 2023, ~15-month build, inspection/packaging/logistics area more than doubled) plus an earlier EUR 142M production building (2019-2021).", "priority_tier": "Tier 2", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Vienna build is largely complete; expect validation/lifecycle follow-on and further 'planned' expansion stages.", "incumbent_vendors_general": ""}, {"id": "sandoz", "name": "Sandoz", "group": "A", "ownership_note": "Sandoz has been a standalone listed company (SIX: SDZ) since its Novartis spin-off in Oct 2023: the buyer is Sandoz, not Novartis. Hexal AG (Holzkirchen) is a Sandoz subsidiary and is covered here.", "footprint_summary": "Kundl and Schaftenau (Tyrol): antibiotics and biosimilar/biologics finished products; Langkampfen (Tyrol); Germany: Holzkirchen (Hexal HQ and BioTD lab), Barleben, Osterweddingen, Rudolstadt (~3,400 staff).", "investment_strategy_summary": "Standalone Sandoz opened a EUR 200M-package antibiotic plant in Kundl (Mar 2024) and a EUR 150M+ 'BioInject' prefilled-syringe/autoinjector plant in Schaftenau, while closing thyroid-hormone production at Langkampfen/Schaftenau by end-2026.", "priority_tier": "Tier 2", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Active modernisation plus consolidation; spin-off means new standalone IT/OT decisions.", "incumbent_vendors_general": ""}, {"id": "novartis", "name": "Novartis", "group": "A", "ownership_note": "Post-spin-off Novartis no longer includes Sandoz.", "footprint_summary": "Basel Campus (R&D HQ), Stein (AG) sterile and solid dosage production, Schweizerhalle (BL) siRNA/API; Halle (Saale) radioligand plant in Germany.", "investment_strategy_summary": "On 25 Nov 2025 Novartis announced USD 80M for siRNA at Schweizerhalle (+80 jobs by 2028) and USD 26M for sterile dosage forms in Stein while ending solid dosage and sterile packaging there by end-2027 (~550 jobs), and EUR 34.7M for a radioligand site in Halle.", "priority_tier": "Tier 2", "priority_reason": "3 open opportunities, 3 in the 2026-27 window, 0 with a Strong fit. Several modest but concrete production projects with 2027-28 timelines; denominated in USD/EUR.", "incumbent_vendors_general": ""}, {"id": "gsk", "name": "GSK", "group": "A", "ownership_note": "", "footprint_summary": "Marburg (vaccines: MenB, mumps, rabies/FSME, filling and freeze-drying); Dresden flu/hepatitis vaccine plant is being closed by 2028 (~640 jobs).", "investment_strategy_summary": "GSK is concentrating vaccine production in Marburg (MenB EUR 162M, mumps EUR 10M, EUR 13M filling/freeze-dry renewal; announcement dates not confirmed) while exiting Dresden.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Marburg projects appear older than the 2024 window; Dresden closure is a negative signal.", "incumbent_vendors_general": ""}, {"id": "bbraun", "name": "B. Braun", "group": "A", "ownership_note": "Family-owned (B. Braun SE); Aesculap and Hospital Care also covered.", "footprint_summary": "Melsungen (HQ; infusion therapy, dialysis machines), Sempach (CH; disinfectants), Tuttlingen (Aesculap).", "investment_strategy_summary": "Several expansions: EUR 150M new infusion-article plant in Melsungen (opened), EUR 60M expansion for dialysis machines and infusion pumps, and CHF 70M N.I.C.O. disinfectant plant in Sempach.", "priority_tier": "Tier 2", "priority_reason": "1 open opportunity, 0 in the 2026-27 window, 0 with a Strong fit. Mix of device and pharma-liquid manufacturing; exact dates were not confirmed in this pass.", "incumbent_vendors_general": ""}, {"id": "bachem", "name": "Bachem", "group": "A", "ownership_note": "", "footprint_summary": "Bubendorf (BL; HQ, peptides and oligonucleotides), Vionnaz (VS), St. Helens (UK, outside scope).", "investment_strategy_summary": "Bachem guides CHF 350-400M annual capex; 'Building K' in Bubendorf is ramping commercial production in 2026 and a CHF 500M+ greenfield at Sisslerfeld (AG) is planned to start production in 2030; 22 Jul 2026 coverage reports a new large-scale production plant plan.", "priority_tier": "Tier 1", "priority_reason": "2 open opportunities, 1 in the 2026-27 window, 1 with a Strong fit. Fastest-growing peptide CDMO in DACH with a greenfield about to enter detailed design/automation selection.", "incumbent_vendors_general": ""}, {"id": "biontech", "name": "BioNTech", "group": "A", "ownership_note": "BioNTech absorbed CureVac (incl. its Tuebingen sites).", "footprint_summary": "Mainz (HQ) remains; Marburg, Idar-Oberstein and Tuebingen manufacturing sites are being closed (end-2027 to end-2028) after no buyers were found.", "investment_strategy_summary": "Restructuring: ~1,800+ jobs affected, ~EUR 500M annual savings targeted by 2029.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Net negative for new automation; potential decommissioning/data-migration work only.", "incumbent_vendors_general": ""}, {"id": "msd", "name": "MSD (Merck & Co.; incl. Intervet / Animal Health)", "group": "A", "ownership_note": "MSD is the name of Merck & Co., Inc. (Rahway, NJ, USA) outside the US and is a different company from Merck KGaA. Animal Health (Intervet) is part of MSD; its DACH footprint includes Schwabenheim (DE) and a Boxmeer (NL) hub outside scope.", "footprint_summary": "Lucerne (CH HQ; new 'One Roof' building, CHF 60M), Schachen (R&D/biotech site, >CHF 230M invested over 20 years); Intervet Deutschland (Schwabenheim, Unterschleissheim).", "investment_strategy_summary": "No new DACH manufacturing project located; Swiss spend is office/R&D.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Limited manufacturing activity found.", "incumbent_vendors_general": ""}, {"id": "sanofi", "name": "Sanofi", "group": "A", "ownership_note": "", "footprint_summary": "Frankfurt-Hoechst (Industriepark Hoechst, insulin and pharma), plus a Lonza-built dedicated biologics facility in Visp (Ibex Solutions).", "investment_strategy_summary": "Sanofi confirmed a ~EUR 1.3B new insulin plant at Hoechst; the EU approved ~EUR 400M state aid in Sept 2026, with completion targeted around 2029.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Largest single new pharma plant in Germany with state-aid approval just received: engineering/automation partner selection phase.", "incumbent_vendors_general": ""}, {"id": "vetter", "name": "Vetter Pharma", "group": "A", "ownership_note": "Family-owned CDMO (Ravensburg).", "footprint_summary": "Ravensburg and Langenargen (DE), Rankweil (AT, clinical); Skokie (US, outside scope).", "investment_strategy_summary": "Vetter broke ground in Saarlouis in May 2026 (EUR ~480-500M first phase, ops 2031, up to 1,500 jobs, EUR 47M EU state aid) alongside ongoing capacity expansions in Ravensburg/Langenargen under a ~EUR 1.5B programme.", "priority_tier": "Tier 1", "priority_reason": "2 open opportunities, 2 in the 2026-27 window, 1 with a Strong fit. Greenfield aseptic fill-finish site: classic Orise fit across SCADA/MES/validation.", "incumbent_vendors_general": ""}, {"id": "fresenius", "name": "Fresenius Kabi", "group": "A", "ownership_note": "Subsidiary of Fresenius SE.", "footprint_summary": "Graz/Werndorf and Linz (AT), Friedberg (DE), Oberdorf (CH).", "investment_strategy_summary": "EUR ~28M additional investment in Graz (biosimilar filling, up to 2026) after >EUR 60M over the prior three years; no larger new project found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Incremental Austrian investment; no big new greenfield identified.", "incumbent_vendors_general": ""}, {"id": "cordenpharma", "name": "CordenPharma", "group": "A", "ownership_note": "Owned by International Chemical Investors Group (ICIG).", "footprint_summary": "Plankstadt (DE), Muttenz/Liestal region (CH, new), Brussels and Colorado (outside scope).", "investment_strategy_summary": "CordenPharma is investing ~EUR 1B in peptides, of which ~EUR 500M for a new greenfield plant at Getec Park in Muttenz (construction 2025-2027, commercial operation H1 2028, 300 jobs).", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield peptide plant at the design/build stage in the 2026-27 window.", "incumbent_vendors_general": ""}, {"id": "abbott", "name": "Abbott", "group": "A", "ownership_note": "", "footprint_summary": "Wiesbaden (HQ), Neustadt am Ruebenberge (Creon), Hannover; Baar, Altishofen, Allschwil (CH).", "investment_strategy_summary": "No new DACH production investment announced in the sources found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "gruenenthal", "name": "Gruenenthal", "group": "A", "ownership_note": "Privately owned.", "footprint_summary": "Aachen (HQ/R&D), Stolberg (DE) and a Swiss site; recent big capex is in Latin America (EUR 80M+).", "investment_strategy_summary": "No new DACH investment found; Stolberg production activity reported closed/reduced.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "ucb", "name": "UCB", "group": "A", "ownership_note": "UCB Farchim SA is the Swiss subsidiary (Bulle, FR).", "footprint_summary": "Bulle (FR): biologics manufacturing; Monheim (DE) is a Germany-based unit.", "investment_strategy_summary": "UCB is investing CHF 100M+ in Bulle: new production unit for a key biologics compound (relocated from Belgium), operational ~2029, full capacity 2030, +80 jobs; CHF 15M QC lab (mid-2026) and CHF 10M cold unit.", "priority_tier": "Tier 2", "priority_reason": "1 open opportunity, 0 in the 2026-27 window, 0 with a Strong fit. Concrete Swiss project with a long lead time.", "incumbent_vendors_general": ""}, {"id": "sartorius", "name": "Sartorius", "group": "A", "ownership_note": "", "footprint_summary": "Goettingen (HQ, membranes/filters), Freiburg (cell and gene therapy components), Marburg and Ulm.", "investment_strategy_summary": "EUR ~25M membrane production building in Goettingen (6,000 m2) and a EUR 140M+ cell/gene therapy competence centre in Freiburg (2026 coverage); further capacity expansion planned in 2026.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Equipment maker with its own growing production footprint.", "incumbent_vendors_general": ""}, {"id": "rentschler", "name": "Rentschler Biopharma", "group": "A", "ownership_note": "Family-owned; withdrew from cell and gene therapy in early 2025.", "footprint_summary": "Laupheim (DE HQ, microbial/mammalian CDMO); Milford, MA (outside scope).", "investment_strategy_summary": "'Largest single investment' in Laupheim: four-storey buffer media station (construction from spring 2025, operational 2028), 'high double-digit million' euro.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Utility/buffer infrastructure with automation and MES interfaces.", "incumbent_vendors_general": ""}, {"id": "lilly", "name": "Eli Lilly", "group": "A", "ownership_note": "", "footprint_summary": "Alzey (Rhineland-Palatinate) is Lilly's only new DACH production site (Mounjaro/injectables); no pre-existing DACH plant.", "investment_strategy_summary": "Alzey was announced in Nov 2023 at ~EUR 2.3B / 1,000 jobs; in 2026 Lilly cut the remaining investment by about half and the job target to ~500 because of German healthcare-cost measures, but still targets ops end-2027.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield injectable plant still under construction; scope reduction adds uncertainty.", "incumbent_vendors_general": ""}, {"id": "finzelberg", "name": "Finzelberg", "group": "B", "ownership_note": "Owned by Willy Fischer / family group.", "footprint_summary": "Andernach (DE): plant extracts.", "investment_strategy_summary": "No project found in this pass.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "plbio", "name": "PL BioScience", "group": "B", "ownership_note": "Aachen-based startup; Series A EUR 7.8M (Aug 2024).", "footprint_summary": "Aachen (DE): human platelet lysate (GMP).", "investment_strategy_summary": "Expanding Aachen HQ to >1,200 m2 for up to 20,000 L/yr GMP-grade HPL.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Small project; limited automation budget.", "incumbent_vendors_general": ""}, {"id": "terumo", "name": "Terumo", "group": "B", "ownership_note": "Japanese group; Terumo Deutschland in Eschborn is a sales entity.", "footprint_summary": "Eschborn (DE) sales; no DACH manufacturing found.", "investment_strategy_summary": "No DACH production or investment found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "beiersdorf", "name": "Beiersdorf", "group": "B", "ownership_note": "Consumer/cosmetics; sold its Bode Chemie unit to Hartmann.", "footprint_summary": "Hamburg (HQ, R&D), Leipzig (EUR 220M plant), Waldheim closed.", "investment_strategy_summary": "EUR 139M innovation centre in Hamburg (planned completion 2028; R&D, not manufacturing) and Leipzig plant expansion.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Consumer-goods rather than pharma core.", "incumbent_vendors_general": ""}, {"id": "biospring", "name": "BioSpring", "group": "B", "ownership_note": "Frankfurt-based oligonucleotide CDMO.", "footprint_summary": "Frankfurt-Fechenheim (cGMP gRNA/mRNA), Offenbach (new site).", "investment_strategy_summary": "Building a large-scale nucleic acid API plant in Offenbach ('several hundred million euros', ~200 jobs, construction to end of 2027) after a double-digit-million Fechenheim expansion.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield GMP plant in construction: strong fit.", "incumbent_vendors_general": ""}, {"id": "ypsomed", "name": "Ypsomed", "group": "B", "ownership_note": "SIX-listed; Swiss.", "footprint_summary": "Solothurn, Burgdorf (CH); Schwerin (DE).", "investment_strategy_summary": "CHF ~200M in Solothurn (new production levels, tool shop, high-bay), CHF 21M in Burgdorf, and ~EUR 500M in two phases in Schwerin to the end of the decade (400-500M pens/yr, 1,000 staff).", "priority_tier": "Tier 1", "priority_reason": "2 open opportunities, 2 in the 2026-27 window, 1 with a Strong fit. Autoinjector/pen assembly: high-volume device automation + MES.", "incumbent_vendors_general": ""}, {"id": "biogen", "name": "Biogen", "group": "B", "ownership_note": "", "footprint_summary": "Luterbach/Solothurn (CH): large-scale biologics.", "investment_strategy_summary": "~CHF 1.5B Luterbach plant, operational since 2021; no new 2026 project found.", "priority_tier": "Tier 2", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Mature site; lifecycle support.", "incumbent_vendors_general": ""}, {"id": "richter", "name": "Richter Pharma", "group": "B", "ownership_note": "Veterinary pharma (Wels).", "footprint_summary": "Wels (AT).", "investment_strategy_summary": "EUR 35M+ VetViva production facility opened 2025, ~120 jobs.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Completed in 2025.", "incumbent_vendors_general": ""}, {"id": "wackerbiotech", "name": "Wacker Biotech", "group": "B", "ownership_note": "Division of Wacker Chemie.", "footprint_summary": "Jena (microbial CDMO), Halle (mRNA competence centre).", "investment_strategy_summary": "Wacker expanded Halle (mRNA lines, ~200 hires) and Jena; dates/amount for Halle not confirmed.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Mature; follow-on only.", "incumbent_vendors_general": ""}, {"id": "rotop", "name": "Rotop Pharmaka", "group": "B", "ownership_note": "Backed by GENUI and SHS Capital.", "footprint_summary": "Dresden-Rossendorf (DE).", "investment_strategy_summary": "Two highly automated radiopharmaceutical factories, start from 2028, 'double-digit million' euro programme.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Germany's largest radiopharma project; automated GMP lines.", "incumbent_vendors_general": ""}, {"id": "merz", "name": "Merz Pharma", "group": "B", "ownership_note": "Family-owned; Merz Aesthetics and Merz Therapeutics.", "footprint_summary": "Dessau-Rosslau (DE); Reinheim (DE, closing).", "investment_strategy_summary": "New packaging line opened June 2026; EUR 100M+ planned in Dessau by 2028; Reinheim production consolidating to Dessau.", "priority_tier": "Tier 2", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 0 with a Strong fit. Consolidation into Dessau drives new lines.", "incumbent_vendors_general": ""}, {"id": "hexal", "name": "Hexal (Sandoz Germany)", "group": "B", "ownership_note": "Hexal AG is a Sandoz subsidiary; see Sandoz.", "footprint_summary": "Holzkirchen (DE).", "investment_strategy_summary": "40-year anniversary in 2026; EUR 25M BioTD lab in Holzkirchen completed Q4 2023.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Covered under Sandoz.", "incumbent_vendors_general": ""}, {"id": "ferring", "name": "Ferring", "group": "B", "ownership_note": "Swiss-HQ (Saint-Prex).", "footprint_summary": "Kiel (DE), Saint-Prex (CH).", "investment_strategy_summary": "EUR ~40M production building in Kiel (undated source); CHF 30M biotech centre in St-Prex (2018).", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Older projects.", "incumbent_vendors_general": ""}, {"id": "bode", "name": "Bode Chemie", "group": "B", "ownership_note": "Owned by PAUL HARTMANN AG.", "footprint_summary": "Hamburg (DE).", "investment_strategy_summary": "No project found in this pass.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "siegfried", "name": "Siegfried", "group": "B", "ownership_note": "SIX-listed CDMO.", "footprint_summary": "Zofingen (HQ), Evionnaz (CH); Hameln, Minden (DE).", "investment_strategy_summary": "Hameln: two new prefilled syringe/cartridge lines (first revenue 2026, second 2027); Minden new multi-purpose drug-substance plant (nearing completion, first revenue H2 2025); CHF 25M R&D centre in Evionnaz.", "priority_tier": "Tier 1", "priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Concrete 2026-27 line start-ups.", "incumbent_vendors_general": ""}, {"id": "abbvie", "name": "AbbVie", "group": "C", "ownership_note": "", "footprint_summary": "Ludwigshafen (R&D, ~2,000 staff).", "investment_strategy_summary": "EUR 150M 'LUnA' R&D building, in operation 2027.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. R&D lab project.", "incumbent_vendors_general": ""}, {"id": "csl", "name": "CSL / CSL Behring", "group": "C", "ownership_note": "CSL Behring Marburg and Bern; CSL Seqirus not found in DACH.", "footprint_summary": "Marburg (DE), Bern (CH).", "investment_strategy_summary": "CHF 300M immunoglobulin 'Protinus' project in Bern; EUR 31M filling/freeze-drying in Marburg.", "priority_tier": "Tier 2", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Dates not verified.", "incumbent_vendors_general": ""}, {"id": "catalent", "name": "Catalent", "group": "C", "ownership_note": "Owned by Novo Holdings (acquired Dec 2024); three fill-finish sites went to Novo Nordisk.", "footprint_summary": "Eberbach (DE) oral solid dose site.", "investment_strategy_summary": "No project found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "pfizer", "name": "Pfizer", "group": "C", "ownership_note": "", "footprint_summary": "Freiburg (DE): tablets/capsules.", "investment_strategy_summary": "EUR 300M high-containment plant opened 2022; in June 2026 the CEO said German investments are under review.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Completed; risk of freeze.", "incumbent_vendors_general": ""}, {"id": "jnj", "name": "Johnson & Johnson Innovative Medicine", "group": "C", "ownership_note": "Cilag/Janssen.", "footprint_summary": "Schaffhausen (CH; ~2,200 staff), Neuss (DE HQ).", "investment_strategy_summary": "Schaffhausen continues to expand biotherapeutic capacity (>CHF 1B over 25 years); no 2026 project located.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Amount not found.", "incumbent_vendors_general": ""}, {"id": "astrazeneca", "name": "AstraZeneca", "group": "C", "ownership_note": "", "footprint_summary": "Wedel (DE) production.", "investment_strategy_summary": "No DACH investment found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.", "incumbent_vendors_general": ""}, {"id": "kbi", "name": "KBI Biopharma", "group": "C", "ownership_note": "JSR subsidiary.", "footprint_summary": "Plan-les-Ouates/Geneva (CH).", "investment_strategy_summary": "Integrated Geneva facility opened Oct 2022; no new investment found.", "priority_tier": "Tier 3", "priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Mature.", "incumbent_vendors_general": ""}];
+const SITES = [{"account": "roche", "site_name": "Roche Diagnostics Production Centre (raw materials)", "city": "Penzberg", "state": "DE-BY", "lat": 47.7508, "lon": 11.3764, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs", "other (R&D / consumer)"], "currency": "EUR", "investment": 600000000, "investment_display": "EUR 600M+ (largest single Roche investment in Germany)", "jobs": 200, "status": "under construction", "expected_start": "2027-12 (completion); production 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New production centre on the Penzberg biotech campus for diagnostic raw materials (enzymes, antibodies, nucleotides). Groundbreaking 28 Nov 2024; completion planned 2027, then qualification, production from 2028 with ~200 initial staff.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Highly automated GMP-like raw-material production must be commissioned 2027 and qualified before 2028 start."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "New batch production and release flow for a new product family needs MES/recipe and data integration."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification phase follows completion in 2027."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Campus-scale data/OT integration in a EUR 3.5B+ German programme."}], "incumbent_vendors": "", "sources": [{"url": "https://www.bionity.com/de/news/1188095/roche-eroeffnet-neues-hightech-innovationszentrum-fuer-300-millionen-euro-in-bayern.html", "publisher": "Bionity", "date": "2026-02", "confidence": "Medium"}, {"url": "https://www.aerzteblatt.de/nachrichten/156068/Roche-legt-Grundstein-fuer-600-Millionen-Investition", "publisher": "Aerzteblatt", "date": "2024-11", "confidence": "Medium"}, {"url": "https://www.onvista.de/news/2026/06-09-roche-haelt-trotz-berliner-sparpaket-an-millionen-investition-fest-0-20-26519960", "publisher": "onvista", "date": "2026-06-09", "confidence": "Medium"}], "notes": "Roche reaffirmed the investment in June 2026 despite the German savings package.", "id": "roche-roche-diagnostics-production-centre-raw-materials", "country": "Germany", "eur": 600000000}, {"account": "roche", "site_name": "Roche Diagnostics Innovation Centre", "city": "Penzberg", "state": "DE-BY", "lat": 47.752, "lon": 11.374, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 300000000, "investment_display": "EUR ~300M", "jobs": null, "status": "operational", "expected_start": "Opened Feb 2026", "in_window": true, "opportunity_status": "Monitor", "technical_scope": "23,000 m2 development/laboratory building opened Feb 2026; ~1,000 of 7,700 site staff moved in. Lab/R&D rather than manufacturing.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Lab data/OT integration; no manufacturing scope."}, {"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Post-opening support of building systems and labs."}], "incumbent_vendors": "", "sources": [{"url": "https://www.ingenieur.de/technik/fachbereiche/bau/durchgetaktet-bis-zum-letzten-gewerk-so-entstand-roches-hightech-labor/", "publisher": "ingenieur.de", "date": "2026-02-25", "confidence": "Medium"}, {"url": "https://www.pharmazeutische-zeitung.de/roche-eroeffnet-neues-diagnostik-innovationszentrum-162786/", "publisher": "Pharmazeutische Zeitung", "date": "2026-02", "confidence": "Medium"}], "notes": "", "id": "roche-roche-diagnostics-innovation-centre", "country": "Germany", "eur": 300000000}, {"account": "roche", "site_name": "Roche Basel Building 12 (research and development)", "city": "Basel", "state": "CH-BS", "lat": 47.5596, "lon": 7.6009, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "CHF", "investment": 500000000, "investment_display": "CHF ~500M", "jobs": null, "status": "under construction", "expected_start": "Completion 2029", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Flexible R&D building for up to 450 early-development researchers; groundbreaking Oct 2025, completion 2029. Laboratory scope, long lead.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Lab automation/data platforms in 2028-29; too early for automation vendors."}], "incumbent_vendors": "", "sources": [{"url": "https://www.roche.ch/en/media-switzerland/informationen/med-ch-2025-10-29", "publisher": "Roche Switzerland", "date": "2025-10-29", "confidence": "High"}, {"url": "https://www.roche.ch/en/stories/groundbreaking-building12", "publisher": "Roche Switzerland", "date": "2025-10", "confidence": "High"}], "notes": "CHF 1.2B Basel programme (research buildings and production renovation) runs to 2030.", "id": "roche-roche-basel-building-12-research-and-development", "country": "Switzerland", "eur": 535000000}, {"account": "roche", "site_name": "Roche Kaiseraugst Production Site Restructuring", "city": "Kaiseraugst", "state": "CH-AG", "lat": 47.534, "lon": 7.723, "project_type": "BROWNFIELD", "modality": ["small molecule/API", "biologics/mAbs"], "currency": "CHF", "investment": 500000000, "investment_display": "CHF 500M+ (headline per Moneycab title; details unverified)", "jobs": null, "status": "announced", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Moneycab reports a CHF 500M+ investment at Kaiseraugst while Roche ends Rocephin production by the end of the decade and cuts ~230 jobs. Scope of new capital items not confirmed.", "orise_fit": [{"area": "Legacy system modernization and migration", "strength": "Weak", "reason": "Restructuring may require system consolidation/migration."}, {"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Ongoing support during product transfers."}], "incumbent_vendors": "", "sources": [{"url": "https://www.moneycab.com/?p=1071859", "publisher": "Moneycab", "date": "Unverified", "confidence": "Low"}, {"url": "https://www.moneycab.com/schweiz/roche-baut-die-produktion-in-kaiseraugst-um/amp/", "publisher": "Moneycab", "date": "Unverified", "confidence": "Medium"}], "notes": "Headline figure not independently confirmed; treat as Low confidence.", "id": "roche-roche-kaiseraugst-production-site-restructuring", "country": "Switzerland", "eur": 535000000}, {"account": "roche", "site_name": "Roche Mannheim diagnostics expansion", "city": "Mannheim", "state": "DE-BW", "lat": 49.4875, "lon": 8.466, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 400000000, "investment_display": "EUR 400M+ across five construction projects", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Five projects at the Mannheim diagnostics site: laboratory, distribution and production buildings, chilled-water storage and IT infrastructure; plus an instrument launch centre.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Facility/IT infrastructure build-out."}, {"area": "MES implementation and integration", "strength": "Weak", "reason": "Diagnostics production lines may need MES."}], "incumbent_vendors": "", "sources": [{"url": "https://www.bionity.com/de/news/1157476/400-millionen-euro-roche-baut-mannheimer-standort-aus.html", "publisher": "Bionity", "date": "Unverified", "confidence": "Medium"}], "notes": "Date of the five-project programme not confirmed.", "id": "roche-roche-mannheim-diagnostics-expansion", "country": "Germany", "eur": 400000000}, {"account": "lonza", "site_name": "Lonza Visp large-scale mammalian facility (Ibex Solutions)", "city": "Visp", "state": "CH-VS", "lat": 46.294, "lon": 7.882, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs"], "currency": "CHF", "investment": null, "investment_display": "Amount not disclosed in sources found", "jobs": null, "status": "commissioning", "expected_start": "Commercial operation from H1 2026", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Large-scale mammalian biologics plant at Ibex Solutions started commercial operation in H1 2026 and is in ramp-up; it includes a dedicated Sanofi facility. Ramp-up and tech-transfer support.", "orise_fit": [{"area": "MES implementation and integration", "strength": "Moderate", "reason": "Ramp-up of multi-customer suites typically needs MES recipe/batch work."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "CSV and data-integrity for newly commissioned suites."}, {"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Early-life support and managed services."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55378861/lonzas-large-scale-mammalian-site-in-visp-switzerland-continues-ramp-up-process", "publisher": "PharmaManufacturing", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.bluewin.ch/en/news/lonza-invests-in-production-and-remains-on-target-li.3224385", "publisher": "blue News", "date": "2026", "confidence": "Medium"}, {"url": "https://new.1815.ch/news/wallis/aktuell/neue-arbeitsplaetze-fuer-visp", "publisher": "1815.ch", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "lonza-lonza-visp-large-scale-mammalian-facility-ibex-solutions", "country": "Switzerland", "eur": null}, {"account": "lonza", "site_name": "Lonza Visp large-scale bioconjugation (ADC) facility", "city": "Visp", "state": "CH-VS", "lat": 46.295, "lon": 7.884, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs", "small molecule/API"], "currency": "CHF", "investment": null, "investment_display": "Amount not found (3,000 m2, three suites to 1,200 L)", "jobs": null, "status": "under construction", "expected_start": "Operations 2027 (dedicated suite) / 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New 3,000 m2 bioconjugation plant with three large-scale suites (up to 1,200 L): one dedicated to a global partner for commercial ADC, two multi-purpose. Construction progressing per Lonza H1/Q1 2026.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "High-containment conjugation suites need process control from design through commissioning in 2027."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Multi-purpose suites require recipe-driven MES and eBR."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Commissioning-qualification in 2027-28."}], "incumbent_vendors": "", "sources": [{"url": "https://live.deutsche-boerse.com/news/LonzaDelivers-Strong-Performance-in-Q1-2026-in-Line-with-Expectations-and-Confirms-Full-Year-Outlook-2026-330ea2f2-33b8-4bd2-9769-3081c8ae07cb", "publisher": "Lonza via Deutsche Boerse", "date": "2026", "confidence": "High"}, {"url": "https://www.dcatvci.org/supplier-news/lonza-investing-in-large-scale-biomanufacturing-bioconjugation-drug-product-manufacturing/", "publisher": "DCAT", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "lonza-lonza-visp-large-scale-bioconjugation-adc-facility", "country": "Switzerland", "eur": null}, {"account": "lonza", "site_name": "Lonza Stein aseptic ADC drug-product facility", "city": "Stein", "state": "CH-AG", "lat": 47.541, "lon": 7.946, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "biologics/mAbs"], "currency": "CHF", "investment": null, "investment_display": "Amount not found (115 jobs at peak)", "jobs": 115, "status": "under construction", "expected_start": "Operations 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Commercial-scale, high-containment aseptic fill-finish for ADCs, operational 2027 (construction progressing as of H1 2026).", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Aseptic fill lines, isolators and HVAC/utilities need integrated control."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Commercial-scale fill-finish needs eBR and equipment integration."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Validation of new sterile process ahead of 2027."}], "incumbent_vendors": "", "sources": [{"url": "https://live.deutsche-boerse.com/news/LonzaDelivers-Strong-Performance-in-Q1-2026-in-Line-with-Expectations-and-Confirms-Full-Year-Outlook-2026-330ea2f2-33b8-4bd2-9769-3081c8ae07cb", "publisher": "Lonza via Deutsche Boerse", "date": "2026", "confidence": "High"}, {"url": "https://www.europeanpharmaceuticalreview.com/news/lonza-to-enhance-commercial-antibody-drug-conjugate-supply-capacity/187684.article", "publisher": "European Pharmaceutical Review", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "lonza-lonza-stein-aseptic-adc-drug-product-facility", "country": "Switzerland", "eur": null}, {"account": "bayer", "site_name": "Bayer Bergkamen Centre of Excellence and Combined Warehouse", "city": "Bergkamen", "state": "DE-NW", "lat": 51.618, "lon": 7.633, "project_type": "BROWNFIELD", "modality": ["small molecule/API", "oral solid dose"], "currency": "EUR", "investment": null, "investment_display": "Part of >EUR 1.4B German pharma programme (not split by site)", "jobs": null, "status": "commissioning", "expected_start": "Warehouse ops Q1 2026", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Bergkamen becomes the Centre of Excellence for contrast media and hormone products with additional therapeutics capacity; a climate-neutral combined warehouse for Bergkamen and Wuppertal API started operations in Q1 2026.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Part of a network digitalization programme."}, {"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Technology upgrades/new production facilities."}, {"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Commissioning of the new warehouse and logistics automation."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmazeutische-zeitung.de/bayer-investiert-milliarden-betrag-in-biotechnologie-sparte-132304/", "publisher": "Pharmazeutische Zeitung", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.fiercepharma.com/manufacturing/bayer-earmarks-22-billion-upgrade-drug-manufacturing-shedding-some-facilities", "publisher": "Fierce Pharma", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.bayer.com/media/download/d423c37e-df47-495a-bcf4-5bfec99a647c/2025-0026.pdf", "publisher": "Bayer", "date": "2025", "confidence": "High"}], "notes": "The EUR 2B programme dates from 2022; per-site amounts are not public.", "id": "bayer-bayer-bergkamen-centre-of-excellence-and-combined-warehouse", "country": "Germany", "eur": null}, {"account": "bayer", "site_name": "Bayer Leverkusen Supply Centre (non-hormonal solids)", "city": "Leverkusen", "state": "DE-NW", "lat": 51.03, "lon": 6.984, "project_type": "BROWNFIELD", "modality": ["oral solid dose"], "currency": "EUR", "investment": null, "investment_display": "Part of >EUR 1.4B programme", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Leverkusen is being built into the Centre of Excellence for non-hormonal solid dosage forms.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Network digitalization initiatives."}, {"area": "Legacy system modernization and migration", "strength": "Weak", "reason": "Consolidation of legacy lines."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmazeutische-zeitung.de/bayer-investiert-milliarden-betrag-in-biotechnologie-sparte-132304/", "publisher": "Pharmazeutische Zeitung", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "bayer-bayer-leverkusen-supply-centre-non-hormonal-solids", "country": "Germany", "eur": null}, {"account": "bayer", "site_name": "Bayer Wuppertal launch production and new technologies", "city": "Wuppertal", "state": "DE-NW", "lat": 51.2562, "lon": 7.1508, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs", "small molecule/API"], "currency": "EUR", "investment": null, "investment_display": "Part of >EUR 1.4B programme", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Wuppertal focuses on launch production and new production technologies within the EUR 2B programme.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Launch-site digitalization."}, {"area": "SCADA / process control and automation", "strength": "Weak", "reason": "New technology introduction."}], "incumbent_vendors": "", "sources": [{"url": "https://www.morningstar.co.uk/uk/news/AN_1648718658294881600/bayer-to-invest-eur2-billion-to-strengthen-pharmaceutical-division.aspx", "publisher": "Morningstar", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "bayer-bayer-wuppertal-launch-production-and-new-technologies", "country": "Germany", "eur": null}, {"account": "bayer", "site_name": "Bayer Berlin Centre for Gene and Cell Therapies", "city": "Berlin", "state": "DE-BE", "lat": 52.542, "lon": 13.356, "project_type": "BROWNFIELD", "modality": ["cell & gene therapy"], "currency": "EUR", "investment": null, "investment_display": "Amount not found", "jobs": null, "status": "under construction", "expected_start": "Target operation 2028", "in_window": false, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Translation centre with GMP production area on the Bayer Nordhafen campus with Charite; construction from 2025, planned operation 2028.", "orise_fit": [{"area": "MES implementation and integration", "strength": "Moderate", "reason": "Small-batch cell/gene therapy GMP needs electronic batch records."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "GMP qualification for a new suite."}, {"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Data capture for translation workflows."}], "incumbent_vendors": "", "sources": [{"url": "https://www.bayer.com/media/aufbau-von-translationszentrum-fuer-gentherapien-und-zelltherapien-in-berlin-beginnt/", "publisher": "Bayer", "date": "2025", "confidence": "High"}, {"url": "https://chemanager-online.com/en/node/440896", "publisher": "CHEManager", "date": "2025", "confidence": "Medium"}], "notes": "", "id": "bayer-bayer-berlin-centre-for-gene-and-cell-therapies", "country": "Germany", "eur": null}, {"account": "takeda", "site_name": "Takeda Linz prefilled syringe and biologics site", "city": "Linz", "state": "AT-OO", "lat": 48.3069, "lon": 14.2858, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "biologics/mAbs", "devices/combination products"], "currency": "EUR", "investment": 100000000, "investment_display": "EUR ~100M by 2025", "jobs": null, "status": "operational", "expected_start": "Production FY2024", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "New prefilled-syringe line at Takeda's global centre for prefilled syringes and self-medication biologics; announced May 2023.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Post-start-up support."}, {"area": "Validation / CSV / data integrity", "strength": "Weak", "reason": "Continued line qualification."}], "incumbent_vendors": "", "sources": [{"url": "https://industriemagazin.at/chemie/wiener-pharma-konzern-takeda-mit-neuer-fuehrung/", "publisher": "Industriemagazin", "date": "2023-05", "confidence": "Medium"}], "notes": "", "id": "takeda-takeda-linz-prefilled-syringe-and-biologics-site", "country": "Austria", "eur": 100000000}, {"account": "takeda", "site_name": "Takeda Vienna R&D laboratory (Seestadt)", "city": "Vienna", "state": "AT-W", "lat": 48.22, "lon": 16.5, "project_type": "GREENFIELD", "modality": ["biologics/mAbs", "plasma-derived"], "currency": "EUR", "investment": null, "investment_display": "Three-digit million EUR (exact figure not stated)", "jobs": 250, "status": "operational", "expected_start": "From 2025", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "New R&D building in Vienna Seestadt for ~250 researchers (from 2025). Laboratory, no manufacturing.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Lab informatics only."}], "incumbent_vendors": "", "sources": [{"url": "https://investinaustria.at/en/news-events-press/global-player-takeda-is-building-a-research-and-development-laboratory-in-vienna-donaustadt/", "publisher": "Invest in Austria", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "takeda-takeda-vienna-r-d-laboratory-seestadt", "country": "Austria", "eur": null}, {"account": "merckkgaa", "site_name": "Merck KGaA Darmstadt QC building and investment programme", "city": "Darmstadt", "state": "DE-HE", "lat": 49.8728, "lon": 8.6512, "project_type": "BROWNFIELD", "modality": ["small molecule/API", "biologics/mAbs"], "currency": "EUR", "investment": null, "investment_display": "EUR 1B+ programme; QC building amount not found", "jobs": null, "status": "announced", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Aerzteblatt reports Merck investing in a new quality-control building at Darmstadt; Merck also runs an EUR 1B+ Darmstadt investment programme including a EUR 300M+ research centre (older).", "orise_fit": [{"area": "Validation / CSV / data integrity", "strength": "Weak", "reason": "QC/LIMS and data integrity in a new lab building."}, {"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Site digitalization."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerzteblatt.de/news/merck-investiert-in-darmstadt-in-neues-gebaeude-fuer-qualitaetskontrolle-85f3f5ae-a93b-4e37-8f17-47cfed920609", "publisher": "Aerzteblatt", "date": "Unverified", "confidence": "Low"}, {"url": "https://www.chemie.de/news/1160203/merck-investiert-1-mrd-in-den-standort-darmstadt.html", "publisher": "Chemie.de", "date": "Unverified", "confidence": "Medium"}], "notes": "Dates not confirmed.", "id": "merckkgaa-merck-kgaa-darmstadt-qc-building-and-investment-programme", "country": "Germany", "eur": null}, {"account": "merckkgaa", "site_name": "Merck Swiss production network (Buchs / Schaffhausen / Altdorf)", "city": "Schaffhausen", "state": "CH-SH", "lat": 47.697, "lon": 8.634, "project_type": "BROWNFIELD", "modality": ["small molecule/API"], "currency": "EUR", "investment": 418000000, "investment_display": "EUR ~418M new Swiss production capacity in last two years", "jobs": null, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Merck states ~EUR 418M new production capacity across Swiss operations (APIs, intermediates, reference materials).", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Support of newly commissioned capacity."}], "incumbent_vendors": "", "sources": [{"url": "https://www.s-ge.com/invest/de/artikel/success-stories/merck-die-schweiz-bietet-attraktive-und-stabile-rahmenbedingungen-fuer", "publisher": "S-GE", "date": "Unverified", "confidence": "Medium"}], "notes": "Time window of the EUR 418M not confirmed.", "id": "merckkgaa-merck-swiss-production-network-buchs-schaffhausen-altdorf", "country": "Switzerland", "eur": 418000000}, {"account": "merckkgaa", "site_name": "Merck Biotech Development Center", "city": "Corsier-sur-Vevey", "state": "CH-VD", "lat": 46.463, "lon": 6.855, "project_type": "GREENFIELD", "modality": ["biologics/mAbs"], "currency": "EUR", "investment": 250000000, "investment_display": "EUR 250M", "jobs": null, "status": "operational", "expected_start": "Opened June 2023", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Clinical-manufacturing biotech centre (250 staff) opened June 2023: outside the Jan 2024 window.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://endpts.com/?p=249831", "publisher": "Endpoints", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.pharmaceutical-technology.com/?p=91715", "publisher": "Pharmaceutical Technology", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "merckkgaa-merck-biotech-development-center", "country": "Switzerland", "eur": 250000000}, {"account": "boehringer", "site_name": "Boehringer Biberach QC laboratory building", "city": "Biberach", "state": "DE-BW", "lat": 48.096, "lon": 9.79, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs"], "currency": "EUR", "investment": 85000000, "investment_display": "EUR 85M", "jobs": null, "status": "under construction", "expected_start": "Completion 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Quality-assurance laboratory building at Biberach, completing 2027; survived the June 2026 freeze on EUR 900M of 2027-30 German investments.", "orise_fit": [{"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "LIMS and data-integrity validation for new QC labs."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Lab/OT data integration."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmazeutische-zeitung.de/boehringer-ingelheim-zieht-investitionen-zurueck-165764/", "publisher": "Pharmazeutische Zeitung", "date": "2026-06", "confidence": "Medium"}, {"url": "https://www.schwaebische.de/wirtschaft/boehringer-ingelheim-waechst-kraeftig-stoppt-aber-investitionen-in-deutschland-4720079", "publisher": "Schwaebische Zeitung", "date": "2026", "confidence": "Medium"}], "notes": "Wider German capex freeze (EUR 900M) lowers odds of new plant projects.", "id": "boehringer-boehringer-biberach-qc-laboratory-building", "country": "Germany", "eur": 85000000}, {"account": "boehringer", "site_name": "Boehringer Vienna administration building", "city": "Vienna", "state": "AT-W", "lat": 48.23, "lon": 16.4, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 100000000, "investment_display": "EUR 100M+", "jobs": 990, "status": "under construction", "expected_start": "Completion 2027", "in_window": true, "opportunity_status": "Monitor", "technical_scope": "New administrative building (~990 staff); no manufacturing scope.", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Building/IT only."}], "incumbent_vendors": "", "sources": [{"url": "https://www.drweb.de/100-millionen-fuer-wien-87-milliarden-fuer-die-usa-boehringers-zoll-kalkuel/", "publisher": "drweb.de", "date": "2026", "confidence": "Low"}], "notes": "", "id": "boehringer-boehringer-vienna-administration-building", "country": "Austria", "eur": 100000000}, {"account": "octapharma", "site_name": "Octapharma Vienna-Favoriten plasma production expansion", "city": "Vienna", "state": "AT-W", "lat": 48.17, "lon": 16.38, "project_type": "BROWNFIELD", "modality": ["plasma-derived"], "currency": "EUR", "investment": 200000000, "investment_display": "EUR 200M (incl. earlier EUR 142M building)", "jobs": 60, "status": "operational", "expected_start": "Build completed ~Dec 2024", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Extension started Sept 2023 and finished in ~15 months: inspection, packaging and logistics area more than doubled (2,800 to 6,300 m2); further stages planned.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Post-start-up lifecycle/validation."}, {"area": "MES implementation and integration", "strength": "Weak", "reason": "Packaging/logistics MES interfaces."}], "incumbent_vendors": "", "sources": [{"url": "https://www.tt.com/artikel/14899556/plasmaproduzent-octapharma-baut-wiener-standort-um-142-mio-euro-aus", "publisher": "Tiroler Tageszeitung", "date": "Unverified", "confidence": "Medium"}, {"url": "https://investinaustria.at/en/news-events-press/octapharma-is-further-expanding-its-viennese-facility-and-investing-eur-200-million", "publisher": "Invest in Austria", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "octapharma-octapharma-vienna-favoriten-plasma-production-expansion", "country": "Austria", "eur": 200000000}, {"account": "sandoz", "site_name": "Sandoz Kundl antibiotic plant", "city": "Kundl", "state": "AT-T", "lat": 47.5069, "lon": 12.0124, "project_type": "BROWNFIELD", "modality": ["small molecule/API"], "currency": "EUR", "investment": 200000000, "investment_display": "EUR 200M package", "jobs": null, "status": "operational", "expected_start": "Opened Mar 2024", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Enzymatic amoxicillin process plant opened March 2024 under a EUR 200M investment package supported by the Austrian government. Mothballed lines follow.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Post-start-up support at a standalone Sandoz."}], "incumbent_vendors": "", "sources": [{"url": "https://www.novartis.com/at-de/stories/sandoz-modernisiert-antibiotika-produktion-kundl", "publisher": "Novartis Austria", "date": "2021", "confidence": "Medium"}, {"url": "https://industriemagazin.at/chemie/sandoz-tirol-naechste-stilllegung-nach-kundl/", "publisher": "Industriemagazin", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "sandoz-sandoz-kundl-antibiotic-plant", "country": "Austria", "eur": 200000000}, {"account": "sandoz", "site_name": "Sandoz Schaftenau BioInject prefilled-syringe plant", "city": "Schaftenau", "state": "AT-T", "lat": 47.539, "lon": 12.153, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products", "biologics/mAbs"], "currency": "EUR", "investment": 150000000, "investment_display": "EUR 150M+", "jobs": null, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Prefilled syringe and autoinjector line for biosimilars and biologics.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Lifecycle and line expansion support."}, {"area": "MES implementation and integration", "strength": "Weak", "reason": "Device assembly/packaging integration."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerztezeitung.de/Wirtschaft/Sandoz-ruestet-sich-fuer-den-weltweiten-Wettbewerb-248042.html", "publisher": "Aerzte Zeitung", "date": "Unverified", "confidence": "Low"}], "notes": "Opening date not confirmed.", "id": "sandoz-sandoz-schaftenau-bioinject-prefilled-syringe-plant", "country": "Austria", "eur": 150000000}, {"account": "sandoz", "site_name": "Sandoz / Hexal Holzkirchen BioTD laboratory", "city": "Holzkirchen", "state": "DE-BY", "lat": 47.878, "lon": 11.699, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs"], "currency": "EUR", "investment": 25000000, "investment_display": "EUR 25M", "jobs": null, "status": "operational", "expected_start": "Q4 2023", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Biopharma technical development lab (biosimilars) at Hexal's Holzkirchen HQ. Hexal is part of Sandoz.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Lab systems support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmaceutical-tech.com/projects/sandoz-plans-to-invest-25-million-to-expand-its-biopharma-technical-development-capabilities-in-holzkirchen-germany", "publisher": "Pharmaceutical Technology", "date": "2022", "confidence": "Medium"}], "notes": "", "id": "sandoz-sandoz-hexal-holzkirchen-biotd-laboratory", "country": "Germany", "eur": 25000000}, {"account": "novartis", "site_name": "Novartis Schweizerhalle siRNA manufacturing", "city": "Schweizerhalle (Muttenz)", "state": "CH-BL", "lat": 47.546, "lon": 7.69, "project_type": "BROWNFIELD", "modality": ["oligonucleotides/nucleic acids", "small molecule/API"], "currency": "USD", "investment": 80000000, "investment_display": "USD 80M (USD-denominated announcement)", "jobs": 80, "status": "announced", "expected_start": "Jobs by end 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Expansion of siRNA manufacturing for cardiovascular/renal/metabolic therapies, announced 25 Nov 2025; 80 new positions by end-2028.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "New siRNA production capacity needs control-system build."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "New GMP process steps need batch execution."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification of new capacity."}], "incumbent_vendors": "", "sources": [{"url": "https://www.novartis.com/ch-de/news/media-releases/novartis-passt-produktionsaktivitaeten-der-schweiz-und-investiert-innovative-herstelltechnologien", "publisher": "Novartis", "date": "2025-11-25", "confidence": "High"}, {"url": "https://www.europeanpharmaceuticalreview.com/news/novartis-adjusts-manufacturing-strategy-in-switzerland-to-secure-competitiveness/268209.article", "publisher": "European Pharmaceutical Review", "date": "2025-11", "confidence": "Medium"}], "notes": "Announcement in USD; subject to consultation process.", "id": "novartis-novartis-schweizerhalle-sirna-manufacturing", "country": "Switzerland", "eur": 68800000}, {"account": "novartis", "site_name": "Novartis Stein sterile dosage form production", "city": "Stein", "state": "CH-AG", "lat": 47.542, "lon": 7.946, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables"], "currency": "USD", "investment": 26000000, "investment_display": "USD 26M (USD-denominated)", "jobs": null, "status": "announced", "expected_start": "By end 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "USD 26M for sterile dosage forms while solid dosage and sterile packaging end by end-2027 (~550 jobs); more automation targeted.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Further automation of sterile lines."}, {"area": "Legacy system modernization and migration", "strength": "Moderate", "reason": "Transfers and line closures involve legacy system migration."}], "incumbent_vendors": "", "sources": [{"url": "https://www.novartis.com/ch-de/news/media-releases/novartis-passt-produktionsaktivitaeten-der-schweiz-und-investiert-innovative-herstelltechnologien", "publisher": "Novartis", "date": "2025-11-25", "confidence": "High"}, {"url": "https://www.moneycab.com/schweiz/novartis-baut-550-stellen-in-stein-ab/amp/", "publisher": "Moneycab", "date": "2025-11", "confidence": "Medium"}], "notes": "", "id": "novartis-novartis-stein-sterile-dosage-form-production", "country": "Switzerland", "eur": 22360000}, {"account": "novartis", "site_name": "Novartis Halle (Saale) radioligand therapy facility", "city": "Halle (Saale)", "state": "DE-ST", "lat": 51.482, "lon": 11.97, "project_type": "GREENFIELD", "modality": ["radiopharmaceuticals"], "currency": "EUR", "investment": 34700000, "investment_display": "EUR 34.7M", "jobs": null, "status": "under construction", "expected_start": "Completion Q4 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New radioligand therapy production site in Saxony-Anhalt, completion Q4 2027.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Automated radiopharma synthesis/dispensing lines."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Short-shelf-life batch release needs MES."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "GMP qualification."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmazeutische-zeitung.de/novartis-investiert-in-neuen-standort-160672/", "publisher": "Pharmazeutische Zeitung", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "novartis-novartis-halle-saale-radioligand-therapy-facility", "country": "Germany", "eur": 34700000}, {"account": "gsk", "site_name": "GSK Marburg vaccine production", "city": "Marburg", "state": "DE-HE", "lat": 50.81, "lon": 8.77, "project_type": "BROWNFIELD", "modality": ["mRNA/vaccines"], "currency": "EUR", "investment": 162000000, "investment_display": "EUR 162M (MenB) + EUR 10M (mumps) + EUR 13M (filling)", "jobs": null, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "MenB vaccine building (EUR 162M), mumps facility (EUR 10M) and EUR 13M filling/freeze-drying renewal; announcement years not confirmed (likely pre-2024).", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Mature site."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerztezeitung.de/Wirtschaft/GlaxoSmithKline-baut-Marburger-Werk-aus-304215.html", "publisher": "Aerzte Zeitung", "date": "Unverified", "confidence": "Low"}, {"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/gsk-meningokokken-in-marburg/", "publisher": "apotheke adhoc", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "gsk-gsk-marburg-vaccine-production", "country": "Germany", "eur": 162000000}, {"account": "gsk", "site_name": "GSK Dresden vaccine plant (closing)", "city": "Dresden", "state": "DE-SN", "lat": 51.05, "lon": 13.74, "project_type": "BROWNFIELD", "modality": ["mRNA/vaccines"], "currency": "EUR", "investment": null, "investment_display": "Not applicable (closure by 2028, ~640 jobs)", "jobs": null, "status": "operational", "expected_start": "Closure by 2028", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Influenza/hepatitis vaccine plant to close by 2028.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://borncity.com/news/grippeimpfstoff-krise-gsk-schliesst-dresdner-werk-bis-2028/", "publisher": "Born City", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/gsk-schliesst-impfstoffwerk-in-dresden/print.html", "publisher": "apotheke adhoc", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "gsk-gsk-dresden-vaccine-plant-closing", "country": "Germany", "eur": null}, {"account": "bbraun", "site_name": "B. Braun Sempach N.I.C.O. disinfectant plant", "city": "Sempach", "state": "CH-LU", "lat": 47.133, "lon": 8.196, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "CHF", "investment": 70000000, "investment_display": "CHF 70M", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": false, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New factory doubling disinfectant production capacity at B. Braun's disinfection competence centre.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Process automation for liquid production."}, {"area": "MES implementation and integration", "strength": "Weak", "reason": "Batch tracking/serialisation."}], "incumbent_vendors": "", "sources": [{"url": "https://lucerne-business.com/en/news/b-braun-expands-production-in-sempach-2981", "publisher": "Lucerne Business", "date": "Unverified", "confidence": "Medium"}], "notes": "Date not confirmed.", "id": "bbraun-b-braun-sempach-n-i-c-o-disinfectant-plant", "country": "Switzerland", "eur": 74900000}, {"account": "bbraun", "site_name": "B. Braun Melsungen infusion article production", "city": "Melsungen", "state": "DE-HE", "lat": 51.13, "lon": 9.55, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products"], "currency": "EUR", "investment": 150000000, "investment_display": "EUR ~150M", "jobs": null, "status": "operational", "expected_start": "Opened (date unverified)", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "New production facility for infusion articles, opened by the Hessian state premier.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Post-start-up support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.hessenschau.de/wirtschaft/150-millionen-investition-b-braun-eroeffnet-neues-werk-in-melsungen-v1,fertigungsstandort-b-braun-100.html", "publisher": "hessenschau", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "bbraun-b-braun-melsungen-infusion-article-production", "country": "Germany", "eur": 150000000}, {"account": "bbraun", "site_name": "B. Braun Melsungen dialysis/pump plant expansion", "city": "Melsungen", "state": "DE-HE", "lat": 51.131, "lon": 9.551, "project_type": "BROWNFIELD", "modality": ["devices/combination products"], "currency": "EUR", "investment": 60000000, "investment_display": "EUR ~60M", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Expansion for dialysis machines and infusion pumps.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Weak", "reason": "Device assembly automation (device scope)."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerzteblatt.de/news/b-braun-investiert-60-millionen-euro-in-werkserweiterung-d7992e5b-ce9b-4ed0-8c44-45cb8042090e", "publisher": "Aerzteblatt", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "bbraun-b-braun-melsungen-dialysis-pump-plant-expansion", "country": "Germany", "eur": 60000000}, {"account": "bachem", "site_name": "Bachem Bubendorf Building K (peptides/oligonucleotides)", "city": "Bubendorf", "state": "CH-BL", "lat": 47.44, "lon": 7.73, "project_type": "BROWNFIELD", "modality": ["GLP-1/peptides", "oligonucleotides/nucleic acids"], "currency": "CHF", "investment": null, "investment_display": "Part of CHF 350-400M annual capex (CHF 148.4M in H1 2026)", "jobs": null, "status": "commissioning", "expected_start": "Commercial ramp-up 2026", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Large-scale peptide/oligonucleotide plant at HQ; ramp-up through 2026 with start-up costs hitting H1 margin.", "orise_fit": [{"area": "MES implementation and integration", "strength": "Strong", "reason": "Ramp of a new large-scale plant needs batch/eBR and data integration."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Commissioning, CSV and data integrity during ramp."}, {"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Upgrades of process control during ramp-up."}], "incumbent_vendors": "", "sources": [{"url": "https://www.cash.ch/news/top-news/bachem-steigert-umsatz-und-gewinn-umsatzmilliarde-2026-wird-nicht-erwahnt-917794", "publisher": "cash.ch", "date": "2026", "confidence": "Medium"}, {"url": "https://www.boerse-express.com/news/articles/bachem-aktie-milliardenmarkt-peptid-fertigung-882685", "publisher": "boerse-express", "date": "2026", "confidence": "Medium"}], "notes": "", "id": "bachem-bachem-bubendorf-building-k-peptides-oligonucleotides", "country": "Switzerland", "eur": null}, {"account": "bachem", "site_name": "Bachem Sisslerfeld greenfield peptide plant", "city": "Sisslerfeld (Eiken)", "state": "CH-AG", "lat": 47.539, "lon": 7.984, "project_type": "GREENFIELD", "modality": ["GLP-1/peptides"], "currency": "CHF", "investment": 500000000, "investment_display": "CHF 500M+", "jobs": null, "status": "announced", "expected_start": "Production from 2030", "in_window": false, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Greenfield peptide manufacturing site; production planned from 2030; 22 Jul 2026 coverage reports a large-scale plant plan.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Design-stage selection of automation in 2026-28."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Greenfield MES architecture."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Data/OT backbone."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification 2029-30."}], "incumbent_vendors": "", "sources": [{"url": "https://chemanager-online.com/de/news/bachem-plant-den-bau-einer-grossmengen-produktionsanlage", "publisher": "CHEManager", "date": "2026-07-22", "confidence": "Medium"}, {"url": "https://www.s-ge.com/invest/de/artikel/news/bachem-investiert-neue-grossanlage-im-sisslerfeld", "publisher": "S-GE", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "bachem-bachem-sisslerfeld-greenfield-peptide-plant", "country": "Switzerland", "eur": 535000000}, {"account": "biontech", "site_name": "BioNTech Marburg manufacturing (closing)", "city": "Marburg", "state": "DE-HE", "lat": 50.8, "lon": 8.75, "project_type": "BROWNFIELD", "modality": ["mRNA/vaccines"], "currency": "EUR", "investment": null, "investment_display": "Not applicable (closure early 2028)", "jobs": null, "status": "operational", "expected_start": "Closure early 2028", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Closing in a staggered programme after no buyer was found.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmamanufacturing.com/facilities/article/55408341/biontech-to-shutter-three-german-manufacturing-sites-after-failing-to-secure-buyers", "publisher": "PharmaManufacturing", "date": "2026-05", "confidence": "Medium"}, {"url": "https://ms-aktuell.de/welt/biontech-werke-schliessung-28-09-2026/", "publisher": "MS aktuell", "date": "2026-09-28", "confidence": "Medium"}], "notes": "", "id": "biontech-biontech-marburg-manufacturing-closing", "country": "Germany", "eur": null}, {"account": "biontech", "site_name": "BioNTech Idar-Oberstein manufacturing (closing)", "city": "Idar-Oberstein", "state": "DE-RP", "lat": 49.714, "lon": 7.309, "project_type": "BROWNFIELD", "modality": ["mRNA/vaccines"], "currency": "EUR", "investment": null, "investment_display": "Not applicable (closure end 2028)", "jobs": null, "status": "operational", "expected_start": "Closure end 2028", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Closing end-2028; Tuebingen (ex-CureVac) closes end-2027.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://chemanager-online.com/de/news/igbce-kritisiert-stellenabbau-bei-biontech", "publisher": "CHEManager", "date": "2026-05-07", "confidence": "Medium"}], "notes": "", "id": "biontech-biontech-idar-oberstein-manufacturing-closing", "country": "Germany", "eur": null}, {"account": "msd", "site_name": "MSD Lucerne HQ and Schachen R&D", "city": "Lucerne", "state": "CH-LU", "lat": 47.041, "lon": 8.31, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "CHF", "investment": 60000000, "investment_display": "CHF 60M (HQ); >CHF 230M over 20 years (R&D)", "jobs": 750, "status": "operational", "expected_start": "Opened 22 May (year unverified)", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "'One Roof' headquarters for 750 staff and the Schachen R&D/biotech centre; not manufacturing.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.s-ge.com/invest/en/articles/news/msd-opens-new-swiss-headquarters", "publisher": "S-GE", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.lucerne-business.com/en/news/msd-looks-back-on-50-years-of-its-schachen-site-18418", "publisher": "Lucerne Business", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "msd-msd-lucerne-hq-and-schachen-r-d", "country": "Switzerland", "eur": 64200000}, {"account": "sanofi", "site_name": "Sanofi Frankfurt-Hoechst insulin plant", "city": "Frankfurt (Hoechst)", "state": "DE-HE", "lat": 50.097, "lon": 8.542, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs", "fill-finish/sterile injectables"], "currency": "EUR", "investment": 1300000000, "investment_display": "EUR ~1.3B (EU state aid ~EUR 400M approved Sept 2026)", "jobs": null, "status": "announced", "expected_start": "Completion ~2029", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New 36,000 m2 human-insulin production plant at the Industriepark Hoechst BioCampus; only human-insulin plant in the EEA; at least 1.1 t/yr by 2042; several hundred jobs.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Greenfield-type process automation for a biologic drug substance/product plant."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Highly regulated; MES/eBR from day one."}, {"area": "Digitalization / Industry 4.0", "strength": "Strong", "reason": "'Highest automation standards' stated."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification phase before 2029."}], "incumbent_vendors": "", "sources": [{"url": "https://www.frankfurt-main.ihk.de/presse/pressemeldungen2026/gruenes-licht-fuer-neue-sanofi-insulinproduktion-7168032", "publisher": "IHK Frankfurt", "date": "2026-09", "confidence": "High"}, {"url": "https://www.hessenschau.de/wirtschaft/insulin-aus-frankfurt-eu-genehmigt-400-millionen-euro-fuer-sanofi-v1,sanofi-insulin-frankfurt-102.html", "publisher": "hessenschau", "date": "2026-09", "confidence": "Medium"}, {"url": "https://www.fiercepharma.com/manufacturing/sanofi-ends-speculation-confirms-it-will-spend-eu13b-build-new-insulin-plant-germany", "publisher": "Fierce Pharma", "date": "Unverified", "confidence": "Medium"}], "notes": "One source states completion by end-2032; most say ~2029.", "id": "sanofi-sanofi-frankfurt-hoechst-insulin-plant", "country": "Germany", "eur": 1300000000}, {"account": "vetter", "site_name": "Vetter Saarlouis commercial fill-finish site", "city": "Saarlouis", "state": "DE-SL", "lat": 49.314, "lon": 6.751, "project_type": "GREENFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products"], "currency": "EUR", "investment": 480000000, "investment_display": "EUR ~480-500M (first phase)", "jobs": 1500, "status": "under construction", "expected_start": "Operational 2031", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New site on the former Ford plant: 50,000 m2 production building with three aseptic cleanrooms (two PFS, one vial) initially; spade turned 13 May 2026; EUR 47M EU state aid approved Dec 2025.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Greenfield aseptic fill-finish: building automation, utilities and line control."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Customer-facing commercial supply needs MES/eBR."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Full qualification program."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Smart-factory design."}], "incumbent_vendors": "", "sources": [{"url": "https://www.vetter-pharma.com/media/content/Downloads/Presse/2026/260513_Vetter_startet_Bau_des_neuen_Produktionsstandorts_in_Saarlouis.pdf", "publisher": "Vetter", "date": "2026-05-13", "confidence": "High"}, {"url": "https://www.bionity.com/de/news/1188700/vetter-investiert-knapp-500-millionen-euro-in-neuen-produktionsstandort.html", "publisher": "Bionity", "date": "2026", "confidence": "Medium"}, {"url": "https://www.onvista.de/news/2026/05-13-pharmafirma-vetter-beginnt-bau-von-werk-in-saarlouis-0-10-26511786", "publisher": "onvista", "date": "2026-05-13", "confidence": "Medium"}], "notes": "", "id": "vetter-vetter-saarlouis-commercial-fill-finish-site", "country": "Germany", "eur": 480000000}, {"account": "vetter", "site_name": "Vetter Ravensburg / Langenargen capacity expansion", "city": "Ravensburg", "state": "DE-BW", "lat": 47.782, "lon": 9.612, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products"], "currency": "EUR", "investment": null, "investment_display": "Part of ~EUR 1.5B ongoing programme", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Ongoing capacity expansions at Vetter's home sites alongside Saarlouis; 2024 press release mentions Germany and US capacity growth.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Line and utility expansions."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Integration into existing MES."}, {"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Ongoing support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.vetter-pharma.com/media/content/Downloads/Presse/2024/240606_Pressemitteilung_Vetter_baut_Kapazit%C3%A4ten_in_Deutschland_und_den_USA_aus.pdf", "publisher": "Vetter", "date": "2024-06-06", "confidence": "High"}, {"url": "https://www.dcatvci.org/supplier-news/vetter-outlines-major-expansion-plan-for-commercial-clinical-fill-finish/", "publisher": "DCAT", "date": "2024", "confidence": "Medium"}], "notes": "", "id": "vetter-vetter-ravensburg-langenargen-capacity-expansion", "country": "Germany", "eur": null}, {"account": "fresenius", "site_name": "Fresenius Kabi Graz biosimilar/sterile expansion", "city": "Graz", "state": "AT-ST", "lat": 47.0707, "lon": 15.4395, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "biologics/mAbs"], "currency": "EUR", "investment": 28000000, "investment_display": "EUR ~28M to 2026 (+ >EUR 60M prior)", "jobs": null, "status": "under construction", "expected_start": "Through 2026", "in_window": true, "opportunity_status": "Monitor", "technical_scope": "Strategic expansion at Graz/Werndorf for biopharma drug substances and 160M+ filled units a year.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Incremental site investments."}], "incumbent_vendors": "", "sources": [{"url": "https://investinaustria.at/en/news-events-press/fresenius-kabi-invests-eur-28-million-in-its-facility-in-graz", "publisher": "Invest in Austria", "date": "2023-09", "confidence": "Medium"}, {"url": "https://fresenius-kabi.com/en-at/news/fresenius-kabi-continues-to-expand-its-operations-in-graz", "publisher": "Fresenius Kabi", "date": "Unverified", "confidence": "High"}], "notes": "", "id": "fresenius-fresenius-kabi-graz-biosimilar-sterile-expansion", "country": "Austria", "eur": 28000000}, {"account": "cordenpharma", "site_name": "CordenPharma Muttenz greenfield peptide plant", "city": "Muttenz", "state": "CH-BL", "lat": 47.523, "lon": 7.643, "project_type": "GREENFIELD", "modality": ["GLP-1/peptides"], "currency": "EUR", "investment": 500000000, "investment_display": "EUR ~500M (CHF-region project)", "jobs": 300, "status": "under construction", "expected_start": "Commercial operation H1 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New peptide plant at Getec Park near Basel with small-, medium- and large-scale lines (GLP-1 and non-GLP-1); construction/qualification 2025-2027; part of a EUR 1B peptide programme.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Construction and qualification across 2025-27."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Multi-line peptide production."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Qualification before 2028 start."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Site digital backbone."}], "incumbent_vendors": "", "sources": [{"url": "https://www.fiercepharma.com/manufacturing/cordenpharma-build-eu500m-swiss-peptide-plant-generate-300-new-jobs", "publisher": "Fierce Pharma", "date": "2024", "confidence": "Medium"}, {"url": "https://www.pharmamanufacturing.com/all-articles/article/55284445/cordenpharma-to-boost-peptide-production-capacity-with-1-billion-investment", "publisher": "PharmaManufacturing", "date": "2024", "confidence": "Medium"}], "notes": "Announced in EUR.", "id": "cordenpharma-cordenpharma-muttenz-greenfield-peptide-plant", "country": "Switzerland", "eur": 500000000}, {"account": "ucb", "site_name": "UCB Bulle biologics production unit", "city": "Bulle", "state": "CH-FR", "lat": 46.619, "lon": 7.057, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs"], "currency": "CHF", "investment": 100000000, "investment_display": "CHF 100M+ (+ CHF 15M QC lab, CHF 10M cold unit)", "jobs": 80, "status": "announced", "expected_start": "Operational ~2029; full 2030", "in_window": false, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New production unit for a key biologics compound relocated from Belgium; QC lab (CHF 15M) expected mid-2026.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "New unit control in 2027-28."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification and tech transfer."}, {"area": "MES implementation and integration", "strength": "Weak", "reason": "Integration into Bulle MES."}], "incumbent_vendors": "", "sources": [{"url": "https://ggba.swiss/en/ucb-invests-over-chf-100-million-to-expand-its-biopharmaceutical-site-in-bulle/", "publisher": "GGBA", "date": "2025", "confidence": "Medium"}, {"url": "https://bioalps.org/ucb-farchim-invests-over-chf-100-million-and-creates-80-new-jobs-in-bulle/", "publisher": "BioAlps", "date": "2025", "confidence": "Medium"}], "notes": "", "id": "ucb-ucb-bulle-biologics-production-unit", "country": "Switzerland", "eur": 107000000}, {"account": "sartorius", "site_name": "Sartorius Freiburg cell and gene therapy competence centre", "city": "Freiburg", "state": "DE-BW", "lat": 47.999, "lon": 7.842, "project_type": "BROWNFIELD", "modality": ["cell & gene therapy"], "currency": "EUR", "investment": 140000000, "investment_display": "EUR 140M+", "jobs": null, "status": "operational", "expected_start": "Opened 2026", "in_window": true, "opportunity_status": "Monitor", "technical_scope": "Development and production of quality-critical materials for cell and gene therapy; opened.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Post-opening support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.boerse-online.de/dpa-afx/eqs-news-sartorius-eroeffnet-neues-kompetenzzentrum-fuer-zell-und-gentherapie-komponenten-in-freiburg-deutsch-526541.html", "publisher": "EQS/boerse-online", "date": "2026", "confidence": "Medium"}], "notes": "", "id": "sartorius-sartorius-freiburg-cell-and-gene-therapy-competence-centre", "country": "Germany", "eur": 140000000}, {"account": "sartorius", "site_name": "Sartorius Goettingen membrane building", "city": "Goettingen", "state": "DE-NI", "lat": 51.536, "lon": 9.926, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 25000000, "investment_display": "EUR ~25M", "jobs": null, "status": "operational", "expected_start": "Inaugurated (date unverified)", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "6,000 m2 building for polyethersulfone membrane production, labs and offices for 120+ staff.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Support of new lines."}], "incumbent_vendors": "", "sources": [{"url": "https://www.industrial-production.de/wirtschaft---unternehmen/sartorius-weiht-neues-membrangebaeude-ein-490157.htm", "publisher": "industrial-production.de", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "sartorius-sartorius-goettingen-membrane-building", "country": "Germany", "eur": 25000000}, {"account": "rentschler", "site_name": "Rentschler Laupheim buffer media station", "city": "Laupheim", "state": "DE-BW", "lat": 48.225, "lon": 9.878, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs"], "currency": "EUR", "investment": null, "investment_display": "'High double-digit million' EUR", "jobs": null, "status": "under construction", "expected_start": "Operational 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Four-storey, 34,000 m2 (per source) buffer/media preparation building; construction from spring 2025; operational 2028; company's largest single investment in Germany.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Buffer prep automation and utilities."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Integration with upstream/downstream MES."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification before 2028."}], "incumbent_vendors": "", "sources": [{"url": "https://drug-dev.com/rentschler-biopharma-announces-largest-single-investment-at-its-headquarters-in-germany/", "publisher": "Drug Development", "date": "2024-10", "confidence": "Medium"}, {"url": "https://www.stuttgarter-zeitung.de/wirtschaft/biopharmahersteller-rentschler-steht-vor-groesster-investition-im-inland-79024511.html", "publisher": "Stuttgarter Zeitung", "date": "2024", "confidence": "Medium"}], "notes": "The 34,000 m2 figure in the source seems large for a buffer building: treat as unverified.", "id": "rentschler-rentschler-laupheim-buffer-media-station", "country": "Germany", "eur": null}, {"account": "lilly", "site_name": "Lilly Alzey injectable and device plant", "city": "Alzey", "state": "DE-RP", "lat": 49.748, "lon": 8.113, "project_type": "GREENFIELD", "modality": ["fill-finish/sterile injectables", "GLP-1/peptides", "devices/combination products"], "currency": "EUR", "investment": 1150000000, "investment_display": "EUR ~1.15B implied (original ~EUR 2.3B cut by about half in 2026)", "jobs": 500, "status": "under construction", "expected_start": "Plant start end-2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Greenfield Mounjaro/injectable plant 30 km south of Mainz. Original EUR 2.3B / 1,000 jobs; 2026 coverage says the remaining investment was halved and jobs reduced to ~500; construction has begun and start-up remains end-2027.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Greenfield plant approaching 2027 start-up."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Lilly global MES standard likely; local integration."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification in 2027."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Site OT/IT backbone."}], "incumbent_vendors": "", "sources": [{"url": "https://www.boerse-online.de/dpa-afx/roundup-pharmariese-eli-lilly-baut-werk-in-alzey-boomgeschaeft-abnehmspritze-330367.html", "publisher": "dpa-AFX", "date": "Unverified", "confidence": "Medium"}, {"url": "https://goldesel.de/aktien/news/eli-lilly-mit-q2-boost-und-alzey-schnitt-umsatzziel-8587-mrd-werkstart-bleibt-2027", "publisher": "goldesel.de", "date": "2026-08", "confidence": "Low"}, {"url": "https://www.boerse-express.com/news/articles/eli-lilly-kuerzt-deutschland-investition-axsome-loest-patentstreit-biotech-im-umbruch-914097", "publisher": "boerse-express", "date": "2026", "confidence": "Low"}], "notes": "EUR 1.15B is an inference (half of EUR 2.3B); confirm with Lilly.", "id": "lilly-lilly-alzey-injectable-and-device-plant", "country": "Germany", "eur": 1150000000}, {"account": "plbio", "site_name": "PL BioScience Aachen headquarters expansion", "city": "Aachen", "state": "DE-NW", "lat": 50.775, "lon": 6.084, "project_type": "BROWNFIELD", "modality": ["cell & gene therapy", "other (R&D / consumer)"], "currency": "EUR", "investment": null, "investment_display": "Amount not disclosed", "jobs": null, "status": "announced", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Expanding HQ to >1,200 m2 with GMP production for up to 20,000 L/yr of human platelet lysate; second GMP facility.", "orise_fit": [{"area": "MES implementation and integration", "strength": "Weak", "reason": "Small GMP production."}, {"area": "Validation / CSV / data integrity", "strength": "Weak", "reason": "GMP validation."}], "incumbent_vendors": "", "sources": [{"url": "https://www.bionity.com/de/news/1186842/pl-bioscience-erweitert-deutschen-standort-am-firmensitz-in-aachen.html", "publisher": "Bionity", "date": "Unverified", "confidence": "Medium"}, {"url": "https://pharmamanufacturing.com/industry-news/news/55307197/pl-bioscience-to-expand-headquarters-and-double-gmp-grade-hpl-output", "publisher": "PharmaManufacturing", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "plbio-pl-bioscience-aachen-headquarters-expansion", "country": "Germany", "eur": null}, {"account": "beiersdorf", "site_name": "Beiersdorf Hamburg Innovation Centre", "city": "Hamburg", "state": "DE-HH", "lat": 53.59, "lon": 9.965, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 139000000, "investment_display": "EUR 139M", "jobs": null, "status": "under construction", "expected_start": "Completion 2028", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "R&D innovation centre (~14,000 m2) at HQ; foundation stone June 2025.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.beiersdorf.com/newsroom/press-information/all-press-releases/2025/06/20-beiersdorf-lays-foundation-stone-for-its-innovation-center-in-hamburg", "publisher": "Beiersdorf", "date": "2025-06-20", "confidence": "High"}], "notes": "", "id": "beiersdorf-beiersdorf-hamburg-innovation-centre", "country": "Germany", "eur": 139000000}, {"account": "biospring", "site_name": "BioSpring Offenbach large-scale nucleic acid API site", "city": "Offenbach", "state": "DE-HE", "lat": 50.106, "lon": 8.76, "project_type": "GREENFIELD", "modality": ["oligonucleotides/nucleic acids"], "currency": "EUR", "investment": null, "investment_display": "'Several hundred million euros' (not stated)", "jobs": 200, "status": "under construction", "expected_start": "Construction to end 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Large-scale oligonucleotide/nucleic-acid API plant on an innovation campus in Offenbach, tonne-scale, ~200 jobs; construction to end of 2027.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "New GMP plant in construction through 2027."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "Greenfield MES."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Qualification 2027-28."}], "incumbent_vendors": "", "sources": [{"url": "https://www.pharmamanufacturing.com/industry-news/news/55301809/biospring-to-build-large-scale-nucleic-acid-api-site-in-germany", "publisher": "PharmaManufacturing", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.bionity.com/de/news/1174484/biospring-errichtet-hightech-wirkstoffproduktion-auf-innovationscampus.html", "publisher": "Bionity", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "biospring-biospring-offenbach-large-scale-nucleic-acid-api-site", "country": "Germany", "eur": null}, {"account": "biospring", "site_name": "BioSpring Frankfurt-Fechenheim gRNA/mRNA expansion", "city": "Frankfurt (Fechenheim)", "state": "DE-HE", "lat": 50.123, "lon": 8.75, "project_type": "BROWNFIELD", "modality": ["oligonucleotides/nucleic acids", "mRNA/vaccines"], "currency": "EUR", "investment": null, "investment_display": "Double-digit EUR millions", "jobs": null, "status": "operational", "expected_start": "2024", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "New cGMP capacity for guide RNA and mRNA.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Support of new capacity."}], "incumbent_vendors": "", "sources": [{"url": "https://chemanager-online.com/de/news/biospring-erweitert-cgmp-produktionskapazitaeten-fuer-guide-rna-und-mrna", "publisher": "CHEManager", "date": "2024-11-06", "confidence": "Medium"}], "notes": "", "id": "biospring-biospring-frankfurt-fechenheim-grna-mrna-expansion", "country": "Germany", "eur": null}, {"account": "ypsomed", "site_name": "Ypsomed Schwerin pen and autoinjector expansion", "city": "Schwerin", "state": "DE-MV", "lat": 53.6355, "lon": 11.401, "project_type": "BROWNFIELD", "modality": ["devices/combination products"], "currency": "EUR", "investment": 500000000, "investment_display": "EUR ~500M in two phases to end of decade", "jobs": 1000, "status": "under construction", "expected_start": "Phases to ~2030", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Fully automated high-bay warehouse done; two construction phases take capacity to 400-500M pens/year and staff above 1,000.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Fully automated assembly and warehouse."}, {"area": "MES implementation and integration", "strength": "Strong", "reason": "High-volume device traceability."}, {"area": "Digitalization / Industry 4.0", "strength": "Moderate", "reason": "Smart-factory data."}], "incumbent_vendors": "", "sources": [{"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/infusionssets-ypsomed-investiert-weiter-in-schwerin/print.html", "publisher": "apotheke adhoc", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.moneycab.com/?p=1652931", "publisher": "Moneycab", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "ypsomed-ypsomed-schwerin-pen-and-autoinjector-expansion", "country": "Germany", "eur": 500000000}, {"account": "ypsomed", "site_name": "Ypsomed Solothurn / Burgdorf production and tool shop", "city": "Solothurn", "state": "CH-SO", "lat": 47.2088, "lon": 7.5323, "project_type": "BROWNFIELD", "modality": ["devices/combination products"], "currency": "CHF", "investment": 200000000, "investment_display": "CHF ~200M (Solothurn) + CHF 21M (Burgdorf)", "jobs": null, "status": "under construction", "expected_start": "Unverified", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New production levels, tool shop and high-bay warehouse in Solothurn; lab/tool/offices in Burgdorf.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "Production-level automation."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Line traceability."}], "incumbent_vendors": "", "sources": [{"url": "https://kildare.luzernerzeitung.ch/solothurn/kanton-solothurn/ypsomed-meldet-rekordzahlen-in-solothurn-wird-weiter-investiert-ld.4171900", "publisher": "Solothurner Zeitung", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.ypsomed.com/en/news-insights/news/press-releases/news-reader-detail-page/ypsomed-opens-new-tool-manufacturing-facility-in-solothurn", "publisher": "Ypsomed", "date": "Unverified", "confidence": "High"}], "notes": "", "id": "ypsomed-ypsomed-solothurn-burgdorf-production-and-tool-shop", "country": "Switzerland", "eur": 214000000}, {"account": "biogen", "site_name": "Biogen Luterbach biologics plant", "city": "Luterbach", "state": "CH-SO", "lat": 47.2, "lon": 7.57, "project_type": "GREENFIELD", "modality": ["biologics/mAbs"], "currency": "CHF", "investment": 1500000000, "investment_display": "CHF ~1.5B", "jobs": 500, "status": "operational", "expected_start": "Operational since 2021", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Large-scale biologics plant (about 500 staff), triples Biogen's biologics capacity; no 2026 project located.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Mature site; lifecycle support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.greaterzuricharea.com/en/news/biogen-driving-solothurn-economy", "publisher": "Greater Zurich Area", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "biogen-biogen-luterbach-biologics-plant", "country": "Switzerland", "eur": 1605000000}, {"account": "richter", "site_name": "Richter Pharma VetViva Wels facility", "city": "Wels", "state": "AT-OO", "lat": 48.157, "lon": 14.021, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables"], "currency": "EUR", "investment": 35000000, "investment_display": "EUR 35M+", "jobs": 120, "status": "operational", "expected_start": "Opened 2025", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Veterinary pharma production opened in 2025; ~10M vials/yr.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.tips.at/nachrichten/wels/wirtschaft-politik/697519-35-millionen-euro-investiert-richter-pharma-startet-hochmoderne-produktionsanlage", "publisher": "Tips.at", "date": "2025", "confidence": "Medium"}], "notes": "", "id": "richter-richter-pharma-vetviva-wels-facility", "country": "Austria", "eur": 35000000}, {"account": "wackerbiotech", "site_name": "Wacker Halle mRNA competence centre", "city": "Halle (Saale)", "state": "DE-ST", "lat": 51.49, "lon": 11.97, "project_type": "BROWNFIELD", "modality": ["mRNA/vaccines", "oligonucleotides/nucleic acids"], "currency": "EUR", "investment": null, "investment_display": "Amount not found", "jobs": 200, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Four-storey mRNA active-ingredient building with four production lines; groundbreaking 2022.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Mature after start-up."}], "incumbent_vendors": "", "sources": [{"url": "https://www.chemie.de/news/73945/wacker-erweitert-produktion-fuer-biopharmazeutika-am-standort-jena.html", "publisher": "Chemie.de", "date": "Unverified", "confidence": "Low"}, {"url": "https://www.wacker.com/cms/media/de/documents/pressrelease-pdf/pm2022/32_spatenstich_mrna_kompetenzzentrum_halle_de.pdf", "publisher": "Wacker", "date": "2022", "confidence": "High"}], "notes": "", "id": "wackerbiotech-wacker-halle-mrna-competence-centre", "country": "Germany", "eur": null}, {"account": "rotop", "site_name": "Rotop radiopharmaceutical factories Dresden-Rossendorf", "city": "Dresden", "state": "DE-SN", "lat": 51.06, "lon": 13.95, "project_type": "BROWNFIELD", "modality": ["radiopharmaceuticals"], "currency": "EUR", "investment": null, "investment_display": "Double-digit EUR millions (~2x annual revenue)", "jobs": null, "status": "under construction", "expected_start": "Gradual start from 2028", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Two highly automated factories for diagnostic and therapeutic radiopharmaceuticals; groundbreaking by Dresden's mayor; Germany's largest radiopharma project under way.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "Highly automated GMP synthesis and dispensing."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Short-shelf-life release."}, {"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Qualification before 2028."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerzteblatt.de/news/rotop-weitet-produktion-von-radiopharmaka-aus-db218f5a-e0de-4164-854f-c039a3592ac5", "publisher": "Aerzteblatt", "date": "Unverified", "confidence": "Medium"}, {"url": "https://medienservice.sachsen.de/medien/news/1061401/download_pdf", "publisher": "Sachsen Medienservice", "date": "Unverified", "confidence": "High"}], "notes": "", "id": "rotop-rotop-radiopharmaceutical-factories-dresden-rossendorf", "country": "Germany", "eur": null}, {"account": "merz", "site_name": "Merz Dessau-Rosslau expansion and packaging line", "city": "Dessau-Rosslau", "state": "DE-ST", "lat": 51.83, "lon": 12.24, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products"], "currency": "EUR", "investment": 100000000, "investment_display": "EUR 100M+ by 2028", "jobs": 25, "status": "under construction", "expected_start": "Through 2028; packaging line opened June 2026", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "New packaging centre opened June 2026; >EUR 100M to Dessau by 2028; Reinheim production consolidates into Dessau.", "orise_fit": [{"area": "MES implementation and integration", "strength": "Moderate", "reason": "Packaging/serialization integration."}, {"area": "SCADA / process control and automation", "strength": "Moderate", "reason": "New lines in 2026-28."}, {"area": "Legacy system modernization and migration", "strength": "Moderate", "reason": "Reinheim transfer."}], "incumbent_vendors": "", "sources": [{"url": "https://www.invest-in-saxony-anhalt.com/press-dates/detail/merz-eroeffnet-neues-verpackungszentrum-in-dessau-und-staerkt-produktionsstandort", "publisher": "Invest in Saxony-Anhalt", "date": "2026-06", "confidence": "High"}, {"url": "https://www.volksstimme.de/sachsen-anhalt/tetesept-und-merz-spezial-dragees-produktion-nur-noch-in-dessau-pharmakonzern-merz-schliesst-werk-in-hessen-3851942", "publisher": "Volksstimme", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "merz-merz-dessau-rosslau-expansion-and-packaging-line", "country": "Germany", "eur": 100000000}, {"account": "ferring", "site_name": "Ferring Kiel production building", "city": "Kiel", "state": "DE-SH", "lat": 54.323, "lon": 10.136, "project_type": "GREENFIELD", "modality": ["fill-finish/sterile injectables", "biologics/mAbs"], "currency": "EUR", "investment": 40000000, "investment_display": "EUR ~40M (undated)", "jobs": null, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "15,000 m2 production building; date not confirmed.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/ferring-investiert-40-millionen-euro-in-kiel-neuer-produktionsstandort/", "publisher": "apotheke adhoc", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "ferring-ferring-kiel-production-building", "country": "Germany", "eur": 40000000}, {"account": "siegfried", "site_name": "Siegfried Hameln fill-finish expansion (PFS/cartridges)", "city": "Hameln", "state": "DE-NI", "lat": 52.104, "lon": 9.356, "project_type": "BROWNFIELD", "modality": ["fill-finish/sterile injectables", "devices/combination products"], "currency": "EUR", "investment": null, "investment_display": "Amount not found", "jobs": null, "status": "under construction", "expected_start": "First line revenue 2026; second 2027", "in_window": true, "opportunity_status": "OPEN OPPORTUNITY", "technical_scope": "Two new manufacturing lines for prefilled syringes and cartridges.", "orise_fit": [{"area": "SCADA / process control and automation", "strength": "Strong", "reason": "New fill lines in start-up window."}, {"area": "MES implementation and integration", "strength": "Moderate", "reason": "Line integration."}, {"area": "Validation / CSV / data integrity", "strength": "Strong", "reason": "Line qualification."}], "incumbent_vendors": "", "sources": [{"url": "https://siegfried.ch/?p=1567", "publisher": "Siegfried", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.finanzen.at/nachrichten/aktien/siegfried-on-track-to-deliver-profitable-growth-1035059761", "publisher": "finanzen.at", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "siegfried-siegfried-hameln-fill-finish-expansion-pfs-cartridges", "country": "Germany", "eur": null}, {"account": "siegfried", "site_name": "Siegfried Minden multi-purpose drug-substance plant", "city": "Minden", "state": "DE-NW", "lat": 52.289, "lon": 8.916, "project_type": "BROWNFIELD", "modality": ["small molecule/API"], "currency": "EUR", "investment": null, "investment_display": "Amount not found", "jobs": null, "status": "commissioning", "expected_start": "First revenue H2 2025", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "New large-scale multi-purpose DS plant, nearing completion per source.", "orise_fit": [{"area": "Lifecycle support and managed services", "strength": "Moderate", "reason": "Post-commissioning support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.finanzen.at/nachrichten/aktien/siegfried-on-track-to-deliver-profitable-growth-1035059761", "publisher": "finanzen.at", "date": "Unverified", "confidence": "Low"}], "notes": "", "id": "siegfried-siegfried-minden-multi-purpose-drug-substance-plant", "country": "Germany", "eur": null}, {"account": "siegfried", "site_name": "Siegfried Evionnaz R&D centre for drug substances", "city": "Evionnaz", "state": "CH-VS", "lat": 46.174, "lon": 7.026, "project_type": "BROWNFIELD", "modality": ["small molecule/API"], "currency": "CHF", "investment": 25000000, "investment_display": "CHF up to 25M", "jobs": 100, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Global R&D centre for drug substances, 100+ specialists.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.siegfried.ch/siegfried-begins-construction-of-a-new-global-rd-center-for-drug-substances-in-evionnaz/", "publisher": "Siegfried", "date": "2023-04-25", "confidence": "High"}], "notes": "", "id": "siegfried-siegfried-evionnaz-r-d-centre-for-drug-substances", "country": "Switzerland", "eur": 26750000}, {"account": "abbvie", "site_name": "AbbVie Ludwigshafen LUnA R&D building", "city": "Ludwigshafen", "state": "DE-RP", "lat": 49.477, "lon": 8.445, "project_type": "BROWNFIELD", "modality": ["other (R&D / consumer)"], "currency": "EUR", "investment": 150000000, "investment_display": "EUR ~150M", "jobs": null, "status": "under construction", "expected_start": "In operation 2027", "in_window": true, "opportunity_status": "Monitor", "technical_scope": "Six-floor lab building housing ~1/3 of 1,000+ researchers (oncology, neurology, immunology).", "orise_fit": [{"area": "Digitalization / Industry 4.0", "strength": "Weak", "reason": "Lab data/OT only."}], "incumbent_vendors": "", "sources": [{"url": "https://www.aerzteblatt.de/news/pharmakonzern-abbvie-investiert-in-ludwigshafen-eef9596c-f19f-42a5-8480-3b034726ab57", "publisher": "Aerzteblatt", "date": "Unverified", "confidence": "Medium"}, {"url": "https://www.dcatvci.org/top-industry-news/abbvie-to-build-160-m-rd-facility-in-germany/", "publisher": "DCAT", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "abbvie-abbvie-ludwigshafen-luna-r-d-building", "country": "Germany", "eur": 150000000}, {"account": "csl", "site_name": "CSL Behring Bern Protinus immunoglobulin plant", "city": "Bern", "state": "CH-BE", "lat": 46.948, "lon": 7.447, "project_type": "BROWNFIELD", "modality": ["plasma-derived"], "currency": "CHF", "investment": 300000000, "investment_display": "CHF 300M", "jobs": null, "status": "commissioning", "expected_start": "Process qualification of Module V (year unverified)", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Immunoglobulin production facility (Project Protinus), staged modules at Bern/Wankdorf.", "orise_fit": [{"area": "Validation / CSV / data integrity", "strength": "Moderate", "reason": "Module qualification."}, {"area": "Lifecycle support and managed services", "strength": "Weak", "reason": "Ongoing support."}], "incumbent_vendors": "", "sources": [{"url": "https://www.dcatvci.org/?p=3470", "publisher": "DCAT", "date": "Unverified", "confidence": "Low"}], "notes": "Dates not verified.", "id": "csl-csl-behring-bern-protinus-immunoglobulin-plant", "country": "Switzerland", "eur": 321000000}, {"account": "csl", "site_name": "CSL Behring Marburg filling and freeze-drying", "city": "Marburg", "state": "DE-HE", "lat": 50.81, "lon": 8.78, "project_type": "BROWNFIELD", "modality": ["plasma-derived", "fill-finish/sterile injectables"], "currency": "EUR", "investment": 31000000, "investment_display": "EUR 31M (+ EUR 20M hemophilia B)", "jobs": null, "status": "operational", "expected_start": "Unverified", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "Filling/freeze-drying facility raising capacity by 50-60%.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.aerztezeitung.de/Wirtschaft/CSL-Behring-staerkt-Standort-Marburg-mit-neuer-Anlage-341367.html", "publisher": "Aerzte Zeitung", "date": "Unverified", "confidence": "Low"}], "notes": "Dates not verified.", "id": "csl-csl-behring-marburg-filling-and-freeze-drying", "country": "Germany", "eur": 31000000}, {"account": "pfizer", "site_name": "Pfizer Freiburg high-containment plant", "city": "Freiburg", "state": "DE-BW", "lat": 47.999, "lon": 7.842, "project_type": "BROWNFIELD", "modality": ["oral solid dose"], "currency": "EUR", "investment": 300000000, "investment_display": "EUR ~300M", "jobs": null, "status": "operational", "expected_start": "Opened 2022", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "High-containment solids plant opened 2022; CEO said in June 2026 German investments under review.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.bionity.com/de/news/1176277/300-millionen-euro-investition-pfizer-eroeffnet-high-containment-werk-in-freiburg.html", "publisher": "Bionity", "date": "2022", "confidence": "Medium"}, {"url": "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101291258/pfizer-chef-sagt-merz-ab-und-stellt-investitionen-in-frage.html", "publisher": "t-online", "date": "2026-06", "confidence": "Medium"}], "notes": "", "id": "pfizer-pfizer-freiburg-high-containment-plant", "country": "Germany", "eur": 300000000}, {"account": "jnj", "site_name": "J&J Schaffhausen biotherapeutics production", "city": "Schaffhausen", "state": "CH-SH", "lat": 47.696, "lon": 8.635, "project_type": "BROWNFIELD", "modality": ["biologics/mAbs", "small molecule/API"], "currency": "CHF", "investment": null, "investment_display": ">CHF 1B over 25 years (not new)", "jobs": 2200, "status": "operational", "expected_start": "Ongoing", "in_window": false, "opportunity_status": "Monitor", "technical_scope": "J&J says Schaffhausen is being developed further to expand capacity; no specific new project amount located.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.jnj.com/CH/latest-news/90-jahre-innovation-in-schaffhausen-von-cilag-zu-johnson-johnson", "publisher": "J&J Switzerland", "date": "2026", "confidence": "Medium"}, {"url": "https://www.s-ge.com/en/article/news/johnson-johnson-erweitert-schaffhauser-biotech-anlage", "publisher": "S-GE", "date": "Unverified", "confidence": "Medium"}], "notes": "", "id": "jnj-j-j-schaffhausen-biotherapeutics-production", "country": "Switzerland", "eur": null}, {"account": "kbi", "site_name": "KBI Biopharma Geneva integrated facility", "city": "Plan-les-Ouates (Geneva)", "state": "CH-GE", "lat": 46.165, "lon": 6.117, "project_type": "GREENFIELD", "modality": ["biologics/mAbs"], "currency": "CHF", "investment": null, "investment_display": "Not disclosed", "jobs": null, "status": "operational", "expected_start": "Opened Oct 2022", "in_window": false, "opportunity_status": "Closed/late", "technical_scope": "Integrated mammalian CDMO site with Selexis; first FIH batch March 2023; no new investment found.", "orise_fit": [], "incumbent_vendors": "", "sources": [{"url": "https://www.businesswire.com/news/home/20230321005069/en/KBI-Biopharma-Inc.-Releases-Inaugural-FIH-Manufacturing-Batch-at-Integrated-Switzerland-Facility-Five-Months-After-Opening", "publisher": "Business Wire", "date": "2023-03-21", "confidence": "High"}], "notes": "", "id": "kbi-kbi-biopharma-geneva-integrated-facility", "country": "Switzerland", "eur": null}];
+const GAPS_HTML = "\n<h4 style=\"margin-top:0;\">How this dashboard was built</h4>\n<p>This is a fresh research pass (7 Oct 2026) on the listed accounts using web search across company newsrooms, wire services, regional business and trade press, and state/cantonal investment agencies, in German and English. Each record carries source links and a confidence rating (High = company or official source; Medium = reputable trade or regional press; Low = single or undated/indirect source). The layout, filters, fit-matrix logic and record structure follow the US dashboard.</p>\n<h4>Known limitations &mdash; please read</h4>\n<ul>\n<li><b>Search-synthesis only.</b> This build could not open primary documents (annual reports, press-release PDFs, Handelsregister, state-aid decisions). Facts come from search-result summaries and snippets, so most items are Medium/Low confidence and many <b>dates are &ldquo;Unverified&rdquo;</b>. Confirm before customer-facing use.</li>\n<li><b>Reference files not available.</b> The earlier DACH CSV/sources/territory plan, the earlier DACH dashboard, the corrected US CSV, the Orise logo PNG and the PowerPoint template were not in this build environment. Nothing from the earlier DACH research was reused; the header uses a text wordmark in the Orise colours instead of the logo file, and brand colours/fonts are taken from the US dashboard's CSS. Drop the logo into the header (inverted to white) when available.</li>\n<li><b>Currencies.</b> Amounts are shown in the announcement currency (EUR, CHF; two Novartis items are announced in USD). The KPI row shows EUR, CHF and USD totals separately. Only the map shading by &ldquo;Investment&rdquo; converts to euro-equivalents using <b>indicative planning rates of 1 CHF = 1.07 EUR and 1 USD = 0.86 EUR (set 7 Oct 2026, not live market rates)</b>; replace them in <code>dach_data.py</code> if needed.</li>\n<li><b>Totals are a floor.</b> 24 of 67 records have no disclosed amount; network programmes (e.g. Bayer &gt;EUR 1.4B, Roche CHF 1.2B Basel programme) are not split across sites. Several records bundle older projects (pre-2024) kept for footprint context and marked Monitor / Closed.</li>\n<li><b>Inferred figure.</b> Lilly Alzey (EUR ~1.15B) is inferred as half of the original EUR 2.3B after a reported 2026 cut; confirm directly.</li>\n<li><b>Greenfield vs brownfield.</b> Greenfield = new stand-alone site or plant on previously undeveloped land; brownfield = new building, line or expansion at an existing site.</li>\n<li><b>Opportunity status.</b> Open = in design, build, commissioning or ramp-up with a clear automation/MES need; Monitor = completed, R&amp;D/non-manufacturing or too early; Closed/late = completed before the window, or site closure. The &ldquo;2026-27 window&rdquo; flag marks projects with construction, commissioning or start-up in 2026-2027.</li>\n<li><b>Tiers are computed:</b> Tier 1 = at least one open opportunity in the 2026-27 window with a Strong fit; Tier 2 = other open opportunities or Monitor items with Moderate fit; Tier 3 = none identified. Fit ratings are analyst judgement from project scope, not confirmed buying intent. Incumbent vendors were not researched (empty).</li>\n<li><b>Coordinates</b> are city-level approximations.</li>\n<li><b>Map.</b> Equal-size tiles for 16 German L&auml;nder, 9 Austrian Bundesl&auml;nder and 26 Swiss cantons (Liechtenstein: no site).</li>\n</ul>\n<h4>Ownership and structure checks</h4>\n<ul>\n<li><b>Sandoz</b> is a standalone company since the Oct 2023 spin-off from Novartis; <b>Hexal</b> is a Sandoz subsidiary and its Holzkirchen record sits under Sandoz.</li>\n<li><b>MSD</b> is Merck &amp; Co. (USA) outside North America, including Intervet/Animal Health, and is unrelated to <b>Merck KGaA</b> (Darmstadt; EMD in the US).</li>\n<li><b>Catalent</b> is owned by Novo Holdings (deal closed Dec 2024). <b>BioNTech</b> absorbed CureVac. <b>Bode Chemie</b> belongs to PAUL HARTMANN AG (bought from Beiersdorf). <b>KBI Biopharma</b> is a JSR company. <b>Takeda</b> acquired Shire/Baxalta plasma assets (Vienna, Linz).</li>\n</ul>\n<h4>Accounts with no project found in this pass</h4>\n<ul><li>Abbott, Gruenenthal, Finzelberg, Terumo, Hexal (Sandoz Germany), Bode Chemie, Catalent, AstraZeneca</li></ul>\n<h4>Group C accounts skipped (no DACH manufacturing or R&amp;D site found)</h4>\n<ul><li><b>Novo Nordisk</b> &mdash; Only a commercial HQ in Mainz found; its European capex goes to Denmark/France.</li><li><b>Amgen</b> &mdash; European HQ in Zug/Rotkreuz is commercial; no production or R&D investment found.</li><li><b>Regeneron</b> &mdash; No DACH site found.</li><li><b>FUJIFILM Biotechnologies</b> &mdash; No DACH site found.</li><li><b>Curia</b> &mdash; No DACH site found.</li><li><b>National Resilience</b> &mdash; No DACH site found.</li><li><b>Amneal</b> &mdash; No DACH site found.</li><li><b>Avid Bioservices</b> &mdash; No DACH site found.</li></ul>\n<h4>Notable thin or negative signals</h4>\n<ul>\n<li><b>Boehringer Ingelheim</b> froze EUR 900M of German investments for 2027-30 (June 2026). <b>Eli Lilly</b> halved the Alzey plan. <b>Pfizer</b> says German investment is under review. <b>BioNTech</b> is closing three German sites; <b>GSK</b> is closing Dresden; <b>Novartis</b> is ending solid-dose production in Stein by end-2027. Expect German health-cost measures to keep affecting site decisions.</li>\n<li><b>Roche Kaiseraugst</b> CHF 500M+ headline and <b>Merck KGaA</b> Darmstadt QC building could not be confirmed beyond a single headline each.</li>\n<li><b>Takeda</b> Oranienburg, <b>Octapharma</b> Dessau/Springe, <b>Fresenius Kabi</b> Friedberg/Oberdorf, <b>CordenPharma</b> Plankstadt, <b>Abbott</b>, <b>Gr&uuml;nenthal</b> and <b>AstraZeneca</b> Wedel: no investment found &mdash; absence in this pass is not proof of absence.</li>\n</ul>\n";
+const AS_OF = "October 7, 2026";
+
+const OFFERING_AREAS = [
+  "SCADA / process control and automation",
+  "MES implementation and integration",
+  "Digitalization / Industry 4.0",
+  "Validation / CSV / data integrity",
+  "Legacy system modernization and migration",
+  "Lifecycle support and managed services"
+];
+const OFFERING_SHORT = {
+  "SCADA / process control and automation":"SCADA / Process Control",
+  "MES implementation and integration":"MES Implementation",
+  "Digitalization / Industry 4.0":"Digitalization / Ind. 4.0",
+  "Validation / CSV / data integrity":"Validation / CSV / DI",
+  "Legacy system modernization and migration":"Legacy Modernization",
+  "Lifecycle support and managed services":"Lifecycle Support"
+};
+
+const STATE_GRID = {"DE-SH": [0, 1], "DE-HH": [1, 1], "DE-MV": [2, 1], "DE-BB": [3, 1], "DE-BE": [4, 1], "DE-ST": [5, 1], "DE-SN": [6, 1], "DE-TH": [7, 1], "DE-NI": [8, 1], "DE-HB": [0, 2], "DE-NW": [1, 2], "DE-HE": [2, 2], "DE-RP": [3, 2], "DE-SL": [4, 2], "DE-BW": [5, 2], "DE-BY": [6, 2], "AT-V": [0, 4], "AT-T": [1, 4], "AT-S": [2, 4], "AT-OO": [3, 4], "AT-NO": [4, 4], "AT-W": [5, 4], "AT-B": [6, 4], "AT-ST": [7, 4], "AT-K": [8, 4], "CH-GE": [0, 6], "CH-VD": [1, 6], "CH-VS": [2, 6], "CH-FR": [3, 6], "CH-NE": [4, 6], "CH-JU": [5, 6], "CH-BE": [6, 6], "CH-SO": [7, 6], "CH-BL": [8, 6], "CH-BS": [0, 7], "CH-AG": [1, 7], "CH-LU": [2, 7], "CH-ZG": [3, 7], "CH-ZH": [4, 7], "CH-SZ": [5, 7], "CH-NW": [6, 7], "CH-OW": [7, 7], "CH-UR": [8, 7], "CH-TG": [0, 8], "CH-SH": [1, 8], "CH-SG": [2, 8], "CH-AR": [3, 8], "CH-AI": [4, 8], "CH-GL": [5, 8], "CH-GR": [6, 8], "CH-TI": [7, 8]};
+const CHF_EUR = 1.07, USD_EUR = 0.86;
+const STATE_NAMES = {"DE-SH": "Schleswig-Holstein", "DE-HH": "Hamburg", "DE-MV": "Mecklenburg-Vorpommern", "DE-BB": "Brandenburg", "DE-BE": "Berlin", "DE-ST": "Sachsen-Anhalt", "DE-SN": "Sachsen", "DE-TH": "Thueringen", "DE-NI": "Niedersachsen", "DE-HB": "Bremen", "DE-NW": "Nordrhein-Westfalen", "DE-HE": "Hessen", "DE-RP": "Rheinland-Pfalz", "DE-SL": "Saarland", "DE-BW": "Baden-Wuerttemberg", "DE-BY": "Bayern", "AT-V": "Vorarlberg", "AT-T": "Tirol", "AT-S": "Salzburg", "AT-OO": "Oberoesterreich", "AT-NO": "Niederoesterreich", "AT-W": "Wien", "AT-B": "Burgenland", "AT-ST": "Steiermark", "AT-K": "Kaernten", "CH-GE": "Genf", "CH-VD": "Waadt", "CH-VS": "Wallis", "CH-FR": "Freiburg", "CH-NE": "Neuenburg", "CH-JU": "Jura", "CH-BE": "Bern", "CH-SO": "Solothurn", "CH-BL": "Basel-Landschaft", "CH-BS": "Basel-Stadt", "CH-AG": "Aargau", "CH-LU": "Luzern", "CH-ZG": "Zug", "CH-ZH": "Zuerich", "CH-SZ": "Schwyz", "CH-NW": "Nidwalden", "CH-OW": "Obwalden", "CH-UR": "Uri", "CH-TG": "Thurgau", "CH-SH": "Schaffhausen", "CH-SG": "St. Gallen", "CH-AR": "Appenzell AR", "CH-AI": "Appenzell IR", "CH-GL": "Glarus", "CH-GR": "Graubuenden", "CH-TI": "Tessin"};
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let filters = { account:new Set(), project_type:new Set(), modality:new Set(), opportunity_status:new Set(), offering_area:new Set(), state:new Set(), country:new Set(), window:new Set() };
+let shadeMode = "sites";
+let tableSort = { key:"account", dir:1 };
+let matrixSort = { mode:"account" }; // "account" | "score"
+let tableSearch = "";
+let accountOpenState = {};
+
+const CUR_SYM = {EUR:"\u20ac", CHF:"CHF ", USD:"$"};
+const fmtAmt = (n,cur) => {
+  if(n===null||n===undefined||isNaN(n)) return "\u2014";
+  const p = CUR_SYM[cur]||"";
+  if(n>=1e9) return p+(n/1e9).toFixed(n%1e9===0?0:2).replace(/\.?0+$/,"")+"B";
+  if(n>=1e6) return p+(n/1e6).toFixed(n%1e6===0?0:1).replace(/\.0$/,"")+"M";
+  if(n>=1e3) return p+(n/1e3).toFixed(0)+"K";
+  return p+n;
+};
+const fmtMoney = s => (s.investment===null||s.investment===undefined) ? "n/d" : fmtAmt(s.investment, s.currency);
+const regName = c => STATE_NAMES[c] || c;
+const regShort = c => String(c).split("-")[1];
+const fmtUSD = n => {
+  if(n===null||n===undefined||isNaN(n)) return "—";
+  if(n>=1e9) return "$"+(n/1e9).toFixed(n%1e9===0?0:1)+"B";
+  if(n>=1e6) return "$"+(n/1e6).toFixed(n%1e6===0?0:0)+"M";
+  if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K";
+  return "$"+n;
+};
+const esc = s => (s===null||s===undefined) ? "" : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const accountById = id => ACCOUNTS.find(a=>a.id===id);
+const luminance = hex => { const c=hex.replace('#',''); const r=parseInt(c.substr(0,2),16)/255,g=parseInt(c.substr(2,2),16)/255,b=parseInt(c.substr(4,2),16)/255; const f=x=> x<=0.03928? x/12.92 : Math.pow((x+0.055)/1.055,2.4); return 0.2126*f(r)+0.7152*f(g)+0.0722*f(b); };
+const textColorFor = hex => luminance(hex) > 0.45 ? "#16232a" : "#ffffff";
+
+function siteMatchesFilters(s){
+  if(filters.account.size && !filters.account.has(s.account)) return false;
+  if(filters.project_type.size && !filters.project_type.has(s.project_type)) return false;
+  if(filters.modality.size && !(s.modality||[]).some(m=>filters.modality.has(m))) return false;
+  if(filters.opportunity_status.size && !filters.opportunity_status.has(s.opportunity_status)) return false;
+  if(filters.offering_area.size && !(s.orise_fit||[]).some(f=>filters.offering_area.has(f.area))) return false;
+  if(filters.state.size && !filters.state.has(s.state)) return false;
+  if(filters.country.size && !filters.country.has(s.country)) return false;
+  if(filters.window.size && !filters.window.has(s.in_window?'yes':'no')) return false;
+  return true;
+}
+function filteredSites(){ return SITES.filter(siteMatchesFilters); }
+
+/* ============================================================
+   INIT
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('asof-date').textContent = AS_OF;
+  document.getElementById('asof-date2').textContent = AS_OF;
+  buildFilterBar();
+  renderAll();
+  wireGlobalEvents();
+  document.getElementById('gaps-panel').innerHTML = GAPS_HTML;
+});
+
+function renderAll(){
+  renderKPIs();
+  renderMap();
+  renderFitMatrix();
+  renderAccounts();
+  renderTable();
+  document.getElementById('result-count').textContent = filteredSites().length + " of " + SITES.length + " records shown";
+}
+
+/* ============================================================
+   FILTER BAR (multi-select widgets)
+   ============================================================ */
+function buildFilterBar(){
+  const defs = {
+    account: ACCOUNTS.map(a=>({v:a.id,l:a.name})).sort((a,b)=>a.l.localeCompare(b.l)),
+    project_type: [{v:"GREENFIELD",l:"Greenfield"},{v:"BROWNFIELD",l:"Brownfield"}],
+    modality: [...new Set(SITES.flatMap(s=>s.modality||[]))].sort().map(v=>({v,l:v})),
+    opportunity_status: [{v:"OPEN OPPORTUNITY",l:"Open opportunity"},{v:"Monitor",l:"Monitor"},{v:"Closed/late",l:"Closed / late"}],
+    offering_area: OFFERING_AREAS.map(v=>({v,l:v})),
+    state: [...new Set(SITES.map(s=>s.state))].sort().map(v=>({v,l:(STATE_NAMES[v]||v)+" ("+v+")"})),
+    country: ["Germany","Austria","Switzerland"].map(v=>({v,l:v})),
+    window: [{v:"yes",l:"In 2026\u201327 window"},{v:"no",l:"Outside window"}]
+  };
+  document.querySelectorAll('.msel').forEach(mselEl=>{
+    const key = mselEl.dataset.filter;
+    const panel = mselEl.querySelector('.msel-panel');
+    const btn = mselEl.querySelector('.msel-btn');
+    const opts = defs[key] || [];
+    panel.innerHTML = '<div class="msel-actions"><button type="button" data-act="all">Select all</button><button type="button" data-act="none">Clear</button></div>' +
+      opts.map(o=>`<label><input type="checkbox" value="${esc(o.v)}"> ${esc(o.l)}</label>`).join('');
+    btn.addEventListener('click', e=>{
+      e.stopPropagation();
+      document.querySelectorAll('.msel.open').forEach(m=>{ if(m!==mselEl) m.classList.remove('open'); });
+      mselEl.classList.toggle('open');
+    });
+    panel.querySelectorAll('input[type=checkbox]').forEach(cb=>{
+      cb.addEventListener('change', ()=>{
+        if(cb.checked) filters[key].add(cb.value); else filters[key].delete(cb.value);
+        updateFilterButtonLabel(mselEl, key, btn);
+        renderAll();
+      });
+    });
+    panel.querySelector('[data-act="all"]').addEventListener('click',()=>{
+      panel.querySelectorAll('input[type=checkbox]').forEach(cb=>{cb.checked=true; filters[key].add(cb.value);});
+      updateFilterButtonLabel(mselEl,key,btn); renderAll();
+    });
+    panel.querySelector('[data-act="none"]').addEventListener('click',()=>{
+      panel.querySelectorAll('input[type=checkbox]').forEach(cb=>{cb.checked=false;});
+      filters[key].clear(); updateFilterButtonLabel(mselEl,key,btn); renderAll();
+    });
+  });
+  document.addEventListener('click', ()=> document.querySelectorAll('.msel.open').forEach(m=>m.classList.remove('open')) );
+  document.getElementById('btn-clear-filters').addEventListener('click', ()=>{
+    Object.keys(filters).forEach(k=>filters[k].clear());
+    document.querySelectorAll('.msel-panel input[type=checkbox]').forEach(cb=>cb.checked=false);
+    document.querySelectorAll('.msel-btn').forEach(b=>{ b.classList.remove('active-filter'); const c=b.querySelector('.chip-count'); if(c) c.remove(); });
+    renderAll();
+  });
+}
+function updateFilterButtonLabel(mselEl,key,btn){
+  const n = filters[key].size;
+  let existing = btn.querySelector('.chip-count');
+  if(n>0){
+    btn.classList.add('active-filter');
+    if(!existing){ existing=document.createElement('span'); existing.className='chip-count'; btn.appendChild(existing);}
+    existing.textContent = n;
+  } else {
+    btn.classList.remove('active-filter');
+    if(existing) existing.remove();
+  }
+}
+
+/* ============================================================
+   KPIs
+   ============================================================ */
+function renderKPIs(){
+  const all = SITES;
+  const tot = {EUR:0, CHF:0, USD:0};
+  all.forEach(s=>{ if(typeof s.investment==='number') tot[s.currency]+=s.investment; });
+  const siteCount = all.length;
+  const openOpps = all.filter(s=>s.opportunity_status==="OPEN OPPORTUNITY").length;
+  const winOpen = all.filter(s=>s.opportunity_status==="OPEN OPPORTUNITY" && s.in_window).length;
+  const gf = all.filter(s=>s.project_type==="GREENFIELD").length;
+  const bf = all.filter(s=>s.project_type==="BROWNFIELD").length;
+  const gfPct = siteCount? Math.round(gf/siteCount*100):0;
+  const bfPct = 100-gfPct;
+  const byC = c=>all.filter(s=>s.country===c).length;
+  const el = document.getElementById('kpi-row');
+  el.innerHTML = `
+    <div class="kpi-card" style="border-top-color:var(--teal);">
+      <div class="kpi-value">${fmtAmt(tot.EUR,'EUR')} <span style="font-size:15px;color:var(--ink-soft);">+</span> ${fmtAmt(tot.CHF,'CHF')}</div>
+      <div class="kpi-label">Announced Investment (EUR + CHF, not summed)</div>
+      <div class="kpi-sub">+ ${fmtAmt(tot.USD,'USD')} in USD-denominated items &middot; ${ACCOUNTS.length} accounts &middot; floor, many amounts undisclosed &middot; &asymp; ${fmtAmt(tot.EUR+tot.CHF*CHF_EUR+tot.USD*USD_EUR,'EUR')} at 1 CHF=${CHF_EUR} EUR, 1 USD=${USD_EUR} EUR (indicative)</div>
+    </div>
+    <div class="kpi-card" style="border-top-color:var(--blue);">
+      <div class="kpi-value">${siteCount}</div>
+      <div class="kpi-label">DACH Sites / Projects Tracked</div>
+      <div class="kpi-sub">DE ${byC('Germany')} &middot; AT ${byC('Austria')} &middot; CH ${byC('Switzerland')} &middot; ${[...new Set(all.map(s=>s.state))].length} of 51 regions</div>
+    </div>
+    <div class="kpi-card" style="border-top-color:var(--aubergine);">
+      <div class="kpi-value">${openOpps}</div>
+      <div class="kpi-label">Open Opportunities</div>
+      <div class="kpi-sub">${winOpen} with activity in the 2026&ndash;27 window</div>
+    </div>
+    <div class="kpi-card" style="border-top-color:var(--grey);">
+      <div class="kpi-value">${gf} / ${bf}</div>
+      <div class="kpi-label">Greenfield / Brownfield</div>
+      <div class="kpi-split"><span class="gf" style="width:${gfPct}%;"></span><span class="bf" style="width:${bfPct}%;"></span></div>
+      <div class="kpi-legend-row"><span><i style="background:var(--aubergine);"></i>Greenfield ${gfPct}%</span><span><i style="background:var(--blue);"></i>Brownfield ${bfPct}%</span></div>
+    </div>
+  `;
+}
+
+/* ============================================================
+   MAP
+   ============================================================ */
+function stateStats(stateCode, sites){
+  const inState = sites.filter(s=>s.state===stateCode);
+  const opps = inState.filter(s=>s.opportunity_status==="OPEN OPPORTUNITY").length;
+  const invest = inState.reduce((sum,s)=>sum+(typeof s.eur==='number'?s.eur:0),0);
+  return { sites:inState, count:inState.length, opps, invest };
+}
+function colorForValue(v, max){
+  if(!max || v<=0) return "#f2f5f5";
+  const t = Math.min(1, v/max);
+  return mixHex("#D0ECEC","#205369", t);
+}
+function mixHex(c1,c2,t){
+  const a=c1.replace('#',''), b=c2.replace('#','');
+  const ar=parseInt(a.substr(0,2),16), ag=parseInt(a.substr(2,2),16), ab=parseInt(a.substr(4,2),16);
+  const br=parseInt(b.substr(0,2),16), bg=parseInt(b.substr(2,2),16), bb=parseInt(b.substr(4,2),16);
+  const r=Math.round(ar+(br-ar)*t), g=Math.round(ag+(bg-ag)*t), bl=Math.round(ab+(bb-ab)*t);
+  return "#"+[r,g,bl].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+
+function renderMap(){
+  const sites = filteredSites();
+  const grid = document.getElementById('us-grid');
+  const maxCol = Math.max(...Object.values(STATE_GRID).map(p=>p[0]))+1;
+  const maxRow = Math.max(...Object.values(STATE_GRID).map(p=>p[1]))+1;
+  grid.style.gridTemplateRows = 'auto 1fr 1fr auto 1fr auto 1fr 1fr 1fr';
+
+  let maxVal = 1;
+  const statVals = {};
+  Object.keys(STATE_GRID).forEach(code=>{
+    const st = stateStats(code, sites);
+    const v = shadeMode==="sites"? st.count : shadeMode==="opps"? st.opps : st.invest;
+    statVals[code]=v;
+    if(v>maxVal) maxVal=v;
+  });
+
+  const lbl = (txt,row)=>`<div class="country-lbl" style="grid-column:1/-1;grid-row:${row};">${txt}</div>`;
+  grid.innerHTML = lbl('Germany &mdash; 16 L\u00e4nder',1)+lbl('Austria &mdash; 9 Bundesl\u00e4nder',4)+lbl('Switzerland &mdash; 26 cantons',6)+Object.entries(STATE_GRID).map(([code,[c,r]])=>{
+    const st = stateStats(code, sites);
+    const v = statVals[code];
+    const bg = colorForValue(v, maxVal);
+    const txtColor = textColorFor(bg);
+    const dots = st.sites.slice(0,6).map(s=>`<span class="dot ${s.project_type}" title="${esc(s.site_name)}"></span>`).join('');
+    const overflow = st.sites.length>6 ? `<span style="font-size:7px;color:${txtColor};font-weight:700;">+${st.sites.length-6}</span>` : '';
+    const emptyClass = st.count===0 ? 'empty' : '';
+    return `<div class="state-tile ${emptyClass}" style="grid-column:${c+1};grid-row:${r+1};background:${bg};" data-state="${code}" title="${esc(STATE_NAMES[code])}: ${st.count} site(s)">
+      ${st.opps>0?`<span class="opp-badge">${st.opps}</span>`:''}
+      <span class="st-code" style="color:${txtColor};">${regShort(code)}</span>
+      <span class="st-count" style="color:${txtColor};">${st.count||''}</span>
+      <span class="dotwrap">${dots}${overflow}</span>
+    </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.state-tile').forEach(tile=>{
+    tile.addEventListener('click', ()=> openStatePanel(tile.dataset.state));
+    tile.addEventListener('mouseenter', ()=> hoverStatePanel(tile.dataset.state));
+  });
+
+  document.getElementById('scale-bar-legend').innerHTML =
+    ['0%','25%','50%','75%','100%'].map(t=>{
+      const tt = parseInt(t)/100;
+      return `<span style="flex:1;background:${colorForValue(tt*maxVal,maxVal)};"></span>`;
+    }).join('');
+}
+
+function hoverStatePanel(code){
+  const sites = filteredSites();
+  const st = stateStats(code, sites);
+  const panel = document.getElementById('side-panel');
+  if(panel.dataset.locked==='1') return;
+  panel.innerHTML = `<h3>${esc(STATE_NAMES[code])} (${code})</h3>
+    <p class="placeholder">${st.count} site(s) &middot; ${st.opps} open opportunit${st.opps===1?'y':'ies'} &middot; ${fmtAmt(st.invest,'EUR')+' (\u20ac-equiv.)'} tracked investment</p>
+    <p class="placeholder" style="font-size:11.5px;">Click the tile to pin this state and list its sites.</p>`;
+}
+function openStatePanel(code){
+  const sites = filteredSites();
+  const st = stateStats(code, sites);
+  const panel = document.getElementById('side-panel');
+  panel.dataset.locked='1';
+  panel.innerHTML = `<h3>${esc(STATE_NAMES[code])} (${code}) <button type="button" onclick="unlockSidePanel()" style="float:right;background:none;border:none;color:var(--blue);font-size:12px;font-weight:700;">unpin &times;</button></h3>
+    <p class="placeholder">${st.count} site(s) &middot; ${st.opps} open opportunit${st.opps===1?'y':'ies'} &middot; ${fmtAmt(st.invest,'EUR')+' (\u20ac-equiv.)'} tracked</p>
+    ${st.sites.length? st.sites.map(s=>oppMiniCard(s)).join('') : '<p class="placeholder">No sites match the current filters in this region.</p>'}`;
+  wireOppMiniCards(panel);
+}
+function unlockSidePanel(){
+  document.getElementById('side-panel').dataset.locked='0';
+  document.getElementById('side-panel').innerHTML = `<h3>Select a region or marker</h3><p class="placeholder">Hover a tile for a quick summary, or click a tile to see its sites and opportunities here.</p>`;
+}
+function oppMiniCard(s){
+  const acct = accountById(s.account);
+  return `<div class="opp-mini" data-site="${s.id}">
+    <div class="om-title">${esc(acct?acct.name:s.account)} &mdash; ${esc(s.site_name)}</div>
+    <div class="om-meta"><span class="tag ${s.project_type}">${s.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</span> ${esc(s.city)}, ${esc(regName(s.state))} &middot; ${fmtMoney(s)} &middot; ${esc(s.status)}</div>
+  </div>`;
+}
+function wireOppMiniCards(container){
+  container.querySelectorAll('.opp-mini').forEach(el=> el.addEventListener('click', ()=> openDetail(el.dataset.site)) );
+}
+
+document.addEventListener('click', e=>{
+  if(e.target.closest('.map-controls .seg-btn')){
+    document.querySelectorAll('.map-controls .seg-btn').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    shadeMode = e.target.dataset.shade;
+    renderMap();
+  }
+});
+
+/* ============================================================
+   FIT MATRIX
+   ============================================================ */
+function fitScore(accId){
+  const sites = filteredSites().filter(s=>s.account===accId && s.opportunity_status==="OPEN OPPORTUNITY");
+  const weights = {Strong:3, Moderate:2, Weak:1};
+  let score = 0;
+  sites.forEach(s=> (s.orise_fit||[]).forEach(f=> score += (weights[f.strength]||0) ));
+  return score;
+}
+function cellData(accId, area){
+  const sites = filteredSites().filter(s=>s.account===accId && (s.orise_fit||[]).some(f=>f.area===area));
+  let maxStrength = 0;
+  const order = {Weak:1,Moderate:2,Strong:3};
+  sites.forEach(s=> (s.orise_fit||[]).filter(f=>f.area===area).forEach(f=>{ if(order[f.strength]>maxStrength) maxStrength=order[f.strength]; }) );
+  return { count: sites.length, level: maxStrength, sites };
+}
+function renderFitMatrix(){
+  let accts = ACCOUNTS.slice();
+  if(matrixSort.mode==="score"){
+    accts.sort((a,b)=> fitScore(b.id)-fitScore(a.id));
+  } else {
+    accts.sort((a,b)=> a.name.localeCompare(b.name));
+  }
+  const thead = document.getElementById('fit-thead-row');
+  thead.innerHTML = `<th class="acct-col" id="sort-acct-col">Account &#8597;</th>` + OFFERING_AREAS.map(a=>`<th>${esc(OFFERING_SHORT[a]||a)}</th>`).join('') + `<th id="sort-score-col" class="sortable">Fit Score &#8597;</th>`;
+  document.getElementById('sort-acct-col').addEventListener('click', ()=>{ matrixSort.mode='account'; renderFitMatrix(); });
+  document.getElementById('sort-score-col').addEventListener('click', ()=>{ matrixSort.mode='score'; renderFitMatrix(); });
+
+  const tbody = document.getElementById('fit-tbody');
+  tbody.innerHTML = accts.map(acc=>{
+    const cells = OFFERING_AREAS.map(area=>{
+      const cd = cellData(acc.id, area);
+      const cls = 'f'+cd.level;
+      return `<td class="fit-cell ${cls}" data-acct="${acc.id}" data-area="${esc(area)}">${cd.count||''}</td>`;
+    }).join('');
+    const tierClass = (acc.priority_tier||'').includes('1')?'T1':(acc.priority_tier||'').includes('2')?'T2':'T3';
+    return `<tr><td class="acct-cell">${esc(acc.name)}<span class="tier-badge">${esc(acc.priority_tier||'')}</span></td>${cells}<td style="font-weight:800;color:var(--teal);">${fitScore(acc.id)}</td></tr>`;
+  }).join('');
+
+  tbody.querySelectorAll('.fit-cell').forEach(td=>{
+    td.addEventListener('click', ()=>{
+      const cd = cellData(td.dataset.acct, td.dataset.area);
+      const acc = accountById(td.dataset.acct);
+      openListPanelModal(`${acc?acc.name:''} &mdash; ${OFFERING_SHORT[td.dataset.area]||td.dataset.area}`, cd.sites);
+    });
+  });
+}
+function openListPanelModal(title, sites){
+  const panel = document.getElementById('side-panel');
+  document.getElementById('map-section').scrollIntoView({behavior:'smooth', block:'start'});
+  panel.dataset.locked='1';
+  panel.innerHTML = `<h3>${title} <button type="button" onclick="unlockSidePanel()" style="float:right;background:none;border:none;color:var(--blue);font-size:12px;font-weight:700;">unpin &times;</button></h3>
+    ${sites.length? sites.map(s=>oppMiniCard(s)).join('') : '<p class="placeholder">No matching opportunities under current filters.</p>'}`;
+  wireOppMiniCards(panel);
+}
+
+/* ============================================================
+   ACCOUNTS
+   ============================================================ */
+function renderAccounts(){
+  const list = document.getElementById('accounts-list');
+  const sites = filteredSites();
+  list.innerHTML = ACCOUNTS.slice().sort((a,b)=>a.name.localeCompare(b.name)).map((acc,i)=>{
+    const accSites = sites.filter(s=>s.account===acc.id);
+    const allAccSites = SITES.filter(s=>s.account===acc.id);
+    const openOpps = allAccSites.filter(s=>s.opportunity_status==="OPEN OPPORTUNITY");
+    const tierClass = (acc.priority_tier||'').includes('1')?'T1':(acc.priority_tier||'').includes('2')?'T2':'T3';
+    const isOpen = accountOpenState[acc.id] ? 'open' : '';
+    const rows = allAccSites.map(s=>`
+      <tr class="opp-row" data-site="${s.id}">
+        <td>${esc(s.site_name)}</td>
+        <td>${esc(regName(s.state))}</td>
+        <td><span class="tag ${s.project_type}">${s.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</span></td>
+        <td>${esc((s.modality||[]).join(', '))}</td>
+        <td>${fmtMoney(s)}</td>
+        <td>${esc(s.status)}</td>
+        <td>${esc(s.expected_start||'—')}</td>
+        <td>${oppStatusTag(s.opportunity_status)}</td>
+      </tr>`).join('');
+    const oppDetail = openOpps.map(s=>`
+      <div style="border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <b style="color:var(--teal);font-size:13.5px;">${esc(s.site_name)}, ${esc(s.city)} (${esc(regName(s.state))})</b>
+          <span class="tag ${s.project_type}">${s.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</span>
+        </div>
+        <p style="margin:8px 0;font-size:13px;">${esc(s.technical_scope||'')}</p>
+        <div style="margin:8px 0;">${(s.orise_fit||[]).map(f=>`<span class="fit-chip"><span class="fs ${f.strength}"></span>${esc(OFFERING_SHORT[f.area]||f.area)} &middot; ${esc(f.strength)}</span>`).join('')}</div>
+        <button type="button" class="btn-primary" data-site="${s.id}" style="padding:6px 12px;font-size:12px;" onclick="openDetail('${s.id}')">Full detail &amp; sources</button>
+      </div>`).join('');
+    return `<div class="acct-card ${isOpen}" data-acct="${acc.id}">
+      <div class="acct-card-head">
+        <div class="ach-left">
+          <div class="acct-num">${i+1}</div>
+          <div>
+            <div class="acct-name">${esc(acc.name)}</div>
+            <div class="acct-quicksum">Group ${esc(acc.group)} &middot; ${allAccSites.length} DACH site(s) &middot; ${openOpps.length} open opportunit${openOpps.length===1?'y':'ies'}${acc.ownership_note?' &middot; '+esc(acc.ownership_note):''}</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="tier-pill ${tierClass}">${esc(acc.priority_tier||'')}</span>
+          <span class="chev">&#9654;</span>
+        </div>
+      </div>
+      <div class="acct-card-body">
+        <div class="sub-h">DACH Footprint Summary</div>
+        <p>${esc(acc.footprint_summary||'')}</p>
+        <div class="sub-h">Investment Strategy</div>
+        <p>${esc(acc.investment_strategy_summary||'')}</p>
+        ${acc.priority_reason?`<div class="sub-h">Why This Priority Tier</div><p>${esc(acc.priority_reason)}</p>`:''}
+        ${acc.incumbent_vendors_general?`<div class="sub-h">Known Incumbent / Standard Platform</div><p class="vendor-line">${esc(acc.incumbent_vendors_general)}</p>`:''}
+
+        <div class="sub-h">DACH Sites &amp; Projects</div>
+        <table class="site-table"><thead><tr><th>Site</th><th>Region</th><th>Type</th><th>Modality</th><th>Investment</th><th>Status</th><th>Start</th><th>Opportunity</th></tr></thead>
+        <tbody>${rows || '<tr><td colspan="8" style="color:var(--ink-soft);">No project located in this research pass (or none matches current filters).</td></tr>'}</tbody></table>
+
+        ${openOpps.length? `<div class="sub-h">Open Opportunity Detail &amp; Orise Entry Point</div>${oppDetail}` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  list.querySelectorAll('.acct-card-head').forEach(head=>{
+    head.addEventListener('click', ()=>{
+      const card = head.closest('.acct-card');
+      const id = card.dataset.acct;
+      accountOpenState[id] = !accountOpenState[id];
+      card.classList.toggle('open');
+    });
+  });
+  list.querySelectorAll('tr.opp-row').forEach(row=>{
+    row.addEventListener('click', ()=> openDetail(row.dataset.site));
+  });
+}
+function oppStatusTag(status){
+  if(status==="OPEN OPPORTUNITY") return `<span class="tag open">Open</span>`;
+  if(status==="Monitor") return `<span class="tag monitor">Monitor</span>`;
+  return `<span class="tag closed">Closed/late</span>`;
+}
+
+/* ============================================================
+   MASTER TABLE
+   ============================================================ */
+const TABLE_COLS = [
+  {key:'account_name', label:'Account'},
+  {key:'site_name', label:'Site'},
+  {key:'city', label:'City'},
+  {key:'state', label:'Country / Region'},
+  {key:'project_type', label:'Type'},
+  {key:'modality_str', label:'Modality'},
+  {key:'eur', label:'Investment (original currency)'},
+  {key:'jobs', label:'Jobs'},
+  {key:'status', label:'Status'},
+  {key:'expected_start', label:'Start'},
+  {key:'win_str', label:'2026\u201327'},
+  {key:'opportunity_status', label:'Opportunity'},
+];
+function tableRows(){
+  return filteredSites().map(s=>({
+    ...s,
+    account_name: (accountById(s.account)||{}).name || s.account,
+    modality_str: (s.modality||[]).join('; '),
+    win_str: s.in_window ? 'Yes' : ''
+  })).filter(r=>{
+    if(!tableSearch) return true;
+    const hay = [r.account_name,r.site_name,r.city,r.country,regName(r.state),r.modality_str,r.status].join(' ').toLowerCase();
+    return hay.includes(tableSearch.toLowerCase());
+  }).sort((a,b)=>{
+    const k=tableSort.key; let av=a[k], bv=b[k];
+    if(typeof av==='string') av=av.toLowerCase(); if(typeof bv==='string') bv=bv.toLowerCase();
+    if(av===undefined||av===null) av=''; if(bv===undefined||bv===null) bv='';
+    if(av<bv) return -1*tableSort.dir; if(av>bv) return 1*tableSort.dir; return 0;
+  });
+}
+function renderTable(){
+  const thead = document.getElementById('master-thead-row');
+  thead.innerHTML = TABLE_COLS.map(c=>`<th data-key="${c.key}">${c.label}${tableSort.key===c.key?(tableSort.dir===1?' &#9650;':' &#9660;'):''}</th>`).join('');
+  thead.querySelectorAll('th').forEach(th=>{
+    th.addEventListener('click', ()=>{
+      const k = th.dataset.key;
+      if(tableSort.key===k) tableSort.dir*=-1; else { tableSort.key=k; tableSort.dir=1; }
+      renderTable();
+    });
+  });
+  const rows = tableRows();
+  const tbody = document.getElementById('master-tbody');
+  tbody.innerHTML = rows.map(r=>`
+    <tr data-site="${r.id}">
+      <td>${esc(r.account_name)}</td>
+      <td>${esc(r.site_name)}</td>
+      <td>${esc(r.city)}</td>
+      <td>${esc(r.country)} &middot; ${esc(regName(r.state))}</td>
+      <td><span class="tag ${r.project_type}">${r.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</span></td>
+      <td>${esc(r.modality_str)}</td>
+      <td>${fmtMoney(r)}</td>
+      <td>${r.jobs??'—'}</td>
+      <td>${esc(r.status)}</td>
+      <td>${esc(r.expected_start||'—')}</td>
+      <td>${r.win_str}</td>
+      <td>${oppStatusTag(r.opportunity_status)}</td>
+    </tr>`).join('');
+  tbody.querySelectorAll('tr').forEach(tr=> tr.addEventListener('click', ()=> openDetail(tr.dataset.site)) );
+  document.getElementById('table-rowcount').textContent = `${rows.length} record(s)`;
+}
+document.addEventListener('input', e=>{
+  if(e.target.id==='table-search'){ tableSearch = e.target.value; renderTable(); }
+});
+document.addEventListener('click', e=>{
+  if(e.target.id==='btn-export-csv') exportCSV();
+});
+async function exportCSV(){
+  const cols = ['Account','Site Name','City','State','Latitude','Longitude','Project Type','Modality','Investment (original currency)','Jobs','Status','Expected Start','Opportunity Status','Technical Scope','Orise Offering Fit','Incumbent Vendors','Sources','Notes','Country','Currency','In 2026-27 Window'];
+  const rows = filteredSites().map(s=>{
+    const acc = accountById(s.account);
+    const fit = (s.orise_fit||[]).map(f=>`${f.area} (${f.strength})`).join(' | ');
+    const src = (s.sources||[]).map(x=>`${x.publisher||''} ${x.date||''} ${x.url||''} [${x.confidence||''}]`).join(' | ');
+    return [acc?acc.name:s.account, s.site_name, s.city, regName(s.state), s.lat, s.lon, s.project_type, (s.modality||[]).join('; '), s.investment??'', s.jobs??'', s.status, s.expected_start||'', s.opportunity_status, s.technical_scope||'', fit, s.incumbent_vendors||'', src, s.notes||'', s.country, s.currency, s.in_window?'Yes':'No'];
+  });
+  const csvLines = [cols.join(',')].concat(rows.map(r=> r.map(csvCell).join(',') ));
+  const blob = new Blob([csvLines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
+
+  // Published as a Claude Artifact: script-driven <a download> is inert there,
+  // so offer the file through the platform's downloads capability instead.
+  if (window.claude && typeof window.claude.use === 'function') {
+    try {
+      const downloads = await window.claude.use('downloads');
+      if (downloads) {
+        await downloads.save({ filename: 'dach-projects.csv', data: blob });
+        return;
+      }
+    } catch (e) {
+      return; // viewer declined / rate-limited / etc — do not fall through to the inert anchor trick
+    }
+  }
+  // Standalone file (opened locally, emailed, or hosted on GitHub/Pages): normal browser download.
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'dach-projects.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+function csvCell(v){
+  if(v===null||v===undefined) return '';
+  const s = String(v);
+  if(/[",\n\r]/.test(s)) return '"'+s.replace(/"/g,'""')+'"';
+  return s;
+}
+
+/* ============================================================
+   DETAIL DRAWER
+   ============================================================ */
+function openDetail(siteId){
+  const s = SITES.find(x=>x.id===siteId);
+  if(!s) return;
+  const acc = accountById(s.account);
+  document.getElementById('dh-title').textContent = `${acc?acc.name:s.account} — ${s.site_name}`;
+  document.getElementById('dh-meta').innerHTML = `${esc(s.city)}, ${esc(regName(s.state))} &middot; <span class="tag ${s.project_type}" style="background:rgba(255,255,255,0.2);color:#fff;">${s.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</span> &middot; ${oppStatusTag(s.opportunity_status)}`;
+  const fitChips = (s.orise_fit||[]).map(f=>`<span class="fit-chip"><span class="fs ${f.strength}"></span><b>${esc(OFFERING_SHORT[f.area]||f.area)}</b>&nbsp;&middot;&nbsp;${esc(f.strength)}</span><div style="font-size:11.5px;color:var(--ink-soft);margin:-4px 0 8px 4px;">${esc(f.reason||'')}</div>`).join('');
+  const sourceItems = (s.sources||[]).map(src=>`<div class="src-item"><a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.publisher||src.url||'Source')}</a> ${esc(src.date||'')} <span class="conf ${src.confidence||'Low'}">${esc(src.confidence||'Unverified')}</span></div>`).join('') || '<p style="color:var(--ink-soft);font-size:12.5px;">No sources recorded.</p>';
+  document.getElementById('drawer-body').innerHTML = `
+    <h4>Overview</h4>
+    <div class="kv-grid">
+      <div class="kv"><b>Account</b>${esc(acc?acc.name:s.account)}</div>
+      <div class="kv"><b>Site</b>${esc(s.site_name)}</div>
+      <div class="kv"><b>Location</b>${esc(s.city)}, ${esc(regName(s.state))}, ${esc(s.country)}</div>
+      <div class="kv"><b>Project Type</b>${s.project_type==='GREENFIELD'?'Greenfield':'Brownfield'}</div>
+      <div class="kv"><b>Modality</b>${esc((s.modality||[]).join(', '))}</div>
+      <div class="kv"><b>Investment</b>${esc(s.investment_display) || fmtMoney(s)}</div>
+      <div class="kv"><b>Currency</b>${esc(s.currency)}</div>
+      <div class="kv"><b>2026–27 window</b>${s.in_window?'Yes':'No'}</div>
+      <div class="kv"><b>Jobs</b>${s.jobs??'—'}</div>
+      <div class="kv"><b>Status</b>${esc(s.status)}</div>
+      <div class="kv"><b>Expected Start</b>${esc(s.expected_start||'—')}</div>
+      <div class="kv"><b>Opportunity Status</b>${esc(s.opportunity_status)}</div>
+    </div>
+    <h4>Technical Scope &amp; Need Signals</h4>
+    <p>${esc(s.technical_scope)||'<span style="color:var(--ink-soft);">Not documented.</span>'}</p>
+    ${s.incumbent_vendors? `<h4>Known Incumbent Vendors</h4><p>${esc(s.incumbent_vendors)}</p>` : ''}
+    <h4>Orise Potential Offering</h4>
+    ${fitChips || '<p style="color:var(--ink-soft);font-size:12.5px;">No offering-area mapping (not an open opportunity).</p>'}
+    <h4>Sources &amp; Confidence</h4>
+    ${sourceItems}
+    ${s.notes? `<h4>Notes</h4><p>${esc(s.notes)}</p>` : ''}
+  `;
+  showDrawer();
+}
+function showDrawer(){
+  document.getElementById('overlay').classList.add('show');
+  document.getElementById('drawer').classList.add('show');
+}
+function hideDrawer(){
+  document.getElementById('overlay').classList.remove('show');
+  document.getElementById('drawer').classList.remove('show');
+}
+function wireGlobalEvents(){
+  document.getElementById('drawer-close').addEventListener('click', hideDrawer);
+  document.getElementById('overlay').addEventListener('click', hideDrawer);
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') hideDrawer(); });
+  document.querySelectorAll('nav.tabs a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      document.querySelectorAll('nav.tabs a').forEach(x=>x.classList.remove('active'));
+      a.classList.add('active');
+    });
+  });
+}
+</script>
+</body>
+</html>
