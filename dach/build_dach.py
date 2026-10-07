@@ -49,7 +49,7 @@ GAPS = f"""
 <h4>Known limitations &mdash; please read</h4>
 <ul>
 <li><b>Search-synthesis only.</b> This build could not open primary documents (annual reports, press-release PDFs, Handelsregister, state-aid decisions). Facts come from search-result summaries and snippets, so most items are Medium/Low confidence and many <b>dates are &ldquo;Unverified&rdquo;</b>. Confirm before customer-facing use.</li>
-<li><b>Reference files not available.</b> The earlier DACH CSV/sources/territory plan, the earlier DACH dashboard, the corrected US CSV, the Orise logo PNG and the PowerPoint template were not in this build environment. Nothing from the earlier DACH research was reused; the header uses a text wordmark in the Orise colours instead of the logo file, and brand colours/fonts are taken from the US dashboard's CSS. Drop the logo into the header (inverted to white) when available.</li>
+<li><b>Reference files not available.</b> The earlier DACH CSV/sources/territory plan, the earlier DACH dashboard, the corrected US CSV and the PowerPoint template were not in this build environment, so nothing from the earlier DACH research was reused and brand colours/fonts are taken from the US dashboard's CSS. The official Orise logo (black wordmark, inverted to white on the teal header) is embedded.</li>
 <li><b>Currencies.</b> Amounts are shown in the announcement currency (EUR, CHF; two Novartis items are announced in USD). The KPI row shows EUR, CHF and USD totals separately. Only the map shading by &ldquo;Investment&rdquo; converts to euro-equivalents using <b>indicative planning rates of 1 CHF = {D.CHF_EUR} EUR and 1 USD = {D.USD_EUR} EUR (set 7 Oct 2026, not live market rates)</b>; replace them in <code>dach_data.py</code> if needed.</li>
 <li><b>Totals are a floor.</b> {sum(1 for s in sites if not s['investment'])} of {len(sites)} records have no disclosed amount; network programmes (e.g. Bayer &gt;EUR 1.4B, Roche CHF 1.2B Basel programme) are not split across sites. Several records bundle older projects (pre-2024) kept for footprint context and marked Monitor / Closed.</li>
 <li><b>Inferred figure.</b> Lilly Alzey (EUR ~1.15B) is inferred as half of the original EUR 2.3B after a reported 2026 cut; confirm directly.</li>
@@ -240,6 +240,7 @@ rep("filename: 'us-projects.csv'", "filename: 'dach-projects.csv'")
 rep("a.download = 'us-projects.csv'", "a.download = 'dach-projects.csv'")
 
 rep('margin:-34px auto 28px auto;','margin:18px auto 28px auto;')
+# logo already embedded in the (patched) US template header
 # map legend note about shading etc. already in desc. Fallbacks for leftover 'US'
 open(OUT_HTML, "w", encoding="utf-8").write(html)
 
