@@ -1,0 +1,47 @@
+﻿Account,Group,Automation fit (0-5),Project scale (0-5),Timing certainty (0-5),Risk (5=low risk) (0-5),Score (0-100),Tier,Score reasons,Qualifying China projects found,Disposition
+AstraZeneca,A) Multinational,4,5,4,3,81,Tier 1,"Six new/expanded China sites (Beijing, Shanghai Lin-gang, Shijiazhuang JV, Wuxi, Taizhou, Qingdao) under a US$15B plan; cell therapy and vaccine scope; JV is CSPC-led (localization risk).",6,In dashboard
+Eli Lilly,A) Multinational,5,4,4,3,82,Tier 1,US$3B China plan (Mar 2026) plus Suzhou upgrade; GLP-1 injectable and oral solid dose localisation; no China-specific automation language found.,3,In dashboard
+Novo Nordisk,A) Multinational,4,4,5,3,81,Tier 1,"Three dated Tianjin projects (CNY 4B sterile expansion to 2027, QC lab to end-2026, pen assembly Jun 2026); isolator filling; group cost-restructuring risk.",3,In dashboard
+Sanofi,A) Multinational,4,5,3,3,76,Tier 1,EUR 1B Beijing insulin API greenfield under construction since Oct 2025; automation / digital named; completion reported as 2032.,1,In dashboard
+Novartis,A) Multinational,4,4,4,3,76,Tier 1,Mar 2026 CNY 3.3B package: Changping sterile upgrade (CNY 1.5B) and Haiyan radioligand plant in commissioning (CNY 600M).,2,In dashboard
+Roche,A) Multinational,4,4,3,3,71,Tier 2,"CNY 2.04B Vabysmo greenfield in Zhangjiang, groundbreaking May 2025, completion 2029; automation decisions later in the window.",1,In dashboard
+Boehringer Ingelheim,A) Multinational,3,2,4,4,64,Tier 2,"Oct 2025 local production of Tradjenta at Zhangjiang; no amount, no new construction found.",1,In dashboard
+Pfizer,A) Multinational,3,3,3,3,60,Tier 2,Wuxi sterile-injectable line additions (2026-2027) reported by Chinese government and press; no amounts; conflicting descriptions; US$1B China plan is R&D.,1,In dashboard
+Bayer,A) Multinational,3,3,3,3,60,Tier 2,"Qidong consumer-health OSD greenfield (CNY 600-750M, completion 2026, ops 2028); Rx exposed to VBP.",1,In dashboard
+MSD (Merck & Co.),A) Multinational,3,2,1,3,45,Tier 3,"Hangzhou packaging / formulation site exists (2013 plant, diabetes drug production from 2023); no 2024+ capital project found.",0,Excluded: No qualifying project found: Hangzhou projects pre-date the window; no 2025-26 announcement in sources reviewed.
+GSK,A) Multinational,2,1,1,3,34,Tier 4,FY2025 annual report says the Tianjin site was closed after transfer to outsourced partners; Shanghai Lin-gang entity is a marketing-authorisation holder.,0,Excluded: No China manufacturing project: Tianjin site closed; China production outsourced.
+Takeda,A) Multinational,2,2,1,3,39,Tier 4,"Tianjin manufacturing exists; only a CNY 110M expansion (2020, site unconfirmed) found.",0,Excluded: No qualifying project found: only pre-window expansion evidence.
+Johnson & Johnson Innovative Medicine,A) Multinational,3,3,1,3,50,Tier 3,"Xi'an Janssen hub (US$200-300M, 2013-2018 build) is the only project found.",0,Excluded: No qualifying project found: Xi'an expansion pre-dates the window.
+Merck KGaA,A) Multinational,2,3,3,3,54,Tier 3,"Nantong pharma plant (2016) and a EUR 70M Nantong reagent expansion (ops 2026) which is Life Science chemicals, not pharma manufacturing.",0,Excluded: Tier 3: only in-window project is a reagent / chemicals plant with weak MES fit.
+Bristol Myers Squibb,A) Multinational,1,1,1,3,28,Tier 4,Only a 2012 US$20M Shanghai expansion found.,0,Excluded: No China project: no in-window China manufacturing capital project found.
+AbbVie,A) Multinational,1,1,1,3,28,Tier 4,No China manufacturing site or project found.,0,Excluded: No China project: no China manufacturing site found.
+Abbott,A) Multinational,2,2,1,3,39,Tier 4,"Jiaxing nutrition plant (2014), Hangzhou optics and a Shanghai pharma plant exist; nothing in window.",0,Excluded: No qualifying project found: only 2011-2015 investments.
+Fresenius Kabi,A) Multinational,2,2,1,2,35,Tier 4,"Nanchang clinical-nutrition device centralisation (2024, device not pharma); investment is being directed to Europe.",0,Excluded: No qualifying project found: only Nanchang medical-device news; Q1 2026 reports of operational hurdles in China.
+CSL,A) Multinational,1,1,1,3,28,Tier 4,No China plasma / manufacturing project verified in sources reviewed.,0,Excluded: Not researched in depth: no China project found; Wuhan plasma ownership not verified.
+Biogen,A) Multinational,1,1,1,3,28,Tier 4,No China manufacturing site found.,0,Excluded: No China project: no China manufacturing site found.
+Regeneron,A) Multinational,1,1,1,3,28,Tier 4,No China manufacturing site found.,0,Excluded: No China project: no China manufacturing site found.
+WuXi Biologics,B) CDMO / supplier,3,4,4,2,66,Tier 2,Chengdu greenfield (GMP release end-2026) and Shanghai Fengxian expansion; in-house engineering and US-policy exposure.,2,In dashboard
+WuXi AppTec (incl. WuXi STA),B) CDMO / supplier,3,4,4,2,66,Tier 2,Taixing and Changzhou API / peptide / oligo plants starting 2026-2027; 2026 capex CNY 7.5-8.5B; in-house engineering and US-policy exposure.,2,In dashboard
+Asymchem,B) CDMO / supplier,3,3,4,3,65,Tier 2,"Tianjin TJ4 SPPS scale-up to about 69,000 L by end-2026 plus new syringe drug-product building.",1,In dashboard
+Pharmaron,B) CDMO / supplier,3,3,3,3,60,Tier 2,Lilly US$200M orforglipron localisation (Mar 2026); site and scope unverified; Chinese-owned.,1,In dashboard
+Porton,B) CDMO / supplier,3,3,2,2,51,Tier 3,"2025-26 China capacity not found; overseas (NJ, Slovenia) projects dominate coverage.",0,Excluded: Tier 3: no verified in-window China project; localization risk.
+WuXi XDC (WuXi Biologics affiliate),B) CDMO / supplier,3,3,3,2,56,Tier 3,"ADC / bioconjugate CRDMO; recent news is Singapore line and BioDlink tender, no China build found.",0,Excluded: Tier 3: no verified in-window China project in sources reviewed.
+GenScript ProBio,B) CDMO / supplier,2,2,2,2,40,Tier 4,Recent coverage is New Jersey (Hopewell) and Singapore; no China build found.,0,Excluded: Tier 4: no China project found in sources reviewed.
+Lonza,B) CDMO / supplier,3,2,1,3,45,Tier 3,"Guangzhou Nansha biologics / drug-product sites exist (2018-2021 builds); Capsules & Health Ingredients (Suzhou etc.) being sold to Lone Star (Mar 2026, close H2 2026).",0,Excluded: Tier 3: no in-window China project; capsule business changing owner.
+Catalent,B) CDMO / supplier,2,1,1,3,34,Tier 4,Owned by Novo Holdings (not Novo Nordisk) since the deal; only a 2013 Haining softgel acquisition found in China.,0,"Excluded: Tier 4: no China project found; ownership changed, no current China plan found."
+Sartorius,B) CDMO / supplier,2,3,2,3,49,Tier 3,"Beijing phase-2 plant (CNY 400M, 2022) and Shanghai hub; no in-window project confirmed.",0,Excluded: Tier 3: supplier plant; announcement pre-dates the window and status unverified.
+Samsung Biologics,B) CDMO / supplier,1,1,1,3,28,Tier 4,No China manufacturing site.,0,Excluded: No China project: no China manufacturing site.
+BeOne Medicines (BeiGene),C) Chinese pharma / biotech,3,4,2,3,60,Tier 2,"Guangzhou biologics (65,000 L, expandable to 200,000 L) and Suzhou small-molecule campus; no dated in-window project verified.",0,Excluded: Tier 2 candidate but no qualifying project verified; Guangzhou expansion described only as 'planned' (SCMP 2025) and Suzhou groundbreaking undated.
+Jiangsu Hengrui,C) Chinese pharma / biotech,2,4,2,2,50,Tier 3,HK IPO (May 2025) allocated about 15% of proceeds to facilities; no named plant; domestic-vendor preference.,0,Excluded: Tier 3: no named project; localization risk.
+CSPC,C) Chinese pharma / biotech,2,3,3,2,50,Tier 3,Shijiazhuang JV with AstraZeneca (Aug 2026) is recorded under AstraZeneca; no separate CSPC plant project found.,0,Excluded: Tier 3: JV counted under AstraZeneca; domestic-vendor preference.
+Innovent,C) Chinese pharma / biotech,3,4,2,2,56,Tier 3,"Large biologics capacity (140,000 L) with expansion claims at Hangzhou from a profile page only.",0,Excluded: Tier 3: expansion evidence is a company-profile listing (Low); localization risk.
+Sinopharm / CNBG,C) Chinese pharma / biotech,2,3,2,2,45,Tier 3,2026 asset injection into Tiantan Biological; no new plant found; state-owned domestic procurement.,0,Excluded: Tier 3: restructuring news only; localization risk.
+Sino Biopharm,C) Chinese pharma / biotech,2,3,2,2,45,Tier 3,No project found.,0,Excluded: Tier 3: no project found; localization risk.
+Fosun Pharma,C) Chinese pharma / biotech,2,3,2,2,45,Tier 3,Only a 2017 Xuzhou industrial-park plan found.,0,Excluded: Tier 3: no in-window project found.
+Hansoh,C) Chinese pharma / biotech,2,2,2,2,40,Tier 4,Only an old joint Lianyungang formulation project with Hengrui.,0,Excluded: Tier 4: no in-window project found.
+Shanghai Pharma,C) Chinese pharma / biotech,2,2,2,2,40,Tier 4,Not found in searches run.,0,Excluded: Tier 4: not researched in depth.
+Zai Lab,C) Chinese pharma / biotech,1,1,1,2,24,Tier 4,Outsources manufacturing (no own plant verified).,0,Excluded: No China project: no own manufacturing site verified.
+Sinovac,C) Chinese pharma / biotech,2,2,1,2,35,Tier 4,Not found in searches run.,0,Excluded: Tier 4: not researched in depth; vaccine demand downturn.
+CanSino,C) Chinese pharma / biotech,2,2,1,2,35,Tier 4,Not found in searches run.,0,Excluded: Tier 4: not researched in depth.
+Walvax,C) Chinese pharma / biotech,2,2,1,2,35,Tier 4,Not found in searches run.,0,Excluded: Tier 4: not researched in depth.
+Zhifei,C) Chinese pharma / biotech,2,2,1,2,35,Tier 4,Not found in searches run.,0,Excluded: Tier 4: not researched in depth.
