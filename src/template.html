@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orise Global Pharma Investment Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --teal:#205369;--teal-dark:#163c4d;--aubergine:#4B2446;--blue:#5F82FF;--orange:#FF9500;
+  --mint:#D0ECEC;--grey:#B7B8C0;--white:#FFFFFF;--ink:#16232a;--ink-soft:#4b5b63;
+  --bg:#FFFFFF;--panel:#F7FBFB;--border:#e2e6e6;--shadow:0 4px 20px rgba(32,83,105,0.12);--radius:10px;
+  --font:"Innovator Grotesk","Inter","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0 0 8px;color:var(--teal);font-weight:700}
+a{color:var(--blue)}
+button,select{font-family:var(--font)}
+button{cursor:pointer}
+.wrap{max-width:1400px;margin:0 auto;padding:0 24px}
+
+/* header */
+header.top{background:var(--teal);color:var(--white);padding:20px 0 0}
+.headrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-bottom:18px}
+.brand-logo{display:block;height:40px;width:auto}
+.headline h1{color:var(--white);font-size:26px;margin-bottom:4px}
+.headline p{color:var(--mint);font-size:14px;margin:0;max-width:640px}
+.asof{font-size:12px;color:var(--mint);opacity:.9;text-align:right}
+nav.tabs{background:var(--teal-dark);display:flex;gap:4px;overflow-x:auto}
+nav.tabs a{color:var(--mint);text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 18px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.tabs a:hover{color:var(--white);border-bottom-color:var(--blue);background:rgba(255,255,255,.04)}
+
+/* scope bar (market + account) */
+.scope{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.scope .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.scope label.cap{font-size:11px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.seg{display:flex;border:1.5px solid var(--grey);border-radius:8px;overflow:hidden}
+.seg button{background:var(--white);border:none;border-right:1px solid var(--border);padding:8px 16px;font-size:13.5px;font-weight:700;color:var(--ink-soft)}
+.seg button:last-child{border-right:none}
+.seg button .n{font-weight:600;font-size:11px;opacity:.75;margin-left:5px}
+.seg button.active{background:var(--teal);color:var(--white)}
+.seg button:not(.active):hover{background:var(--mint)}
+.acct-select{min-width:260px;padding:9px 12px;border:1.5px solid var(--grey);border-radius:8px;font-size:13.5px;color:var(--ink);background:var(--white)}
+.acct-select:focus{outline:none;border-color:var(--blue)}
+.scope .summary{margin-left:auto;font-size:12.5px;color:var(--ink-soft);font-weight:600;text-align:right}
+.btn-link{background:none;border:none;color:var(--blue);font-weight:700;font-size:12.5px;padding:0}
+
+/* market cards */
+.mkt-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0 14px}
+.mkt-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:14px 18px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s}
+.mkt-card:hover,.mkt-card.active{border-color:var(--blue)}
+.mkt-card.dim{opacity:.45}
+.mkt-card h3{font-size:14px;margin:0 0 6px}
+.mkt-card .row{display:flex;gap:18px;font-size:12px;color:var(--ink-soft)}
+.mkt-card .row b{display:block;font-size:19px;color:var(--teal);line-height:1.15}
+
+/* KPIs */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:0 0 6px}
+.kpi-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;border-top:4px solid var(--blue)}
+.kpi-value{font-size:28px;font-weight:800;color:var(--teal);line-height:1.1}
+.kpi-label{font-size:12px;color:var(--ink-soft);margin-top:4px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.kpi-sub{font-size:12px;color:var(--ink-soft);margin-top:6px}
+.kpi-split{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:10px;background:var(--border)}
+.kpi-split .gf{background:var(--aubergine)}.kpi-split .bf{background:var(--blue)}
+.kpi-legend-row{display:flex;gap:14px;margin-top:6px;font-size:11.5px;color:var(--ink-soft)}
+.kpi-legend-row i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px}
+
+section{padding:32px 0;border-top:1px solid var(--border)}
+.section-head{margin-bottom:16px}
+.section-head h2{font-size:21px}
+.section-head p.desc{color:var(--ink-soft);font-size:13.5px;margin:0;max-width:760px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;font-size:13.5px}
+.panel h4{margin-top:14px}.panel p,.panel li{font-size:13.5px}
+
+/* filter bar */
+.filterbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:16px}
+.fb-label{font-size:11.5px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.4px}
+.msel{position:relative}
+.msel-btn{background:var(--white);border:1.5px solid var(--grey);border-radius:7px;padding:7px 12px;font-size:13px;color:var(--ink);display:flex;align-items:center;gap:6px}
+.msel-btn:hover{border-color:var(--blue)}
+.msel-btn.active-filter{border-color:var(--blue);background:#eef2ff;color:var(--teal)}
+.chip-count{background:var(--blue);color:var(--white);border-radius:10px;font-size:10.5px;font-weight:700;padding:1px 6px}
+.msel-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);padding:8px;min-width:240px;max-height:300px;overflow-y:auto;z-index:1200}
+.msel.open .msel-panel{display:block}
+.msel-panel label{display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 6px;border-radius:5px;cursor:pointer}
+.msel-panel label:hover{background:var(--mint)}
+.btn-clear-all{background:var(--white);border:1.5px solid var(--grey);border-radius:7px;padding:7px 12px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.btn-clear-all:hover{border-color:var(--teal);color:var(--teal)}
+.result-count{margin-left:auto;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+
+/* map */
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+@media(max-width:960px){.map-layout{grid-template-columns:1fr}}
+.map-tools{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+.map-tools .lbl{font-size:12px;color:var(--ink-soft);font-weight:700}
+.seg-btn{background:var(--white);border:1.5px solid var(--grey);padding:5px 11px;font-size:12.5px;border-radius:6px;color:var(--ink-soft);font-weight:600}
+.seg-btn:hover{border-color:var(--teal)}
+#map{height:620px;border:1px solid var(--border);border-radius:var(--radius);background:#eef3f3;z-index:1}
+.map-fail{padding:30px;font-size:13px;color:var(--ink-soft)}
+.map-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:12px;color:var(--ink-soft);align-items:center}
+.lg-item{display:flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.side-panel{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:14px;height:620px;overflow-y:auto}
+.side-panel h3{font-size:14.5px}
+.opp-mini{border:1px solid var(--border);border-radius:8px;padding:9px 12px;margin-bottom:8px;cursor:pointer}
+.opp-mini:hover,.opp-mini.hl{border-color:var(--blue);background:#f7f9ff}
+.om-title{font-weight:700;font-size:13px;color:var(--teal)}
+.om-meta{font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.3px;margin-right:4px}
+.tag.GREENFIELD{background:rgba(75,36,70,.12);color:var(--aubergine)}
+.tag.BROWNFIELD{background:rgba(95,130,255,.14);color:#3a5cd6}
+.tag.open{background:rgba(95,130,255,.9);color:var(--white)}
+.tag.monitor{background:var(--border);color:var(--ink-soft)}
+.tag.closed{background:#eee;color:#999}
+.tag.mk{background:var(--mint);color:var(--teal-dark)}
+.leaflet-popup-content{font-family:var(--font);font-size:12.5px;margin:10px 12px}
+.leaflet-popup-content b{color:var(--teal)}
+
+/* drawer */
+.overlay{position:fixed;inset:0;background:rgba(10,20,25,.45);display:none;z-index:2000}
+.overlay.show{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(580px,94vw);background:var(--white);z-index:2001;box-shadow:-8px 0 30px rgba(0,0,0,.25);transform:translateX(100%);transition:transform .22s ease;overflow-y:auto}
+.drawer.show{transform:translateX(0)}
+.drawer-head{background:var(--teal);color:var(--white);padding:20px 24px;position:sticky;top:0;z-index:2}
+.dh-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--white);font-size:24px;line-height:1}
+.drawer-head h3{color:var(--white);font-size:18px;margin-bottom:6px;padding-right:30px}
+.dh-meta{font-size:12.5px;color:var(--mint)}
+.drawer-body{padding:20px 24px 40px}
+.drawer-body h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--teal);margin:20px 0 8px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.drawer-body h4:first-child{margin-top:0}
+.drawer-body p{font-size:13.5px;margin:0 0 8px}
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kv{font-size:12.5px}.kv b{display:block;color:var(--ink-soft);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.3px}
+.fit-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:8px;padding:6px 10px;margin:0 6px 6px 0;font-size:12.5px}
+.fs{width:9px;height:9px;border-radius:50%;display:inline-block}
+.fs.Strong{background:var(--teal)}.fs.Moderate{background:var(--blue)}.fs.Weak{background:var(--mint);border:1px solid var(--grey)}
+.fit-reason{font-size:12.5px;color:var(--ink-soft);margin:0 0 8px 4px}
+.src-item{font-size:12px;padding:8px 0;border-bottom:1px dashed var(--border);word-break:break-word}
+.src-item:last-child{border-bottom:none}
+.conf{font-size:10px;font-weight:700;padding:1px 7px;border-radius:8px;margin-left:6px}
+.conf.High{background:rgba(32,83,105,.12);color:var(--teal)}
+.conf.Medium{background:rgba(95,130,255,.14);color:#3a5cd6}
+.conf.Low{background:rgba(183,184,192,.3);color:#6b6c73}
+
+/* fit matrix */
+.fit-table-wrap{overflow-x:auto;background:var(--white);border:1px solid var(--border);border-radius:var(--radius)}
+table.fit-table{border-collapse:collapse;width:100%;font-size:12.8px;min-width:860px}
+.fit-table th,.fit-table td{padding:9px 10px;text-align:center;border-bottom:1px solid var(--border)}
+.fit-table thead th{background:var(--teal);color:var(--white);font-size:11.5px;line-height:1.25}
+.fit-table .acct-col,.fit-table td.acct-cell{text-align:left;position:sticky;left:0;background:var(--white);z-index:3}
+.fit-table thead th.acct-col{background:var(--teal-dark);z-index:5}
+.fit-table td.acct-cell{font-weight:700;color:var(--teal)}
+.fit-table td.acct-cell small{display:block;font-size:10px;font-weight:600;color:var(--ink-soft)}
+.fit-cell{cursor:pointer;font-weight:700}
+.fit-cell:hover{outline:2px solid var(--teal);outline-offset:-2px}
+.fit-cell.f0{color:var(--grey);font-weight:400;cursor:default}
+.fit-cell.f1{background:var(--mint);color:var(--teal-dark)}
+.fit-cell.f2{background:var(--blue);color:var(--white)}
+.fit-cell.f3{background:var(--teal);color:var(--white)}
+.matrix-legend{display:flex;gap:14px;margin-top:12px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap;align-items:center}
+.matrix-legend .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+
+/* accounts */
+.acct-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+.acct-card-head{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:14px;flex-wrap:wrap}
+.acct-card-head:hover{background:var(--panel)}
+.ach-left{display:flex;align-items:center;gap:12px}
+.acct-num{width:30px;height:30px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12.5px;flex-shrink:0}
+.acct-name{font-size:16px;font-weight:800;color:var(--teal)}
+.acct-quicksum{font-size:12px;color:var(--ink-soft);margin-top:2px}
+.tier-pill{font-size:10.5px;font-weight:800;padding:3px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.3px;margin-left:4px}
+.tier-pill.T1{background:var(--teal);color:var(--white)}.tier-pill.T2{background:var(--blue);color:var(--white)}.tier-pill.T3{background:var(--grey);color:var(--white)}
+.chev{transition:transform .15s;color:var(--teal)}
+.acct-card.open .chev{transform:rotate(90deg)}
+.acct-card-body{display:none;padding:0 20px 20px;border-top:1px solid var(--border)}
+.acct-card.open .acct-card-body{display:block}
+.mkt-block{margin-top:16px;padding-top:4px}
+.mkt-block>h4{font-size:13px;margin:0 0 6px;color:var(--teal);text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:8px}
+.sub-h{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--teal);margin:12px 0 4px;font-weight:800}
+.acct-card-body p{font-size:13.5px;margin:0 0 6px}
+table.site-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
+.site-table th{text-align:left;background:var(--panel);padding:7px 9px;font-size:11px;color:var(--teal);text-transform:uppercase}
+.site-table td{padding:8px 9px;border-bottom:1px solid var(--border)}
+.site-table tr.row{cursor:pointer}.site-table tr.row:hover{background:var(--panel)}
+
+/* table */
+.table-toolbar{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.search-input{flex:1;min-width:200px;padding:9px 12px;border:1.5px solid var(--grey);border-radius:7px;font-size:13.5px;font-family:var(--font)}
+.search-input:focus{outline:none;border-color:var(--blue)}
+.btn-primary{background:var(--teal);color:var(--white);border:none;border-radius:7px;padding:9px 16px;font-size:13px;font-weight:700}
+.btn-primary:hover{background:var(--teal-dark)}
+.table-scroll{overflow:auto;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);max-height:640px}
+table.master-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:1300px}
+.master-table thead th{position:sticky;top:0;background:var(--teal);color:var(--white);padding:9px 10px;text-align:left;font-size:11px;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.master-table tbody td{padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
+.master-table tbody tr{cursor:pointer}.master-table tbody tr:hover{background:var(--panel)}
+.rowcount{font-size:12.5px;color:var(--ink-soft);margin-top:8px}
+.empty{padding:28px;text-align:center;color:var(--ink-soft);font-size:13.5px}
+footer{background:var(--teal-dark);color:var(--mint);padding:26px 0;margin-top:20px;font-size:12.5px}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:640px){.kv-grid{grid-template-columns:1fr}.scope .summary{margin-left:0;text-align:left}.wrap{padding:0 16px}#map{height:440px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap headrow">
+    <img class="brand-logo" src="__LOGO__" alt="Orise">
+    <div class="headline">
+      <h1>Global Pharma Investment Landscape</h1>
+      <p>One view across the US, DACH and China: pick a market and an account to see the relevant manufacturing capital projects and where Orise's automation, MES and digitalization offerings fit.</p>
+    </div>
+    <div class="asof" id="asof"></div>
+  </div>
+  <nav class="tabs wrap" style="padding-left:0;padding-right:0">
+    <a href="#map-section">Investment Map</a><a href="#matrix-section">Fit Matrix</a>
+    <a href="#accounts-section">Account Detail</a><a href="#table-section">Data Table &amp; Export</a>
+    <a href="#gaps-section">Gaps &amp; Methodology</a>
+  </nav>
+</header>
+
+<div class="scope">
+  <div class="wrap">
+    <div><label class="cap">Market</label><div class="seg" id="market-seg"></div></div>
+    <div><label class="cap" for="account-select">Account</label><select class="acct-select" id="account-select"></select></div>
+    <div class="summary" id="scope-summary"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="mkt-row" id="mkt-row"></div>
+  <div class="kpi-row" id="kpi-row"></div>
+
+  <section id="map-section">
+    <div class="section-head"><h2>Investment Map</h2>
+      <p class="desc">Every site in the current selection. Marker colour shows Greenfield vs Brownfield, an orange ring marks an open Orise opportunity and the marker size follows the disclosed investment. Click a marker for the full record.</p></div>
+
+    <div class="filterbar" id="filterbar">
+      <span class="fb-label">Filters</span>
+      <div class="msel" data-filter="project_type"><button class="msel-btn" type="button">Greenfield / Brownfield</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="modality"><button class="msel-btn" type="button">Modality</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="opportunity_status"><button class="msel-btn" type="button">Opportunity Status</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="offering_area"><button class="msel-btn" type="button">Orise Offering Area</button><div class="msel-panel"></div></div>
+      <div class="msel" data-filter="region"><button class="msel-btn" type="button">State / Province</button><div class="msel-panel"></div></div>
+      <button class="btn-clear-all" id="btn-clear-filters" type="button">Clear filters</button>
+      <span class="result-count" id="result-count"></span>
+    </div>
+
+    <div class="map-layout">
+      <div>
+        <div class="map-tools"><span class="lbl">Zoom to:</span>
+          <button class="seg-btn" data-zoom="ALL">Selection</button>
+          <button class="seg-btn" data-zoom="US">US</button>
+          <button class="seg-btn" data-zoom="DACH">DACH</button>
+          <button class="seg-btn" data-zoom="CN">China</button></div>
+        <div id="map"></div>
+        <div class="map-legend">
+          <div class="lg-item"><span class="dot" style="background:var(--aubergine)"></span> Greenfield</div>
+          <div class="lg-item"><span class="dot" style="background:var(--blue)"></span> Brownfield</div>
+          <div class="lg-item"><span class="dot" style="background:#fff;border:3px solid var(--orange)"></span> Open opportunity</div>
+          <div class="lg-item"><span class="dot" style="background:var(--blue);opacity:.4"></span> Faded = monitor / closed</div>
+        </div>
+      </div>
+      <div class="side-panel" id="side-panel"></div>
+    </div>
+  </section>
+
+  <section id="matrix-section">
+    <div class="section-head"><h2>Focus-Area Fit Matrix</h2>
+      <p class="desc">Accounts &times; Orise offering areas for the current selection. Each cell is the number of matching sites, coloured by the strongest fit present. Click a cell to list them.</p></div>
+    <div class="fit-table-wrap"><table class="fit-table"><thead><tr id="fit-thead-row"></tr></thead><tbody id="fit-tbody"></tbody></table></div>
+    <div class="matrix-legend"><b>Fit:</b>
+      <span class="lg-item"><span class="sw" style="background:#fff;border:1px solid var(--grey)"></span>None</span>
+      <span class="lg-item"><span class="sw" style="background:var(--mint)"></span>Weak</span>
+      <span class="lg-item"><span class="sw" style="background:var(--blue)"></span>Moderate</span>
+      <span class="lg-item"><span class="sw" style="background:var(--teal)"></span>Strong</span></div>
+  </section>
+
+  <section id="accounts-section">
+    <div class="section-head"><h2>Account Project Detail</h2>
+      <p class="desc">Each pharma customer with its footprint, strategy and sites per market. An account present in several markets shows one block per market.</p></div>
+    <div id="accounts-list"></div>
+  </section>
+
+  <section id="table-section">
+    <div class="section-head"><h2>Master Data Table</h2>
+      <p class="desc">Every record in the current selection. Investment is normalised to USD; the original currency is in the site detail.</p></div>
+    <div class="table-toolbar">
+      <input type="text" class="search-input" id="table-search" placeholder="Search account, site, city, region, modality...">
+      <button class="btn-primary" id="btn-export-csv" type="button">&#8681; Download CSV</button></div>
+    <div class="table-scroll"><table class="master-table"><thead><tr id="master-thead-row"></tr></thead><tbody id="master-tbody"></tbody></table></div>
+    <div class="rowcount" id="table-rowcount"></div>
+  </section>
+
+  <section id="gaps-section">
+    <div class="section-head"><h2>Gaps &amp; Methodology</h2></div>
+    <div class="panel" id="gaps-panel"></div>
+  </section>
+</main>
+
+<footer><div class="wrap fl">
+  <div>Prepared by Orise Digital for internal sales &amp; business development use. Not for external distribution.</div>
+  <div id="foot-asof"></div></div></footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head"><button class="dh-close" id="drawer-close" aria-label="Close">&times;</button>
+    <h3 id="dh-title">&nbsp;</h3><div class="dh-meta" id="dh-meta"></div></div>
+  <div class="drawer-body" id="drawer-body"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const DATA = /*__DATA__*/null;
+const MARKETS = DATA.markets, ACCOUNTS = DATA.accounts, SITES = DATA.sites, REGIONS = DATA.regions;
+const OFFERING_AREAS = DATA.offering_areas;
+const OFFERING_SHORT = {
+  "SCADA / process control and automation":"SCADA / Process Control","MES implementation and integration":"MES Implementation",
+  "Digitalization / Industry 4.0":"Digitalization / Ind. 4.0","Validation / CSV / data integrity":"Validation / CSV / DI",
+  "Legacy system modernization and migration":"Legacy Modernization","Lifecycle support and managed services":"Lifecycle Support"};
+const MKT_NAME = Object.fromEntries(MARKETS.map(m=>[m.id,m.short]));
+const ZOOM_BOX = {US:[[24,-125],[49.5,-66]], DACH:[[45.6,5.6],[55.2,17.4]], CN:[[18,73],[50,134]]};
+
+/* ---------------- state ---------------- */
+const FILTER_KEYS = ['project_type','modality','opportunity_status','offering_area','region'];
+const state = { market:'ALL', account:'ALL', filters:Object.fromEntries(FILTER_KEYS.map(k=>[k,new Set()])) };
+let tableSort = {key:'account_name', dir:1}, tableSearch = '', accountOpen = {};
+
+/* ---------------- helpers ---------------- */
+const esc = s => (s===null||s===undefined)?'':String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const accById = id => ACCOUNTS.find(a=>a.id===id);
+const accName = id => (accById(id)||{}).name || id;
+const regName = code => (REGIONS[code]||{}).name || code;
+const fmtUSD = n => { if(n===null||n===undefined) return 'n/d';
+  if(n>=1e9) return '$'+(n/1e9).toFixed(n>=1e10?0:2).replace(/(\.\d*?)0+$/,'$1').replace(/\.$/,'')+'B';
+  if(n>=1e6) return '$'+Math.round(n/1e6).toLocaleString()+'M';
+  return '$'+Math.round(n).toLocaleString(); };
+const oppClass = s => s==='OPEN OPPORTUNITY'?'open':(s==='Monitor'?'monitor':'closed');
+const oppLabel = s => s==='OPEN OPPORTUNITY'?'Open':s;
+const strengthRank = s => ({Strong:3,Moderate:2,Weak:1}[s]||0);
+const sum = (a,f) => a.reduce((t,x)=>t+(f(x)||0),0);
+const siteLabel = s => s.site_name + (s.site_name_zh?' · '+s.site_name_zh:'');
+
+/* ---------------- scoping and filtering ---------------- */
+function scopeSites(){ return SITES.filter(s=>(state.market==='ALL'||s.market===state.market)&&(state.account==='ALL'||s.account===state.account)); }
+function filteredSites(){
+  const f = state.filters;
+  return scopeSites().filter(s=>{
+    if(f.project_type.size && !f.project_type.has(s.project_type)) return false;
+    if(f.opportunity_status.size && !f.opportunity_status.has(s.opportunity_status)) return false;
+    if(f.region.size && !f.region.has(s.region)) return false;
+    if(f.modality.size && !(s.modality||[]).some(m=>f.modality.has(m))) return false;
+    if(f.offering_area.size && !(s.orise_fit||[]).some(x=>f.offering_area.has(x.area))) return false;
+    return true; });
+}
+
+/* ---------------- URL hash ---------------- */
+function readHash(){
+  const p = new URLSearchParams(location.hash.replace(/^#/,''));
+  const m = p.get('market'), a = p.get('account');
+  if(m && (m==='ALL'||MARKETS.some(x=>x.id===m))) state.market = m;
+  if(a && (a==='ALL'||accById(a))) state.account = a;
+}
+function writeHash(){
+  const p = new URLSearchParams();
+  if(state.market!=='ALL') p.set('market',state.market);
+  if(state.account!=='ALL') p.set('account',state.account);
+  try{ history.replaceState(null,'', p.toString()?'#'+p.toString():location.pathname+location.search); }catch(e){}
+}
+
+/* ---------------- scope bar ---------------- */
+function renderScope(){
+  const seg = document.getElementById('market-seg');
+  const acctScoped = SITES.filter(s=>state.account==='ALL'||s.account===state.account);
+  const opts = [{id:'ALL',label:'All markets'}].concat(MARKETS.map(m=>({id:m.id,label:m.short})));
+  seg.innerHTML = opts.map(o=>{
+    const n = acctScoped.filter(s=>o.id==='ALL'||s.market===o.id).length;
+    return `<button type="button" data-market="${o.id}" class="${state.market===o.id?'active':''}">${o.label}<span class="n">${n}</span></button>`; }).join('');
+  const marketSites = SITES.filter(s=>state.market==='ALL'||s.market===state.market);
+  const counts = {}; marketSites.forEach(s=>counts[s.account]=(counts[s.account]||0)+1);
+  const accs = ACCOUNTS.filter(a=>counts[a.id]);
+  const sel = document.getElementById('account-select');
+  sel.innerHTML = `<option value="ALL">All accounts (${accs.length})</option>` +
+    accs.map(a=>`<option value="${a.id}">${esc(a.name)} (${counts[a.id]})</option>`).join('');
+  sel.value = state.account;
+}
+function renderMarketCards(){
+  const row = document.getElementById('mkt-row');
+  row.innerHTML = MARKETS.map(m=>{
+    const ss = SITES.filter(s=>s.market===m.id&&(state.account==='ALL'||s.account===state.account));
+    const inv = sum(ss,s=>s.investment_usd), open = ss.filter(s=>s.opportunity_status==='OPEN OPPORTUNITY').length;
+    const dim = state.market!=='ALL'&&state.market!==m.id;
+    return `<div class="mkt-card ${state.market===m.id?'active':''} ${dim?'dim':''}" data-market="${m.id}">
+      <h3>${esc(m.name)}</h3><div class="row"><div><b>${ss.length}</b>sites</div><div><b>${open}</b>open opps</div><div><b>${fmtUSD(inv)}</b>disclosed</div></div></div>`; }).join('');
+}
+
+/* ---------------- KPIs ---------------- */
+function renderKPIs(){
+  const ss = filteredSites();
+  const open = ss.filter(s=>s.opportunity_status==='OPEN OPPORTUNITY');
+  const inv = sum(ss,s=>s.investment_usd), undisclosed = ss.filter(s=>s.investment_usd==null).length;
+  const gf = ss.filter(s=>s.project_type==='GREENFIELD').length, bf = ss.length-gf;
+  const accts = new Set(ss.map(s=>s.account)).size;
+  const jobs = sum(ss,s=>s.jobs);
+  document.getElementById('kpi-row').innerHTML = `
+    <div class="kpi-card"><div class="kpi-value">${ss.length}</div><div class="kpi-label">Sites / projects</div><div class="kpi-sub">${accts} account${accts===1?'':'s'} &middot; ${new Set(ss.map(s=>s.market)).size} market${new Set(ss.map(s=>s.market)).size===1?'':'s'}</div></div>
+    <div class="kpi-card"><div class="kpi-value">${open.length}</div><div class="kpi-label">Open opportunities</div><div class="kpi-sub">${ss.length?Math.round(open.length/ss.length*100):0}% of sites in view</div></div>
+    <div class="kpi-card"><div class="kpi-value">${fmtUSD(inv)}</div><div class="kpi-label">Disclosed investment (USD)</div><div class="kpi-sub">Floor: ${undisclosed} site${undisclosed===1?'':'s'} undisclosed</div></div>
+    <div class="kpi-card"><div class="kpi-value">${jobs?jobs.toLocaleString():'n/d'}</div><div class="kpi-label">Announced jobs</div><div class="kpi-sub">where disclosed</div></div>
+    <div class="kpi-card"><div class="kpi-value">${gf} / ${bf}</div><div class="kpi-label">Greenfield / Brownfield</div>
+      <div class="kpi-split"><span class="gf" style="width:${ss.length?gf/ss.length*100:0}%"></span><span class="bf" style="width:${ss.length?bf/ss.length*100:0}%"></span></div>
+      <div class="kpi-legend-row"><span><i style="background:var(--aubergine)"></i>Greenfield</span><span><i style="background:var(--blue)"></i>Brownfield</span></div></div>`;
+  const mk = state.market==='ALL'?'All markets':MKT_NAME[state.market], ac = state.account==='ALL'?'all accounts':accName(state.account);
+  document.getElementById('scope-summary').innerHTML = `${esc(mk)} &middot; ${esc(ac)}<br><button class="btn-link" id="btn-reset-scope" type="button">Reset selection</button>`;
+}
+
+/* ---------------- filters ---------------- */
+function filterOptions(key){
+  const ss = scopeSites(); const m = new Map();
+  const add = (v,l)=>{ if(v!==undefined&&v!==null&&v!=='') m.set(v,l||v); };
+  ss.forEach(s=>{
+    if(key==='project_type') add(s.project_type, s.project_type[0]+s.project_type.slice(1).toLowerCase());
+    else if(key==='opportunity_status') add(s.opportunity_status);
+    else if(key==='region') add(s.region, (state.market==='ALL'?MKT_NAME[s.market]+' · ':'')+regName(s.region));
+    else if(key==='modality') (s.modality||[]).forEach(x=>add(x));
+    else if(key==='offering_area') (s.orise_fit||[]).forEach(x=>add(x.area));
+  });
+  return [...m.entries()].sort((a,b)=>String(a[1]).localeCompare(String(b[1])));
+}
+function renderFilters(){
+  document.querySelectorAll('.msel').forEach(el=>{
+    const key = el.dataset.filter, set = state.filters[key], opts = filterOptions(key);
+    // drop selections that no longer exist in this scope
+    [...set].forEach(v=>{ if(!opts.some(o=>o[0]===v)) set.delete(v); });
+    const btn = el.querySelector('.msel-btn'); const base = btn.dataset.base || (btn.dataset.base = btn.textContent);
+    btn.innerHTML = esc(base) + (set.size?` <span class="chip-count">${set.size}</span>`:'');
+    btn.classList.toggle('active-filter', set.size>0);
+    el.querySelector('.msel-panel').innerHTML = opts.length ? opts.map(([v,l])=>`<label><input type="checkbox" value="${esc(v)}" ${set.has(v)?'checked':''}> ${esc(l)}</label>`).join('') : '<div class="empty" style="padding:8px">No options</div>';
+  });
+  document.getElementById('result-count').textContent = `${filteredSites().length} of ${scopeSites().length} sites`;
+}
+
+/* ---------------- map (Leaflet) ---------------- */
+let map, markerLayer, markersById = {}, mapOK = false;
+function initMap(){
+  const el = document.getElementById('map');
+  if(typeof L==='undefined'){ el.innerHTML = '<div class="map-fail">The map library could not be loaded (check your connection). The site list on the right and the tables below still work.</div>'; return; }
+  map = L.map(el, {worldCopyJump:true, zoomSnap:0.25}).setView([30,60],2);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    maxZoom:18, subdomains:'abcd', attribution:'&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
+  markerLayer = L.layerGroup().addTo(map); mapOK = true;
+}
+function markerStyle(s){
+  const open = s.opportunity_status==='OPEN OPPORTUNITY';
+  const fill = s.project_type==='GREENFIELD'?'#4B2446':'#5F82FF';
+  const r = s.investment_usd ? Math.max(7, Math.min(22, 5+Math.sqrt(s.investment_usd/1e7)*1.6)) : 6;
+  return {radius:r, fillColor:fill, fillOpacity:open?0.9:0.4, color:open?'#FF9500':'#ffffff', weight:open?3:1.5};
+}
+function renderMap(fit){
+  if(!mapOK) return;
+  markerLayer.clearLayers(); markersById = {};
+  const ss = filteredSites();
+  ss.forEach(s=>{
+    if(s.lat==null||s.lon==null) return;
+    const mk = L.circleMarker([s.lat,s.lon], markerStyle(s)).addTo(markerLayer);
+    mk.bindTooltip(`<b>${esc(accName(s.account))}</b><br>${esc(s.site_name)}<br>${esc(s.city)}, ${esc(regName(s.region))} &middot; ${fmtUSD(s.investment_usd)}`, {direction:'top'});
+    mk.on('click', ()=>{ openSite(s.id); highlightSide(s.id); });
+    markersById[s.id] = mk;
+  });
+  if(fit!==false) zoomMap('ALL');
+  setTimeout(()=>map.invalidateSize(),50);
+}
+function zoomMap(target){
+  if(!mapOK) return;
+  if(target==='ALL'){
+    const pts = filteredSites().filter(s=>s.lat!=null).map(s=>[s.lat,s.lon]);
+    if(pts.length===1) map.setView(pts[0],9);
+    else if(pts.length) map.fitBounds(L.latLngBounds(pts).pad(0.15), {maxZoom:10});
+    else map.setView([30,60],2);
+  } else map.fitBounds(ZOOM_BOX[target]);
+}
+function renderSide(){
+  const ss = filteredSites().slice().sort((a,b)=>(b.opportunity_status==='OPEN OPPORTUNITY')-(a.opportunity_status==='OPEN OPPORTUNITY')||(b.investment_usd||0)-(a.investment_usd||0));
+  const el = document.getElementById('side-panel');
+  el.innerHTML = `<h3>${ss.length} site${ss.length===1?'':'s'} in view</h3>` + (ss.length? ss.map(s=>`
+    <div class="opp-mini" data-site="${esc(s.id)}"><div class="om-title">${esc(accName(s.account))} — ${esc(s.site_name)}</div>
+      <div class="om-meta">${esc(s.city)}, ${esc(regName(s.region))} &middot; ${fmtUSD(s.investment_usd)}</div>
+      <div style="margin-top:5px"><span class="tag mk">${esc(MKT_NAME[s.market])}</span><span class="tag ${s.project_type}">${s.project_type}</span><span class="tag ${oppClass(s.opportunity_status)}">${oppLabel(s.opportunity_status)}</span></div></div>`).join('')
+    : '<div class="empty">No sites match the current selection and filters.</div>');
+}
+function highlightSide(id){
+  document.querySelectorAll('#side-panel .opp-mini').forEach(e=>e.classList.toggle('hl',e.dataset.site===id));
+  const t = document.querySelector(`#side-panel .opp-mini[data-site="${CSS.escape(id)}"]`); if(t) t.scrollIntoView({block:'nearest'});
+}
+
+/* ---------------- fit matrix ---------------- */
+function renderMatrix(){
+  document.getElementById('fit-thead-row').innerHTML = `<th class="acct-col">Account</th>` + OFFERING_AREAS.map(a=>`<th>${esc(OFFERING_SHORT[a]||a)}</th>`).join('') + '<th>Sites</th>';
+  const ss = filteredSites(); const by = {}; ss.forEach(s=>(by[s.account]=by[s.account]||[]).push(s));
+  const rows = Object.keys(by).map(id=>{
+    const cells = OFFERING_AREAS.map(area=>{
+      let n=0,best=0; by[id].forEach(s=>(s.orise_fit||[]).forEach(f=>{ if(f.area===area){ n++; best=Math.max(best,strengthRank(f.strength)); } }));
+      return {area,n,best}; });
+    return {id,cells,total:by[id].length,score:sum(cells,c=>c.best*c.n)}; }).sort((a,b)=>b.score-a.score||accName(a.id).localeCompare(accName(b.id)));
+  document.getElementById('fit-tbody').innerHTML = rows.length ? rows.map(r=>`<tr>
+    <td class="acct-cell">${esc(accName(r.id))}<small>${[...new Set(by[r.id].map(s=>MKT_NAME[s.market]))].join(' · ')}</small></td>
+    ${r.cells.map(c=>`<td class="fit-cell f${c.n?c.best:0}" ${c.n?`data-acct="${esc(r.id)}" data-area="${esc(c.area)}"`:''}>${c.n||'·'}</td>`).join('')}
+    <td>${r.total}</td></tr>`).join('') : `<tr><td colspan="${OFFERING_AREAS.length+2}" class="empty">No data for this selection.</td></tr>`;
+}
+
+/* ---------------- accounts ---------------- */
+function renderAccounts(){
+  const ss = filteredSites(); const by = {}; ss.forEach(s=>(by[s.account]=by[s.account]||[]).push(s));
+  const ids = Object.keys(by).sort((a,b)=>sum(by[b],s=>s.investment_usd)-sum(by[a],s=>s.investment_usd));
+  const single = state.account!=='ALL';
+  document.getElementById('accounts-list').innerHTML = ids.length ? ids.map((id,i)=>{
+    const a = accById(id), sites = by[id];
+    const mks = MARKETS.filter(m=>sites.some(s=>s.market===m.id));
+    const open = accountOpen[id]!==undefined?accountOpen[id]:single;
+    const tiers = mks.map(m=>{ const t=(a.markets[m.id]||{}).tier; return t?`<span class="tier-pill T${(t.match(/\d/)||[3])[0]}">${m.short} ${esc(t)}</span>`:''; }).join('');
+    return `<div class="acct-card ${open?'open':''}" data-acct="${esc(id)}">
+      <div class="acct-card-head"><div class="ach-left"><div class="acct-num">${i+1}</div><div><div class="acct-name">${esc(a.name)}</div>
+        <div class="acct-quicksum">${sites.length} site${sites.length===1?'':'s'} &middot; ${sites.filter(s=>s.opportunity_status==='OPEN OPPORTUNITY').length} open &middot; ${fmtUSD(sum(sites,s=>s.investment_usd))} disclosed &middot; ${mks.map(m=>m.short).join(' / ')}</div></div></div>
+        <div>${tiers}<span class="chev">&#9656;</span></div></div>
+      <div class="acct-card-body">${mks.map(m=>{
+        const ma = a.markets[m.id]||{}, ms = sites.filter(s=>s.market===m.id);
+        return `<div class="mkt-block"><h4>${esc(m.name)} ${ma.tier?`<span class="tier-pill T${(ma.tier.match(/\d/)||[3])[0]}">${esc(ma.tier)}</span>`:''}</h4>
+          ${ma.footprint?`<div class="sub-h">Footprint</div><p>${esc(ma.footprint)}</p>`:''}
+          ${ma.strategy?`<div class="sub-h">Investment strategy</div><p>${esc(ma.strategy)}</p>`:''}
+          ${ma.tier_reason?`<div class="sub-h">Why this priority</div><p>${esc(ma.tier_reason)}</p>`:''}
+          ${ma.ownership?`<div class="sub-h">Ownership note</div><p>${esc(ma.ownership)}</p>`:''}
+          ${ma.incumbents?`<div class="sub-h">Incumbent vendors</div><p>${esc(ma.incumbents)}</p>`:''}
+          <div class="sub-h">Sites</div>
+          <table class="site-table"><thead><tr><th>Site</th><th>Region</th><th>Type</th><th>Investment</th><th>Status</th><th>Opportunity</th></tr></thead><tbody>
+          ${ms.map(s=>`<tr class="row" data-site="${esc(s.id)}"><td>${esc(s.site_name)}</td><td>${esc(s.city)}, ${esc(regName(s.region))}</td><td><span class="tag ${s.project_type}">${s.project_type}</span></td><td>${fmtUSD(s.investment_usd)}</td><td>${esc(s.status)}</td><td><span class="tag ${oppClass(s.opportunity_status)}">${oppLabel(s.opportunity_status)}</span></td></tr>`).join('')}
+          </tbody></table></div>`; }).join('')}</div></div>`; }).join('')
+    : '<div class="empty">No accounts match the current selection.</div>';
+}
+
+/* ---------------- table + CSV ---------------- */
+const TABLE_COLS = [
+  {key:'account_name',label:'Account'},{key:'market_name',label:'Market'},{key:'site_name',label:'Site'},{key:'city',label:'City'},
+  {key:'region_name',label:'State / Province'},{key:'country',label:'Country'},{key:'project_type',label:'Type'},{key:'modality_str',label:'Modality'},
+  {key:'investment_usd',label:'Investment (USD)'},{key:'jobs',label:'Jobs'},{key:'status',label:'Status'},{key:'expected_start',label:'Start'},{key:'opportunity_status',label:'Opportunity'}];
+function tableRows(){
+  let rows = filteredSites().map(s=>({...s,account_name:accName(s.account),market_name:MKT_NAME[s.market],region_name:regName(s.region),modality_str:(s.modality||[]).join('; ')}));
+  if(tableSearch){ const q = tableSearch.toLowerCase();
+    rows = rows.filter(r=>[r.account_name,r.market_name,r.site_name,r.site_name_zh,r.city,r.region_name,r.country,r.modality_str,r.status].join(' ').toLowerCase().includes(q)); }
+  const k = tableSort.key, d = tableSort.dir;
+  rows.sort((a,b)=>{ const x=a[k],y=b[k]; if(x==null&&y==null) return 0; if(x==null) return 1; if(y==null) return -1;
+    return (typeof x==='number'&&typeof y==='number'? x-y : String(x).localeCompare(String(y)))*d; });
+  return rows;
+}
+function renderTable(){
+  document.getElementById('master-thead-row').innerHTML = TABLE_COLS.map(c=>`<th data-sort="${c.key}">${c.label}${tableSort.key===c.key?(tableSort.dir>0?' ▲':' ▼'):''}</th>`).join('');
+  const rows = tableRows();
+  document.getElementById('master-tbody').innerHTML = rows.map(r=>`<tr data-site="${esc(r.id)}">${TABLE_COLS.map(c=>{
+    let v=r[c.key]; if(c.key==='investment_usd') v=fmtUSD(v); else if(c.key==='opportunity_status') return `<td><span class="tag ${oppClass(v)}">${oppLabel(v)}</span></td>`;
+    else if(c.key==='project_type') return `<td><span class="tag ${v}">${v}</span></td>`;
+    return `<td>${esc(v==null?'':v)}</td>`; }).join('')}</tr>`).join('');
+  document.getElementById('table-rowcount').textContent = `${rows.length} record(s)`;
+}
+function csvCell(v){ if(v==null) return ''; const s=String(v); return /[",\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s; }
+async function exportCSV(){
+  const cols = ['Account','Market','Site Name','City','State/Province','Country','Latitude','Longitude','Project Type','Modality','Investment (USD)','Investment (as reported)','Currency','Jobs','Status','Expected Start','Opportunity Status','Technical Scope','Orise Offering Fit','Incumbent Vendors','Sources','Notes'];
+  const rows = tableRows().map(s=>[s.account_name,s.market_name,s.site_name,s.city,s.region_name,s.country,s.lat,s.lon,s.project_type,s.modality_str,s.investment_usd??'',s.investment_display||'',s.currency||'',s.jobs??'',s.status,s.expected_start||'',s.opportunity_status,s.technical_scope||'',
+    (s.orise_fit||[]).map(f=>`${f.area} (${f.strength})`).join(' | '),s.incumbent_vendors||'',
+    (s.sources||[]).map(x=>`${x.publisher||''} ${x.date||''} ${x.url||''} [${x.confidence||''}]`).join(' | '),s.notes||'']);
+  const blob = new Blob([[cols.join(',')].concat(rows.map(r=>r.map(csvCell).join(','))).join('\r\n')],{type:'text/csv;charset=utf-8;'});
+  const name = 'orise-pharma-'+(state.market==='ALL'?'global':state.market.toLowerCase())+(state.account==='ALL'?'':'-'+state.account)+'.csv';
+  if(window.claude && typeof window.claude.use==='function'){   // shared as a Claude Artifact: use the downloads capability
+    try{ const dl = await window.claude.use('downloads'); if(dl){ await dl.save({filename:name,data:blob}); return; } }catch(e){ return; }
+  }
+  const url = URL.createObjectURL(blob), a = document.createElement('a');
+  a.href=url; a.download=name; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+}
+
+/* ---------------- gaps ---------------- */
+function renderGaps(){
+  const ms = MARKETS.filter(m=>state.market==='ALL'||state.market===m.id);
+  document.getElementById('gaps-panel').innerHTML =
+    `<h4 style="margin-top:0">How the three dashboards were combined</h4>
+     <p>This view merges the separate US, DACH and China dashboards into one dataset. Records are unchanged; only the following was normalised: investment shown in <b>USD</b> (original amount and currency kept in each site's detail), one <b>account</b> per pharma customer across markets (e.g. Roche, Sanofi, Novartis), and one shared set of Orise offering areas. ${esc(DATA.fx_note)} Amounts are a floor: many are undisclosed (<i>n/d</i>).</p>
+     <p>Data as of: ${ms.map(m=>`${esc(m.short)} — ${esc(DATA.as_of[m.id])}`).join(' &middot; ')}</p>` +
+    ms.map(m=>`<hr style="border:none;border-top:1px solid var(--border);margin:18px 0"><h3 style="margin-top:0">${esc(m.name)}</h3>${DATA.gaps[m.id]}`).join('');
+  document.getElementById('asof').innerHTML = 'Data as of<br>' + MARKETS.map(m=>`${esc(m.short)}: ${esc(DATA.as_of[m.id])}`).join('<br>');
+  document.getElementById('foot-asof').textContent = 'Sources verified through ' + MARKETS.map(m=>`${m.short} ${DATA.as_of[m.id]}`).join(' · ') + '. See each record for its source list.';
+}
+
+/* ---------------- drawer ---------------- */
+function openDrawer(title,meta,html){
+  document.getElementById('dh-title').innerHTML = title; document.getElementById('dh-meta').innerHTML = meta;
+  document.getElementById('drawer-body').innerHTML = html;
+  document.getElementById('overlay').classList.add('show'); document.getElementById('drawer').classList.add('show');
+  document.getElementById('drawer').scrollTop = 0;
+}
+function closeDrawer(){ document.getElementById('overlay').classList.remove('show'); document.getElementById('drawer').classList.remove('show'); }
+function openSite(id){
+  const s = SITES.find(x=>x.id===id); if(!s) return;
+  const a = accById(s.account);
+  const fit = (s.orise_fit||[]);
+  openDrawer(esc(s.site_name_zh? s.site_name+' · '+s.site_name_zh : s.site_name),
+    `${esc(a.name)} &middot; ${esc(s.city)}, ${esc(regName(s.region))}, ${esc(s.country)} &middot; ${esc(MKT_NAME[s.market])}`,
+    `<h4>Overview</h4><div class="kv-grid">
+      <div class="kv"><b>Project type</b><span class="tag ${s.project_type}">${s.project_type}</span></div>
+      <div class="kv"><b>Opportunity</b><span class="tag ${oppClass(s.opportunity_status)}">${esc(s.opportunity_status)}</span></div>
+      <div class="kv"><b>Investment (USD)</b>${fmtUSD(s.investment_usd)}</div>
+      <div class="kv"><b>As reported</b>${esc(s.investment_display||'n/d')}</div>
+      <div class="kv"><b>Jobs</b>${s.jobs!=null?s.jobs.toLocaleString():'n/d'}</div>
+      <div class="kv"><b>Status</b>${esc(s.status||'n/d')}</div>
+      <div class="kv"><b>Expected start / completion</b>${esc(s.expected_start||'n/d')}</div>
+      <div class="kv"><b>Modality</b>${esc((s.modality||[]).join('; ')||'n/d')}</div></div>
+     ${s.technical_scope?`<h4>Technical scope</h4><p>${esc(s.technical_scope)}</p>`:''}
+     <h4>Orise offering fit</h4>${fit.length? fit.map(f=>`<div class="fit-chip"><span class="fs ${esc(f.strength)}"></span><b>${esc(f.area)}</b> &middot; ${esc(f.strength)}</div><div class="fit-reason">${esc(f.reason)}</div>`).join(''):'<p>No fit assessed.</p>'}
+     ${s.incumbent_vendors?`<h4>Incumbent vendors</h4><p>${esc(s.incumbent_vendors)}</p>`:''}
+     ${s.notes?`<h4>Notes</h4><p>${esc(s.notes)}</p>`:''}
+     <h4>Sources</h4>${(s.sources||[]).map(x=>`<div class="src-item"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.publisher||x.url)}</a> ${x.date?'&middot; '+esc(x.date):''}${x.confidence?`<span class="conf ${esc(x.confidence)}">${esc(x.confidence)}</span>`:''}</div>`).join('')||'<p>None listed.</p>'}`);
+}
+function openCell(acct,area){
+  const ss = filteredSites().filter(s=>s.account===acct&&(s.orise_fit||[]).some(f=>f.area===area));
+  openDrawer(esc(accName(acct)), esc(area)+` &middot; ${ss.length} site${ss.length===1?'':'s'}`,
+    ss.map(s=>{ const f=s.orise_fit.find(x=>x.area===area);
+      return `<div class="opp-mini" data-site="${esc(s.id)}"><div class="om-title">${esc(s.site_name)}</div><div class="om-meta">${esc(MKT_NAME[s.market])} &middot; ${esc(s.city)}, ${esc(regName(s.region))}</div>
+        <div style="margin-top:5px"><span class="fs ${esc(f.strength)}"></span> <b>${esc(f.strength)}</b> — ${esc(f.reason)}</div></div>`; }).join(''));
+}
+
+/* ---------------- render orchestration ---------------- */
+function renderAll(opts){
+  opts = opts||{};
+  renderScope(); renderMarketCards(); renderFilters(); renderKPIs();
+  renderMap(opts.fit); renderSide(); renderMatrix(); renderAccounts(); renderTable(); renderGaps(); writeHash();
+}
+function setScope(market,account){
+  if(market!==undefined) state.market = market;
+  if(account!==undefined) state.account = account;
+  // an account that has no sites in the chosen market -> back to all accounts
+  if(state.account!=='ALL' && !SITES.some(s=>s.account===state.account&&(state.market==='ALL'||s.market===state.market))) state.account='ALL';
+  FILTER_KEYS.forEach(k=>state.filters[k].clear());
+  renderAll();
+}
+
+/* ---------------- events ---------------- */
+document.addEventListener('click', e=>{
+  const t = e.target;
+  const seg = t.closest('#market-seg button'); if(seg) return setScope(seg.dataset.market);
+  const card = t.closest('.mkt-card'); if(card) return setScope(state.market===card.dataset.market?'ALL':card.dataset.market);
+  if(t.id==='btn-reset-scope') return setScope('ALL','ALL');
+  const zb = t.closest('[data-zoom]'); if(zb) return zoomMap(zb.dataset.zoom);
+  if(t.closest('#drawer-close')||t.id==='overlay') return closeDrawer();
+  const cell = t.closest('.fit-cell[data-acct]'); if(cell) return openCell(cell.dataset.acct,cell.dataset.area);
+  const site = t.closest('[data-site]');
+  if(site && !t.closest('a')){
+    const id = site.dataset.site; openSite(id);
+    if(site.closest('#side-panel')&&mapOK&&markersById[id]){ map.setView(markersById[id].getLatLng(),Math.max(map.getZoom(),6)); highlightSide(id); }
+    return; }
+  const head = t.closest('.acct-card-head'); if(head){ const c=head.parentElement; c.classList.toggle('open'); accountOpen[c.dataset.acct]=c.classList.contains('open'); return; }
+  const th = t.closest('#master-thead-row th'); if(th){ const k=th.dataset.sort; tableSort = {key:k,dir:tableSort.key===k?-tableSort.dir:1}; return renderTable(); }
+  if(t.id==='btn-export-csv') return exportCSV();
+  if(t.id==='btn-clear-filters'){ FILTER_KEYS.forEach(k=>state.filters[k].clear()); return renderAll({fit:true}); }
+  const mb = t.closest('.msel-btn');
+  document.querySelectorAll('.msel').forEach(m=>{ if(mb&&m===mb.parentElement) m.classList.toggle('open'); else if(!t.closest('.msel-panel')||!m.contains(t)) m.classList.remove('open'); });
+});
+document.addEventListener('change', e=>{
+  const t = e.target;
+  if(t.id==='account-select') return setScope(undefined,t.value);
+  const box = t.closest('.msel-panel input[type=checkbox]');
+  if(box){ const key = box.closest('.msel').dataset.filter, set = state.filters[key];
+    box.checked? set.add(box.value) : set.delete(box.value);
+    renderFilters(); renderKPIs(); renderMap(); renderSide(); renderMatrix(); renderAccounts(); renderTable(); }
+});
+document.addEventListener('input', e=>{ if(e.target.id==='table-search'){ tableSearch=e.target.value; renderTable(); } });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); });
+window.addEventListener('hashchange', ()=>{ const m=state.market,a=state.account; readHash(); if(m!==state.market||a!==state.account) renderAll(); });
+
+readHash(); initMap(); renderAll();
+</script>
+</body>
+</html>

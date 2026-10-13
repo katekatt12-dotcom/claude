@@ -1,0 +1,1618 @@
+{
+"accounts": [
+{
+"id": "astrazeneca",
+"name": "AstraZeneca",
+"ownership_note": "CSPC-led (51%) Shijiazhuang JV; BioKangtai vaccine JV in Beijing",
+"us_footprint_summary": "AstraZeneca names existing plants in Wuxi, Taizhou, Qingdao and Beijing (Jan 2026 company statement) and R&D hubs in Shanghai and Beijing. New projects since 2025: a Beijing BioPark R&D / biotech / first-China-vaccine-plant programme (US$2.5B over five years, Mar 2025), a commercial CAR-T cell-therapy base in Shanghai Lin-gang (announced Mar 2026), and a biologics drug-substance JV with CSPC in Shijiazhuang, Hebei (Aug 2026). The company targets a China workforce above 20,000.",
+"investment_strategy_summary": "A US$15B commitment through 2030 (announced Jan 2026) to upgrade the existing plants, build new sites still to be announced, and focus on cell therapy and radioconjugates. No per-site split has been published, so only the Beijing US$2.5B figure is recorded as a site-level amount. The Shijiazhuang JV will make drug substance for global markets, so it is partly an export base, not only China-for-China.",
+"priority_tier": "Tier 1",
+"priority_reason": "Largest and most diverse set of new China sites of any account (six records, three of them greenfield), with explicit cell-therapy, vaccine and biologics scope that needs MES, SCADA and CSV. Held at Tier 1 despite the Shijiazhuang JV being CSPC-led (localization risk) and the per-site budgets being undisclosed.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "eli-lilly",
+"name": "Eli Lilly",
+"ownership_note": "US$200M Pharmaron collaboration (see Pharmaron)",
+"us_footprint_summary": "Lilly's only China manufacturing site is the Suzhou plant (established 1996, about 500 staff per March 2026 coverage). A US$212M (CNY 1.5B) Suzhou upgrade was announced in Oct 2024. In March 2026 Lilly pledged US$3B over about ten years: more incretin-injection capacity at Suzhou, new oral solid dose capacity in Beijing, and local CDMO partnerships starting with Pharmaron. Cumulative China investment is stated as nearly US$6B.",
+"investment_strategy_summary": "China-for-China localisation of GLP-1 supply, tied to the end-2025 NMPA filing for orforglipron. The US$3B total is not split by site, so per-site amounts are left blank except the Oct 2024 Suzhou upgrade.",
+"priority_tier": "Tier 1",
+"priority_reason": "Explicit, dated, multi-site GLP-1 buildout (injectable and oral solid dose) in the window, backed by a stated US$3B plan. Digitalization language was not found in the China announcements (unlike the US ones), so fit is rated from scope, not from statements.",
+"incumbent_vendors_general": "Global, not China-confirmed: Lilly US case studies and job postings reference Rockwell FactoryTalk / ControlLogix, Werum PAS-X, Emerson Syncade and DeltaV (Medium/Low). No China-site-specific incumbent evidence found."
+},
+{
+"id": "novo-nordisk",
+"name": "Novo Nordisk",
+"ownership_note": "",
+"us_footprint_summary": "Novo Nordisk's China production hub is Tianjin (TEDA). Three recent projects there: a sterile preparation expansion (about CNY 4B, groundbreaking 19 Mar 2024, completion 2027, isolator technology), a quality-testing laboratory (CNY 800M, MoU July 2025, completion end 2026) and a CNY 200M injection-pen production and assembly addition (June 2026). Cumulative Tianjin investment is stated to pass CNY 10B and China investment CNY 17B since 2003.",
+"investment_strategy_summary": "Steady capacity additions in Tianjin to localise insulin and GLP-1 injectable supply for China. Money is committed in several mid-sized tranches rather than one pledge.",
+"priority_tier": "Tier 1",
+"priority_reason": "Three concrete, dated Tianjin projects with 2026-2027 completion dates fall exactly in the design / commissioning window; isolator-based sterile filling and a new QC lab imply MES, SCADA, LIMS-adjacent and CSV work. Global Novo cost-restructuring pressure is a risk to verify.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "sanofi",
+"name": "Sanofi",
+"ownership_note": "",
+"us_footprint_summary": "Sanofi runs China production in Beijing (largest insulin injection site in Asia-Pacific, established 1995), Shenzhen and Hangzhou. Its new Beijing E-Town insulin API plant (EUR 1B, groundbreaking Oct 2025) is described by the Beijing government as the first multinational biologic-API project in China.",
+"investment_strategy_summary": "Local insulin drug-substance production feeding the existing Beijing formulation lines, to secure supply and localise the chain. Reports mention advanced automation and digital management systems for the new plant.",
+"priority_tier": "Tier 1",
+"priority_reason": "Single large greenfield (EUR 1B, nearly 60,000 m2) in active construction with automation and digital management named in coverage. Long timeline (completion reported as 2032) means automation procurement will be staged, which lowers timing urgency.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "novartis",
+"name": "Novartis",
+"ownership_note": "",
+"us_footprint_summary": "March 2026 package of about CNY 3.3B (about US$480M at announcement): about CNY 1.5B to upgrade the Beijing Changping plant (new buildings, sterile preparation and liquid filling), CNY 1.8B jointly with partners for phase 2 of the Shanghai campus (R&D, not recorded as a manufacturing site), and a CNY 600M radioligand therapy plant in Haiyan, Zhejiang whose main construction is complete (production targeted by end-2026 subject to approvals).",
+"investment_strategy_summary": "Add sterile and radioligand capacity in China for China patients, announced alongside Lilly and AstraZeneca. Haiyan is Novartis' first RLT production base in China.",
+"priority_tier": "Tier 1",
+"priority_reason": "Haiyan is in commissioning and Changping is newly announced with sterile filling scope, giving two live automation and CSV entry points with dated milestones.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "roche",
+"name": "Roche",
+"ownership_note": "Roche Diagnostics Suzhou project excluded (IVD)",
+"us_footprint_summary": "Roche's second China innovative-drug plant is being built in Zhangjiang, Pudong: CNY 2.04B (about US$283M at announcement), about 53 mu, 25,000 m2 building area, groundbreaking 8 May 2025, completion 2029 and commercial operation by 2031, for Vabysmo (faricimab) local production. It sits beside Roche's existing Shanghai campus.",
+"investment_strategy_summary": "Localise high-value ophthalmology biologics for China. The long build programme spreads the automation decisions over 2026-2029.",
+"priority_tier": "Tier 2",
+"priority_reason": "Clear greenfield biologics-style plant with a named product, but automation scope is likely contracted in 2027-2028, so urgency is lower than the Tier 1 accounts.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "boehringer-ingelheim",
+"name": "Boehringer Ingelheim",
+"ownership_note": "",
+"us_footprint_summary": "BI's China production is at the Shanghai Zhangjiang human-pharma base, which began local production of Tradjenta (linagliptin) in Oct 2025; it also has a biopharma manufacturing facility with a filling line in Shanghai (older, undated in sources). BI plans more than CNY 5B of China R&D spending over five years.",
+"investment_strategy_summary": "Move from import-led supply to a localised industrial chain in Shanghai, positioning it as an Asia-Pacific supply hub.",
+"priority_tier": "Tier 2",
+"priority_reason": "Fresh production launch (Oct 2025) and a stated supply-hub ambition give a sustaining-services entry, but no investment amount, no new construction and no automation language were found.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "pfizer",
+"name": "Pfizer",
+"ownership_note": "Hangzhou biologics site sold to WuXi Biologics in 2021",
+"us_footprint_summary": "Pfizer's China plants are in Wuxi, Dalian and Suzhou (per a user-edited encyclopedia entry, Low confidence). In Wuxi (Pfizer Pharmaceuticals (Wuxi), established 1995) a district-government agreement was signed on 17 Oct 2025 for localised production, and a weekly magazine reports a new anti-infective line that could start production as early as Jan 2027. A Nov 2024 signing of an anti-cancer injectable (methotrexate) industrialisation project in Wuxi is also reported. Pfizer's separate US$1B China plan for 2025-2030 is R&D-focused.",
+"investment_strategy_summary": "Wuxi is positioned as an advanced oncology and now anti-infective sterile-injectable site. No capex amounts were disclosed.",
+"priority_tier": "Tier 2",
+"priority_reason": "Dated, in-window Wuxi line additions (2026-2027) are a real brownfield entry, but amounts, scope and the exact project (methotrexate vs anti-infective) are inconsistent across sources, so confidence is Low-Medium.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "bayer",
+"name": "Bayer",
+"ownership_note": "",
+"us_footprint_summary": "Bayer is building a consumer-health supply centre in Qidong, Jiangsu (groundbreaking 18 Oct 2024; initial investment CNY 600M, later reported as CNY 750M; completion 2026, operations from 2028; 1.4 billion oral solid dose tablets a year). Bayer's pharma plant in Beijing and supply centres elsewhere (for example Kunming) are older and not in the window.",
+"investment_strategy_summary": "Add local OTC / consumer-health oral solid dose capacity. Prescription-drug sales in China are under volume-based procurement pressure (Q1 2026 reporting).",
+"priority_tier": "Tier 2",
+"priority_reason": "Dated greenfield project with a 2026 completion and 2028 start of operations gives a design / build entry, but it is a consumer-health OSD plant (lower automation complexity than sterile or biologic plants).",
+"incumbent_vendors_general": ""
+},
+{
+"id": "pharmaron",
+"name": "Pharmaron",
+"ownership_note": "Chinese-owned CDMO; Lilly US$200M collaboration",
+"us_footprint_summary": "Beijing-based CDMO named by Lilly (March 2026) as the first local partner for orforglipron production. Pharmaron's China sites other than Beijing could not be confirmed in this session.",
+"investment_strategy_summary": "Lilly states the US$200M supports Pharmaron's technology and gradually expands scale as needed. One outlet instead names WuXi STA as the US$200M partner, so the counterparty is not fully settled.",
+"priority_tier": "Tier 2",
+"priority_reason": "A named, funded, product-specific oral solid dose localisation, but the exact site, scope and whether Lilly's money is equity or capex are unverified, and Pharmaron is Chinese-owned (localization and data-security barriers).",
+"incumbent_vendors_general": ""
+},
+{
+"id": "wuxi-biologics",
+"name": "WuXi Biologics",
+"ownership_note": "Separate listed company from WuXi AppTec; owns ex-Pfizer Hangzhou site",
+"us_footprint_summary": "China sites include Shanghai Fengxian (MFG17: 9,000 L expandable to 20,000 L; DP15 drug-product line GMP-released April 2026), a new Chengdu Wenjiang microbial site (95,000 m2, 15,000 L fermenter, GMP release targeted end-2026, capacity could reach 60,000 L), and Hangzhou. H1 2026 results describe accelerating capacity expansion.",
+"investment_strategy_summary": "Global CDMO capacity growth, with China projects running alongside Singapore, Ireland and US builds. BIOSECURE-type exposure and a strong in-house engineering culture reduce external-vendor openings.",
+"priority_tier": "Tier 2",
+"priority_reason": "Two dated China builds with 2026 milestones (Chengdu greenfield, Fengxian expansion) and clear GMP / CSV scope, but WuXi has strong internal automation teams and political risk from US policy, so fit is Moderate at best.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "wuxi-apptec",
+"name": "WuXi AppTec (incl. WuXi STA)",
+"ownership_note": "Separate listed company from WuXi Biologics",
+"us_footprint_summary": "Taixing, Jiangsu is the newest and largest API base (operating since Sept 2023): two new small-molecule API plants due online in 2026 and two more for oligonucleotide, peptide and PMO in 2027. Changzhou has added peptide and oligonucleotide capacity and a new Changzhou API site is reported to be starting ahead of schedule. 2026 capex guidance was raised to CNY 7.5-8.5B across all regions.",
+"investment_strategy_summary": "Raised 2026 capex (company-wide, not split by site) to add drug-substance and drug-product capacity in Asia, Europe and the US.",
+"priority_tier": "Tier 2",
+"priority_reason": "Several dated China plant start-ups in 2026-2027 (peptide, oligonucleotide, API) are real commissioning and CSV needs, tempered by WuXi's in-house capability and US-policy risk.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "asymchem",
+"name": "Asymchem (凯莱英)",
+"ownership_note": "",
+"us_footprint_summary": "Tianjin TJ4 hosts over 45,000 L of solid-phase peptide synthesis reactors (April 2026), planned to reach about 69,000 L by end-2026, plus a newly commissioned 6,000 m2 drug-product building for prefilled syringes and cartridges. 2025 capex was CNY 1.27B (company-wide).",
+"investment_strategy_summary": "Scale peptide, oligonucleotide and biologics CDMO services; 2026 revenue growth guided at 19-22%.",
+"priority_tier": "Tier 2",
+"priority_reason": "GLP-1 / peptide scale-up and a new sterile drug-product building are strong fits for MES, SCADA and CSV, with dated 2026 targets. Localization (domestic vendors) and customer-audit-driven vendor choice are the main risks.",
+"incumbent_vendors_general": ""
+}
+],
+"sites": [
+{
+"id": "astrazeneca-beijing-biopark-rd-biotech-vaccine-hub",
+"account": "astrazeneca",
+"site_name": "AstraZeneca Beijing BioPark R&D, Biotech & Vaccine Manufacturing Hub",
+"site_name_zh": "阿斯利康北京生物医药创新园（研发、生物药及疫苗制造）",
+"city": "Beijing (Daxing / BDA Yizhuang)",
+"state": "BJ",
+"lat": 39.79,
+"lon": 116.51,
+"project_type": "GREENFIELD",
+"modality": [
+"mRNA/vaccines",
+"biologics/mAbs"
+],
+"investment_usd": 2500000000,
+"investment_display": "US$2.5 billion over five years (Mar 2025; R&D, biotech and manufacturing combined, no split)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2025",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Part of the US$2.5B Beijing programme announced in March 2025: AstraZeneca's sixth global strategic R&D centre in the Beijing International Pharmaceutical Innovation Park, a biotech component, and a joint venture with BioKangtai said to give AstraZeneca its first vaccine manufacturing site in China for respiratory and infectious-disease vaccines. Beijing headcount is expected to reach 1,700. Site-level building, line and timing details for the manufacturing portion were not found.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "A first China vaccine plant needs batch-record / MES scope, but the vaccine JV partner and build timing are not public."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "A new vaccine and biotech GMP facility will need computerized-system validation and data integrity under NMPA GMP computerized-systems and data-integrity requirements."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Beijing is framed as a global strategic centre; digital-lab and plant data-platform needs are plausible but not stated."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Pharma Manufacturing",
+"date": "2025-03",
+"url": "https://www.pharmamanufacturing.com/industry-news/news/55276437/astrazeneca-unveils-25b-plan-for-rd-biotech-and-manufacturing-expansion-in-beijing",
+"confidence": "Medium"
+},
+{
+"publisher": "Yicai Global",
+"date": "2025-03-21",
+"url": "https://yicaiglobal.com/news/astrazeneca-to-invest-usd25-billion-in-new-rd-center-in-beijing",
+"confidence": "Medium"
+},
+{
+"publisher": "AstraZeneca (company press release)",
+"date": "2026-01",
+"url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-invests-15bn-in-china-through-2030.html",
+"confidence": "High"
+}
+],
+"notes": "The US$2.5B covers R&D and manufacturing together; the manufacturing share is not split and the figure is likely R&D-heavy, so it overstates plant capex in the KPI. Whether the US$2.5B is inside or on top of the later US$15B is not stated. BioKangtai JV details (site, size, timing) Unverified. In China for China. Beijing BDA incentives likely (zone clustering) but not documented. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "astrazeneca-shanghai-lingang-cell-therapy-base",
+"account": "astrazeneca",
+"site_name": "AstraZeneca Shanghai Lin-gang Commercial Cell Therapy Manufacturing & Supply Base",
+"site_name_zh": "阿斯利康上海临港细胞治疗商业化生产与供应基地",
+"city": "Shanghai (Lin-gang New Area)",
+"state": "SH",
+"lat": 30.9,
+"lon": 121.93,
+"project_type": "GREENFIELD",
+"modality": [
+"cell & gene therapy"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (part of the US$15B China commitment)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Commercial manufacturing and supply base for autologous CAR-T therapies (lead product AZD0120, a BCMA/CD19 dual-target CAR-T in clinical development for multiple myeloma and autoimmune disease) for China and other Asian markets, in the Lin-gang area of the Shanghai Free Trade Zone. A companion Zhangjiang innovation centre will handle early research, viral vector / plasmid development, analytical testing and clinical production. Announced 19 March 2026; groundbreaking date, capacity and schedule not found.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Autologous cell therapy needs vein-to-vein batch tracking and electronic batch records; the base is described as end-to-end."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "New GMP cell-therapy facility under Lin-gang pilot policy will need computerized-system validation and data integrity per NMPA GMP computerized-systems and data-integrity requirements."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Patient-specific supply chain and chain-of-identity data platforms are typical digitalization scope; not stated."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Pharma Manufacturing",
+"date": "2026-03",
+"url": "https://www.pharmamanufacturing.com/facilities/article/55365229/astrazeneca-plans-commercial-cell-therapy-manufacturing-rd-hub-in-shanghai",
+"confidence": "Medium"
+},
+{
+"publisher": "BioPharm International",
+"date": "2026-03-20",
+"url": "https://www.biopharminternational.com/view/astrazeneca-builds-end-to-end-cell-therapy-hub-in-china",
+"confidence": "Medium"
+},
+{
+"publisher": "Shanghai Municipal People's Government (English)",
+"date": "2026-04-24",
+"url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260424/dd293400b66f49658a2b7db84aaf783f.html",
+"confidence": "High"
+}
+],
+"notes": "First end-to-end multinational cell-therapy capability in China, enabled by Lin-gang pilot policy for foreign-invested cell therapy. No separate budget published. Local government incentives and Lin-gang zone clustering likely but not documented. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "astrazeneca-shijiazhuang-cspc-biologics-jv",
+"account": "astrazeneca",
+"site_name": "AstraZeneca-CSPC Shijiazhuang Biologics Drug Substance JV Site",
+"site_name_zh": "阿斯利康-石药集团石家庄生物药原液合资工厂",
+"city": "Shijiazhuang",
+"state": "HE",
+"lat": 38.0428,
+"lon": 114.5149,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "Monitor",
+"technical_scope": "Joint venture (CSPC 51%, AstraZeneca 49%) to build and operate a biologics manufacturing site in Shijiazhuang, initially for mutually agreed biologics drug substances for global markets. Disclosed in a CSPC filing to HKEX on 5 Aug 2026 and subject to customary closing conditions including regulatory approvals. Investment size not disclosed.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "Bioreactor and purification automation will be needed, but CSPC leads construction and operations, making a domestic DCS vendor the likely default."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Drug substance for global markets implies FDA/EMA-grade data integrity, which creates a validation role for an experienced integrator."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "CSPC filing, HKEXnews",
+"date": "2026-08-05",
+"url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0805/2026080500460.pdf",
+"confidence": "High"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2026-08",
+"url": "https://www.pharmamanufacturing.com/industry-news/news/55396246/astrazeneca-cspc-form-biologics-manufacturing-joint-venture-in-china",
+"confidence": "Medium"
+},
+{
+"publisher": "Fierce Pharma",
+"date": "2026-08",
+"url": "https://fiercepharma.com/pharma/astrazeneca-cspc-form-joint-venture-biologics-manufacturing",
+"confidence": "Medium"
+}
+],
+"notes": "Buyer risk: the JV is CSPC-controlled (51%), so procurement may follow CSPC's local-vendor preference; flagged Monitor until closing and scope are clear. A search snippet linked this deal to weight management; none of the retrieved sources do, so that link is not used. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "astrazeneca-wuxi-plant-expansion",
+"account": "astrazeneca",
+"site_name": "AstraZeneca Wuxi Plant (planned expansion)",
+"site_name_zh": "阿斯利康无锡工厂（计划扩建）",
+"city": "Wuxi",
+"state": "JS",
+"lat": 31.4912,
+"lon": 120.3119,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (inside the US$15B through 2030)",
+"jobs": null,
+"status": "announced",
+"expected_start": null,
+"opportunity_status": "Monitor",
+"technical_scope": "AstraZeneca's Jan 2026 statement says the US$15B programme will expand existing manufacturing in Wuxi, Taizhou, Qingdao and Beijing and add new sites to be announced. No site-level scope, products, budget or schedule were found for Wuxi; the product mix shown is not confirmed by the sources reviewed.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Existing operating plant; no project detail yet, so only a sustaining-services relationship can be assumed."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Expansion of an established plant may trigger control-system migration, but nothing is announced."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "AstraZeneca (company press release)",
+"date": "2026-01",
+"url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-invests-15bn-in-china-through-2030.html",
+"confidence": "High"
+},
+{
+"publisher": "European Pharmaceutical Review",
+"date": "2026-01",
+"url": "https://www.europeanpharmaceuticalreview.com/news/astrazeneca-makes-15bn-manufacturing-investment-in-china/1130860.article",
+"confidence": "Medium"
+},
+{
+"publisher": "BioPharma Dive",
+"date": "2026-01",
+"url": "https://www.biopharmadive.com/news/astrazeneca-china-biotech-invest-drug-manufacturing/810847/",
+"confidence": "Medium"
+}
+],
+"notes": "Placeholder record for an announced-but-unspecified expansion; no per-site figure is assigned to avoid inventing a split of the US$15B. Re-check when AstraZeneca or the local development zone publishes site detail. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "astrazeneca-taizhou-plant-expansion",
+"account": "astrazeneca",
+"site_name": "AstraZeneca Taizhou Plant (planned expansion)",
+"site_name_zh": "阿斯利康泰州工厂（计划扩建）",
+"city": "Taizhou (Jiangsu, China Medical City)",
+"state": "JS",
+"lat": 32.4553,
+"lon": 119.9229,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"oral solid dose"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (inside the US$15B through 2030)",
+"jobs": null,
+"status": "announced",
+"expected_start": null,
+"opportunity_status": "Monitor",
+"technical_scope": "AstraZeneca's Jan 2026 statement says the US$15B programme will expand existing manufacturing in Wuxi, Taizhou, Qingdao and Beijing and add new sites to be announced. No site-level scope, products, budget or schedule were found for Taizhou; the product mix shown is not confirmed by the sources reviewed.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Existing operating plant; no project detail yet, so only a sustaining-services relationship can be assumed."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Expansion of an established plant may trigger control-system migration, but nothing is announced."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "AstraZeneca (company press release)",
+"date": "2026-01",
+"url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-invests-15bn-in-china-through-2030.html",
+"confidence": "High"
+},
+{
+"publisher": "European Pharmaceutical Review",
+"date": "2026-01",
+"url": "https://www.europeanpharmaceuticalreview.com/news/astrazeneca-makes-15bn-manufacturing-investment-in-china/1130860.article",
+"confidence": "Medium"
+},
+{
+"publisher": "BioPharma Dive",
+"date": "2026-01",
+"url": "https://www.biopharmadive.com/news/astrazeneca-china-biotech-invest-drug-manufacturing/810847/",
+"confidence": "Medium"
+}
+],
+"notes": "Placeholder record for an announced-but-unspecified expansion; no per-site figure is assigned to avoid inventing a split of the US$15B. Re-check when AstraZeneca or the local development zone publishes site detail. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "astrazeneca-qingdao-plant-expansion",
+"account": "astrazeneca",
+"site_name": "AstraZeneca Qingdao Plant (planned expansion)",
+"site_name_zh": "阿斯利康青岛工厂（计划扩建）",
+"city": "Qingdao",
+"state": "SD",
+"lat": 36.0671,
+"lon": 120.3826,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (inside the US$15B through 2030)",
+"jobs": null,
+"status": "announced",
+"expected_start": null,
+"opportunity_status": "Monitor",
+"technical_scope": "AstraZeneca's Jan 2026 statement says the US$15B programme will expand existing manufacturing in Wuxi, Taizhou, Qingdao and Beijing and add new sites to be announced. No site-level scope, products, budget or schedule were found for Qingdao; the product mix shown is not confirmed by the sources reviewed.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Existing operating plant; no project detail yet, so only a sustaining-services relationship can be assumed."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Expansion of an established plant may trigger control-system migration, but nothing is announced."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "AstraZeneca (company press release)",
+"date": "2026-01",
+"url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-invests-15bn-in-china-through-2030.html",
+"confidence": "High"
+},
+{
+"publisher": "European Pharmaceutical Review",
+"date": "2026-01",
+"url": "https://www.europeanpharmaceuticalreview.com/news/astrazeneca-makes-15bn-manufacturing-investment-in-china/1130860.article",
+"confidence": "Medium"
+},
+{
+"publisher": "BioPharma Dive",
+"date": "2026-01",
+"url": "https://www.biopharmadive.com/news/astrazeneca-china-biotech-invest-drug-manufacturing/810847/",
+"confidence": "Medium"
+}
+],
+"notes": "Placeholder record for an announced-but-unspecified expansion; no per-site figure is assigned to avoid inventing a split of the US$15B. Re-check when AstraZeneca or the local development zone publishes site detail. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "eli-lilly-suzhou-plant-2024-upgrade",
+"account": "eli-lilly",
+"site_name": "Lilly Suzhou Plant Upgrade (Oct 2024 programme)",
+"site_name_zh": "礼来苏州工厂升级项目（2024年）",
+"city": "Suzhou",
+"state": "JS",
+"lat": 31.319,
+"lon": 120.726,
+"project_type": "BROWNFIELD",
+"modality": [
+"GLP-1/peptides",
+"fill-finish/sterile injectables"
+],
+"investment_usd": 222600000,
+"investment_display": "CNY 1.5 billion (reported as about US$206-212M at announcement)",
+"jobs": 120,
+"status": "announced",
+"expected_start": "2024",
+"opportunity_status": "Monitor",
+"technical_scope": "Upgrade of Lilly's only China manufacturing plant to raise output of diabetes and obesity medicines, announced Oct 2024 with about 120 new positions. Construction status and completion date were not found. Reports of Lilly's cumulative Suzhou / China investment differ (about CNY 15B for Suzhou vs more than CNY 20B for China).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Project likely under way or complete; sustaining support for new lines is the realistic entry."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Upgrade of a plant operating since 1996 may involve control-system refresh; not stated."
+}
+],
+"incumbent_vendors": "Not confirmed for Suzhou.",
+"sources": [
+{
+"publisher": "Fierce Pharma",
+"date": "2024-10",
+"url": "https://www.fiercepharma.com/manufacturing/lillys-manufacturing-splurge-continues-200m-expansion-china",
+"confidence": "Medium"
+},
+{
+"publisher": "Yicai Global",
+"date": "2024-10",
+"url": "https://www2.yicaiglobal.com/news/eli-lillys-china-unit-to-invest-usd212-million-to-upgrade-suzhou-plant",
+"confidence": "Medium"
+},
+{
+"publisher": "China Daily (Invest in China)",
+"date": "2024-10-18",
+"url": "https://govt.chinadaily.com.cn/s/202410/18/WS67120238498eec7e1f725206/eli-lilly-to-expand-medicine-production-in-china.html",
+"confidence": "Medium"
+}
+],
+"notes": "Automation for the 2024 scope is probably already awarded, so rated Monitor and treated separately from the 2026 incretin expansion at the same site. Converted at CNY 6.74 per USD = about US$223M (the press figure of US$206-212M used older rates). Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "eli-lilly-suzhou-incretin-injection-expansion-2026",
+"account": "eli-lilly",
+"site_name": "Lilly Suzhou Incretin Injection Capacity Expansion (US$3B plan)",
+"site_name_zh": "礼来苏州工厂肠促胰素类注射剂产能扩建（30亿美元计划）",
+"city": "Suzhou",
+"state": "JS",
+"lat": 31.319,
+"lon": 120.726,
+"project_type": "BROWNFIELD",
+"modality": [
+"GLP-1/peptides",
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (inside the US$3B, about 10-year China plan announced 11 Mar 2026)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Lilly will continue to expand existing incretin injection production capacity at Suzhou as part of a US$3B plan over about ten years to expand its China supply chain (announced 11 Mar 2026), tied to the end-2025 NMPA submission of orforglipron. Site-level scope, budget and schedule were not found.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Added injectable / device assembly capacity will need control-system integration; scope not detailed."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Lilly's global GLP-1 builds are electronic-batch-record driven; the China expansion likely follows the corporate MES pattern, not confirmed."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "New or expanded lines require validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "Global, not China-confirmed: Rockwell, Werum PAS-X, Emerson Syncade / DeltaV mentioned in US data (Medium/Low).",
+"sources": [
+{
+"publisher": "Fierce Pharma",
+"date": "2026-03-11",
+"url": "https://www.fiercepharma.com/manufacturing/lilly-commits-3b-china-manufacturing-expansions-local-cdmo-partnerships",
+"confidence": "Medium"
+},
+{
+"publisher": "BioPharma Dive",
+"date": "2026-03",
+"url": "https://biopharmadive.com/news/lilly-china-manufacturing-expand-orforglipron/814413",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharmaceutical Technology",
+"date": "2026-03",
+"url": "https://www.pharmaceutical-technology.com/news/eli-lilly-to-invest-3bn-in-china-in-anticipation-of-orforglipron-approval/",
+"confidence": "Medium"
+}
+],
+"notes": "The US$3B is not split by site, so no per-site amount is recorded. Lilly says cumulative China investment is nearly US$6B. In China for China. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "eli-lilly-beijing-oral-solid-dose-line",
+"account": "eli-lilly",
+"site_name": "Lilly Beijing Oral Solid Dose Production Capacity (orforglipron)",
+"site_name_zh": "礼来北京口服固体制剂产能（orforglipron）",
+"city": "Beijing",
+"state": "BJ",
+"lat": 39.74,
+"lon": 116.34,
+"project_type": "GREENFIELD",
+"modality": [
+"oral solid dose",
+"GLP-1/peptides"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (inside the US$3B plan)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New oral solid dose production capacity in Beijing, described by Lilly as a localised system for orforglipron, announced 11 Mar 2026 alongside the Suzhou expansion and the Pharmaron collaboration. Whether this is a Lilly-owned site, a line inside a partner site or the same project as the Pharmaron collaboration is not clear from the sources reviewed.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New OSD line needs process control and packaging integration; nothing site-specific announced."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Greenfield OSD capacity is typically specified with electronic batch records from the start."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "A new launch-critical GMP line requires computerized-system validation and data integrity under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "Global, not China-confirmed (see Lilly note).",
+"sources": [
+{
+"publisher": "Fierce Pharma",
+"date": "2026-03-11",
+"url": "https://www.fiercepharma.com/manufacturing/lilly-commits-3b-china-manufacturing-expansions-local-cdmo-partnerships",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharmaceutical Commerce",
+"date": "2026-03-12",
+"url": "https://www.pharmaceuticalcommerce.com/view/lilly-bolsters-glp1-supply-chain-pledging-3-billion-manufacturing-expansion-in-china",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharmaceutical Technology",
+"date": "2026-03",
+"url": "https://www.pharmaceutical-technology.com/news/eli-lilly-to-invest-3bn-in-china-in-anticipation-of-orforglipron-approval/",
+"confidence": "Medium"
+}
+],
+"notes": "Coordinates are Beijing city-level approximations. Approval of orforglipron by NMPA gates the commercial ramp. Possible overlap with the Pharmaron record. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "pharmaron-lilly-orforglipron-localization",
+"account": "pharmaron",
+"site_name": "Pharmaron Orforglipron Localization (Lilly collaboration)",
+"site_name_zh": "康龙化成（Pharmaron）礼来orforglipron本土化生产合作",
+"city": "Beijing (site Unverified)",
+"state": "BJ",
+"lat": 39.74,
+"lon": 116.34,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose",
+"small molecule/API",
+"GLP-1/peptides"
+],
+"investment_usd": 200000000,
+"investment_display": "US$200 million (Lilly investment / collaboration, March 2026)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Lilly will invest US$200M with Beijing-based CDMO Pharmaron to localise production of its oral GLP-1 candidate orforglipron, building capability and scale as needed. Which Pharmaron site, whether the money is equity or plant capex, and the scope (API vs drug product) are not stated. One outlet names WuXi STA as the US$200M partner instead.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "Scope and site unknown; MES need depends on whether drug product is made."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Lilly-qualified supply will require Lilly-grade data integrity and CSV oversight."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Jiemian (zh)",
+"date": "2026-03",
+"url": "https://m.jiemian.com/article/14106412.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharmaceutical Commerce",
+"date": "2026-03-12",
+"url": "https://www.pharmaceuticalcommerce.com/view/lilly-bolsters-glp1-supply-chain-pledging-3-billion-manufacturing-expansion-in-china",
+"confidence": "Medium"
+},
+{
+"publisher": "Fierce Pharma",
+"date": "2026-03-11",
+"url": "https://www.fiercepharma.com/manufacturing/lilly-commits-3b-china-manufacturing-expansions-local-cdmo-partnerships",
+"confidence": "Medium"
+}
+],
+"notes": "Classified BROWNFIELD as a build-out inside an existing CDMO network, but the site is Unverified. The US$200M may overlap with Lilly's Beijing OSD record, so it is not added to Lilly. Chinese-owned counterparty: localization and data-security barriers apply. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "novo-nordisk-tianjin-sterile-preparation-expansion",
+"account": "novo-nordisk",
+"site_name": "Novo Nordisk Tianjin Sterile Preparation Expansion",
+"site_name_zh": "诺和诺德天津无菌制剂扩建项目",
+"city": "Tianjin (TEDA)",
+"state": "TJ",
+"lat": 39.085,
+"lon": 117.7,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"GLP-1/peptides"
+],
+"investment_usd": 593500000,
+"investment_display": "CNY 4 billion (about US$556-580M at announcement)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2024",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Sterile preparation expansion at the Tianjin production base using isolator technology for high sterility; announced and groundbreaking held 19 Mar 2024 with completion targeted for 2027. In Q1 2023 Novo had already put CNY 1.18B into a finished-product workshop and new lines at the site.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Isolator-based aseptic filling lines in commissioning around 2026-2027 need PLC/SCADA and environmental-monitoring integration."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "New sterile capacity for insulin/GLP-1 products needs electronic batch records and weigh-and-dispense / line integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Aseptic isolator lines require equipment qualification and computerized-system validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "BioSpectrum Asia",
+"date": "2024-03-19",
+"url": "https://www.biospectrumasia.com/news/48/23982/novo-nordisk-invests-4-b-in-china-for-sterile-preparation-expansion-project.html",
+"confidence": "Medium"
+},
+{
+"publisher": "BioSpace",
+"date": "2024-03",
+"url": "https://www.biospace.com/novo-invests-556m-in-china-operations-to-boost-manufacturing-capacity",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2024-03",
+"url": "https://www.pharmamanufacturing.com/production/aseptic-processing/news/33039004/novo-nordisk-invests-580m-in-china-site-expansion",
+"confidence": "Medium"
+}
+],
+"notes": "Current construction status not reported; 2027 completion is the latest confirmed date. Automation for the first phase may already be contracted; later phases and qualification remain. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "novo-nordisk-tianjin-quality-testing-laboratory",
+"account": "novo-nordisk",
+"site_name": "Novo Nordisk Tianjin Quality Testing Laboratory Expansion",
+"site_name_zh": "诺和诺德天津质量检测实验室扩建项目",
+"city": "Tianjin (TEDA)",
+"state": "TJ",
+"lat": 39.085,
+"lon": 117.7,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables"
+],
+"investment_usd": 118700000,
+"investment_display": "CNY 800 million (about US$112M at announcement)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2025",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "About 18,000 m2 of chemical, microbiological and biological quality laboratories under an MoU signed in July 2025 with the TEDA administration, targeted for completion by end-2026.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "A large new QC building typically drives LIMS, instrument-integration and data-flow digitalization."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "QC laboratories are the centre of data-integrity inspections under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Fierce Pharma",
+"date": "2025-07",
+"url": "https://www.fiercepharma.com/manufacturing/novo-keeps-china-manufacturing-investments-rolling-112m-new-quality-testing-lab",
+"confidence": "Medium"
+},
+{
+"publisher": "TEDA Investment Promotion (invest.teda.gov.cn)",
+"date": "Unverified",
+"url": "https://invest.teda.gov.cn/contents/2813/110707.html",
+"confidence": "High"
+}
+],
+"notes": "Lab, not production, scope: MES fit is limited; the opportunity is LIMS, instrument integration and data integrity. The TEDA page was surfaced by search but not opened. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "novo-nordisk-tianjin-injection-pen-assembly-expansion",
+"account": "novo-nordisk",
+"site_name": "Novo Nordisk Tianjin Injection Pen Production & Assembly Addition",
+"site_name_zh": "诺和诺德天津注射笔生产与组装产能扩建",
+"city": "Tianjin (TEDA)",
+"state": "TJ",
+"lat": 39.085,
+"lon": 117.7,
+"project_type": "BROWNFIELD",
+"modality": [
+"devices/combination products"
+],
+"investment_usd": 29700000,
+"investment_display": "CNY 200 million (about US$29M at announcement)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "An additional CNY 200M to expand production and assembly capacity for injection pens, announced 15 Jun 2026 during a visit by Novo's global executive team to China.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Automated pen assembly lines need machine-control integration; usually delivered by the line builder."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Assembly lines generate traceability data that connects to MES / OEE reporting."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "ScandAsia",
+"date": "2026-06-15",
+"url": "https://scandasia.com/novo-nordisk-invests-further-in-tianjin-production-hub/",
+"confidence": "Low"
+},
+{
+"publisher": "CCPIT (en.ccpit.org)",
+"date": "2026-06",
+"url": "https://en.ccpit.org/infoById/5c1c2c5a695b11f196230242ac1a0702/4",
+"confidence": "Low"
+}
+],
+"notes": "Single-region secondary coverage; confirm via Novo China press release. Small tranche. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "sanofi-beijing-e-town-insulin-api-plant",
+"account": "sanofi",
+"site_name": "Sanofi Beijing E-Town Insulin API Plant",
+"site_name_zh": "赛诺菲北京经开区胰岛素原料药生产基地",
+"city": "Beijing (BDA / Yizhuang)",
+"state": "BJ",
+"lat": 39.795,
+"lon": 116.505,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"investment_usd": 1160000000,
+"investment_display": "EUR 1 billion (about US$1.05-1.16B depending on rate)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2025",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "China's first multinational biologic-API plant: insulin active ingredients for Sanofi's existing Beijing insulin formulation lines (Sanofi's largest insulin injection site in Asia-Pacific). MoC signed Dec 2024, project launched Mar 2025, groundbreaking Oct 2025, nearly 60,000 m2, completion and operation reported for 2032. Coverage mentions advanced automation and digital management systems.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "A fermentation / purification API plant needs large-scale process control; named as an automated facility."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Upstream and downstream batch execution and genealogy for insulin API; formulation MES already exists next door."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "Reports cite digital management systems for a new 60,000 m2 plant."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Biologic API for a regulated insulin chain requires computerized-system validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Beijing Municipal Government (English)",
+"date": "2025-03-26",
+"url": "https://english.beijing.gov.cn/investinginbeijing/Investmentnews/202503/t20250326_4044953.html",
+"confidence": "High"
+},
+{
+"publisher": "Invest Beijing",
+"date": "2024-12-03",
+"url": "https://invest.beijing.gov.cn/english/Background/Investment/202412/t20241203_3955909.html",
+"confidence": "High"
+},
+{
+"publisher": "China Daily (Invest in China)",
+"date": "2025-10-27",
+"url": "https://investinchina.chinadaily.com.cn/s/202510/27/WS68ff16da498e23165e0696b7/sanofi-breaks-ground-on-1-billion-euro-insulin-manufacturing-project-in-beijing.html",
+"confidence": "Medium"
+}
+],
+"notes": "Announced in EUR; converted at EUR/USD 1.16 (approximate). Completion year 2032 is reported by one outlet only. BDA incentives and Yizhuang biomedical clustering likely but not documented. In China for China; insulin is exposed to national VBP, which can pressure payback. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "novartis-beijing-changping-plant-upgrade",
+"account": "novartis",
+"site_name": "Novartis Beijing Changping Plant Upgrade (sterile / liquid filling)",
+"site_name_zh": "诺华北京昌平工厂升级项目",
+"city": "Beijing (Changping)",
+"state": "BJ",
+"lat": 40.22,
+"lon": 116.23,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables"
+],
+"investment_usd": 222600000,
+"investment_display": "About CNY 1.5 billion (about US$220M at announcement)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Upgrade of the Beijing production site announced in March 2026: new facilities and technologies including sterile preparation, aseptic and liquid filling and packaging. Completion date not found.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "New aseptic / liquid filling lines in a brownfield plant need control integration into existing utilities and cleanrooms."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Brownfield upgrades often integrate new lines into the site MES; the incumbent is unknown."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "New sterile lines require qualification and computerized-system validation under NMPA GMP computerized-systems and data-integrity requirements."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "Upgrade of an older plant may require migration of legacy control systems; not stated."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Fierce Pharma",
+"date": "2026-03",
+"url": "https://www.fiercepharma.com/pharma/after-lilly-az-pledges-novartis-commits-nearly-480m-boost-china-manufacturing-rd",
+"confidence": "Medium"
+},
+{
+"publisher": "China Daily",
+"date": "2026-03-28",
+"url": "https://www.chinadaily.com.cn/a/202603/28/WS69c72203a310d6866eb4059e.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2026-03",
+"url": "https://www.pharmamanufacturing.com/industry-news/news/55366147/novartis-plans-480m-china-investment-to-expand-radioligand-therapy-manufacturing",
+"confidence": "Medium"
+}
+],
+"notes": "Total package about CNY 3.3B / US$480M also covers the Shanghai campus phase 2 (R&D; not recorded). Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "novartis-haiyan-radioligand-therapy-plant",
+"account": "novartis",
+"site_name": "Novartis Haiyan Radioligand Therapy Plant",
+"site_name_zh": "诺华海盐放射配体疗法生产基地",
+"city": "Haiyan (Jiaxing)",
+"state": "ZJ",
+"lat": 30.526,
+"lon": 120.946,
+"project_type": "GREENFIELD",
+"modality": [
+"small molecule/API"
+],
+"investment_usd": 89000000,
+"investment_display": "CNY 600 million (US$84.6M reported at 2023 announcement)",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "China's first radioligand manufacturing facility; main construction completed, with production expected by end-2026 once the relevant drugs obtain regulatory approval (2026 reporting). Investment figure dates from the 2023 announcement.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Radioligand production uses shielded, partly automated processing; much is supplied as packaged equipment."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Short-shelf-life products need tight scheduling, batch release and genealogy."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "A new GMP facility entering commissioning needs computerized-system validation and data integrity under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "China Daily",
+"date": "2026-03-28",
+"url": "https://www.chinadaily.com.cn/a/202603/28/WS69c72203a310d6866eb4059e.html",
+"confidence": "Medium"
+},
+{
+"publisher": "BioSpectrum Asia",
+"date": "2023",
+"url": "https://www.biospectrumasia.com/news/48/23419/novartis-invests-84-6-m-in-new-radiopharmaceutical-production-base-in-china.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Fierce Pharma",
+"date": "2023",
+"url": "https://www.fiercepharma.com/manufacturing/novartis-expands-radiotherapy-manufacturing-network-85m-plant-china",
+"confidence": "Medium"
+}
+],
+"notes": "Project announced in 2023 (before the Jan 2024 window) but still in build / commissioning in 2026, so it is included. Automation for the main build may already be placed; the open scope is commissioning, validation and handover. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "roche-shanghai-zhangjiang-vabysmo-plant",
+"account": "roche",
+"site_name": "Roche Shanghai Zhangjiang Biopharma Plant (Vabysmo)",
+"site_name_zh": "罗氏上海张江生物药新工厂（法瑞西单抗）",
+"city": "Shanghai (Zhangjiang, Pudong)",
+"state": "SH",
+"lat": 31.2,
+"lon": 121.59,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"investment_usd": 302700000,
+"investment_display": "CNY 2.04 billion (about US$276-283M at announcement)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2025",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Second China innovative-drug site, on about 53 mu with 25,000 m2 of building area in Zhangjiang Hi-Tech Park, for local production of faricimab (Vabysmo). Groundbreaking 8 May 2025; construction completion 2029; commercial operation by 2031.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Design and procurement of process automation would fall in 2026-2028; the plant is about three years from completion."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "New biologics plant likely to adopt MES; vendor choice not public."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Greenfield sterile biologics plant needs CSV and data-integrity planning under NMPA GMP computerized-systems and data-integrity requirements from design stage."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Roche global sites follow Industry 4.0 programmes; nothing China-specific stated."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Shanghai Municipal People's Government (English)",
+"date": "2025-05-09",
+"url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250509/5741e28b6dc1457690bc8fc7647e517b.html",
+"confidence": "High"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2025-05",
+"url": "https://www.pharmamanufacturing.com/industry-news/news/55289607/roche-invests-over-280m-to-build-new-biopharma-site-in-shanghai",
+"confidence": "Medium"
+},
+{
+"publisher": "Jiemian (zh)",
+"date": "2025-05",
+"url": "https://m.jiemian.com/article/12762534.html",
+"confidence": "Medium"
+}
+],
+"notes": "Announcement date differs by a day between sources (8 vs 9 May 2025). Zhangjiang cluster and Pudong incentives likely. Roche Diagnostics' separate CNY 3B Suzhou project (Aug 2024, operations 2028) is IVD, outside this pharma scope. In China for China. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "boehringer-ingelheim-shanghai-zhangjiang-tradjenta-localization",
+"account": "boehringer-ingelheim",
+"site_name": "Boehringer Ingelheim Shanghai Zhangjiang Human Pharma Base (Tradjenta localization)",
+"site_name_zh": "勃林格殷格翰上海张江human pharma生产基地（欧唐宁本地化生产）",
+"city": "Shanghai (Zhangjiang, Pudong)",
+"state": "SH",
+"lat": 31.205,
+"lon": 121.595,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "operational",
+"expected_start": "2025",
+"opportunity_status": "Monitor",
+"technical_scope": "Local production of Tradjenta (linagliptin) began at the Zhangjiang human-pharma base in October 2025, described by the Shanghai government as moving BI from import-led operations to an integrated local chain and as an Asia-Pacific supply hub. BI plans more than CNY 5B of China R&D over five years (not a plant amount).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Newly started line and supply-hub ambition suggest sustaining support and technology transfer needs."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Further product localisations would require validation, but none are announced."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Shanghai Municipal People's Government (English)",
+"date": "2025-10-20",
+"url": "https://english.shanghai.gov.cn/en-CIIE2025/20251020/a95198174fbd4a14bb20bfa451d802d7.html",
+"confidence": "High"
+}
+],
+"notes": "Single official source; no capex amount; project start is the Oct 2025 localisation, so it sits just inside the window. VBP (national volume-based procurement) is a likely driver for localising a DPP-4 inhibitor, and also a price-pressure risk for further capex. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "pfizer-wuxi-sterile-injectable-line-additions",
+"account": "pfizer",
+"site_name": "Pfizer Wuxi Plant - New Injectable Production Lines",
+"site_name_zh": "辉瑞制药（无锡）有限公司新增注射剂生产线",
+"city": "Wuxi (Binhu District)",
+"state": "JS",
+"lat": 31.52,
+"lon": 120.28,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "announced",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Two reports for the Wuxi site (operating since 1995): (1) Nov 2024 signing of an anti-cancer injectable (methotrexate) industrialisation project in the Wuxi resort-zone area, reportedly to go into production in 2026; (2) a weekly-magazine report that a new anti-infective line, signalling a shift from oncology to anti-infectives, could start production as early as Jan 2027, following a 17 Oct 2025 industry-cooperation agreement with Binhu District to accelerate localised production. The two descriptions may be the same or separate projects.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New sterile injectable lines at a long-running plant need control integration; scope unknown."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "A 30-year-old site adding lines may need migration or integration with legacy systems; not stated."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "New product lines require validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Wuxi Binhu Government (zh)",
+"date": "2024-11-14",
+"url": "https://www.wxbh.gov.cn/doc/2024/11/14/4433547.shtml",
+"confidence": "High"
+},
+{
+"publisher": "CIIE / China News Service (zh)",
+"date": "2025-10-22",
+"url": "https://www.ciie.org/zbh/cn/2024/medium-item1/20251022/53237.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Xinmin Weekly (zh)",
+"date": "2025-12-08",
+"url": "https://img1.xinmin.cn/xmzk/2025-12-08/131208.pdf",
+"confidence": "Low"
+}
+],
+"notes": "Confidence is Low-Medium: no amount, conflicting project description, and the government page was surfaced by search but not opened. Pfizer's Hangzhou biologics site was sold to WuXi Biologics in 2021 and is not a Pfizer project. Pfizer's US$1B China 2025-2030 plan targets R&D, not plants. VBP pressure on generic injectables is a capex risk. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "bayer-qidong-consumer-health-supply-center",
+"account": "bayer",
+"site_name": "Bayer Qidong Consumer Health Products Supply Center",
+"site_name_zh": "拜耳启东消费者健康产品供应中心",
+"city": "Qidong (Nantong)",
+"state": "JS",
+"lat": 31.81,
+"lon": 121.66,
+"project_type": "GREENFIELD",
+"modality": [
+"oral solid dose"
+],
+"investment_usd": 111300000,
+"investment_display": "CNY 600 million initial; CNY 750 million planned total (2025 report)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2024",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New consumer-health supply centre; groundbreaking 18 Oct 2024; completion expected 2026 and operations from 2028; expected output 1.4 billion oral solid dosage tablets a year.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New OSD plant needs process control and packaging line integration; much is supplied with the equipment."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Greenfield OSD capacity of 1.4 billion tablets a year is typically specified with electronic batch records."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "New GMP facility needs validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Nantong Municipal Government (English)",
+"date": "2024-10-24",
+"url": "https://en.nantong.gov.cn/2024-10/24/c_1039205.htm",
+"confidence": "High"
+},
+{
+"publisher": "China Daily (Invest in China)",
+"date": "2024-10-24",
+"url": "https://investinchina.chinadaily.com.cn/s/202410/24/WS671a1e7c498eec7e1f7258be/bayer-breaks-ground-on-new-consumer-health-products-supply-center-in-qidong.html",
+"confidence": "Medium"
+},
+{
+"publisher": "China Daily (Nantong)",
+"date": "2025-04-10",
+"url": "https://regional.chinadaily.com.cn/nantong/2025-04/10/c_1085183.htm",
+"confidence": "Medium"
+}
+],
+"notes": "GREENFIELD vs BROWNFIELD is Unverified (new centre; whether on an existing Bayer campus was not found). Converted at CNY 6.74 per USD = about US$111M. OTC / consumer health, so less exposed to VBP than Rx. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "wuxi-biologics-chengdu-microbial-site",
+"account": "wuxi-biologics",
+"site_name": "WuXi Biologics Chengdu Wenjiang Microbial Manufacturing Site",
+"site_name_zh": "药明生物成都温江微生物原液生产基地",
+"city": "Chengdu (Wenjiang)",
+"state": "SC",
+"lat": 30.7,
+"lon": 103.85,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2025",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Microbial manufacturing site of about 95,000 m2 with a 15,000 L fermenter, structural completion and key equipment delivery reported, GMP release targeted by end-2026, with capacity possible up to 60,000 L.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Fermentation and purification control is likely specified within WuXi's own engineering standard."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "GMP release in 2026 needs computerized-system validation and data integrity; WuXi has strong in-house teams."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "BioSpectrum Asia",
+"date": "2025",
+"url": "https://biospectrumasia.com/news/40/26173/wuxi-biologics-begins-construction-of-microbial-manufacturing-site-in-china.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharma Manufacturing (H1 2026 results)",
+"date": "2026-08",
+"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55401151/wuxi-biologics-revenue-jumps-in-h1-2026-as-it-accelerates-capacity-expansion",
+"confidence": "Medium"
+}
+],
+"notes": "An older 'US$69 million' Chengdu headline looks mistranslated and is not used. Western-client audits help foreign-vendor credibility, but BIOSECURE-type US policy risk and in-house engineering reduce openings. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "wuxi-biologics-shanghai-fengxian-mfg17",
+"account": "wuxi-biologics",
+"site_name": "WuXi Biologics Shanghai Fengxian Site (MFG17 / DP15)",
+"site_name_zh": "药明生物上海奉贤基地（MFG17 / DP15）",
+"city": "Shanghai (Fengxian)",
+"state": "SH",
+"lat": 30.92,
+"lon": 121.47,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"fill-finish/sterile injectables"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "2026",
+"opportunity_status": "Monitor",
+"technical_scope": "MFG17 currently 9,000 L, expandable to 20,000 L; drug-product line DP15 achieved GMP release in April 2026 (H1 2026 company update).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Newly released lines need sustaining support; expansion to 20,000 L is possible but not scheduled."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Further expansion would need validation, but timing is not stated."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Pharma Manufacturing (H1 2026 results)",
+"date": "2026-08",
+"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55401151/wuxi-biologics-revenue-jumps-in-h1-2026-as-it-accelerates-capacity-expansion",
+"confidence": "Medium"
+}
+],
+"notes": "Single source. Proposed purchase of Transcenta's Hangzhou site is an acquisition proposal, not a build project, and is not recorded. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "wuxi-apptec-taixing-api-peptide-oligo-complex",
+"account": "wuxi-apptec",
+"site_name": "WuXi STA Taixing API, Peptide & Oligonucleotide Complex",
+"site_name_zh": "合全药业（药明康德）泰兴原料药、多肽及寡核苷酸基地",
+"city": "Taixing (Taizhou, Jiangsu)",
+"state": "JS",
+"lat": 32.17,
+"lon": 119.92,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"GLP-1/peptides"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (2026 group capex guidance CNY 7.5-8.5B, all regions)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Newest and largest WuXi API base (running since Sept 2023, 169-acre complex unveiled 2024): two new small-molecule API plants due online in 2026 and two more for oligonucleotide, peptide and PMO in 2027.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Large new API and peptide plants need process control, though WuXi uses its own engineering standards."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Multi-plant ramp-up in 2026-2027 creates batch execution and genealogy needs."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Commissioning and GMP start-ups need computerized-system validation under NMPA GMP computerized-systems and data-integrity requirements."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "WuXi AppTec (company newsroom)",
+"date": "2026",
+"url": "https://rcs.wuxiapptec.com/news/wuxi-apptec-expands-global-manufacturing-capacity-as-customer-demand-accelerates/",
+"confidence": "High"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2026-07",
+"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55395448/wuxi-apptec-boosts-global-capacity-expansion-with-capital-expenditure-increase",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharmaceutical Technology",
+"date": "2024",
+"url": "https://www.pharmaceutical-technology.com/projects/wuxi-apptec-peptide-manufacturing-facility-taixing-china",
+"confidence": "Medium"
+}
+],
+"notes": "Capex is company-wide and is not assigned to this site. WuXi STA's Taixing site was unveiled in 2024 per a DCAT expansion plan. Strong in-house engineering and US-policy risk. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+},
+{
+"id": "wuxi-apptec-changzhou-api-peptide-oligo-site",
+"account": "wuxi-apptec",
+"site_name": "WuXi STA Changzhou API, Peptide & Oligonucleotide Site",
+"site_name_zh": "合全药业（药明康德）常州原料药、多肽及寡核苷酸基地",
+"city": "Changzhou",
+"state": "JS",
+"lat": 31.81,
+"lon": 119.97,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"GLP-1/peptides"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "2026",
+"opportunity_status": "Monitor",
+"technical_scope": "Changzhou campus has added peptide capacity (reactors up to 1,000 L) and a large-scale oligonucleotide plant with four production lines; WuXi said (2026) a new Changzhou API site would start ahead of schedule.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Newly started lines need sustaining support."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Start-up validation is likely handled in-house."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "DCAT Value Chain Insights",
+"date": "2024",
+"url": "https://www.dcatvci.org/supplier-news/wuxi-sta-launches-new-small-molecule-api-facility-expands-peptides-oligonucletides-capacity-updates-drug-product-expansions",
+"confidence": "Medium"
+},
+{
+"publisher": "Pharma Manufacturing",
+"date": "2026-07",
+"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55395448/wuxi-apptec-boosts-global-capacity-expansion-with-capital-expenditure-increase",
+"confidence": "Medium"
+}
+],
+"notes": "Dates for the Changzhou peptide and oligonucleotide plants were not confirmed (the cited coverage may pre-date the window); site scope for the 'new Changzhou API site' is Unverified. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role."
+},
+{
+"id": "asymchem-tianjin-tj4-peptide-and-drug-product",
+"account": "asymchem",
+"site_name": "Asymchem Tianjin TJ4 Peptide (SPPS) & Prefilled Syringe Drug Product Site",
+"site_name_zh": "凯莱英天津TJ4多肽及预灌封制剂基地",
+"city": "Tianjin (TEDA)",
+"state": "TJ",
+"lat": 39.05,
+"lon": 117.7,
+"project_type": "BROWNFIELD",
+"modality": [
+"GLP-1/peptides",
+"fill-finish/sterile injectables"
+],
+"investment_usd": null,
+"investment_display": "Not disclosed (2025 group capex CNY 1.27B)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Solid-phase peptide synthesis reactor volume above 45,000 L (April 2026), planned to reach about 69,000 L by end-2026, with annual peptide capacity above 22.5 tonnes; a newly commissioned 6,000 m2 (2,000 m2 footprint) drug-product building for prefilled syringes and cartridges.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "SPPS scale-up and a new syringe / cartridge filling building need process and line control; CDMO may use in-house teams."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "CDMO multi-product batch execution is a good MES case; vendor decisions unknown."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "A new drug-product building serving global customers needs CSV and data integrity under NMPA GMP computerized-systems and data-integrity requirements and customer audits."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"publisher": "Asymchem press release (via Leader-Call)",
+"date": "2026-04",
+"url": "https://www.leader-call.com/online_features/press_releases/asymchem-unveils-its-fully-integrated-tides-commercial-supply-matrix---supporting-partners-from-molecule/article_be2b2501-7f23-5da3-842e-a7179ee29736.html",
+"confidence": "Medium"
+},
+{
+"publisher": "Tiger Brokers news (2025 results)",
+"date": "2026",
+"url": "https://www.itiger.com/hans/news/1116304791",
+"confidence": "Low"
+}
+],
+"notes": "Capex is company-wide, not assigned to the site. Expansion has been running since before 2026, so some automation scope may already be delivered. Localization / 国产替代: domestic DCS and MES vendors (SUPCON / 中控技术, Hollysys / 和利时) are often preferred; a foreign integrator must show a differentiated GMP / validation role. Data security: Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) constrain cross-border data flows and remote access to OT/MES systems."
+}
+],
+"gaps_html": "<h4 style=\"margin-top:0;\">How this dashboard was built</h4>\n<p>This is the China twin of the US dashboard: same structure, filters, map logic, fit matrix and export; only the data, map and labels differ. A seed list of 45 pharma, CDMO and Chinese-pharma accounts was scored (explicit automation language, project scale, timing certainty, account risk; see china-account-tiering.csv) and only Tier 1 and Tier 2 accounts with at least one qualifying greenfield or brownfield project from Jan 2024 to today (or an announced start through 2030) were researched in depth. That gives 13 accounts and 25 site records. Research used web search over company and government announcements, trade press (Fierce Pharma, Pharma Manufacturing, BioSpectrum Asia, Yicai, China Daily) and a small number of Chinese-language government and press pages. Every record carries source links and a confidence level (High = official source; Medium = reputable trade press; Low = single or indirect source).</p>\n<p><b>Currency.</b> Original figures are kept in each record's investment text (CNY, USD or EUR as announced). All USD-equivalent values (KPIs and map shading) use one rate: <b>1 USD = 6.74 CNY</b> (PBOC central parity of 8 Oct 2026 was reported as 6.7367 by a secondary source, stockwirex.com; check against CFETS before external use) and, for Sanofi's EUR 1B only, <b>1 EUR = 1.16 USD</b> (approximate). USD-announced figures are not converted. Press-quoted USD amounts at announcement dates (for example US$212M for Lilly Suzhou) differ from the USD-equivalent shown because they used older rates.</p>\n\n<h4>Known limitations</h4>\n<ul>\n<li><b>No direct reading of primary pages.</b> This build ran in a sandbox where direct page fetches were blocked, so facts come from search-result summaries. Official pages (company releases, government sites, HKEXnews) were surfaced by search but not opened; their High rating reflects the publisher, not a read-through. Treat all Medium and Low items as needing confirmation before customer use.</li>\n<li><b>Chinese-language sources thin.</b> The search tool returned mostly English results. Chinese government and press pages were found for Pfizer Wuxi, Novo, Roche and a few others, marked (zh). The following were not reached: cninfo.com.cn and SSE/SZSE announcements, the National Enterprise Credit Information Publicity System, Qichacha / Tianyancha, NMPA drug-manufacturing-licence and GMP databases, EIA (环评) public notices, China Land Market, NDRC / DRC filings, public tender platforms (cebpubservice.com, ccgp.gov.cn), BOSS Zhipin / Liepin / 51job / Zhaopin job postings, ISPE / PDA China talks, and company WeChat accounts. These would be the best sources for unannounced greenfield signals and for incumbent MES / DCS names.</li>\n<li><b>Incumbent vendors.</b> No China-site incumbent evidence (PAS-X, Siemens, Rockwell, Emerson, Honeywell, Yokogawa, AVEVA, SUPCON, Hollysys) could be found because job-posting sites were unreachable; those fields are blank rather than inferred. Lilly's entry is the global pattern from the US data (Medium/Low).</li>\n<li><b>Combined, non-itemised figures.</b> AstraZeneca's US$15B (Wuxi, Taizhou, Qingdao, Beijing, new sites), Lilly's US$3B, Novartis's CNY 3.3B package (only Changping and Haiyan are plant lines) and WuXi / Asymchem group capex are not split by site; no per-site amount was invented, so the investment KPI is a floor. AstraZeneca's US$2.5B Beijing figure covers R&D, biotech and manufacturing together and inflates the KPI relative to plant capex.</li>\n<li><b>Investment mixing.</b> Totals combine announced commitments of different types (capex, JV, R&D) and different durations (up to ten years). Do not read the KPI as one-year spend.</li>\n<li><b>Coordinates</b> are city or development-zone level approximations, not site addresses.</li>\n<li><b>Map.</b> Province boundaries are Natural Earth 1:10m admin-1 polygons (simplified, Albers equal-area conic, embedded so the file works offline), not geoBoundaries, because the geoBoundaries file was not retrievable here. Taiwan, Hong Kong, Macau and the South China Sea islands are not drawn; no account has a site in Hong Kong or Macau. Boundaries are indicative and carry no legal weight. Beijing, Tianjin and Shanghai are labelled in boxes on the right.</li>\n<li><b>Reference files.</b> The Downloads folder, the DACH CSV and territory plan, the EPCM project matrix and the PowerPoint brand template were not available. The tiering score therefore follows the method described in the brief and the US dashboard's priority reasons (weights: automation language 30%, scale 25%, timing 25%, risk 20%; Tier 1 &ge; 75, Tier 2 60-74, Tier 3 45-59, Tier 4 &lt; 45), and EPCM leads (PM Group, Exyte, Jacobs) were not cross-checked. The logo and brand CSS are reused unchanged from the US file.</li>\n</ul>\n\n<h4>China-specific context to apply when qualifying deals</h4>\n<ul>\n<li><b>Volume-based procurement (VBP).</b> National VBP cuts prices on off-patent and some branded drugs and constrains capex payback for generics-heavy sites (for example Bayer's Q1 2026 China results cite VBP pressure on Aspirin Cardio and Stivarga; Pfizer Wuxi injectables; BI's Tradjenta localisation). Innovative, growth products (GLP-1, biologics, cell therapy) are less exposed.</li>\n<li><b>Localization / 国产替代.</b> Chinese buyers and many multinational China plants prefer domestic automation vendors (SUPCON / 中控技术, Hollysys / 和利时). Position Orise on GMP validation, MES integration and global-standard data integrity rather than on DCS supply.</li>\n<li><b>Data security.</b> Data Security Law, Cybersecurity Law and MLPS 2.0 (等保) affect remote access, cloud hosting and cross-border data flows for foreign OT / MES vendors.</li>\n<li><b>In China, for China.</b> Most multinational projects (Lilly, Novo, Sanofi, Roche, Novartis) localise supply for the Chinese market; the Shijiazhuang JV and the CDMOs also serve export markets.</li>\n<li><b>Local incentives and zone clustering.</b> Many projects sit in development zones (BDA Yizhuang, TEDA Tianjin, Zhangjiang, Lin-gang, Suzhou, Taizhou China Medical City, Wuxi); incentives are likely but were documented only where cited.</li>\n</ul>\n\n<h4>Accounts or areas where information was notably thin or unverified</h4>\n<ul>\n<li><b>Pfizer Wuxi</b> &mdash; two differing project descriptions (methotrexate injectable, Nov 2024; anti-infective line from Jan 2027), no amounts, one source is a weekly magazine (Low).</li>\n<li><b>AstraZeneca Wuxi / Taizhou / Qingdao</b> &mdash; placeholder expansion records only; products, scope and schedule are not published. The BioKangtai vaccine JV site is not identified.</li>\n<li><b>Lilly Beijing OSD vs Pharmaron</b> &mdash; may be the same project; Pharmaron's site, whether the US$200M is equity or capex, and one outlet naming WuXi STA instead are unresolved.</li>\n<li><b>Novo Nordisk Tianjin</b> &mdash; construction status of the sterile expansion and the QC lab not reported; pen-assembly item has only secondary coverage (Low).</li>\n<li><b>Sanofi Beijing</b> &mdash; completion year 2032 from one outlet; automation vendor unknown.</li>\n<li><b>Bayer Qidong</b> &mdash; greenfield vs brownfield unverified.</li>\n<li><b>WuXi Biologics / WuXi AppTec / Asymchem</b> &mdash; sources are company results and trade press; site-level capex not disclosed. Ownership: WuXi Biologics now owns the ex-Pfizer Hangzhou biologics site (2021); WuXi AppTec and WuXi Biologics are separate listed groups. Catalent is owned by Novo Holdings and has no verified in-window China project.</li>\n<li><b>BeOne (BeiGene), Innovent, Hengrui, CSPC</b> &mdash; large Chinese groups with expansion intent but no dated, verifiable in-window plant project found; evaluated as excluded below.</li>\n<li><b>Multinational accounts with no qualifying China project found</b> may still have projects that appear only in Chinese filings (EIA notices, NMPA licences, tender sites) that could not be searched here.</li>\n</ul>\n\n<h4>Accounts excluded (no qualifying China project, or Tier 3-4)</h4>\n<ul>\n<li><b>MSD (Merck &amp; Co.)</b> (Tier 3) &mdash; No qualifying project found: Hangzhou projects pre-date the window; no 2025-26 announcement in sources reviewed.</li>\n<li><b>GSK</b> (Tier 4) &mdash; No China manufacturing project: Tianjin site closed; China production outsourced.</li>\n<li><b>Takeda</b> (Tier 4) &mdash; No qualifying project found: only pre-window expansion evidence.</li>\n<li><b>Johnson &amp; Johnson Innovative Medicine</b> (Tier 3) &mdash; No qualifying project found: Xi&#x27;an expansion pre-dates the window.</li>\n<li><b>Merck KGaA</b> (Tier 3) &mdash; Tier 3: only in-window project is a reagent / chemicals plant with weak MES fit.</li>\n<li><b>Bristol Myers Squibb</b> (Tier 4) &mdash; No China project: no in-window China manufacturing capital project found.</li>\n<li><b>AbbVie</b> (Tier 4) &mdash; No China project: no China manufacturing site found.</li>\n<li><b>Abbott</b> (Tier 4) &mdash; No qualifying project found: only 2011-2015 investments.</li>\n<li><b>Fresenius Kabi</b> (Tier 4) &mdash; No qualifying project found: only Nanchang medical-device news; Q1 2026 reports of operational hurdles in China.</li>\n<li><b>CSL</b> (Tier 4) &mdash; Not researched in depth: no China project found; Wuhan plasma ownership not verified.</li>\n<li><b>Biogen</b> (Tier 4) &mdash; No China project: no China manufacturing site found.</li>\n<li><b>Regeneron</b> (Tier 4) &mdash; No China project: no China manufacturing site found.</li>\n<li><b>Porton</b> (Tier 3) &mdash; Tier 3: no verified in-window China project; localization risk.</li>\n<li><b>WuXi XDC (WuXi Biologics affiliate)</b> (Tier 3) &mdash; Tier 3: no verified in-window China project in sources reviewed.</li>\n<li><b>GenScript ProBio</b> (Tier 4) &mdash; Tier 4: no China project found in sources reviewed.</li>\n<li><b>Lonza</b> (Tier 3) &mdash; Tier 3: no in-window China project; capsule business changing owner.</li>\n<li><b>Catalent</b> (Tier 4) &mdash; Tier 4: no China project found; ownership changed, no current China plan found.</li>\n<li><b>Sartorius</b> (Tier 3) &mdash; Tier 3: supplier plant; announcement pre-dates the window and status unverified.</li>\n<li><b>Samsung Biologics</b> (Tier 4) &mdash; No China project: no China manufacturing site.</li>\n<li><b>BeOne Medicines (BeiGene)</b> (Tier 2) &mdash; Tier 2 candidate but no qualifying project verified; Guangzhou expansion described only as &#x27;planned&#x27; (SCMP 2025) and Suzhou groundbreaking undated.</li>\n<li><b>Jiangsu Hengrui</b> (Tier 3) &mdash; Tier 3: no named project; localization risk.</li>\n<li><b>CSPC</b> (Tier 3) &mdash; Tier 3: JV counted under AstraZeneca; domestic-vendor preference.</li>\n<li><b>Innovent</b> (Tier 3) &mdash; Tier 3: expansion evidence is a company-profile listing (Low); localization risk.</li>\n<li><b>Sinopharm / CNBG</b> (Tier 3) &mdash; Tier 3: restructuring news only; localization risk.</li>\n<li><b>Sino Biopharm</b> (Tier 3) &mdash; Tier 3: no project found; localization risk.</li>\n<li><b>Fosun Pharma</b> (Tier 3) &mdash; Tier 3: no in-window project found.</li>\n<li><b>Hansoh</b> (Tier 4) &mdash; Tier 4: no in-window project found.</li>\n<li><b>Shanghai Pharma</b> (Tier 4) &mdash; Tier 4: not researched in depth.</li>\n<li><b>Zai Lab</b> (Tier 4) &mdash; No China project: no own manufacturing site verified.</li>\n<li><b>Sinovac</b> (Tier 4) &mdash; Tier 4: not researched in depth; vaccine demand downturn.</li>\n<li><b>CanSino</b> (Tier 4) &mdash; Tier 4: not researched in depth.</li>\n<li><b>Walvax</b> (Tier 4) &mdash; Tier 4: not researched in depth.</li>\n<li><b>Zhifei</b> (Tier 4) &mdash; Tier 4: not researched in depth.</li>\n</ul>\n",
+"as_of": "October 12, 2026",
+"region_names_zh": {
+"XJ": "新疆",
+"XZ": "西藏",
+"NM": "内蒙古",
+"GS": "甘肃",
+"YN": "云南",
+"HL": "黑龙江",
+"JL": "吉林",
+"LN": "辽宁",
+"GX": "广西",
+"GD": "广东",
+"HI": "海南",
+"FJ": "福建",
+"ZJ": "浙江",
+"SH": "上海",
+"JS": "江苏",
+"SD": "山东",
+"HE": "河北",
+"TJ": "天津",
+"BJ": "北京",
+"SC": "四川",
+"CQ": "重庆",
+"GZ": "贵州",
+"HN": "湖南",
+"NX": "宁夏",
+"SN": "陕西",
+"QH": "青海",
+"SX": "山西",
+"JX": "江西",
+"HA": "河南",
+"HB": "湖北",
+"AH": "安徽"
+},
+"region_names": {
+"XJ": "Xinjiang",
+"XZ": "Xizang (Tibet)",
+"NM": "Inner Mongolia",
+"GS": "Gansu",
+"YN": "Yunnan",
+"HL": "Heilongjiang",
+"JL": "Jilin",
+"LN": "Liaoning",
+"GX": "Guangxi",
+"GD": "Guangdong",
+"HI": "Hainan",
+"FJ": "Fujian",
+"ZJ": "Zhejiang",
+"SH": "Shanghai",
+"JS": "Jiangsu",
+"SD": "Shandong",
+"HE": "Hebei",
+"TJ": "Tianjin",
+"BJ": "Beijing",
+"SC": "Sichuan",
+"CQ": "Chongqing",
+"GZ": "Guizhou",
+"HN": "Hunan",
+"NX": "Ningxia",
+"SN": "Shaanxi",
+"QH": "Qinghai",
+"SX": "Shanxi",
+"JX": "Jiangxi",
+"HA": "Henan",
+"HB": "Hubei",
+"AH": "Anhui"
+}
+}

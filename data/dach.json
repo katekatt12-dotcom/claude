@@ -1,0 +1,2964 @@
+{
+"accounts": [
+{
+"id": "roche",
+"name": "Roche (incl. Genentech/Diagnostics)",
+"group": "A",
+"ownership_note": "Roche Diagnostics (Penzberg, Mannheim) and Roche Pharma (Basel, Kaiseraugst) are separate buyers inside one group; Genentech has no DACH site.",
+"footprint_summary": "Largest DACH pharma footprint: Penzberg (biotech + diagnostics raw-materials, ~7,700 staff), Mannheim (diagnostics), Basel and Kaiseraugst (pharma R&D / production), plus Grenzach-Wyhlen and Ludwigshafen-area sites.",
+"investment_strategy_summary": "Roche says it has invested >EUR 3.5B in German sites since 2020 (about half in Penzberg) and pairs a USD 50B US pledge with continued European R&D builds; Kaiseraugst is being restructured (Rocephin production to end by decade-end, ~230 jobs cut).",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Penzberg's EUR 600M+ diagnostics production centre is the single largest Roche investment in Germany and is mid-construction with commissioning 2027-28: a near-term automation/MES/validation entry point.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "lonza",
+"name": "Lonza",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Visp (VS) is Lonza's biggest site (biologics, small molecules, ADC bioconjugation); Stein (AG) is adding a commercial aseptic ADC drug-product plant; Basel is HQ.",
+"investment_strategy_summary": "H1 2026 results were strong and margin guidance was raised; Lonza says its new large-scale mammalian facility in Visp started commercial operation in H1 2026, with the Stein ADC drug-product plant (2027) and Visp bioconjugation facility (2028) under construction.",
+"priority_tier": "Tier 1",
+"priority_reason": "3 open opportunities, 3 in the 2026-27 window, 2 with a Strong fit. Three concurrent capital projects at Visp/Stein with 2027-28 start-up dates, at a CDMO that buys automation and MES per suite.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "bayer",
+"name": "Bayer",
+"group": "A",
+"ownership_note": "Pharmaceuticals division only; Crop Science/Consumer Health sites excluded.",
+"footprint_summary": "Pharma production at Bergkamen, Berlin, Leverkusen, Weimar and Wuppertal; Berlin Nordhafen campus hosts cell/gene therapy build-out.",
+"investment_strategy_summary": "Bayer committed >EUR 1.4B (part of ~EUR 2B) to German pharma technology, new production facilities and digitalization, and is positioning each site as a Centre of Excellence (Bergkamen contrast media/hormones, Leverkusen non-hormonal solids, Wuppertal launch production).",
+"priority_tier": "Tier 2",
+"priority_reason": "2 open opportunities, 1 in the 2026-27 window, 0 with a Strong fit. Network-wide modernisation plus a new combined warehouse (ops Q1 2026) and Berlin cell/gene therapy centre (target 2028): multiple site-level digitalization entry points.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "takeda",
+"name": "Takeda",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Vienna-Donaustadt (plasma fractionation to packaging), Linz (prefilled syringes / biologics), Orth an der Donau (QC lab); Oranienburg (DE) is a small production site.",
+"investment_strategy_summary": "Takeda put ~EUR 100M into Linz through 2025 (new syringe line, FY2024 start) and built a new R&D laboratory in Vienna Seestadt; no new 2026 DACH capital project was found.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Main Linz project is completed; follow-on lifecycle/validation work only. No new announcements located.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "merckkgaa",
+"name": "Merck KGaA (Darmstadt)",
+"group": "A",
+"ownership_note": "Merck KGaA (Darmstadt; US name EMD) is NOT Merck & Co./MSD. Swiss sites are held via Merck & Cie (Schaffhausen, Altdorf) and Merck Biotech Development Center (Corsier-sur-Vevey).",
+"footprint_summary": "Darmstadt HQ and production; Swiss API / pharma-chemicals sites in Buchs, Schaffhausen, Altdorf; biotech development centre in Corsier-sur-Vevey (opened June 2023, EUR 250M).",
+"investment_strategy_summary": "EUR 1B+ Darmstadt investment programme and ~EUR 418M new Swiss production capacity in the last two years; a new quality-control building in Darmstadt was announced. 2026 outlook was raised in May 2026.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Several live projects but amounts, dates and automation scope are only thinly documented in this pass.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "boehringer",
+"name": "Boehringer Ingelheim",
+"group": "A",
+"ownership_note": "Privately owned; Animal Health is part of the group.",
+"footprint_summary": "Ingelheim (HQ/production), Biberach (largest R&D site, ~8,000 staff, biopharma production), Dortmund (production), Vienna (biopharma and R&D).",
+"investment_strategy_summary": "In June 2026 Boehringer stopped planned German investments of EUR 900M for 2027-2030 (citing health-cost savings law and US pressure) but keeps an EUR 85M QC lab building in Biberach (completion 2027) and an EUR 100M+ Vienna office build.",
+"priority_tier": "Tier 2",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 0 with a Strong fit. German capex freeze lowers near-term site-build demand; QC lab (LIMS/validation) in Biberach is the concrete item.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "sandoz",
+"name": "Sandoz",
+"group": "A",
+"ownership_note": "Sandoz has been a standalone listed company (SIX: SDZ) since its Novartis spin-off in Oct 2023: the buyer is Sandoz, not Novartis. Hexal AG (Holzkirchen) is a Sandoz subsidiary and is covered here.",
+"footprint_summary": "Kundl and Schaftenau (Tyrol): antibiotics and biosimilar/biologics finished products; Langkampfen (Tyrol); Germany: Holzkirchen (Hexal HQ and BioTD lab), Barleben, Osterweddingen, Rudolstadt (~3,400 staff).",
+"investment_strategy_summary": "Standalone Sandoz opened a EUR 200M-package antibiotic plant in Kundl (Mar 2024) and a EUR 150M+ 'BioInject' prefilled-syringe/autoinjector plant in Schaftenau, while closing thyroid-hormone production at Langkampfen/Schaftenau by end-2026.",
+"priority_tier": "Tier 2",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Active modernisation plus consolidation; spin-off means new standalone IT/OT decisions.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "novartis",
+"name": "Novartis",
+"group": "A",
+"ownership_note": "Post-spin-off Novartis no longer includes Sandoz.",
+"footprint_summary": "Basel Campus (R&D HQ), Stein (AG) sterile and solid dosage production, Schweizerhalle (BL) siRNA/API; Halle (Saale) radioligand plant in Germany.",
+"investment_strategy_summary": "On 25 Nov 2025 Novartis announced USD 80M for siRNA at Schweizerhalle (+80 jobs by 2028) and USD 26M for sterile dosage forms in Stein while ending solid dosage and sterile packaging there by end-2027 (~550 jobs), and EUR 34.7M for a radioligand site in Halle.",
+"priority_tier": "Tier 2",
+"priority_reason": "3 open opportunities, 3 in the 2026-27 window, 0 with a Strong fit. Several modest but concrete production projects with 2027-28 timelines; denominated in USD/EUR.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "gsk",
+"name": "GSK",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Marburg (vaccines: MenB, mumps, rabies/FSME, filling and freeze-drying); Dresden flu/hepatitis vaccine plant is being closed by 2028 (~640 jobs).",
+"investment_strategy_summary": "GSK is concentrating vaccine production in Marburg (MenB EUR 162M, mumps EUR 10M, EUR 13M filling/freeze-dry renewal; announcement dates not confirmed) while exiting Dresden.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Marburg projects appear older than the 2024 window; Dresden closure is a negative signal.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "bbraun",
+"name": "B. Braun",
+"group": "A",
+"ownership_note": "Family-owned (B. Braun SE); Aesculap and Hospital Care also covered.",
+"footprint_summary": "Melsungen (HQ; infusion therapy, dialysis machines), Sempach (CH; disinfectants), Tuttlingen (Aesculap).",
+"investment_strategy_summary": "Several expansions: EUR 150M new infusion-article plant in Melsungen (opened), EUR 60M expansion for dialysis machines and infusion pumps, and CHF 70M N.I.C.O. disinfectant plant in Sempach.",
+"priority_tier": "Tier 2",
+"priority_reason": "1 open opportunity, 0 in the 2026-27 window, 0 with a Strong fit. Mix of device and pharma-liquid manufacturing; exact dates were not confirmed in this pass.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "bachem",
+"name": "Bachem",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Bubendorf (BL; HQ, peptides and oligonucleotides), Vionnaz (VS), St. Helens (UK, outside scope).",
+"investment_strategy_summary": "Bachem guides CHF 350-400M annual capex; 'Building K' in Bubendorf is ramping commercial production in 2026 and a CHF 500M+ greenfield at Sisslerfeld (AG) is planned to start production in 2030; 22 Jul 2026 coverage reports a new large-scale production plant plan.",
+"priority_tier": "Tier 1",
+"priority_reason": "2 open opportunities, 1 in the 2026-27 window, 1 with a Strong fit. Fastest-growing peptide CDMO in DACH with a greenfield about to enter detailed design/automation selection.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "biontech",
+"name": "BioNTech",
+"group": "A",
+"ownership_note": "BioNTech absorbed CureVac (incl. its Tuebingen sites).",
+"footprint_summary": "Mainz (HQ) remains; Marburg, Idar-Oberstein and Tuebingen manufacturing sites are being closed (end-2027 to end-2028) after no buyers were found.",
+"investment_strategy_summary": "Restructuring: ~1,800+ jobs affected, ~EUR 500M annual savings targeted by 2029.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Net negative for new automation; potential decommissioning/data-migration work only.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "sanofi",
+"name": "Sanofi",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Frankfurt-Hoechst (Industriepark Hoechst, insulin and pharma), plus a Lonza-built dedicated biologics facility in Visp (Ibex Solutions).",
+"investment_strategy_summary": "Sanofi confirmed a ~EUR 1.3B new insulin plant at Hoechst; the EU approved ~EUR 400M state aid in Sept 2026, with completion targeted around 2029.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Largest single new pharma plant in Germany with state-aid approval just received: engineering/automation partner selection phase.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "vetter",
+"name": "Vetter Pharma",
+"group": "A",
+"ownership_note": "Family-owned CDMO (Ravensburg).",
+"footprint_summary": "Ravensburg and Langenargen (DE), Rankweil (AT, clinical); Skokie (US, outside scope).",
+"investment_strategy_summary": "Vetter broke ground in Saarlouis in May 2026 (EUR ~480-500M first phase, ops 2031, up to 1,500 jobs, EUR 47M EU state aid) alongside ongoing capacity expansions in Ravensburg/Langenargen under a ~EUR 1.5B programme.",
+"priority_tier": "Tier 1",
+"priority_reason": "2 open opportunities, 2 in the 2026-27 window, 1 with a Strong fit. Greenfield aseptic fill-finish site: classic Orise fit across SCADA/MES/validation.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "cordenpharma",
+"name": "CordenPharma",
+"group": "A",
+"ownership_note": "Owned by International Chemical Investors Group (ICIG).",
+"footprint_summary": "Plankstadt (DE), Muttenz/Liestal region (CH, new), Brussels and Colorado (outside scope).",
+"investment_strategy_summary": "CordenPharma is investing ~EUR 1B in peptides, of which ~EUR 500M for a new greenfield plant at Getec Park in Muttenz (construction 2025-2027, commercial operation H1 2028, 300 jobs).",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield peptide plant at the design/build stage in the 2026-27 window.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "ucb",
+"name": "UCB",
+"group": "A",
+"ownership_note": "UCB Farchim SA is the Swiss subsidiary (Bulle, FR).",
+"footprint_summary": "Bulle (FR): biologics manufacturing; Monheim (DE) is a Germany-based unit.",
+"investment_strategy_summary": "UCB is investing CHF 100M+ in Bulle: new production unit for a key biologics compound (relocated from Belgium), operational ~2029, full capacity 2030, +80 jobs; CHF 15M QC lab (mid-2026) and CHF 10M cold unit.",
+"priority_tier": "Tier 2",
+"priority_reason": "1 open opportunity, 0 in the 2026-27 window, 0 with a Strong fit. Concrete Swiss project with a long lead time.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "rentschler",
+"name": "Rentschler Biopharma",
+"group": "A",
+"ownership_note": "Family-owned; withdrew from cell and gene therapy in early 2025.",
+"footprint_summary": "Laupheim (DE HQ, microbial/mammalian CDMO); Milford, MA (outside scope).",
+"investment_strategy_summary": "'Largest single investment' in Laupheim: four-storey buffer media station (construction from spring 2025, operational 2028), 'high double-digit million' euro.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Utility/buffer infrastructure with automation and MES interfaces.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "lilly",
+"name": "Eli Lilly",
+"group": "A",
+"ownership_note": "",
+"footprint_summary": "Alzey (Rhineland-Palatinate) is Lilly's only new DACH production site (Mounjaro/injectables); no pre-existing DACH plant.",
+"investment_strategy_summary": "Alzey was announced in Nov 2023 at ~EUR 2.3B / 1,000 jobs; in 2026 Lilly cut the remaining investment by about half and the job target to ~500 because of German healthcare-cost measures, but still targets ops end-2027.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield injectable plant still under construction; scope reduction adds uncertainty.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "biospring",
+"name": "BioSpring",
+"group": "B",
+"ownership_note": "Frankfurt-based oligonucleotide CDMO.",
+"footprint_summary": "Frankfurt-Fechenheim (cGMP gRNA/mRNA), Offenbach (new site).",
+"investment_strategy_summary": "Building a large-scale nucleic acid API plant in Offenbach ('several hundred million euros', ~200 jobs, construction to end of 2027) after a double-digit-million Fechenheim expansion.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Greenfield GMP plant in construction: strong fit.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "ypsomed",
+"name": "Ypsomed",
+"group": "B",
+"ownership_note": "SIX-listed; Swiss.",
+"footprint_summary": "Solothurn, Burgdorf (CH); Schwerin (DE).",
+"investment_strategy_summary": "CHF ~200M in Solothurn (new production levels, tool shop, high-bay), CHF 21M in Burgdorf, and ~EUR 500M in two phases in Schwerin to the end of the decade (400-500M pens/yr, 1,000 staff).",
+"priority_tier": "Tier 1",
+"priority_reason": "2 open opportunities, 2 in the 2026-27 window, 1 with a Strong fit. Autoinjector/pen assembly: high-volume device automation + MES.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "rotop",
+"name": "Rotop Pharmaka",
+"group": "B",
+"ownership_note": "Backed by GENUI and SHS Capital.",
+"footprint_summary": "Dresden-Rossendorf (DE).",
+"investment_strategy_summary": "Two highly automated radiopharmaceutical factories, start from 2028, 'double-digit million' euro programme.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Germany's largest radiopharma project; automated GMP lines.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "merz",
+"name": "Merz Pharma",
+"group": "B",
+"ownership_note": "Family-owned; Merz Aesthetics and Merz Therapeutics.",
+"footprint_summary": "Dessau-Rosslau (DE); Reinheim (DE, closing).",
+"investment_strategy_summary": "New packaging line opened June 2026; EUR 100M+ planned in Dessau by 2028; Reinheim production consolidating to Dessau.",
+"priority_tier": "Tier 2",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 0 with a Strong fit. Consolidation into Dessau drives new lines.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "siegfried",
+"name": "Siegfried",
+"group": "B",
+"ownership_note": "SIX-listed CDMO.",
+"footprint_summary": "Zofingen (HQ), Evionnaz (CH); Hameln, Minden (DE).",
+"investment_strategy_summary": "Hameln: two new prefilled syringe/cartridge lines (first revenue 2026, second 2027); Minden new multi-purpose drug-substance plant (nearing completion, first revenue H2 2025); CHF 25M R&D centre in Evionnaz.",
+"priority_tier": "Tier 1",
+"priority_reason": "1 open opportunity, 1 in the 2026-27 window, 1 with a Strong fit. Concrete 2026-27 line start-ups.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "pfizer",
+"name": "Pfizer",
+"group": "C",
+"ownership_note": "",
+"footprint_summary": "Freiburg (DE): tablets/capsules.",
+"investment_strategy_summary": "EUR 300M high-containment plant opened 2022; in June 2026 the CEO said German investments are under review.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. Completed; risk of freeze.",
+"incumbent_vendors_general": ""
+},
+{
+"id": "astrazeneca",
+"name": "AstraZeneca",
+"group": "C",
+"ownership_note": "",
+"footprint_summary": "Wedel (DE) production.",
+"investment_strategy_summary": "No DACH investment found.",
+"priority_tier": "Tier 3",
+"priority_reason": "0 open opportunities, 0 in the 2026-27 window, 0 with a Strong fit. No project identified.",
+"incumbent_vendors_general": ""
+}
+],
+"sites": [
+{
+"account": "roche",
+"site_name": "Roche Diagnostics Production Centre (raw materials)",
+"city": "Penzberg",
+"state": "DE-BY",
+"lat": 47.7508,
+"lon": 11.3764,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"other (R&D / consumer)"
+],
+"currency": "EUR",
+"investment": 600000000,
+"investment_display": "EUR 600M+ (largest single Roche investment in Germany)",
+"jobs": 200,
+"status": "under construction",
+"expected_start": "2027-12 (completion); production 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New production centre on the Penzberg biotech campus for diagnostic raw materials (enzymes, antibodies, nucleotides). Groundbreaking 28 Nov 2024; completion planned 2027, then qualification, production from 2028 with ~200 initial staff.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Highly automated GMP-like raw-material production must be commissioned 2027 and qualified before 2028 start."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "New batch production and release flow for a new product family needs MES/recipe and data integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification phase follows completion in 2027."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Campus-scale data/OT integration in a EUR 3.5B+ German programme."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bionity.com/de/news/1188095/roche-eroeffnet-neues-hightech-innovationszentrum-fuer-300-millionen-euro-in-bayern.html",
+"publisher": "Bionity",
+"date": "2026-02",
+"confidence": "Medium"
+},
+{
+"url": "https://www.aerzteblatt.de/nachrichten/156068/Roche-legt-Grundstein-fuer-600-Millionen-Investition",
+"publisher": "Aerzteblatt",
+"date": "2024-11",
+"confidence": "Medium"
+},
+{
+"url": "https://www.onvista.de/news/2026/06-09-roche-haelt-trotz-berliner-sparpaket-an-millionen-investition-fest-0-20-26519960",
+"publisher": "onvista",
+"date": "2026-06-09",
+"confidence": "Medium"
+}
+],
+"notes": "Roche reaffirmed the investment in June 2026 despite the German savings package.",
+"id": "roche-roche-diagnostics-production-centre-raw-materials",
+"country": "Germany",
+"eur": 600000000
+},
+{
+"account": "roche",
+"site_name": "Roche Diagnostics Innovation Centre",
+"city": "Penzberg",
+"state": "DE-BY",
+"lat": 47.752,
+"lon": 11.374,
+"project_type": "BROWNFIELD",
+"modality": [
+"other (R&D / consumer)"
+],
+"currency": "EUR",
+"investment": 300000000,
+"investment_display": "EUR ~300M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened Feb 2026",
+"in_window": true,
+"opportunity_status": "Monitor",
+"technical_scope": "23,000 m2 development/laboratory building opened Feb 2026; ~1,000 of 7,700 site staff moved in. Lab/R&D rather than manufacturing.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Lab data/OT integration; no manufacturing scope."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Post-opening support of building systems and labs."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.ingenieur.de/technik/fachbereiche/bau/durchgetaktet-bis-zum-letzten-gewerk-so-entstand-roches-hightech-labor/",
+"publisher": "ingenieur.de",
+"date": "2026-02-25",
+"confidence": "Medium"
+},
+{
+"url": "https://www.pharmazeutische-zeitung.de/roche-eroeffnet-neues-diagnostik-innovationszentrum-162786/",
+"publisher": "Pharmazeutische Zeitung",
+"date": "2026-02",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "roche-roche-diagnostics-innovation-centre",
+"country": "Germany",
+"eur": 300000000
+},
+{
+"account": "roche",
+"site_name": "Roche Basel Building 12 (research and development)",
+"city": "Basel",
+"state": "CH-BS",
+"lat": 47.5596,
+"lon": 7.6009,
+"project_type": "BROWNFIELD",
+"modality": [
+"other (R&D / consumer)"
+],
+"currency": "CHF",
+"investment": 500000000,
+"investment_display": "CHF ~500M",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Completion 2029",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Flexible R&D building for up to 450 early-development researchers; groundbreaking Oct 2025, completion 2029. Laboratory scope, long lead.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Lab automation/data platforms in 2028-29; too early for automation vendors."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.roche.ch/en/media-switzerland/informationen/med-ch-2025-10-29",
+"publisher": "Roche Switzerland",
+"date": "2025-10-29",
+"confidence": "High"
+},
+{
+"url": "https://www.roche.ch/en/stories/groundbreaking-building12",
+"publisher": "Roche Switzerland",
+"date": "2025-10",
+"confidence": "High"
+}
+],
+"notes": "CHF 1.2B Basel programme (research buildings and production renovation) runs to 2030.",
+"id": "roche-roche-basel-building-12-research-and-development",
+"country": "Switzerland",
+"eur": 535000000
+},
+{
+"account": "roche",
+"site_name": "Roche Kaiseraugst Production Site Restructuring",
+"city": "Kaiseraugst",
+"state": "CH-AG",
+"lat": 47.534,
+"lon": 7.723,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"biologics/mAbs"
+],
+"currency": "CHF",
+"investment": 500000000,
+"investment_display": "CHF 500M+ (headline per Moneycab title; details unverified)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Moneycab reports a CHF 500M+ investment at Kaiseraugst while Roche ends Rocephin production by the end of the decade and cuts ~230 jobs. Scope of new capital items not confirmed.",
+"orise_fit": [
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Restructuring may require system consolidation/migration."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Ongoing support during product transfers."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.moneycab.com/?p=1071859",
+"publisher": "Moneycab",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.moneycab.com/schweiz/roche-baut-die-produktion-in-kaiseraugst-um/amp/",
+"publisher": "Moneycab",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "Headline figure not independently confirmed; treat as Low confidence.",
+"id": "roche-roche-kaiseraugst-production-site-restructuring",
+"country": "Switzerland",
+"eur": 535000000
+},
+{
+"account": "roche",
+"site_name": "Roche Mannheim diagnostics expansion",
+"city": "Mannheim",
+"state": "DE-BW",
+"lat": 49.4875,
+"lon": 8.466,
+"project_type": "BROWNFIELD",
+"modality": [
+"other (R&D / consumer)"
+],
+"currency": "EUR",
+"investment": 400000000,
+"investment_display": "EUR 400M+ across five construction projects",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Five projects at the Mannheim diagnostics site: laboratory, distribution and production buildings, chilled-water storage and IT infrastructure; plus an instrument launch centre.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Facility/IT infrastructure build-out."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "Diagnostics production lines may need MES."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bionity.com/de/news/1157476/400-millionen-euro-roche-baut-mannheimer-standort-aus.html",
+"publisher": "Bionity",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "Date of the five-project programme not confirmed.",
+"id": "roche-roche-mannheim-diagnostics-expansion",
+"country": "Germany",
+"eur": 400000000
+},
+{
+"account": "lonza",
+"site_name": "Lonza Visp large-scale mammalian facility (Ibex Solutions)",
+"city": "Visp",
+"state": "CH-VS",
+"lat": 46.294,
+"lon": 7.882,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "CHF",
+"investment": null,
+"investment_display": "Amount not disclosed in sources found",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "Commercial operation from H1 2026",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Large-scale mammalian biologics plant at Ibex Solutions started commercial operation in H1 2026 and is in ramp-up; it includes a dedicated Sanofi facility. Ramp-up and tech-transfer support.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Ramp-up of multi-customer suites typically needs MES recipe/batch work."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "CSV and data-integrity for newly commissioned suites."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Early-life support and managed services."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmamanufacturing.com/sector/contract-manufacturing/article/55378861/lonzas-large-scale-mammalian-site-in-visp-switzerland-continues-ramp-up-process",
+"publisher": "PharmaManufacturing",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.bluewin.ch/en/news/lonza-invests-in-production-and-remains-on-target-li.3224385",
+"publisher": "blue News",
+"date": "2026",
+"confidence": "Medium"
+},
+{
+"url": "https://new.1815.ch/news/wallis/aktuell/neue-arbeitsplaetze-fuer-visp",
+"publisher": "1815.ch",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "lonza-lonza-visp-large-scale-mammalian-facility-ibex-solutions",
+"country": "Switzerland",
+"eur": null
+},
+{
+"account": "lonza",
+"site_name": "Lonza Visp large-scale bioconjugation (ADC) facility",
+"city": "Visp",
+"state": "CH-VS",
+"lat": 46.295,
+"lon": 7.884,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"small molecule/API"
+],
+"currency": "CHF",
+"investment": null,
+"investment_display": "Amount not found (3,000 m2, three suites to 1,200 L)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Operations 2027 (dedicated suite) / 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New 3,000 m2 bioconjugation plant with three large-scale suites (up to 1,200 L): one dedicated to a global partner for commercial ADC, two multi-purpose. Construction progressing per Lonza H1/Q1 2026.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "High-containment conjugation suites need process control from design through commissioning in 2027."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Multi-purpose suites require recipe-driven MES and eBR."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Commissioning-qualification in 2027-28."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://live.deutsche-boerse.com/news/LonzaDelivers-Strong-Performance-in-Q1-2026-in-Line-with-Expectations-and-Confirms-Full-Year-Outlook-2026-330ea2f2-33b8-4bd2-9769-3081c8ae07cb",
+"publisher": "Lonza via Deutsche Boerse",
+"date": "2026",
+"confidence": "High"
+},
+{
+"url": "https://www.dcatvci.org/supplier-news/lonza-investing-in-large-scale-biomanufacturing-bioconjugation-drug-product-manufacturing/",
+"publisher": "DCAT",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "lonza-lonza-visp-large-scale-bioconjugation-adc-facility",
+"country": "Switzerland",
+"eur": null
+},
+{
+"account": "lonza",
+"site_name": "Lonza Stein aseptic ADC drug-product facility",
+"city": "Stein",
+"state": "CH-AG",
+"lat": 47.541,
+"lon": 7.946,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"biologics/mAbs"
+],
+"currency": "CHF",
+"investment": null,
+"investment_display": "Amount not found (115 jobs at peak)",
+"jobs": 115,
+"status": "under construction",
+"expected_start": "Operations 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Commercial-scale, high-containment aseptic fill-finish for ADCs, operational 2027 (construction progressing as of H1 2026).",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Aseptic fill lines, isolators and HVAC/utilities need integrated control."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Commercial-scale fill-finish needs eBR and equipment integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Validation of new sterile process ahead of 2027."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://live.deutsche-boerse.com/news/LonzaDelivers-Strong-Performance-in-Q1-2026-in-Line-with-Expectations-and-Confirms-Full-Year-Outlook-2026-330ea2f2-33b8-4bd2-9769-3081c8ae07cb",
+"publisher": "Lonza via Deutsche Boerse",
+"date": "2026",
+"confidence": "High"
+},
+{
+"url": "https://www.europeanpharmaceuticalreview.com/news/lonza-to-enhance-commercial-antibody-drug-conjugate-supply-capacity/187684.article",
+"publisher": "European Pharmaceutical Review",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "lonza-lonza-stein-aseptic-adc-drug-product-facility",
+"country": "Switzerland",
+"eur": null
+},
+{
+"account": "bayer",
+"site_name": "Bayer Bergkamen Centre of Excellence and Combined Warehouse",
+"city": "Bergkamen",
+"state": "DE-NW",
+"lat": 51.618,
+"lon": 7.633,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"oral solid dose"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Part of >EUR 1.4B German pharma programme (not split by site)",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "Warehouse ops Q1 2026",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Bergkamen becomes the Centre of Excellence for contrast media and hormone products with additional therapeutics capacity; a climate-neutral combined warehouse for Bergkamen and Wuppertal API started operations in Q1 2026.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Part of a network digitalization programme."
+},
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Technology upgrades/new production facilities."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Commissioning of the new warehouse and logistics automation."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmazeutische-zeitung.de/bayer-investiert-milliarden-betrag-in-biotechnologie-sparte-132304/",
+"publisher": "Pharmazeutische Zeitung",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/bayer-earmarks-22-billion-upgrade-drug-manufacturing-shedding-some-facilities",
+"publisher": "Fierce Pharma",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.bayer.com/media/download/d423c37e-df47-495a-bcf4-5bfec99a647c/2025-0026.pdf",
+"publisher": "Bayer",
+"date": "2025",
+"confidence": "High"
+}
+],
+"notes": "The EUR 2B programme dates from 2022; per-site amounts are not public.",
+"id": "bayer-bayer-bergkamen-centre-of-excellence-and-combined-warehouse",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "bayer",
+"site_name": "Bayer Leverkusen Supply Centre (non-hormonal solids)",
+"city": "Leverkusen",
+"state": "DE-NW",
+"lat": 51.03,
+"lon": 6.984,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Part of >EUR 1.4B programme",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Leverkusen is being built into the Centre of Excellence for non-hormonal solid dosage forms.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Network digitalization initiatives."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "Consolidation of legacy lines."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmazeutische-zeitung.de/bayer-investiert-milliarden-betrag-in-biotechnologie-sparte-132304/",
+"publisher": "Pharmazeutische Zeitung",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bayer-bayer-leverkusen-supply-centre-non-hormonal-solids",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "bayer",
+"site_name": "Bayer Wuppertal launch production and new technologies",
+"city": "Wuppertal",
+"state": "DE-NW",
+"lat": 51.2562,
+"lon": 7.1508,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"small molecule/API"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Part of >EUR 1.4B programme",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Wuppertal focuses on launch production and new production technologies within the EUR 2B programme.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Launch-site digitalization."
+},
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "New technology introduction."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.morningstar.co.uk/uk/news/AN_1648718658294881600/bayer-to-invest-eur2-billion-to-strengthen-pharmaceutical-division.aspx",
+"publisher": "Morningstar",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bayer-bayer-wuppertal-launch-production-and-new-technologies",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "bayer",
+"site_name": "Bayer Berlin Centre for Gene and Cell Therapies",
+"city": "Berlin",
+"state": "DE-BE",
+"lat": 52.542,
+"lon": 13.356,
+"project_type": "BROWNFIELD",
+"modality": [
+"cell & gene therapy"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Amount not found",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Target operation 2028",
+"in_window": false,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Translation centre with GMP production area on the Bayer Nordhafen campus with Charite; construction from 2025, planned operation 2028.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Small-batch cell/gene therapy GMP needs electronic batch records."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "GMP qualification for a new suite."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Data capture for translation workflows."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bayer.com/media/aufbau-von-translationszentrum-fuer-gentherapien-und-zelltherapien-in-berlin-beginnt/",
+"publisher": "Bayer",
+"date": "2025",
+"confidence": "High"
+},
+{
+"url": "https://chemanager-online.com/en/node/440896",
+"publisher": "CHEManager",
+"date": "2025",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bayer-bayer-berlin-centre-for-gene-and-cell-therapies",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "takeda",
+"site_name": "Takeda Linz prefilled syringe and biologics site",
+"city": "Linz",
+"state": "AT-OO",
+"lat": 48.3069,
+"lon": 14.2858,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"biologics/mAbs",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 100000000,
+"investment_display": "EUR ~100M by 2025",
+"jobs": null,
+"status": "operational",
+"expected_start": "Production FY2024",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "New prefilled-syringe line at Takeda's global centre for prefilled syringes and self-medication biologics; announced May 2023.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Post-start-up support."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Continued line qualification."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://industriemagazin.at/chemie/wiener-pharma-konzern-takeda-mit-neuer-fuehrung/",
+"publisher": "Industriemagazin",
+"date": "2023-05",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "takeda-takeda-linz-prefilled-syringe-and-biologics-site",
+"country": "Austria",
+"eur": 100000000
+},
+{
+"account": "takeda",
+"site_name": "Takeda Vienna R&D laboratory (Seestadt)",
+"city": "Vienna",
+"state": "AT-W",
+"lat": 48.22,
+"lon": 16.5,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs",
+"plasma-derived"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Three-digit million EUR (exact figure not stated)",
+"jobs": 250,
+"status": "operational",
+"expected_start": "From 2025",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "New R&D building in Vienna Seestadt for ~250 researchers (from 2025). Laboratory, no manufacturing.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Lab informatics only."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://investinaustria.at/en/news-events-press/global-player-takeda-is-building-a-research-and-development-laboratory-in-vienna-donaustadt/",
+"publisher": "Invest in Austria",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "takeda-takeda-vienna-r-d-laboratory-seestadt",
+"country": "Austria",
+"eur": null
+},
+{
+"account": "merckkgaa",
+"site_name": "Merck KGaA Darmstadt QC building and investment programme",
+"city": "Darmstadt",
+"state": "DE-HE",
+"lat": 49.8728,
+"lon": 8.6512,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API",
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "EUR 1B+ programme; QC building amount not found",
+"jobs": null,
+"status": "announced",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Aerzteblatt reports Merck investing in a new quality-control building at Darmstadt; Merck also runs an EUR 1B+ Darmstadt investment programme including a EUR 300M+ research centre (older).",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "QC/LIMS and data integrity in a new lab building."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Site digitalization."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.aerzteblatt.de/news/merck-investiert-in-darmstadt-in-neues-gebaeude-fuer-qualitaetskontrolle-85f3f5ae-a93b-4e37-8f17-47cfed920609",
+"publisher": "Aerzteblatt",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.chemie.de/news/1160203/merck-investiert-1-mrd-in-den-standort-darmstadt.html",
+"publisher": "Chemie.de",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "Dates not confirmed.",
+"id": "merckkgaa-merck-kgaa-darmstadt-qc-building-and-investment-programme",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "merckkgaa",
+"site_name": "Merck Swiss production network (Buchs / Schaffhausen / Altdorf)",
+"city": "Schaffhausen",
+"state": "CH-SH",
+"lat": 47.697,
+"lon": 8.634,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"currency": "EUR",
+"investment": 418000000,
+"investment_display": "EUR ~418M new Swiss production capacity in last two years",
+"jobs": null,
+"status": "operational",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Merck states ~EUR 418M new production capacity across Swiss operations (APIs, intermediates, reference materials).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Support of newly commissioned capacity."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.s-ge.com/invest/de/artikel/success-stories/merck-die-schweiz-bietet-attraktive-und-stabile-rahmenbedingungen-fuer",
+"publisher": "S-GE",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "Time window of the EUR 418M not confirmed.",
+"id": "merckkgaa-merck-swiss-production-network-buchs-schaffhausen-altdorf",
+"country": "Switzerland",
+"eur": 418000000
+},
+{
+"account": "merckkgaa",
+"site_name": "Merck Biotech Development Center",
+"city": "Corsier-sur-Vevey",
+"state": "CH-VD",
+"lat": 46.463,
+"lon": 6.855,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": 250000000,
+"investment_display": "EUR 250M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened June 2023",
+"in_window": false,
+"opportunity_status": "Closed/late",
+"technical_scope": "Clinical-manufacturing biotech centre (250 staff) opened June 2023: outside the Jan 2024 window.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://endpts.com/?p=249831",
+"publisher": "Endpoints",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.pharmaceutical-technology.com/?p=91715",
+"publisher": "Pharmaceutical Technology",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "merckkgaa-merck-biotech-development-center",
+"country": "Switzerland",
+"eur": 250000000
+},
+{
+"account": "boehringer",
+"site_name": "Boehringer Biberach QC laboratory building",
+"city": "Biberach",
+"state": "DE-BW",
+"lat": 48.096,
+"lon": 9.79,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": 85000000,
+"investment_display": "EUR 85M",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Completion 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Quality-assurance laboratory building at Biberach, completing 2027; survived the June 2026 freeze on EUR 900M of 2027-30 German investments.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "LIMS and data-integrity validation for new QC labs."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Lab/OT data integration."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmazeutische-zeitung.de/boehringer-ingelheim-zieht-investitionen-zurueck-165764/",
+"publisher": "Pharmazeutische Zeitung",
+"date": "2026-06",
+"confidence": "Medium"
+},
+{
+"url": "https://www.schwaebische.de/wirtschaft/boehringer-ingelheim-waechst-kraeftig-stoppt-aber-investitionen-in-deutschland-4720079",
+"publisher": "Schwaebische Zeitung",
+"date": "2026",
+"confidence": "Medium"
+}
+],
+"notes": "Wider German capex freeze (EUR 900M) lowers odds of new plant projects.",
+"id": "boehringer-boehringer-biberach-qc-laboratory-building",
+"country": "Germany",
+"eur": 85000000
+},
+{
+"account": "boehringer",
+"site_name": "Boehringer Vienna administration building",
+"city": "Vienna",
+"state": "AT-W",
+"lat": 48.23,
+"lon": 16.4,
+"project_type": "BROWNFIELD",
+"modality": [
+"other (R&D / consumer)"
+],
+"currency": "EUR",
+"investment": 100000000,
+"investment_display": "EUR 100M+",
+"jobs": 990,
+"status": "under construction",
+"expected_start": "Completion 2027",
+"in_window": true,
+"opportunity_status": "Monitor",
+"technical_scope": "New administrative building (~990 staff); no manufacturing scope.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Building/IT only."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.drweb.de/100-millionen-fuer-wien-87-milliarden-fuer-die-usa-boehringers-zoll-kalkuel/",
+"publisher": "drweb.de",
+"date": "2026",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "boehringer-boehringer-vienna-administration-building",
+"country": "Austria",
+"eur": 100000000
+},
+{
+"account": "sandoz",
+"site_name": "Sandoz Kundl antibiotic plant",
+"city": "Kundl",
+"state": "AT-T",
+"lat": 47.5069,
+"lon": 12.0124,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"currency": "EUR",
+"investment": 200000000,
+"investment_display": "EUR 200M package",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened Mar 2024",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Enzymatic amoxicillin process plant opened March 2024 under a EUR 200M investment package supported by the Austrian government. Mothballed lines follow.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Post-start-up support at a standalone Sandoz."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.novartis.com/at-de/stories/sandoz-modernisiert-antibiotika-produktion-kundl",
+"publisher": "Novartis Austria",
+"date": "2021",
+"confidence": "Medium"
+},
+{
+"url": "https://industriemagazin.at/chemie/sandoz-tirol-naechste-stilllegung-nach-kundl/",
+"publisher": "Industriemagazin",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "sandoz-sandoz-kundl-antibiotic-plant",
+"country": "Austria",
+"eur": 200000000
+},
+{
+"account": "sandoz",
+"site_name": "Sandoz Schaftenau BioInject prefilled-syringe plant",
+"city": "Schaftenau",
+"state": "AT-T",
+"lat": 47.539,
+"lon": 12.153,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products",
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": 150000000,
+"investment_display": "EUR 150M+",
+"jobs": null,
+"status": "operational",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Prefilled syringe and autoinjector line for biosimilars and biologics.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Lifecycle and line expansion support."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "Device assembly/packaging integration."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.aerztezeitung.de/Wirtschaft/Sandoz-ruestet-sich-fuer-den-weltweiten-Wettbewerb-248042.html",
+"publisher": "Aerzte Zeitung",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "Opening date not confirmed.",
+"id": "sandoz-sandoz-schaftenau-bioinject-prefilled-syringe-plant",
+"country": "Austria",
+"eur": 150000000
+},
+{
+"account": "sandoz",
+"site_name": "Sandoz / Hexal Holzkirchen BioTD laboratory",
+"city": "Holzkirchen",
+"state": "DE-BY",
+"lat": 47.878,
+"lon": 11.699,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": 25000000,
+"investment_display": "EUR 25M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Q4 2023",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Biopharma technical development lab (biosimilars) at Hexal's Holzkirchen HQ. Hexal is part of Sandoz.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Lab systems support."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmaceutical-tech.com/projects/sandoz-plans-to-invest-25-million-to-expand-its-biopharma-technical-development-capabilities-in-holzkirchen-germany",
+"publisher": "Pharmaceutical Technology",
+"date": "2022",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "sandoz-sandoz-hexal-holzkirchen-biotd-laboratory",
+"country": "Germany",
+"eur": 25000000
+},
+{
+"account": "novartis",
+"site_name": "Novartis Schweizerhalle siRNA manufacturing",
+"city": "Schweizerhalle (Muttenz)",
+"state": "CH-BL",
+"lat": 47.546,
+"lon": 7.69,
+"project_type": "BROWNFIELD",
+"modality": [
+"oligonucleotides/nucleic acids",
+"small molecule/API"
+],
+"currency": "USD",
+"investment": 80000000,
+"investment_display": "USD 80M (USD-denominated announcement)",
+"jobs": 80,
+"status": "announced",
+"expected_start": "Jobs by end 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Expansion of siRNA manufacturing for cardiovascular/renal/metabolic therapies, announced 25 Nov 2025; 80 new positions by end-2028.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New siRNA production capacity needs control-system build."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "New GMP process steps need batch execution."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification of new capacity."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.novartis.com/ch-de/news/media-releases/novartis-passt-produktionsaktivitaeten-der-schweiz-und-investiert-innovative-herstelltechnologien",
+"publisher": "Novartis",
+"date": "2025-11-25",
+"confidence": "High"
+},
+{
+"url": "https://www.europeanpharmaceuticalreview.com/news/novartis-adjusts-manufacturing-strategy-in-switzerland-to-secure-competitiveness/268209.article",
+"publisher": "European Pharmaceutical Review",
+"date": "2025-11",
+"confidence": "Medium"
+}
+],
+"notes": "Announcement in USD; subject to consultation process.",
+"id": "novartis-novartis-schweizerhalle-sirna-manufacturing",
+"country": "Switzerland",
+"eur": 68800000
+},
+{
+"account": "novartis",
+"site_name": "Novartis Stein sterile dosage form production",
+"city": "Stein",
+"state": "CH-AG",
+"lat": 47.542,
+"lon": 7.946,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables"
+],
+"currency": "USD",
+"investment": 26000000,
+"investment_display": "USD 26M (USD-denominated)",
+"jobs": null,
+"status": "announced",
+"expected_start": "By end 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "USD 26M for sterile dosage forms while solid dosage and sterile packaging end by end-2027 (~550 jobs); more automation targeted.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Further automation of sterile lines."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "Transfers and line closures involve legacy system migration."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.novartis.com/ch-de/news/media-releases/novartis-passt-produktionsaktivitaeten-der-schweiz-und-investiert-innovative-herstelltechnologien",
+"publisher": "Novartis",
+"date": "2025-11-25",
+"confidence": "High"
+},
+{
+"url": "https://www.moneycab.com/schweiz/novartis-baut-550-stellen-in-stein-ab/amp/",
+"publisher": "Moneycab",
+"date": "2025-11",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "novartis-novartis-stein-sterile-dosage-form-production",
+"country": "Switzerland",
+"eur": 22360000
+},
+{
+"account": "novartis",
+"site_name": "Novartis Halle (Saale) radioligand therapy facility",
+"city": "Halle (Saale)",
+"state": "DE-ST",
+"lat": 51.482,
+"lon": 11.97,
+"project_type": "GREENFIELD",
+"modality": [
+"radiopharmaceuticals"
+],
+"currency": "EUR",
+"investment": 34700000,
+"investment_display": "EUR 34.7M",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Completion Q4 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New radioligand therapy production site in Saxony-Anhalt, completion Q4 2027.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Automated radiopharma synthesis/dispensing lines."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Short-shelf-life batch release needs MES."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "GMP qualification."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmazeutische-zeitung.de/novartis-investiert-in-neuen-standort-160672/",
+"publisher": "Pharmazeutische Zeitung",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "novartis-novartis-halle-saale-radioligand-therapy-facility",
+"country": "Germany",
+"eur": 34700000
+},
+{
+"account": "gsk",
+"site_name": "GSK Marburg vaccine production",
+"city": "Marburg",
+"state": "DE-HE",
+"lat": 50.81,
+"lon": 8.77,
+"project_type": "BROWNFIELD",
+"modality": [
+"mRNA/vaccines"
+],
+"currency": "EUR",
+"investment": 162000000,
+"investment_display": "EUR 162M (MenB) + EUR 10M (mumps) + EUR 13M (filling)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "MenB vaccine building (EUR 162M), mumps facility (EUR 10M) and EUR 13M filling/freeze-drying renewal; announcement years not confirmed (likely pre-2024).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Mature site."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.aerztezeitung.de/Wirtschaft/GlaxoSmithKline-baut-Marburger-Werk-aus-304215.html",
+"publisher": "Aerzte Zeitung",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/gsk-meningokokken-in-marburg/",
+"publisher": "apotheke adhoc",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "gsk-gsk-marburg-vaccine-production",
+"country": "Germany",
+"eur": 162000000
+},
+{
+"account": "gsk",
+"site_name": "GSK Dresden vaccine plant (closing)",
+"city": "Dresden",
+"state": "DE-SN",
+"lat": 51.05,
+"lon": 13.74,
+"project_type": "BROWNFIELD",
+"modality": [
+"mRNA/vaccines"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Not applicable (closure by 2028, ~640 jobs)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Closure by 2028",
+"in_window": false,
+"opportunity_status": "Closed/late",
+"technical_scope": "Influenza/hepatitis vaccine plant to close by 2028.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://borncity.com/news/grippeimpfstoff-krise-gsk-schliesst-dresdner-werk-bis-2028/",
+"publisher": "Born City",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/gsk-schliesst-impfstoffwerk-in-dresden/print.html",
+"publisher": "apotheke adhoc",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "gsk-gsk-dresden-vaccine-plant-closing",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "bbraun",
+"site_name": "B. Braun Sempach N.I.C.O. disinfectant plant",
+"city": "Sempach",
+"state": "CH-LU",
+"lat": 47.133,
+"lon": 8.196,
+"project_type": "BROWNFIELD",
+"modality": [
+"other (R&D / consumer)"
+],
+"currency": "CHF",
+"investment": 70000000,
+"investment_display": "CHF 70M",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New factory doubling disinfectant production capacity at B. Braun's disinfection competence centre.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Process automation for liquid production."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "Batch tracking/serialisation."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://lucerne-business.com/en/news/b-braun-expands-production-in-sempach-2981",
+"publisher": "Lucerne Business",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "Date not confirmed.",
+"id": "bbraun-b-braun-sempach-n-i-c-o-disinfectant-plant",
+"country": "Switzerland",
+"eur": 74900000
+},
+{
+"account": "bbraun",
+"site_name": "B. Braun Melsungen infusion article production",
+"city": "Melsungen",
+"state": "DE-HE",
+"lat": 51.13,
+"lon": 9.55,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 150000000,
+"investment_display": "EUR ~150M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened (date unverified)",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "New production facility for infusion articles, opened by the Hessian state premier.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Post-start-up support."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.hessenschau.de/wirtschaft/150-millionen-investition-b-braun-eroeffnet-neues-werk-in-melsungen-v1,fertigungsstandort-b-braun-100.html",
+"publisher": "hessenschau",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bbraun-b-braun-melsungen-infusion-article-production",
+"country": "Germany",
+"eur": 150000000
+},
+{
+"account": "bbraun",
+"site_name": "B. Braun Melsungen dialysis/pump plant expansion",
+"city": "Melsungen",
+"state": "DE-HE",
+"lat": 51.131,
+"lon": 9.551,
+"project_type": "BROWNFIELD",
+"modality": [
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 60000000,
+"investment_display": "EUR ~60M",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Expansion for dialysis machines and infusion pumps.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "Device assembly automation (device scope)."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.aerzteblatt.de/news/b-braun-investiert-60-millionen-euro-in-werkserweiterung-d7992e5b-ce9b-4ed0-8c44-45cb8042090e",
+"publisher": "Aerzteblatt",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bbraun-b-braun-melsungen-dialysis-pump-plant-expansion",
+"country": "Germany",
+"eur": 60000000
+},
+{
+"account": "bachem",
+"site_name": "Bachem Bubendorf Building K (peptides/oligonucleotides)",
+"city": "Bubendorf",
+"state": "CH-BL",
+"lat": 47.44,
+"lon": 7.73,
+"project_type": "BROWNFIELD",
+"modality": [
+"GLP-1/peptides",
+"oligonucleotides/nucleic acids"
+],
+"currency": "CHF",
+"investment": null,
+"investment_display": "Part of CHF 350-400M annual capex (CHF 148.4M in H1 2026)",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "Commercial ramp-up 2026",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Large-scale peptide/oligonucleotide plant at HQ; ramp-up through 2026 with start-up costs hitting H1 margin.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Ramp of a new large-scale plant needs batch/eBR and data integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Commissioning, CSV and data integrity during ramp."
+},
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Upgrades of process control during ramp-up."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.cash.ch/news/top-news/bachem-steigert-umsatz-und-gewinn-umsatzmilliarde-2026-wird-nicht-erwahnt-917794",
+"publisher": "cash.ch",
+"date": "2026",
+"confidence": "Medium"
+},
+{
+"url": "https://www.boerse-express.com/news/articles/bachem-aktie-milliardenmarkt-peptid-fertigung-882685",
+"publisher": "boerse-express",
+"date": "2026",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bachem-bachem-bubendorf-building-k-peptides-oligonucleotides",
+"country": "Switzerland",
+"eur": null
+},
+{
+"account": "bachem",
+"site_name": "Bachem Sisslerfeld greenfield peptide plant",
+"city": "Sisslerfeld (Eiken)",
+"state": "CH-AG",
+"lat": 47.539,
+"lon": 7.984,
+"project_type": "GREENFIELD",
+"modality": [
+"GLP-1/peptides"
+],
+"currency": "CHF",
+"investment": 500000000,
+"investment_display": "CHF 500M+",
+"jobs": null,
+"status": "announced",
+"expected_start": "Production from 2030",
+"in_window": false,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Greenfield peptide manufacturing site; production planned from 2030; 22 Jul 2026 coverage reports a large-scale plant plan.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Design-stage selection of automation in 2026-28."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Greenfield MES architecture."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Data/OT backbone."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification 2029-30."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://chemanager-online.com/de/news/bachem-plant-den-bau-einer-grossmengen-produktionsanlage",
+"publisher": "CHEManager",
+"date": "2026-07-22",
+"confidence": "Medium"
+},
+{
+"url": "https://www.s-ge.com/invest/de/artikel/news/bachem-investiert-neue-grossanlage-im-sisslerfeld",
+"publisher": "S-GE",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "bachem-bachem-sisslerfeld-greenfield-peptide-plant",
+"country": "Switzerland",
+"eur": 535000000
+},
+{
+"account": "biontech",
+"site_name": "BioNTech Marburg manufacturing (closing)",
+"city": "Marburg",
+"state": "DE-HE",
+"lat": 50.8,
+"lon": 8.75,
+"project_type": "BROWNFIELD",
+"modality": [
+"mRNA/vaccines"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Not applicable (closure early 2028)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Closure early 2028",
+"in_window": false,
+"opportunity_status": "Closed/late",
+"technical_scope": "Closing in a staggered programme after no buyer was found.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmamanufacturing.com/facilities/article/55408341/biontech-to-shutter-three-german-manufacturing-sites-after-failing-to-secure-buyers",
+"publisher": "PharmaManufacturing",
+"date": "2026-05",
+"confidence": "Medium"
+},
+{
+"url": "https://ms-aktuell.de/welt/biontech-werke-schliessung-28-09-2026/",
+"publisher": "MS aktuell",
+"date": "2026-09-28",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "biontech-biontech-marburg-manufacturing-closing",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "biontech",
+"site_name": "BioNTech Idar-Oberstein manufacturing (closing)",
+"city": "Idar-Oberstein",
+"state": "DE-RP",
+"lat": 49.714,
+"lon": 7.309,
+"project_type": "BROWNFIELD",
+"modality": [
+"mRNA/vaccines"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Not applicable (closure end 2028)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Closure end 2028",
+"in_window": false,
+"opportunity_status": "Closed/late",
+"technical_scope": "Closing end-2028; Tuebingen (ex-CureVac) closes end-2027.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://chemanager-online.com/de/news/igbce-kritisiert-stellenabbau-bei-biontech",
+"publisher": "CHEManager",
+"date": "2026-05-07",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "biontech-biontech-idar-oberstein-manufacturing-closing",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "sanofi",
+"site_name": "Sanofi Frankfurt-Hoechst insulin plant",
+"city": "Frankfurt (Hoechst)",
+"state": "DE-HE",
+"lat": 50.097,
+"lon": 8.542,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"fill-finish/sterile injectables"
+],
+"currency": "EUR",
+"investment": 1300000000,
+"investment_display": "EUR ~1.3B (EU state aid ~EUR 400M approved Sept 2026)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Completion ~2029",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New 36,000 m2 human-insulin production plant at the Industriepark Hoechst BioCampus; only human-insulin plant in the EEA; at least 1.1 t/yr by 2042; several hundred jobs.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Greenfield-type process automation for a biologic drug substance/product plant."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Highly regulated; MES/eBR from day one."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "'Highest automation standards' stated."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification phase before 2029."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.frankfurt-main.ihk.de/presse/pressemeldungen2026/gruenes-licht-fuer-neue-sanofi-insulinproduktion-7168032",
+"publisher": "IHK Frankfurt",
+"date": "2026-09",
+"confidence": "High"
+},
+{
+"url": "https://www.hessenschau.de/wirtschaft/insulin-aus-frankfurt-eu-genehmigt-400-millionen-euro-fuer-sanofi-v1,sanofi-insulin-frankfurt-102.html",
+"publisher": "hessenschau",
+"date": "2026-09",
+"confidence": "Medium"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/sanofi-ends-speculation-confirms-it-will-spend-eu13b-build-new-insulin-plant-germany",
+"publisher": "Fierce Pharma",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "One source states completion by end-2032; most say ~2029.",
+"id": "sanofi-sanofi-frankfurt-hoechst-insulin-plant",
+"country": "Germany",
+"eur": 1300000000
+},
+{
+"account": "vetter",
+"site_name": "Vetter Saarlouis commercial fill-finish site",
+"city": "Saarlouis",
+"state": "DE-SL",
+"lat": 49.314,
+"lon": 6.751,
+"project_type": "GREENFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 480000000,
+"investment_display": "EUR ~480-500M (first phase)",
+"jobs": 1500,
+"status": "under construction",
+"expected_start": "Operational 2031",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New site on the former Ford plant: 50,000 m2 production building with three aseptic cleanrooms (two PFS, one vial) initially; spade turned 13 May 2026; EUR 47M EU state aid approved Dec 2025.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Greenfield aseptic fill-finish: building automation, utilities and line control."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Customer-facing commercial supply needs MES/eBR."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Full qualification program."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Smart-factory design."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.vetter-pharma.com/media/content/Downloads/Presse/2026/260513_Vetter_startet_Bau_des_neuen_Produktionsstandorts_in_Saarlouis.pdf",
+"publisher": "Vetter",
+"date": "2026-05-13",
+"confidence": "High"
+},
+{
+"url": "https://www.bionity.com/de/news/1188700/vetter-investiert-knapp-500-millionen-euro-in-neuen-produktionsstandort.html",
+"publisher": "Bionity",
+"date": "2026",
+"confidence": "Medium"
+},
+{
+"url": "https://www.onvista.de/news/2026/05-13-pharmafirma-vetter-beginnt-bau-von-werk-in-saarlouis-0-10-26511786",
+"publisher": "onvista",
+"date": "2026-05-13",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "vetter-vetter-saarlouis-commercial-fill-finish-site",
+"country": "Germany",
+"eur": 480000000
+},
+{
+"account": "vetter",
+"site_name": "Vetter Ravensburg / Langenargen capacity expansion",
+"city": "Ravensburg",
+"state": "DE-BW",
+"lat": 47.782,
+"lon": 9.612,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Part of ~EUR 1.5B ongoing programme",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Ongoing capacity expansions at Vetter's home sites alongside Saarlouis; 2024 press release mentions Germany and US capacity growth.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Line and utility expansions."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Integration into existing MES."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Ongoing support."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.vetter-pharma.com/media/content/Downloads/Presse/2024/240606_Pressemitteilung_Vetter_baut_Kapazit%C3%A4ten_in_Deutschland_und_den_USA_aus.pdf",
+"publisher": "Vetter",
+"date": "2024-06-06",
+"confidence": "High"
+},
+{
+"url": "https://www.dcatvci.org/supplier-news/vetter-outlines-major-expansion-plan-for-commercial-clinical-fill-finish/",
+"publisher": "DCAT",
+"date": "2024",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "vetter-vetter-ravensburg-langenargen-capacity-expansion",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "cordenpharma",
+"site_name": "CordenPharma Muttenz greenfield peptide plant",
+"city": "Muttenz",
+"state": "CH-BL",
+"lat": 47.523,
+"lon": 7.643,
+"project_type": "GREENFIELD",
+"modality": [
+"GLP-1/peptides"
+],
+"currency": "EUR",
+"investment": 500000000,
+"investment_display": "EUR ~500M (CHF-region project)",
+"jobs": 300,
+"status": "under construction",
+"expected_start": "Commercial operation H1 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New peptide plant at Getec Park near Basel with small-, medium- and large-scale lines (GLP-1 and non-GLP-1); construction/qualification 2025-2027; part of a EUR 1B peptide programme.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Construction and qualification across 2025-27."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Multi-line peptide production."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Qualification before 2028 start."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Site digital backbone."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.fiercepharma.com/manufacturing/cordenpharma-build-eu500m-swiss-peptide-plant-generate-300-new-jobs",
+"publisher": "Fierce Pharma",
+"date": "2024",
+"confidence": "Medium"
+},
+{
+"url": "https://www.pharmamanufacturing.com/all-articles/article/55284445/cordenpharma-to-boost-peptide-production-capacity-with-1-billion-investment",
+"publisher": "PharmaManufacturing",
+"date": "2024",
+"confidence": "Medium"
+}
+],
+"notes": "Announced in EUR.",
+"id": "cordenpharma-cordenpharma-muttenz-greenfield-peptide-plant",
+"country": "Switzerland",
+"eur": 500000000
+},
+{
+"account": "ucb",
+"site_name": "UCB Bulle biologics production unit",
+"city": "Bulle",
+"state": "CH-FR",
+"lat": 46.619,
+"lon": 7.057,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "CHF",
+"investment": 100000000,
+"investment_display": "CHF 100M+ (+ CHF 15M QC lab, CHF 10M cold unit)",
+"jobs": 80,
+"status": "announced",
+"expected_start": "Operational ~2029; full 2030",
+"in_window": false,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New production unit for a key biologics compound relocated from Belgium; QC lab (CHF 15M) expected mid-2026.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New unit control in 2027-28."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification and tech transfer."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "Integration into Bulle MES."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://ggba.swiss/en/ucb-invests-over-chf-100-million-to-expand-its-biopharmaceutical-site-in-bulle/",
+"publisher": "GGBA",
+"date": "2025",
+"confidence": "Medium"
+},
+{
+"url": "https://bioalps.org/ucb-farchim-invests-over-chf-100-million-and-creates-80-new-jobs-in-bulle/",
+"publisher": "BioAlps",
+"date": "2025",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "ucb-ucb-bulle-biologics-production-unit",
+"country": "Switzerland",
+"eur": 107000000
+},
+{
+"account": "rentschler",
+"site_name": "Rentschler Laupheim buffer media station",
+"city": "Laupheim",
+"state": "DE-BW",
+"lat": 48.225,
+"lon": 9.878,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "'High double-digit million' EUR",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Operational 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Four-storey, 34,000 m2 (per source) buffer/media preparation building; construction from spring 2025; operational 2028; company's largest single investment in Germany.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Buffer prep automation and utilities."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Integration with upstream/downstream MES."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification before 2028."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://drug-dev.com/rentschler-biopharma-announces-largest-single-investment-at-its-headquarters-in-germany/",
+"publisher": "Drug Development",
+"date": "2024-10",
+"confidence": "Medium"
+},
+{
+"url": "https://www.stuttgarter-zeitung.de/wirtschaft/biopharmahersteller-rentschler-steht-vor-groesster-investition-im-inland-79024511.html",
+"publisher": "Stuttgarter Zeitung",
+"date": "2024",
+"confidence": "Medium"
+}
+],
+"notes": "The 34,000 m2 figure in the source seems large for a buffer building: treat as unverified.",
+"id": "rentschler-rentschler-laupheim-buffer-media-station",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "lilly",
+"site_name": "Lilly Alzey injectable and device plant",
+"city": "Alzey",
+"state": "DE-RP",
+"lat": 49.748,
+"lon": 8.113,
+"project_type": "GREENFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"GLP-1/peptides",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 1150000000,
+"investment_display": "EUR ~1.15B implied (original ~EUR 2.3B cut by about half in 2026)",
+"jobs": 500,
+"status": "under construction",
+"expected_start": "Plant start end-2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Greenfield Mounjaro/injectable plant 30 km south of Mainz. Original EUR 2.3B / 1,000 jobs; 2026 coverage says the remaining investment was halved and jobs reduced to ~500; construction has begun and start-up remains end-2027.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Greenfield plant approaching 2027 start-up."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Lilly global MES standard likely; local integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification in 2027."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Site OT/IT backbone."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.boerse-online.de/dpa-afx/roundup-pharmariese-eli-lilly-baut-werk-in-alzey-boomgeschaeft-abnehmspritze-330367.html",
+"publisher": "dpa-AFX",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://goldesel.de/aktien/news/eli-lilly-mit-q2-boost-und-alzey-schnitt-umsatzziel-8587-mrd-werkstart-bleibt-2027",
+"publisher": "goldesel.de",
+"date": "2026-08",
+"confidence": "Low"
+},
+{
+"url": "https://www.boerse-express.com/news/articles/eli-lilly-kuerzt-deutschland-investition-axsome-loest-patentstreit-biotech-im-umbruch-914097",
+"publisher": "boerse-express",
+"date": "2026",
+"confidence": "Low"
+}
+],
+"notes": "EUR 1.15B is an inference (half of EUR 2.3B); confirm with Lilly.",
+"id": "lilly-lilly-alzey-injectable-and-device-plant",
+"country": "Germany",
+"eur": 1150000000
+},
+{
+"account": "biospring",
+"site_name": "BioSpring Offenbach large-scale nucleic acid API site",
+"city": "Offenbach",
+"state": "DE-HE",
+"lat": 50.106,
+"lon": 8.76,
+"project_type": "GREENFIELD",
+"modality": [
+"oligonucleotides/nucleic acids"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "'Several hundred million euros' (not stated)",
+"jobs": 200,
+"status": "under construction",
+"expected_start": "Construction to end 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Large-scale oligonucleotide/nucleic-acid API plant on an innovation campus in Offenbach, tonne-scale, ~200 jobs; construction to end of 2027.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "New GMP plant in construction through 2027."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "Greenfield MES."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Qualification 2027-28."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmamanufacturing.com/industry-news/news/55301809/biospring-to-build-large-scale-nucleic-acid-api-site-in-germany",
+"publisher": "PharmaManufacturing",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.bionity.com/de/news/1174484/biospring-errichtet-hightech-wirkstoffproduktion-auf-innovationscampus.html",
+"publisher": "Bionity",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "biospring-biospring-offenbach-large-scale-nucleic-acid-api-site",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "biospring",
+"site_name": "BioSpring Frankfurt-Fechenheim gRNA/mRNA expansion",
+"city": "Frankfurt (Fechenheim)",
+"state": "DE-HE",
+"lat": 50.123,
+"lon": 8.75,
+"project_type": "BROWNFIELD",
+"modality": [
+"oligonucleotides/nucleic acids",
+"mRNA/vaccines"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Double-digit EUR millions",
+"jobs": null,
+"status": "operational",
+"expected_start": "2024",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "New cGMP capacity for guide RNA and mRNA.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "Support of new capacity."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://chemanager-online.com/de/news/biospring-erweitert-cgmp-produktionskapazitaeten-fuer-guide-rna-und-mrna",
+"publisher": "CHEManager",
+"date": "2024-11-06",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "biospring-biospring-frankfurt-fechenheim-grna-mrna-expansion",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "ypsomed",
+"site_name": "Ypsomed Schwerin pen and autoinjector expansion",
+"city": "Schwerin",
+"state": "DE-MV",
+"lat": 53.6355,
+"lon": 11.401,
+"project_type": "BROWNFIELD",
+"modality": [
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 500000000,
+"investment_display": "EUR ~500M in two phases to end of decade",
+"jobs": 1000,
+"status": "under construction",
+"expected_start": "Phases to ~2030",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Fully automated high-bay warehouse done; two construction phases take capacity to 400-500M pens/year and staff above 1,000.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Fully automated assembly and warehouse."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "High-volume device traceability."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Smart-factory data."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.apotheke-adhoc.de/nachrichten/detail/markt/infusionssets-ypsomed-investiert-weiter-in-schwerin/print.html",
+"publisher": "apotheke adhoc",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.moneycab.com/?p=1652931",
+"publisher": "Moneycab",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "ypsomed-ypsomed-schwerin-pen-and-autoinjector-expansion",
+"country": "Germany",
+"eur": 500000000
+},
+{
+"account": "ypsomed",
+"site_name": "Ypsomed Solothurn / Burgdorf production and tool shop",
+"city": "Solothurn",
+"state": "CH-SO",
+"lat": 47.2088,
+"lon": 7.5323,
+"project_type": "BROWNFIELD",
+"modality": [
+"devices/combination products"
+],
+"currency": "CHF",
+"investment": 200000000,
+"investment_display": "CHF ~200M (Solothurn) + CHF 21M (Burgdorf)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Unverified",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New production levels, tool shop and high-bay warehouse in Solothurn; lab/tool/offices in Burgdorf.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "Production-level automation."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Line traceability."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://kildare.luzernerzeitung.ch/solothurn/kanton-solothurn/ypsomed-meldet-rekordzahlen-in-solothurn-wird-weiter-investiert-ld.4171900",
+"publisher": "Solothurner Zeitung",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.ypsomed.com/en/news-insights/news/press-releases/news-reader-detail-page/ypsomed-opens-new-tool-manufacturing-facility-in-solothurn",
+"publisher": "Ypsomed",
+"date": "Unverified",
+"confidence": "High"
+}
+],
+"notes": "",
+"id": "ypsomed-ypsomed-solothurn-burgdorf-production-and-tool-shop",
+"country": "Switzerland",
+"eur": 214000000
+},
+{
+"account": "rotop",
+"site_name": "Rotop radiopharmaceutical factories Dresden-Rossendorf",
+"city": "Dresden",
+"state": "DE-SN",
+"lat": 51.06,
+"lon": 13.95,
+"project_type": "BROWNFIELD",
+"modality": [
+"radiopharmaceuticals"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Double-digit EUR millions (~2x annual revenue)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Gradual start from 2028",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Two highly automated factories for diagnostic and therapeutic radiopharmaceuticals; groundbreaking by Dresden's mayor; Germany's largest radiopharma project under way.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "Highly automated GMP synthesis and dispensing."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Short-shelf-life release."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Qualification before 2028."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.aerzteblatt.de/news/rotop-weitet-produktion-von-radiopharmaka-aus-db218f5a-e0de-4164-854f-c039a3592ac5",
+"publisher": "Aerzteblatt",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://medienservice.sachsen.de/medien/news/1061401/download_pdf",
+"publisher": "Sachsen Medienservice",
+"date": "Unverified",
+"confidence": "High"
+}
+],
+"notes": "",
+"id": "rotop-rotop-radiopharmaceutical-factories-dresden-rossendorf",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "merz",
+"site_name": "Merz Dessau-Rosslau expansion and packaging line",
+"city": "Dessau-Rosslau",
+"state": "DE-ST",
+"lat": 51.83,
+"lon": 12.24,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": 100000000,
+"investment_display": "EUR 100M+ by 2028",
+"jobs": 25,
+"status": "under construction",
+"expected_start": "Through 2028; packaging line opened June 2026",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "New packaging centre opened June 2026; >EUR 100M to Dessau by 2028; Reinheim production consolidates into Dessau.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Packaging/serialization integration."
+},
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New lines in 2026-28."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "Reinheim transfer."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.invest-in-saxony-anhalt.com/press-dates/detail/merz-eroeffnet-neues-verpackungszentrum-in-dessau-und-staerkt-produktionsstandort",
+"publisher": "Invest in Saxony-Anhalt",
+"date": "2026-06",
+"confidence": "High"
+},
+{
+"url": "https://www.volksstimme.de/sachsen-anhalt/tetesept-und-merz-spezial-dragees-produktion-nur-noch-in-dessau-pharmakonzern-merz-schliesst-werk-in-hessen-3851942",
+"publisher": "Volksstimme",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "merz-merz-dessau-rosslau-expansion-and-packaging-line",
+"country": "Germany",
+"eur": 100000000
+},
+{
+"account": "siegfried",
+"site_name": "Siegfried Hameln fill-finish expansion (PFS/cartridges)",
+"city": "Hameln",
+"state": "DE-NI",
+"lat": 52.104,
+"lon": 9.356,
+"project_type": "BROWNFIELD",
+"modality": [
+"fill-finish/sterile injectables",
+"devices/combination products"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Amount not found",
+"jobs": null,
+"status": "under construction",
+"expected_start": "First line revenue 2026; second 2027",
+"in_window": true,
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Two new manufacturing lines for prefilled syringes and cartridges.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "New fill lines in start-up window."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Line integration."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "Line qualification."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://siegfried.ch/?p=1567",
+"publisher": "Siegfried",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.finanzen.at/nachrichten/aktien/siegfried-on-track-to-deliver-profitable-growth-1035059761",
+"publisher": "finanzen.at",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "siegfried-siegfried-hameln-fill-finish-expansion-pfs-cartridges",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "siegfried",
+"site_name": "Siegfried Minden multi-purpose drug-substance plant",
+"city": "Minden",
+"state": "DE-NW",
+"lat": 52.289,
+"lon": 8.916,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"currency": "EUR",
+"investment": null,
+"investment_display": "Amount not found",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "First revenue H2 2025",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "New large-scale multi-purpose DS plant, nearing completion per source.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Post-commissioning support."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.finanzen.at/nachrichten/aktien/siegfried-on-track-to-deliver-profitable-growth-1035059761",
+"publisher": "finanzen.at",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"notes": "",
+"id": "siegfried-siegfried-minden-multi-purpose-drug-substance-plant",
+"country": "Germany",
+"eur": null
+},
+{
+"account": "siegfried",
+"site_name": "Siegfried Evionnaz R&D centre for drug substances",
+"city": "Evionnaz",
+"state": "CH-VS",
+"lat": 46.174,
+"lon": 7.026,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule/API"
+],
+"currency": "CHF",
+"investment": 25000000,
+"investment_display": "CHF up to 25M",
+"jobs": 100,
+"status": "operational",
+"expected_start": "Unverified",
+"in_window": false,
+"opportunity_status": "Monitor",
+"technical_scope": "Global R&D centre for drug substances, 100+ specialists.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.siegfried.ch/siegfried-begins-construction-of-a-new-global-rd-center-for-drug-substances-in-evionnaz/",
+"publisher": "Siegfried",
+"date": "2023-04-25",
+"confidence": "High"
+}
+],
+"notes": "",
+"id": "siegfried-siegfried-evionnaz-r-d-centre-for-drug-substances",
+"country": "Switzerland",
+"eur": 26750000
+},
+{
+"account": "pfizer",
+"site_name": "Pfizer Freiburg high-containment plant",
+"city": "Freiburg",
+"state": "DE-BW",
+"lat": 47.999,
+"lon": 7.842,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose"
+],
+"currency": "EUR",
+"investment": 300000000,
+"investment_display": "EUR ~300M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened 2022",
+"in_window": false,
+"opportunity_status": "Closed/late",
+"technical_scope": "High-containment solids plant opened 2022; CEO said in June 2026 German investments under review.",
+"orise_fit": [],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bionity.com/de/news/1176277/300-millionen-euro-investition-pfizer-eroeffnet-high-containment-werk-in-freiburg.html",
+"publisher": "Bionity",
+"date": "2022",
+"confidence": "Medium"
+},
+{
+"url": "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101291258/pfizer-chef-sagt-merz-ab-und-stellt-investitionen-in-frage.html",
+"publisher": "t-online",
+"date": "2026-06",
+"confidence": "Medium"
+}
+],
+"notes": "",
+"id": "pfizer-pfizer-freiburg-high-containment-plant",
+"country": "Germany",
+"eur": 300000000
+}
+],
+"gaps_html": "\n<h4 style=\"margin-top:0;\">How this dashboard was built</h4>\n<p><b>Scope filter:</b> accounts with no open opportunity were removed from this view on 7 Oct 2026, except Takeda, Merck KGaA, Sandoz, GSK, BioNTech, Pfizer and AstraZeneca, which were kept as opportunity accounts; 21 accounts and 16 site records were excluded.</p>\n<p>This is a fresh research pass (7 Oct 2026) on the listed accounts using web search across company newsrooms, wire services, regional business and trade press, and state/cantonal investment agencies, in German and English. Each record carries source links and a confidence rating (High = company or official source; Medium = reputable trade or regional press; Low = single or undated/indirect source). The layout, filters, fit-matrix logic and record structure follow the US dashboard.</p>\n<h4>Known limitations &mdash; please read</h4>\n<ul>\n<li><b>Search-synthesis only.</b> This build could not open primary documents (annual reports, press-release PDFs, Handelsregister, state-aid decisions). Facts come from search-result summaries and snippets, so most items are Medium/Low confidence and many <b>dates are &ldquo;Unverified&rdquo;</b>. Confirm before customer-facing use.</li>\n<li><b>Reference files not available.</b> The earlier DACH CSV/sources/territory plan, the earlier DACH dashboard, the corrected US CSV and the PowerPoint template were not in this build environment, so nothing from the earlier DACH research was reused and brand colours/fonts are taken from the US dashboard's CSS. The official Orise logo (black wordmark, inverted to white on the teal header) is embedded.</li>\n<li><b>Currencies.</b> Amounts are shown in the announcement currency (EUR, CHF; two Novartis items are announced in USD). The KPI row shows EUR, CHF and USD totals separately. Only the map shading by &ldquo;Investment&rdquo; converts to euro-equivalents using <b>indicative planning rates of 1 CHF = 1.07 EUR and 1 USD = 0.86 EUR (set 7 Oct 2026, not live market rates)</b>; replace them in <code>dach_data.py</code> if needed.</li>\n<li><b>Totals are a floor.</b> 20 of 51 records have no disclosed amount; network programmes (e.g. Bayer &gt;EUR 1.4B, Roche CHF 1.2B Basel programme) are not split across sites. Several records bundle older projects (pre-2024) kept for footprint context and marked Monitor / Closed.</li>\n<li><b>Inferred figure.</b> Lilly Alzey (EUR ~1.15B) is inferred as half of the original EUR 2.3B after a reported 2026 cut; confirm directly.</li>\n<li><b>Greenfield vs brownfield.</b> Greenfield = new stand-alone site or plant on previously undeveloped land; brownfield = new building, line or expansion at an existing site.</li>\n<li><b>Opportunity status.</b> Open = in design, build, commissioning or ramp-up with a clear automation/MES need; Monitor = completed, R&amp;D/non-manufacturing or too early; Closed/late = completed before the window, or site closure. The &ldquo;2026-27 window&rdquo; flag marks projects with construction, commissioning or start-up in 2026-2027.</li>\n<li><b>Tiers are computed:</b> Tier 1 = at least one open opportunity in the 2026-27 window with a Strong fit; Tier 2 = other open opportunities or Monitor items with Moderate fit; Tier 3 = none identified. Fit ratings are analyst judgement from project scope, not confirmed buying intent. Incumbent vendors were not researched (empty).</li>\n<li><b>Coordinates</b> are city-level approximations.</li>\n<li><b>Map.</b> Equal-size tiles for 16 German L&auml;nder, 9 Austrian Bundesl&auml;nder and 26 Swiss cantons (Liechtenstein: no site).</li>\n</ul>\n<h4>Ownership and structure checks</h4>\n<ul>\n<li><b>Sandoz</b> is a standalone company since the Oct 2023 spin-off from Novartis; <b>Hexal</b> is a Sandoz subsidiary and its Holzkirchen record sits under Sandoz.</li>\n<li><b>MSD</b> is Merck &amp; Co. (USA) outside North America, including Intervet/Animal Health, and is unrelated to <b>Merck KGaA</b> (Darmstadt; EMD in the US).</li>\n<li><b>Catalent</b> is owned by Novo Holdings (deal closed Dec 2024). <b>BioNTech</b> absorbed CureVac. <b>Bode Chemie</b> belongs to PAUL HARTMANN AG (bought from Beiersdorf). <b>KBI Biopharma</b> is a JSR company. <b>Takeda</b> acquired Shire/Baxalta plasma assets (Vienna, Linz).</li>\n</ul>\n<h4>Accounts with no project found in this pass</h4>\n<ul><li>Abbott, Gruenenthal, Finzelberg, Terumo, Hexal (Sandoz Germany), Bode Chemie, Catalent, AstraZeneca</li></ul>\n<h4>Group C accounts skipped (no DACH manufacturing or R&amp;D site found)</h4>\n<ul><li><b>Novo Nordisk</b> &mdash; Only a commercial HQ in Mainz found; its European capex goes to Denmark/France.</li><li><b>Amgen</b> &mdash; European HQ in Zug/Rotkreuz is commercial; no production or R&D investment found.</li><li><b>Regeneron</b> &mdash; No DACH site found.</li><li><b>FUJIFILM Biotechnologies</b> &mdash; No DACH site found.</li><li><b>Curia</b> &mdash; No DACH site found.</li><li><b>National Resilience</b> &mdash; No DACH site found.</li><li><b>Amneal</b> &mdash; No DACH site found.</li><li><b>Avid Bioservices</b> &mdash; No DACH site found.</li></ul>\n<h4>Notable thin or negative signals</h4>\n<ul>\n<li><b>Boehringer Ingelheim</b> froze EUR 900M of German investments for 2027-30 (June 2026). <b>Eli Lilly</b> halved the Alzey plan. <b>Pfizer</b> says German investment is under review. <b>BioNTech</b> is closing three German sites; <b>GSK</b> is closing Dresden; <b>Novartis</b> is ending solid-dose production in Stein by end-2027. Expect German health-cost measures to keep affecting site decisions.</li>\n<li><b>Roche Kaiseraugst</b> CHF 500M+ headline and <b>Merck KGaA</b> Darmstadt QC building could not be confirmed beyond a single headline each.</li>\n<li><b>Takeda</b> Oranienburg, <b>Octapharma</b> Dessau/Springe, <b>Fresenius Kabi</b> Friedberg/Oberdorf, <b>CordenPharma</b> Plankstadt, <b>Abbott</b>, <b>Gr&uuml;nenthal</b> and <b>AstraZeneca</b> Wedel: no investment found &mdash; absence in this pass is not proof of absence.</li>\n</ul>\n",
+"as_of": "October 7, 2026",
+"region_names": {
+"DE-SH": "Schleswig-Holstein",
+"DE-HH": "Hamburg",
+"DE-MV": "Mecklenburg-Vorpommern",
+"DE-BB": "Brandenburg",
+"DE-BE": "Berlin",
+"DE-ST": "Sachsen-Anhalt",
+"DE-SN": "Sachsen",
+"DE-TH": "Thueringen",
+"DE-NI": "Niedersachsen",
+"DE-HB": "Bremen",
+"DE-NW": "Nordrhein-Westfalen",
+"DE-HE": "Hessen",
+"DE-RP": "Rheinland-Pfalz",
+"DE-SL": "Saarland",
+"DE-BW": "Baden-Wuerttemberg",
+"DE-BY": "Bayern",
+"AT-V": "Vorarlberg",
+"AT-T": "Tirol",
+"AT-S": "Salzburg",
+"AT-OO": "Oberoesterreich",
+"AT-NO": "Niederoesterreich",
+"AT-W": "Wien",
+"AT-B": "Burgenland",
+"AT-ST": "Steiermark",
+"AT-K": "Kaernten",
+"CH-GE": "Genf",
+"CH-VD": "Waadt",
+"CH-VS": "Wallis",
+"CH-FR": "Freiburg",
+"CH-NE": "Neuenburg",
+"CH-JU": "Jura",
+"CH-BE": "Bern",
+"CH-SO": "Solothurn",
+"CH-BL": "Basel-Landschaft",
+"CH-BS": "Basel-Stadt",
+"CH-AG": "Aargau",
+"CH-LU": "Luzern",
+"CH-ZG": "Zug",
+"CH-ZH": "Zuerich",
+"CH-SZ": "Schwyz",
+"CH-NW": "Nidwalden",
+"CH-OW": "Obwalden",
+"CH-UR": "Uri",
+"CH-TG": "Thurgau",
+"CH-SH": "Schaffhausen",
+"CH-SG": "St. Gallen",
+"CH-AR": "Appenzell AR",
+"CH-AI": "Appenzell IR",
+"CH-GL": "Glarus",
+"CH-GR": "Graubuenden",
+"CH-TI": "Tessin"
+}
+}
