@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Orise Global Pharma Investment Dashboard</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
+/*__LEAFLET_CSS__*/
 :root{
   --teal:#205369;--teal-dark:#163c4d;--aubergine:#4B2446;--blue:#5F82FF;--orange:#FF9500;
   --mint:#D0ECEC;--grey:#B7B8C0;--white:#FFFFFF;--ink:#16232a;--ink-soft:#4b5b63;
@@ -97,7 +97,7 @@ section{padding:32px 0;border-top:1px solid var(--border)}
 .map-tools .lbl{font-size:12px;color:var(--ink-soft);font-weight:700}
 .seg-btn{background:var(--white);border:1.5px solid var(--grey);padding:5px 11px;font-size:12.5px;border-radius:6px;color:var(--ink-soft);font-weight:600}
 .seg-btn:hover{border-color:var(--teal)}
-#map{height:620px;border:1px solid var(--border);border-radius:var(--radius);background:#eef3f3;z-index:1}
+#map{height:620px;border:1px solid var(--border);border-radius:var(--radius);background:#dce7ea;z-index:1}
 .map-fail{padding:30px;font-size:13px;color:var(--ink-soft)}
 .map-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:12px;color:var(--ink-soft);align-items:center}
 .lg-item{display:flex;align-items:center;gap:6px}
@@ -316,6 +316,7 @@ footer{background:var(--teal-dark);color:var(--mint);padding:26px 0;margin-top:2
 const DATA = /*__DATA__*/null;
 const MARKETS = DATA.markets, ACCOUNTS = DATA.accounts, SITES = DATA.sites, REGIONS = DATA.regions;
 const OFFERING_AREAS = DATA.offering_areas;
+const BASEMAP = /*__BASEMAP__*/null;
 const OFFERING_SHORT = {
   "SCADA / process control and automation":"SCADA / Process Control","MES implementation and integration":"MES Implementation",
   "Digitalization / Industry 4.0":"Digitalization / Ind. 4.0","Validation / CSV / data integrity":"Validation / CSV / DI",
@@ -448,8 +449,11 @@ function initMap(){
   const el = document.getElementById('map');
   if(typeof L==='undefined'){ el.innerHTML = '<div class="map-fail">The map library could not be loaded (check your connection). The site list on the right and the tables below still work.</div>'; return; }
   map = L.map(el, {worldCopyJump:true, zoomSnap:0.25}).setView([30,60],2);
+  // Street tiles are optional: hosts that block images (e.g. shared Artifact links) fall back to the embedded vector basemap below.
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     maxZoom:18, subdomains:'abcd', attribution:'&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
+  L.geoJSON(BASEMAP.countries, {interactive:false, style:{color:'#aebcc0', weight:0.8, fillColor:'#f6f9f9', fillOpacity:0.62}}).addTo(map);
+  L.geoJSON(BASEMAP.us_states, {interactive:false, style:{color:'#c3cfd2', weight:0.6, fill:false}}).addTo(map);
   markerLayer = L.layerGroup().addTo(map); mapOK = true;
 }
 function markerStyle(s){

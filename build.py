@@ -91,8 +91,16 @@ def main():
     html = (ROOT / "src" / "template.html").read_text()
     html = html.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"))
     html = html.replace("__LOGO__", logo)
+    html = html.replace("/*__BASEMAP__*/null", (ROOT / "data" / "basemap.json").read_text().strip())
+    html = html.replace("/*__LEAFLET_CSS__*/", (ROOT / "src" / "leaflet.css").read_text())
     out = ROOT / "Orise-Global-Pharma-Investment-Dashboard.html"
     out.write_text(html)
+    # Claude Artifact variant: body-only page (the platform adds the document skeleton)
+    title = re.search(r"<title>.*?</title>", html, re.S).group(0)
+    style = re.search(r"<style>.*?</style>", html, re.S).group(0)
+    body = re.search(r"<body>(.*)</body>", html, re.S).group(1)
+    (ROOT / "dist").mkdir(exist_ok=True)
+    (ROOT / "dist" / "artifact.html").write_text(title + "\n" + style + "\n" + body)
     multi = [a["name"] for a in data["accounts"] if len(a["markets"]) > 1]
     print(f"wrote {out.name}: {len(sites)} sites, {len(accounts)} accounts ({len(multi)} in 2+ markets: {', '.join(multi)})")
 
