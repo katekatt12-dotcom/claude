@@ -1,0 +1,566 @@
+{
+"accounts": [
+{
+"id": "novartis",
+"name": "Novartis",
+"priority_tier": "Tier 1",
+"footprint_summary": "Italian manufacturing at Torre Annunziata (Naples; FDA-certified since 2021, >100M packs/yr) and Ivrea; HQ in Origgio (Varese). The €350M 2023-2025 Italy plan started with Torre Annunziata and Ivrea.",
+"investment_strategy_summary": "Capacity and innovation space at Torre Annunziata: a €32M expansion approved by the Campania ZES commissioner (reported March 2026), after a >€30M line opened in Feb 2024.",
+"priority_reason": "Dated, approved brownfield expansion in the window with a 'new technologies' / life-science innovation scope. Amount is small and no digital scope is stated, so held as an entry-level Tier 1 lead; Ivrea not yet researched.",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+},
+{
+"id": "sanofi",
+"name": "Sanofi",
+"priority_tier": "Tier 1",
+"footprint_summary": "Anagni (biotech, vaccines, enzyme replacement; sterile freeze-dried line), Scoppito (L'Aquila; oral solids, ~€50M 2020-22 + €7.3M in 2024) and Origgio.",
+"investment_strategy_summary": "Anagni: Invitalia development contract of €47.3M (€17.4M grant) for a new sterile freeze-dried line; plus a 2022 MISE innovation agreement (~€27M, €6.3M grant) for prototype freeze-drying systems. No 2026 announcement found.",
+"priority_reason": "Sterile lyophilisation and biotech at Anagni is a strong GMP-automation profile, but the projects found pre-date the window and no new 2026-27 programme was found. Monitor until a dated project appears.",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+},
+{
+"id": "gsk",
+"name": "GSK",
+"priority_tier": "Tier 1",
+"footprint_summary": "Verona (respiratory/oral) and San Polo di Torrile, Parma (ViiV HIV, oncology, autoimmune; supplies >100 markets).",
+"investment_strategy_summary": "A secondary source reports ~€215M across GSK's Italian sites in 2025-2027, mainly technology upgrades, sustainability and plant modernisation. The split by site is not disclosed.",
+"priority_reason": "A modernisation programme is exactly the Orise trigger, but it is Italy-wide, from a secondary source, with no site split. Needs the GSK press release to qualify.",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+},
+{
+"id": "eli-lilly",
+"name": "Eli Lilly",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sesto Fiorentino (Florence): biotech/insulin and, per the new lot, diabetes and obesity medicines; Italy hub.",
+"investment_strategy_summary": "Over €750M announced for a new production lot at Sesto Fiorentino for diabetes/obesity drugs, with a 2025 horizon; the Lilly Italy president said investments would be fully finalised by end-2025 (Il Sole 24 Ore, 2025).",
+"priority_reason": "Very large, but the build was due to finish by end-2025, so the window is commissioning and lifecycle rather than a new build. No new 2026 investment announced (Sept 2026 coverage is the 150th anniversary).",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+},
+{
+"id": "menarini",
+"name": "Menarini",
+"priority_tier": "Tier 2",
+"footprint_summary": "Italian plants at Florence (2), Pisa (2), Pomezia, L'Aquila, Lomagna (Lecco) and Casaletto Lodigiano (Lodi). 2025 revenue €4.887B.",
+"investment_strategy_summary": "March 2026: approved restructuring of the Florence vial area with a new aseptic line, €14-15M (Lucia Aleotti, results press event). Separate, older €150M Sesto Fiorentino plant coverage (date not verified).",
+"priority_reason": "A new aseptic line is a clear, dated, in-window brownfield project with CSV, SCADA and MES implications. Amount is modest; L'Aquila and Pisa not yet researched.",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+},
+{
+"id": "chiesi",
+"name": "Chiesi",
+"priority_tier": "Tier 2",
+"footprint_summary": "Parma (HQ, manufacturing, Biotech Center of Excellence) and, from 2025, Nerviano (Milan), the former Carlo Erba/Farmitalia research site.",
+"investment_strategy_summary": "€430M at Nerviano over 2025-2030 to convert a 124,000 m² site into a production hub for low-carbon-footprint inhalers and sterile biologics, ~300 jobs by 2029; first activity from 2026, full operation 2030. Linked investments planned at Parma and Blois (France).",
+"priority_reason": "Largest dated, in-window project found: a multi-year conversion into a regulated manufacturing site, so automation, MES and validation decisions fall in 2026-2029. Highest priority of this batch.",
+"incumbent_vendors_general": "",
+"ownership_note": ""
+}
+],
+"sites": [
+{
+"id": "chiesi-nerviano",
+"account": "chiesi",
+"site_name": "Chiesi Nerviano production hub (former Carlo Erba site)",
+"city": "Nerviano (Milan)",
+"state": "IT-LOM",
+"lat": 45.55,
+"lon": 8.99,
+"project_type": "BROWNFIELD",
+"modality": [
+"inhalers / respiratory",
+"biologics/mAbs (sterile biologics)"
+],
+"eur": 430000000,
+"investment_display": "€430 million over 2025-2030",
+"jobs": 300,
+"status": "announced",
+"expected_start": "2025-2030; first activity from 2026, full operation 2030",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Redevelopment of a 124,000 m² industrial area, the former Farmitalia Carlo Erba oncology research centre (founded 1965, closed 2024), into a manufacturing site focused on low-carbon-footprint inhalers, with sterile biological products. Includes a photovoltaic park; tied to Chiesi's Net Zero 2035 goal. About 300 jobs by 2029.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "New regulated manufacturing site that must be built out and commissioned over 2026-2029. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "New inhaler and sterile biologics production needs batch execution and release flow. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "GMP site start-up with sterile biologics brings Annex 11 / data integrity validation. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Greenfield-like conversion allows a connected-plant design from the start. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.fiercepharma.com/manufacturing/chiesi-lays-out-eu430m-revitalize-italian-production-site-inhaler-biologics",
+"publisher": "Fierce Pharma",
+"date": "2025-03",
+"confidence": "Medium"
+},
+{
+"url": "https://forbes.it/2025/03/27/chiesi-nuovo-stabilimento-nerviano-investimento-430-milioni/",
+"publisher": "Forbes Italia",
+"date": "2025-03-27",
+"confidence": "Medium"
+},
+{
+"url": "https://www.saronnonews.it/2025/03/27/il-gruppo-chiesi-investe-a-nerviano-300-posti-di-lavoro-nellex-stabilimento-della-carlo-erba/",
+"publisher": "SaronnoNews",
+"date": "2025-03-27",
+"confidence": "Medium"
+},
+{
+"url": "https://legnanonews.com/aree-geografiche/alto_milanese/2025/03/27/il-gruppo-chiesi-investe-430-milioni-di-euro-a-nerviano-300-nuovi-posti-di-lavoro-nellex-stabilimento-della-carlo-erba/1306353/",
+"publisher": "LegnanoNews",
+"date": "2025-03-27",
+"confidence": "Medium"
+}
+],
+"confidence": "High",
+"orise_relevance": "High",
+"notes": "Announced March 2025, before the Jan 2026 window, but activity runs through the window. Classed BROWNFIELD because it converts an existing site; functionally a new manufacturing build, so treat as greenfield-equivalent for Orise. No digital or automation statement found.",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "novartis-torre-annunziata",
+"account": "novartis",
+"site_name": "Novartis Torre Annunziata expansion (life-science innovation space)",
+"city": "Torre Annunziata (Naples)",
+"state": "IT-CAM",
+"lat": 40.75,
+"lon": 14.45,
+"project_type": "BROWNFIELD",
+"modality": [
+"finished dosage / packaging (not specified in sources)"
+],
+"eur": 32000000,
+"investment_display": "€32 million",
+"jobs": null,
+"status": "announced",
+"expected_start": "Not found in public sources (approval reported March 2026)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Expansion of the Torre Annunziata site with a space for development, innovation and new technologies in life sciences, to raise production capacity. Plan approved by the Campania ZES commissioner, Giuseppe Romano. The site was FDA-certified in 2021 and passed 100M packs/yr.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "'New technologies' innovation space and capacity growth at an FDA-audited site. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Capacity growth on existing packaging/production lines. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "FDA-certified site, so changes need validated systems. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.ecoseven.net/flash-news/investimenti-da-32-milioni-di-euro-per-il-sito-di-novartis-a-torre-annunziata/",
+"publisher": "Ecoseven (Adnkronos)",
+"date": "2026-03 (per search snippet; page not opened)",
+"confidence": "Medium"
+},
+{
+"url": "https://www.affaritaliani.it/economia/notizie-aziende/novartis-32-milioni-per-ampliare-il-sito-di-torre-annunziata-846735.html",
+"publisher": "Affaritaliani",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"confidence": "Medium",
+"orise_relevance": "Med",
+"notes": "Approval date could not be confirmed on a second search; one source cites a different, larger plan (€80M, 300 hires) which seems to be an older, separate plan and is not recorded. Earlier: >€30M line opened Feb 2024 and €350M Italy plan 2023-2025 (not in window).",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "menarini-florence-aseptic",
+"account": "menarini",
+"site_name": "Menarini Florence vial area restructuring and new aseptic line",
+"city": "Florence",
+"state": "IT-TOS",
+"lat": 43.78,
+"lon": 11.23,
+"project_type": "BROWNFIELD",
+"modality": [
+"sterile fill-finish (vials)"
+],
+"eur": 14000000,
+"investment_display": "€14-15 million (range stated; lower bound used)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Not found in public sources (approved; stated March 2026)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"technical_scope": "Restructuring of the vial department at the Florence plant with a new aseptic line, approved and announced by Lucia Aleotti at the 2025 results press event (March 2026).",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "A new aseptic line needs qualification and computerised-system validation (Annex 1 / Annex 11). Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "New line control and integration with the existing plant. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "Vial area batch records and line integration. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://tg24.sky.it/salute-e-benessere/2026/03/06/gruppo-menarini",
+"publisher": "Sky TG24",
+"date": "2026-03-06",
+"confidence": "Medium"
+},
+{
+"url": "https://www.lapresse.it/salute/farmaci/2026/03/07/menarini-sfiora-i-49-mld-di-euro-nel-2025-e-punta-su-talenti-e-ai-mentre-nel-pharma-entrano-player-giganti/",
+"publisher": "LaPresse",
+"date": "2026-03-07",
+"confidence": "Medium"
+}
+],
+"confidence": "Medium",
+"orise_relevance": "High",
+"notes": "The €14-15M figure comes from a search summary of a Fortune Italia piece whose URL implies 2023; the Sky/LaPresse March 2026 pieces cover the same results event. Verify the exact quote.",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "lilly-sesto",
+"account": "eli-lilly",
+"site_name": "Lilly Sesto Fiorentino new production lot (diabetes and obesity)",
+"city": "Sesto Fiorentino (Florence)",
+"state": "IT-TOS",
+"lat": 43.83,
+"lon": 11.2,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (insulin / diabetes and obesity drugs)"
+],
+"eur": 750000000,
+"investment_display": "Over €750 million, horizon 2025",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Horizon 2025; 'fully finalised by end of 2025' per Il Sole 24 Ore (2025). Current status not found",
+"opportunity_status": "Monitor",
+"technical_scope": "New lot at the Sesto Fiorentino plant (operating since 1959-62) to expand production of drugs for diabetes and obesity. Estimated contribution of €1.5B to Italian GDP and >6,000 jobs in the supply chain (Forbes Italia, Nov 2024).",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Commissioning and ramp-up of a large new lot, then long-term support. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "Ramp-up and validation of new biologics lines. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "Scale of the new lot suggests data and OT integration needs. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.fortuneita.com/?p=320008",
+"publisher": "Fortune Italia",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://forbes.it/2024/11/27/entro-il-2025-lilly-contribuira-al-pil-italiano-con-15-miliardi-di-euro-e-generera-oltre-6mila-posti-di-lavoro/",
+"publisher": "Forbes Italia",
+"date": "2024-11-27",
+"confidence": "Medium"
+},
+{
+"url": "https://qds.it/eli-lilly-un-nuovo-patto-con-litalia-da-750-milioni-entro-il-2025/",
+"publisher": "QdS",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"confidence": "Medium",
+"orise_relevance": "Med",
+"notes": "Sources disagree on whether the plan was announced in 2023 or 2024. Not found: whether the lot is complete, and any 2026 follow-on investment (Sept 2026 coverage is the 150th anniversary).",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "sanofi-anagni",
+"account": "sanofi",
+"site_name": "Sanofi Anagni sterile freeze-dried line and lyophilisation prototype systems",
+"city": "Anagni (Frosinone)",
+"state": "IT-LAZ",
+"lat": 41.74,
+"lon": 13.15,
+"project_type": "BROWNFIELD",
+"modality": [
+"sterile fill-finish (freeze-dried)",
+"biologics / vaccines / enzyme therapies"
+],
+"eur": 47300000,
+"investment_display": "€47.3 million (Invitalia contract, €17.4M grant); separate ~€27M MISE agreement",
+"jobs": null,
+"status": "Not found in public sources",
+"expected_start": "Not found in public sources (pre-2026 projects)",
+"opportunity_status": "Monitor",
+"technical_scope": "New line for sterile freeze-dried products under an Invitalia development contract, plus a 2022 MISE innovation agreement (~€27M, €6.3M grant) for prototype freeze-drying production systems.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "Pre-2026 line already built; support and lifecycle work follow. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Revalidation or change control on a sterile line. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.quotidianosanita.it/?p=34138",
+"publisher": "Quotidiano Sanità",
+"date": "Unverified",
+"confidence": "Medium"
+},
+{
+"url": "https://www.industriaitaliana.it/industria-farmaceutica-204-milioni-mise-sanofi-gelesis/",
+"publisher": "Industria Italiana",
+"date": "2022-04",
+"confidence": "Medium"
+},
+{
+"url": "https://www.fortuneita.com/?p=318844",
+"publisher": "Fortune Italia",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.sanofi.com/it/italia/anagni",
+"publisher": "Sanofi Italia",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"confidence": "Low",
+"orise_relevance": "Low",
+"notes": "Both projects pre-date the Jan 2026 window; shown as Monitor only. €37M+ investment over the last three years (Mimit, Regione Lazio) is also cited by Sanofi's site page. Scoppito (€7.3M in 2024) not recorded as a project.",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "chiesi-parma-biotech",
+"account": "chiesi",
+"site_name": "Chiesi Parma Biotech Center of Excellence",
+"city": "Parma",
+"state": "IT-EMR",
+"lat": 44.8,
+"lon": 10.33,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics/mAbs",
+"enzymes and other proteins"
+],
+"eur": 85000000,
+"investment_display": "€85 million (one source: ~€400M for the whole Parma biotech hub; not reconciled)",
+"jobs": 105,
+"status": "Not found in public sources",
+"expected_start": "Was due to be operational from 2024",
+"opportunity_status": "Monitor",
+"technical_scope": "Biotech centre inside the existing Parma site for development and production of active ingredients such as monoclonal antibodies, enzymes and other proteins.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "If now operational, lifecycle and expansion support. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Biologics GMP site changes. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.fortuneita.com/?p=292103",
+"publisher": "Fortune Italia",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"confidence": "Low",
+"orise_relevance": "Low",
+"notes": "Pre-window project; the €85M and ~€400M figures conflict. Chiesi also plans related investment at Parma as part of the Nerviano strategy (no amount found).",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "gsk-italy-modernisation",
+"account": "gsk",
+"site_name": "GSK Italy plant modernisation programme 2025-2027 (Italy-wide)",
+"city": "San Polo di Torrile (Parma)",
+"state": "IT-EMR",
+"lat": 44.9,
+"lon": 10.4,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule / oral and respiratory",
+"HIV / oncology (ViiV)"
+],
+"eur": null,
+"investment_display": "~€215 million across GSK Italy 2025-2027 (not site-specific; not counted in totals)",
+"jobs": null,
+"status": "announced",
+"expected_start": "2025-2027 (programme)",
+"opportunity_status": "Monitor",
+"technical_scope": "Reported plan to invest about €215M across GSK's Italian sites in 2025-2027, mainly for technology upgrades, environmental sustainability and plant modernisation. Pin placed at San Polo di Torrile as the main GSK plant; the split between Verona and Torrile is not disclosed.",
+"orise_fit": [
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "A technology-upgrade programme often includes legacy control and MES refresh. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "Modernisation across plants is a digital trigger. Assessed from project scope; no public statement about automation or digital scope was found."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "Upgrades need revalidation. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://www.ticonsiglio.com/gsk-offerte-lavoro-italia-estero-settore-farmaceutico/",
+"publisher": "Ticonsiglio",
+"date": "Unverified (about 135 days before search)",
+"confidence": "Low"
+},
+{
+"url": "https://www.larena.it/argomenti/economia/economia-veronese/gsk-innovazione-accessibile-e-verona-resta-strategica-1.12990280",
+"publisher": "L'Arena",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.aboutpharma.com/business-e-mercato/gsk-italia-800-milioni-investiti-nel-2020-2025-59-in-vaccini/",
+"publisher": "AboutPharma",
+"date": "Unverified",
+"confidence": "Medium"
+}
+],
+"confidence": "Low",
+"orise_relevance": "Med",
+"notes": "Secondary source only; another source cites €324M across Italian sites. Needs the GSK Italy press release. Torrile's last confirmed project is the 2018 ViiV HIV plant (€30M).",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+},
+{
+"id": "menarini-sesto-150",
+"account": "menarini",
+"site_name": "Menarini Sesto Fiorentino production hub (older coverage)",
+"city": "Sesto Fiorentino (Florence)",
+"state": "IT-TOS",
+"lat": 43.83,
+"lon": 11.2,
+"project_type": "GREENFIELD",
+"modality": [
+"finished dosage (about 100M packs/yr)"
+],
+"eur": 150000000,
+"investment_display": "€150 million (reported)",
+"jobs": null,
+"status": "Not found in public sources",
+"expected_start": "Not found in public sources",
+"opportunity_status": "Monitor",
+"technical_scope": "New plant of about 40,000 m² near Florence with capacity of roughly 100 million packs a year, as reported in older press. Date and current status not verified.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "If operational, lifecycle support. Assessed from project scope; no public statement about automation or digital scope was found."
+}
+],
+"incumbent_vendors": "",
+"digital_signals": "Not found in public sources",
+"sources": [
+{
+"url": "https://en.ilsole24ore.com/art/menarini-investe-150-milioni-sesto-fiorentino-ADKah0V",
+"publisher": "Il Sole 24 Ore",
+"date": "Unverified",
+"confidence": "Low"
+},
+{
+"url": "https://www.italpress.com/?p=155338",
+"publisher": "Italpress",
+"date": "Unverified",
+"confidence": "Low"
+}
+],
+"confidence": "Low",
+"orise_relevance": "Low",
+"notes": "Probably pre-window. Kept to flag for verification; date not confirmed.",
+"country": "Italy",
+"currency": "EUR",
+"in_window": null
+}
+],
+"gaps_html": "<h4 style=\"margin-top:0\">Status of the Italy research</h4>\n<p><b>First batch only:</b> Novartis, Sanofi, GSK, Eli Lilly, Menarini and Chiesi. Remaining Tier 1 (Roche, Merck KGaA, MSD, Pfizer, AbbVie, BMS, Bayer, Takeda, Amgen, AstraZeneca, J&amp;J/Janssen, Novo Nordisk) and Tier 2 (Angelini, Recordati, Italfarmaco, Zambon, Dompé, Alfasigma, Bracco, Kedrion, Catalent, Thermo Fisher/Patheon, BSP, CordenPharma, Olon, IBSA, Fareva) are not researched yet.</p>\n<h4>How reliable the figures are</h4>\n<ul><li>Amounts and dates come from <b>search-result summaries</b> of the cited pages. The pages themselves could not be opened in this environment, so each figure needs a quick manual check against the linked source before it is quoted to a customer.</li>\n<li>Only Chiesi Nerviano is confirmed by several independent outlets (High). Others are Medium or Low; the reason is in each record's notes.</li>\n<li>No site shows a public statement about MES, CSV or Industry 4.0 scope. The Orise fit ratings are assessed from project scope and are labelled that way.</li></ul>\n<h4>Not yet searched</h4>\n<ul><li>Permitting signals: VIA/VAS, AIA, SUAP and regional BUR notices; Invitalia and regional agency listings.</li>\n<li>Trade press: NCF, AboutPharma, Pharmaceutical Technology Europe, BioProcess International; ISPE Italy and AFI.</li>\n<li>Sanofi Scoppito, Novartis Ivrea and Origgio, Menarini L'Aquila and Pisa, Verona (GSK).</li></ul>\n<h4>For you to fill</h4>\n<ul><li>Paywalled and login sources (Industrial Info, IIR, LinkedIn) were not used. Contacts by role (site director, engineering/capital projects, automation or IT-OT lead, procurement) need your LinkedIn network.</li>\n<li>Incumbent vendors per site (PAS-X, AVEVA PI, SCADA) are not public; internal knowledge needed.</li>\n<li>EUR amounts are shown in USD at 1 USD = 0.86 EUR on the dashboard.</li></ul>",
+"as_of": "October 14, 2026",
+"region_names": {
+"IT-LOM": "Lombardy",
+"IT-CAM": "Campania",
+"IT-TOS": "Tuscany",
+"IT-LAZ": "Lazio",
+"IT-EMR": "Emilia-Romagna"
+}
+}

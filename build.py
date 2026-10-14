@@ -8,12 +8,13 @@ import json, re, pathlib
 
 ROOT = pathlib.Path(__file__).parent
 FX_EUR_PER_USD = 0.86   # same indicative rate the DACH dashboard used (1 USD = 0.86 EUR)
-FX_NOTE = "EUR/CHF amounts converted at 1 CHF = 1.07 EUR and 1 USD = 0.86 EUR (indicative, as in the DACH dashboard); CNY amounts use the USD equivalents from the China dashboard."
+FX_NOTE = "EUR/CHF amounts converted at 1 CHF = 1.07 EUR and 1 USD = 0.86 EUR (indicative, as in the DACH dashboard; Italy uses the same EUR rate); CNY amounts use the USD equivalents from the China dashboard."
 
 MARKETS = [
     {"id": "US", "name": "United States", "short": "US", "file": "us.json"},
     {"id": "DACH", "name": "DACH (Germany · Austria · Switzerland)", "short": "DACH", "file": "dach.json"},
     {"id": "CN", "name": "China", "short": "China", "file": "cn.json"},
+    {"id": "IT", "name": "Italy", "short": "Italy", "file": "it.json"},
 ]
 
 # Optional alias map: account name (lower-case, parenthetical stripped) -> canonical name

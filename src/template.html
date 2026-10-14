@@ -254,7 +254,8 @@ footer{background:var(--teal-dark);color:var(--mint);padding:26px 0;margin-top:2
           <button class="seg-btn" data-zoom="ALL">Selection</button>
           <button class="seg-btn" data-zoom="US">US</button>
           <button class="seg-btn" data-zoom="DACH">DACH</button>
-          <button class="seg-btn" data-zoom="CN">China</button></div>
+          <button class="seg-btn" data-zoom="CN">China</button>
+          <button class="seg-btn" data-zoom="IT">Italy</button></div>
         <div id="map"></div>
         <div class="map-legend">
           <div class="lg-item"><span class="dot" style="background:var(--aubergine)"></span> Greenfield</div>
@@ -322,7 +323,7 @@ const OFFERING_SHORT = {
   "Digitalization / Industry 4.0":"Digitalization / Ind. 4.0","Validation / CSV / data integrity":"Validation / CSV / DI",
   "Legacy system modernization and migration":"Legacy Modernization","Lifecycle support and managed services":"Lifecycle Support"};
 const MKT_NAME = Object.fromEntries(MARKETS.map(m=>[m.id,m.short]));
-const ZOOM_BOX = {US:[[24,-125],[49.5,-66]], DACH:[[45.6,5.6],[55.2,17.4]], CN:[[18,73],[50,134]]};
+const ZOOM_BOX = {US:[[24,-125],[49.5,-66]], DACH:[[45.6,5.6],[55.2,17.4]], CN:[[18,73],[50,134]], IT:[[36.4,6.6],[47.2,18.6]]};
 
 /* ---------------- state ---------------- */
 const FILTER_KEYS = ['project_type','modality','opportunity_status','offering_area','region'];
