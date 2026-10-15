@@ -1,0 +1,2009 @@
+{
+"accounts": [
+{
+"id": "MSD (Merck & Co.)",
+"name": "MSD (Merck & Co.)",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Dundalk, Co. Louth; Network-wide (Carlow, Cork, Dublin, Louth, Meath, Tipperary); Dunboyne, Co. Meath.",
+"investment_strategy_summary": "Acquisition & ramp of former WuXi Vaccines plant: >EUR 500m (USD 520m) purchase price. Multi-site workforce & capacity expansion: Not stated as single figure. Dunboyne Biologics campus (context / prior build): EUR 1bn combined with Carlow.",
+"priority_reason": "Rank 6 (A-). Integrating an acquired vaccine plant: IT/OT convergence, historian migration and CSV of inherited systems. The €1bn Carlow and Dunboyne builds opened in 2023.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Eli Lilly",
+"name": "Eli Lilly",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Ballycummin, Raheen Business Park, Limerick; Kinsale, Co. Cork.",
+"investment_strategy_summary": "New biologics drug-substance (API) campus + doubling expansion: ~USD 2bn total (EUR 400m initial + USD 1bn expansion Sept 2024). Kinsale site expansion (diabetes/obesity capacity): USD 800m.",
+"priority_reason": "Ranks 2 and 4 (A+, A). Raheen biologics API starts production in 2026 (qualification now) and Kinsale is ramping tirzepatide. One Lilly Ireland relationship covers both sites.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Postings (Medicine Foundry): DeltaV, Rockwell, Syncade, LabVantage, OSI PI.",
+"ownership_note": "",
+"roles": "Dave Riordan, General Manager, Limerick (quoted in expansion press)."
+},
+{
+"id": "Pfizer",
+"name": "Pfizer",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Grange Castle Business Park, Clondalkin, Dublin 22; Ringaskiddy, Co. Cork.",
+"investment_strategy_summary": "DS2 (Drug Substance 2) — new biological DS facility (double site capacity): EUR 1.2bn (USD 1.26bn). Clinical/development manufacturing facility (early-stage compounds): Part of the EUR 1.2bn package.",
+"priority_reason": "Rank 1 (A+). DS2 biologics build underway, final commissioning 2027, so automation, CSV, MES and historian spend is committed in 2026-27. Engage capital projects and automation now.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Job postings: DeltaV DCS, Honeywell, package PLCs, SCADA; AVEVA PI with Rockwell PLCs and FactoryTalk View. Earlier case study: GE Historian. Delivery partners on site: PM Group, PJ Hegarty, Jones Engineering, NeoDyne.",
+"ownership_note": "",
+"roles": "Julien Deneve, Site Leader, Grange Castle (public source; confirm current)."
+},
+{
+"id": "Johnson & Johnson (Innovative Medicine / Janssen)",
+"name": "Johnson & Johnson (Innovative Medicine / Janssen)",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Ringaskiddy, Co. Cork.",
+"investment_strategy_summary": "Site expansion + land banking (Regatta centre & additional land): EUR 150m (2022 biopharma expansion); land purchases undisclosed.",
+"priority_reason": "Watch: €150M 2022 expansion likely complete; land banking signals a later build. On 13 Oct 2026 J&J said it intends to spin off DePuy Synthes (about 1,700 staff at Ringaskiddy); orthopaedics, not pharma, but shared site IT/OT could be affected.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Takeda",
+"name": "Takeda",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Grange Castle, Dublin.",
+"investment_strategy_summary": "Cell therapy manufacturing facility expansion: EUR 36m.",
+"priority_reason": "Rank 11 (B). Cell therapy is a premium technical fit; small capex.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "AbbVie",
+"name": "AbbVie",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Carrigtwohill, Co. Cork; North Dublin.",
+"investment_strategy_summary": "Cork facility expansion (aesthetics / sterile): EUR 60-63m. European manufacturing services hub: EUR 23m.",
+"priority_reason": "Rank 12 (B-). New sterile lines ramping at Carrigtwohill; the North Dublin hub is lower fit.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Amgen",
+"name": "Amgen",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Dún Laoghaire, Dublin.",
+"investment_strategy_summary": "Manufacturing facility expansion / capacity build: USD 407m (EUR 353m) capex over 2023-2024.",
+"priority_reason": "Rank 5 (A-). Aseptic fill line install and test means live CSV, serialization and historian work. A March 2026 planning application points to further growth.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Dún Laoghaire postings: Allen-Bradley, Siemens and B&R PLC, iFix / InTouch / Zenon SCADA, FactoryTalk Batch, OSIsoft PI, Körber MES.",
+"ownership_note": "",
+"roles": "Cathal Elliott, listed principal of Amgen Technology (Ireland) UC (confirm site title)."
+},
+{
+"id": "Regeneron",
+"name": "Regeneron",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Ballycummin, Raheen Business Park, Limerick.",
+"investment_strategy_summary": "IOPS site expansion — Process Science bldg + new admin/lab building: EUR 18.8m (Process Science bldg, built); ~EUR 200m programme (10,200 sqm admin/lab filed); EUR 100m/300 jobs Oct 2025.",
+"priority_reason": "Rank 7 (B+). Bulk biologics plus a new admin/lab building. The €100M and ~€200M figures are not reconciled, and a drainage appeal refused one permission.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Raheen postings: DeltaV (ISA-88), Rockwell PLC; an automation infrastructure role covers historian and data integration.",
+"ownership_note": "",
+"roles": "Niall O'Leary, VP & Site Head, IOPS Limerick (reported 2020; verify). Dan Van Plew, EVP & GM, IOPS (corporate)."
+},
+{
+"id": "Novartis",
+"name": "Novartis",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Ringaskiddy, Co. Cork.",
+"investment_strategy_summary": "DIVESTMENT — API site transferred to Sterling Pharma Solutions: n/a (site sold; earlier USD 16m Novartis product investment).",
+"priority_reason": "Divested. Ringaskiddy API moved to Sterling Pharma Solutions (CDMO); target Sterling instead. Novartis Ireland is now mainly commercial.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Gilead Sciences",
+"name": "Gilead Sciences",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Carrigtwohill, Co. Cork.",
+"investment_strategy_summary": "Drug product / oral solids capacity expansion: ~EUR 45m (2023 reports); EUR 7m Dublin base (2020, context).",
+"priority_reason": "Watch: significant oral-solids site, but no in-window capital confirmed.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "BioMarin",
+"name": "BioMarin",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Shanbally, Co. Cork.",
+"investment_strategy_summary": "New QC/process-dev lab + packaging expansion: EUR 60m (lab) + >EUR 30m (packaging).",
+"priority_reason": "Rank 10 (B). End-to-end biologics; the new QC / process-development lab suits LIMS and historian, packaging suits serialization.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Shanbally Sr Manager Automation & MES posting: DeltaV, Siemens PLC, OSI PI, OEE, BAS, MES, CSV.",
+"ownership_note": "",
+"roles": "Conor Delaney (VP Ops & Site Leader) and Geraldine Cregan (Exec Director & Quality Site Head), reported 2023; confirm current."
+},
+{
+"id": "WuXi Biologics",
+"name": "WuXi Biologics",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Dundalk, Co. Louth.",
+"investment_strategy_summary": "Conjugation (ADC) drug substance + drug product lines: EUR 325m (original campus); new conjugation lines within it.",
+"priority_reason": "Rank 14 (B, with caveat). ADC conjugation lines reach GMP in 2026, a strong modality fit, but US BIOSECURE uncertainty affects WuXi's commercial stability.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Alexion (AstraZeneca)",
+"name": "Alexion (AstraZeneca)",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Blanchardstown, Dublin (APICOM / College Park Phase 2) + Monksland Athlone.",
+"investment_strategy_summary": "APICOM next-generation drug-substance/API facility (flagship): USD 360m (EUR 326m) total programme; ~EUR 42m main building contract.",
+"priority_reason": "Rank 9 (B+). APICOM drug-substance facility; IDA reported it opened in April 2026, so the angle shifts from commissioning to lifecycle, historian and expansion. Modality wording still to confirm.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): APICOM MES Specialist posting: Körber PAS-X MES, DeltaV, eMBR, LIMS, SAP S/4HANA; OSI / AVEVA PI historian.",
+"ownership_note": "",
+"roles": "Maureen Larkin, Executive Director & Site Lead, College Park. Shane Doyle (SVP Global Ops & Sustainability) and Sylvia Kiely (VP Global Supply Chain), corporate."
+},
+{
+"id": "Sanofi (Genzyme)",
+"name": "Sanofi (Genzyme)",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Waterford (IDA Industrial Park, Old Kilmeaden Rd).",
+"investment_strategy_summary": "Genzyme campus investment + permitted plant extension: EUR 44m (campus); extension recently permitted.",
+"priority_reason": "Rank 13 (B-). Biologics site with a planning-permitted extension; an FDA citation over Altuviiio points to a data-integrity / CSV remediation angle.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": "Cian O'Brien, Site Head (appointed 2024)."
+},
+{
+"id": "Abbott",
+"name": "Abbott",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Kilkenny (new greenfield) + Donegal.",
+"investment_strategy_summary": "New Kilkenny plant + Donegal Diabetes Care expansion: EUR 440m (combined).",
+"priority_reason": "Domain call for you: a €440M medtech / diagnostics build with automation, MES and serialization needs, but not GMP biopharma.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "GSK",
+"name": "GSK",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Cork (Currabinny) / Dungarvan / Sligo.",
+"investment_strategy_summary": "DIVESTMENT — Cork API plant sold to Thermo Fisher: n/a (site divested; earlier EUR 12m Cork lab 2021-22).",
+"priority_reason": "Divesting. The Cork API plant is being acquired by Thermo Fisher; target Thermo Fisher instead.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Novo Nordisk",
+"name": "Novo Nordisk",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Monksland, Athlone, Co. Roscommon/Westmeath.",
+"investment_strategy_summary": "Tabletting facility for oral GLP-1s (retrofit + new capacity): EUR 432m (USD 506m).",
+"priority_reason": "Rank 3 (A). Announced 2 March 2026; construction live to 2028; oral solid dose means serialization, MES and CSV. Move early, before line vendors lock scope.",
+"incumbent_vendors_general": "From job postings (platform evidence, not a confirmed site stack): Postings: DeltaV, Rockwell and Siemens PLC, Syncade and PAS-X MES, OSI PI / iBatch, SQL. Novo Nordisk Engineering is the captive EPCM.",
+"ownership_note": "",
+"roles": "Tom Quinn, VP & Site General Manager, NN Production Ireland (Mar 2026). Dilek Dogan Gurluk, General Manager, NN Ireland (commercial)."
+},
+{
+"id": "Roche",
+"name": "Roche",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Clarecastle, Co. Clare.",
+"investment_strategy_summary": "SITE CLOSURE / remediation + sale (not a build): n/a (EUR 207.56m cumulative remediation spend).",
+"priority_reason": "Not a Roche opportunity. Clarecastle closed in 2016; whoever buys the 88-acre site (first tranche late 2027) could be a greenfield lead from 2027-28.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Merck KGaA (MilliporeSigma / Life Science)",
+"name": "Merck KGaA (MilliporeSigma / Life Science)",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Carrigtwohill & Blarney, Co. Cork.",
+"investment_strategy_summary": "Membrane + filtration manufacturing expansion (Cork): EUR 440m total (EUR 290m Carrigtwohill + EUR 150m Blarney).",
+"priority_reason": "Rank 8 (B+). New membrane and filtration lines reach commercial output 2026-27. A different Irish API plant is to be mothballed by end-2028 (site not identified).",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Ipsen",
+"name": "Ipsen",
+"priority_tier": "Tier 3",
+"footprint_summary": "Sites in this research: Blanchardstown, Dublin.",
+"investment_strategy_summary": "Dublin manufacturing site upgrade + capacity increase: EUR 52m (delivered) + EUR 15m more (2023-2026).",
+"priority_reason": "Rank 15 (C+). Small oncology API upgrade; mid-market entry.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Servier",
+"name": "Servier",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Arklow, Co. Wicklow (+ Swords, Dublin).",
+"investment_strategy_summary": "No confirmed in-window project: Not found in public sources (last major capex EUR 184m, 2006).",
+"priority_reason": "Watch: large oral-solids and CDMO site with no in-window project found.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Astellas",
+"name": "Astellas",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Tralee, Co. Kerry (Kerry Technology Park).",
+"investment_strategy_summary": "Tralee biopharma facility: EUR 330m new facility (opening early 2027) + second aseptic filling line (announced 14 Sep 2026): 330,000,000 (earlier commitment); second-line cost NOT disclosed.",
+"priority_reason": "Added in the Oct 2026 refresh, not on the starter list. High fit: the Tralee facility opens early 2027 to 2028, so CQV, MES/eBR and CSV decisions are live; a second aseptic line adds scope to 2029. Automation scope and integrator not found.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "PCI Pharma Services",
+"name": "PCI Pharma Services",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Dublin (CityNorth, Dublin 15) and Dundalk.",
+"investment_strategy_summary": "CityNorth injectable packaging facility + Dundalk commercial packaging site: Not found for Ireland (group-wide USD 365m across EU and US sites, Sep 2024 press).",
+"priority_reason": "Tier 2 CDMO addition (snippets only). Likely operating now; lifecycle and packaging-line serialization only.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "West Pharmaceutical Services",
+"name": "West Pharmaceutical Services",
+"priority_tier": "Tier 4",
+"footprint_summary": "Sites in this research: Damastown, Dublin 15.",
+"investment_strategy_summary": "Damastown manufacturing expansion (165,000 sq ft) - 330 jobs: Not found in public sources.",
+"priority_reason": "Component maker for injectables; borderline scope, low priority.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+}
+],
+"sites": [
+{
+"id": "msd-merck-co-acquisition-ramp-of-former-wuxi-vaccines-plant",
+"account": "MSD (Merck & Co.)",
+"site_name": "Acquisition & ramp of former WuXi Vaccines plant",
+"city": "Dundalk, Co. Louth",
+"state": "IE-LH",
+"lat": 54.0,
+"lon": -6.4,
+"project_type": "BROWNFIELD",
+"modality": [
+"vaccines (drug substance + drug product)"
+],
+"eur": 500000000,
+"investment_display": ">€500 million (USD 520M) purchase price of the former WuXi Vaccines plant (acquisition, not capex)",
+"jobs": 150,
+"status": "operational",
+"expected_start": "Handover H1 2025; +150 staff by end-2025; ramp and integration through 2026-2027",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Acquisition & ramp of former WuXi Vaccines plant. Modality: Vaccine drug substance + drug product manufacturing, QC labs (15,520 sqm, 3 storeys). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): Purchase price well-sourced across trade press."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): Purchase price well-sourced across trade press."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): Purchase price well-sourced across trade press."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmaceuticalcommerce.com/view/merck-purchases-wuxi-vaccine-plant-ireland-520-million",
+"publisher": "pharmaceuticalcommerce.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://chemicalparks.eu/news/merck-msd-ireland-announces-acquisition-of-wuxi-vaccines-dundalk-site",
+"publisher": "chemicalparks.eu",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/wuxi-continues-divest-sale-ireland-vaccines-plant-merck-eu500m",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Deal announced Jan 2025; handover completed H1 2025; +150 staff by end-2025; production ramp/integration active through 2026-2027 Notes: Purchase price well-sourced across trade press. Site previously ran a 20-yr / USD 150m-per-year vaccine contract solely for Merck. Ongoing fit-out/automation of an existing plant = strong Orise IT/OT + CSV opportunity.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "msd-merck-co-multi-site-workforce-capacity-expansion",
+"account": "MSD (Merck & Co.)",
+"site_name": "Multi-site workforce & capacity expansion",
+"city": "Network-wide",
+"state": "IE-CW",
+"lat": 52.84,
+"lon": -6.93,
+"project_type": "BROWNFIELD",
+"modality": [
+"vaccines / biologics / sterile / small molecule"
+],
+"eur": null,
+"investment_display": "No single figure (about 1,000 jobs across 8 Irish sites)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Announced Jan 2025; 'over coming years'",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Multi-site workforce & capacity expansion. Modality: Mixed: vaccines, biologics drug substance, sterile fill-finish, small molecule. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Jobs figure implies continued capital deployment but no discrete new build EUR confirmed for the 2026-27 window."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmaceuticalcommerce.com/view/merck-purchases-wuxi-vaccine-plant-ireland-520-million",
+"publisher": "pharmaceuticalcommerce.com",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: Announced Jan 2025: ~1,000 new jobs across 8 Irish sites 'over coming years' — active 2025-2027 Notes: Jobs figure implies continued capital deployment but no discrete new build EUR confirmed for the 2026-27 window. Treat as directional signal, not a costed project.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "msd-merck-co-dunboyne-biologics-campus-context-prior-build",
+"account": "MSD (Merck & Co.)",
+"site_name": "Dunboyne Biologics campus (context / prior build)",
+"city": "Dunboyne, Co. Meath",
+"state": "IE-MH",
+"lat": 53.42,
+"lon": -6.47,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (drug substance)"
+],
+"eur": null,
+"investment_display": "€1 billion combined with Carlow (2023; context only)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Opened Sept 2023, outside the window",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "Dunboyne Biologics campus (context / prior build). Modality: Biologics drug substance (single-use commercialisation). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Already operational. (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Already operational. (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.irishtimes.com/business/2023/09/12/msd-opens-expanded-irish-medicine-plants-after-1bn-investment/",
+"publisher": "irishtimes.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Opened Sept 2023 — OUTSIDE 2026-27 window; listed for context only Notes: Already operational. Included so the plan distinguishes confirmed/opened builds from new-window opportunities. Any future capacity add-on here would be a prime Orise target.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "eli-lilly-new-biologics-drug-substance-api-campus-doubling-expansion",
+"account": "Eli Lilly",
+"site_name": "New biologics drug-substance (API) campus + doubling expansion",
+"city": "Ballycummin, Raheen Business Park, Limerick",
+"state": "IE-LK",
+"lat": 52.64,
+"lon": -8.67,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics (monoclonal antibodies, drug substance)"
+],
+"eur": 1720000000,
+"investment_display": "About USD 2 billion (€400M initial + USD 1bn expansion Sept 2024 + reported extra USD 500M)",
+"jobs": 450,
+"status": "under construction",
+"expected_start": "Production start targeted for 2026 (no confirmation found)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "New biologics drug-substance (API) campus + doubling expansion. Modality: Biologics drug substance / monoclonal antibodies (incl. Alzheimer's donanemab/Kisunla portfolio). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER FIT."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER FIT."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER FIT."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER FIT."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.eplanning.ie/LimerickCCC/AppFileRefDetails/22190/0",
+"publisher": "eplanning.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pleanala.ie/en-ie/case/314921",
+"publisher": "pleanala.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://investor.lilly.com/news-releases/news-release-details/lilly-expands-manufacturing-footprint-ireland-18-billion",
+"publisher": "investor.lilly.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.limerickleader.ie/news/planning/1811375/lilly-s-billion-dollar-expansion-in-limerick-gets-the-green-light.html",
+"publisher": "limerickleader.ie",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: ORIGINAL campus: Limerick CC ref 22190, granted 10/10/2022, 47,384 sqm (4-storey mfg bldg ~18,534 sqm + 27,000 sqm solar); ABP appeal PL91.314921 WITHDRAWN 23/11/2022. EXPANSION: +~67,997 sqm incl 4-storey biomfg facility ~52,400 sqm (34m), green-lit; production START 2026; ~450 jobs Notes: TOP-TIER FIT. Campus reaching production start 2026 = live CSV/qualification (GAMP5, Part 11), MES, historian, IT/OT, automation. Applicant entity = 'Eli Lilly (Kinsale) Limited'. Get separate expansion ref for the 52,400 sqm facility. NB Raheen drainage-appeal risk (see Regeneron).",
+"country": "Ireland",
+"currency": "USD"
+},
+{
+"id": "eli-lilly-kinsale-site-expansion-diabetes-obesity-capacity",
+"account": "Eli Lilly",
+"site_name": "Kinsale site expansion (diabetes/obesity capacity)",
+"city": "Kinsale, Co. Cork",
+"state": "IE-CO",
+"lat": 51.71,
+"lon": -8.52,
+"project_type": "BROWNFIELD",
+"modality": [
+"sterile / drug product (tirzepatide)"
+],
+"eur": 688000000,
+"investment_display": "USD 800 million (part of the USD 1.8bn Sept 2024 package)",
+"jobs": null,
+"status": "operational",
+"expected_start": "Making medicines since 2025; ramp active 2026-2027",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Kinsale site expansion (diabetes/obesity capacity). Modality: Sterile / drug product for diabetes & obesity therapies (tirzepatide — Mounjaro/Zepbound). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): High-demand GLP-1 capacity."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): High-demand GLP-1 capacity."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): High-demand GLP-1 capacity."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://investor.lilly.com/news-releases/news-release-details/lilly-expands-manufacturing-footprint-ireland-18-billion",
+"publisher": "investor.lilly.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.irishtimes.com/business/2026/05/22/inside-the-irish-factory-at-the-centre-of-the-global-weight-loss-revolution/",
+"publisher": "irishtimes.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Part of $1.8bn Sept 2024 package; began making medicines in 2025; ramp/scale-up ACTIVE 2026-2027 Notes: High-demand GLP-1 capacity. Recently online = optimisation, historian/MES tuning, serialization, added lines all plausible Orise entry points. May 2026 Irish Times feature confirms active ramp.",
+"country": "Ireland",
+"currency": "USD"
+},
+{
+"id": "pfizer-ds2-drug-substance-2-new-biological-ds-facility-double-site-cap",
+"account": "Pfizer",
+"site_name": "DS2 (Drug Substance 2) — new biological DS facility (double site capacity)",
+"city": "Grange Castle Business Park, Clondalkin, Dublin 22",
+"state": "IE-D",
+"lat": 53.32,
+"lon": -6.43,
+"project_type": "GREENFIELD",
+"modality": [
+"biologics (drug substance, mAbs)"
+],
+"eur": 1200000000,
+"investment_display": "€1.2 billion (USD 1.26bn)",
+"jobs": 500,
+"status": "under construction",
+"expected_start": "Construction since 2023; final commissioning 2027",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "DS2 (Drug Substance 2) — new biological DS facility (double site capacity). Modality: Biologics drug substance (large-molecule / mAbs). DS2 = 6-storey steel/concrete biopharma mfg building + link corridor + DS1 extension + warehouse extension + chiller building. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER + BUILD UNDERWAY = engage NOW."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER + BUILD UNDERWAY = engage NOW."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER + BUILD UNDERWAY = engage NOW."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A+): TOP-TIER + BUILD UNDERWAY = engage NOW."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://nbco.localgov.ie/en/bcms/notice/pfizer-grangecastle-drug-substance-2-ds2-project",
+"publisher": "nbco.localgov.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.bioprocessintl.com/facilities-capacity/pfizer-gives-green-light-to-1-26bn-ireland-expansion",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pharmaceutical-technology.com/projects/grangecastle/",
+"publisher": "pharmaceutical-technology.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: IN CONSTRUCTION: Building Control ref SN0009046SD, DS2 notices lodged from 29 Aug 2023; EIA-accompanied application; associated planning ref SD23A/0123 (ancillary works); FINAL COMMISSIONING 2027; up to 500 jobs Notes: TOP-TIER + BUILD UNDERWAY = engage NOW. Past planning, into construction/fit-out since 2023 -> CSV/qualification, MES, historian, IT/OT, automation procurement imminent/live for 2027 commissioning. Delivery partners on site: PM Group, PJ Hegarty, Jones Engineering, Mercury, NeoDyne, Gallagher & McKinney (relationship routes). Main DS2 planning ref not machine-confirmable (SDCC portal blocks fetch) — search applicant 'Pfizer' on sdublincoco.ie/Planning.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "pfizer-clinical-development-manufacturing-facility-early-stage-compoun",
+"account": "Pfizer",
+"site_name": "Clinical/development manufacturing facility (early-stage compounds)",
+"city": "Ringaskiddy, Co. Cork",
+"state": "IE-CO",
+"lat": 51.83,
+"lon": -8.32,
+"project_type": "BROWNFIELD",
+"modality": [
+"clinical / development API"
+],
+"eur": null,
+"investment_display": "Part of the €1.2bn package (not counted again)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Tied to the Grange Castle programme",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "Clinical/development manufacturing facility (early-stage compounds). Modality: Clinical-trial drug substance / development-scale API. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Development facility for global clinical supply."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Development facility for global clinical supply."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bioprocessintl.com/facilities-capacity/pfizer-gives-green-light-to-1-26bn-ireland-expansion",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: Initial-stage project within the 2023 package; timeline tied to Grange Castle programme Notes: Development facility for global clinical supply. Smaller but automation/CSV relevant. Confirm standalone budget/timeline.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "johnson-johnson-innovative-medicine-janssen-site-expansion-land-bankin",
+"account": "Johnson & Johnson (Innovative Medicine / Janssen)",
+"site_name": "Site expansion + land banking (Regatta centre & additional land)",
+"city": "Ringaskiddy, Co. Cork",
+"state": "IE-CO",
+"lat": 51.83,
+"lon": -8.32,
+"project_type": "BROWNFIELD",
+"modality": [
+"biopharma drug substance / API"
+],
+"eur": 150000000,
+"investment_display": "€150 million (2022 expansion, likely complete)",
+"jobs": 180,
+"status": "operational",
+"expected_start": "2022 to about 2024; land purchases signal a later expansion",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "Site expansion + land banking (Regatta centre & additional land). Modality: Biopharmaceutical drug substance / API supply chain. Manufacturing-related: Partial.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research notes: No confirmed NEW 2026-27 costed build yet, but land banking at 116.5-acre Cork campus is a leading indicator. (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: No confirmed NEW 2026-27 costed build yet, but land banking at 116.5-acre Cork campus is a leading indicator. (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://businesscork.ie/janssen-announces-e150m-investment-in-cork-to-expand-biopharmaceutical-supply-chain-footprint/",
+"publisher": "businesscork.ie",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.irishexaminer.com/business/companies/arid-41434924.html",
+"publisher": "irishexaminer.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/heels-one-expansion-j-j-will-pour-176m-into-another-boost-for-its-manufacturing-site",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: EUR150m expansion construction 2022-~2024 (likely complete); recent land acquisitions signal FUTURE expansion pipeline Notes: No confirmed NEW 2026-27 costed build yet, but land banking at 116.5-acre Cork campus is a leading indicator. Watch for planning applications — potential future Orise target. Verify status of $176m 'boost'.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "takeda-cell-therapy-manufacturing-facility-expansion",
+"account": "Takeda",
+"site_name": "Cell therapy manufacturing facility expansion",
+"city": "Grange Castle, Dublin",
+"state": "IE-D",
+"lat": 53.32,
+"lon": -6.43,
+"project_type": "BROWNFIELD",
+"modality": [
+"cell therapy"
+],
+"eur": 36000000,
+"investment_display": "€36 million",
+"jobs": 100,
+"status": "commissioning",
+"expected_start": "Announced about 2023-24; ramp and qualification active into 2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Cell therapy manufacturing facility expansion. Modality: Autologous/allogeneic cell therapy — Ireland's first commercial-scale cell therapy production. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bioprocessintl.com/bioprocess-insider/takeda-to-expand-cell-therapy-facility-in-ireland",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/takeda-ireland-celebrates-opening-of-new-innovative-manufacturing-site-in-grange-castle",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Announced ~2023-24; ~100 jobs over 3 years; ramp/qualification ACTIVE into 2026 Notes: STRONG MODALITY FIT. Cell therapy = highly complex, small-batch, data-intensive process → premium on automation, CSV/GAMP5, historian, IT/OT traceability. Smaller capex but high technical value. NB Takeda sold its Dunboyne biologics plant to MSD (see MSD rows).",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "abbvie-cork-facility-expansion-aesthetics-sterile",
+"account": "AbbVie",
+"site_name": "Cork facility expansion (aesthetics / sterile)",
+"city": "Carrigtwohill, Co. Cork",
+"state": "IE-CO",
+"lat": 51.91,
+"lon": -8.26,
+"project_type": "BROWNFIELD",
+"modality": [
+"sterile / aesthetics"
+],
+"eur": 60000000,
+"investment_display": "€60-63 million",
+"jobs": 70,
+"status": "operational",
+"expected_start": "Construction from 2023; operational from 2025; ramp 2025-2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Cork facility expansion (aesthetics / sterile). Modality: Sterile manufacturing + QC for aesthetics portfolio (e.g. Botox/fillers business). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B-): New sterile lines + 3-yr training on new tech = CSV/qualification, serialization, automation, MES all in scope while ramping."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B-): New sterile lines + 3-yr training on new tech = CSV/qualification, serialization, automation, MES all in scope while ramping."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B-): New sterile lines + 3-yr training on new tech = CSV/qualification, serialization, automation, MES all in scope while ramping."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B-): New sterile lines + 3-yr training on new tech = CSV/qualification, serialization, automation, MES all in scope while ramping."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.fiercepharma.com/manufacturing/abbvie-invests-eu60m-effort-make-manufacturing-site-ireland-aesthetic-success",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.gov.ie/en/news/f35b3-abbvie-announces-a-60-million-expansion-as-companys-cork-facility-marks-20th-anniversary/",
+"publisher": "gov.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.europeanpharmaceuticalreview.com/news/174561/abbvie-cork-facility-e60-million-expansion/",
+"publisher": "europeanpharmaceuticalreview.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Construction from 2023; operational from 2025; ~70 jobs; ramp ACTIVE 2025-2026 Notes: New sterile lines + 3-yr training on new tech = CSV/qualification, serialization, automation, MES all in scope while ramping. Good mid-size entry point.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "abbvie-european-manufacturing-services-hub",
+"account": "AbbVie",
+"site_name": "European manufacturing services hub",
+"city": "North Dublin",
+"state": "IE-D",
+"lat": 53.4,
+"lon": -6.3,
+"project_type": "BROWNFIELD",
+"modality": [
+"manufacturing services hub"
+],
+"eur": 23000000,
+"investment_display": "€23 million",
+"jobs": null,
+"status": "announced",
+"expected_start": "Establishment phase",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "European manufacturing services hub. Modality: Manufacturing services / supply-chain support hub (not primary production). Manufacturing-related: Partial.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Services hub rather than a production line — lower direct fit for SCADA/MES, but possible IT/OT and data/historian angle."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Services hub rather than a production line — lower direct fit for SCADA/MES, but possible IT/OT and data/historian angle."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Services hub rather than a production line — lower direct fit for SCADA/MES, but possible IT/OT and data/historian angle."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Services hub rather than a production line — lower direct fit for SCADA/MES, but possible IT/OT and data/historian angle."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.idaireland.com/latest-news/press-release/abbvie-establishes-new-23-million-european-manufacturing-services-hub-in-north-dublin",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: Announced (IDA); establishment phase Notes: Services hub rather than a production line — lower direct fit for SCADA/MES, but possible IT/OT and data/historian angle. Verify scope.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "amgen-manufacturing-facility-expansion-capacity-build",
+"account": "Amgen",
+"site_name": "Manufacturing facility expansion / capacity build",
+"city": "Dún Laoghaire, Dublin",
+"state": "IE-D",
+"lat": 53.29,
+"lon": -6.14,
+"project_type": "BROWNFIELD",
+"modality": [
+"aseptic fill-finish (vials, lyophilisation)"
+],
+"eur": 350020000,
+"investment_display": "USD 407 million (€353M) capex 2023-2024",
+"jobs": null,
+"status": "operational",
+"expected_start": "Installation and testing 2023-24; active; workforce to about 2,888 by 2035",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Manufacturing facility expansion / capacity build. Modality: Aseptic drug product filling, lyophilization, formulation, packaging, analytical testing. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): STRONG FIT."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): STRONG FIT."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A-): STRONG FIT."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.rte.ie/news/business/2026/0319/1564227-amgen-spends-407m-on-dun-laoghaire-manufacturing-plant/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pharmaceutical-technology.com/uncategorized/amgen-facility-expansion-dun-laoghaire/",
+"publisher": "pharmaceutical-technology.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/amgen-celebrates-10-years-in-dun-laoghaire-with-an-investment-of-$100-million-in-a-new-vial-filling",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Capex 2023-24 incl. installation/construction/testing of manufacturing facilities; workforce growing to ~2,888 by 2035; ACTIVE Notes: STRONG FIT. Installation/testing of new manufacturing lines = live CSV/qualification, serialization (aseptic fill), automation, historian. NB separate item: Amgen to divest ex-Horizon aseptic plant by 2026 — verify which Irish assets affected.",
+"country": "Ireland",
+"currency": "USD"
+},
+{
+"id": "regeneron-iops-site-expansion-process-science-bldg-new-admin-lab-build",
+"account": "Regeneron",
+"site_name": "IOPS site expansion — Process Science bldg + new admin/lab building",
+"city": "Ballycummin, Raheen Business Park, Limerick",
+"state": "IE-LK",
+"lat": 52.64,
+"lon": -8.67,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (bulk drug substance)",
+"R&D / process science"
+],
+"eur": 100000000,
+"investment_display": "€100 million confirmed (Oct 2025; about €200M programme reported, not reconciled)",
+"jobs": 300,
+"status": "under construction",
+"expected_start": "Process Science building built; larger admin/lab building filed; a construction-compound permission was refused on appeal (Sept 2025)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "IOPS site expansion — Process Science bldg + new admin/lab building. Modality: Bulk biologics drug substance (largest-scale bulk biologics site in Ireland) + process science/QC labs + R&D. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER FIT (bulk biologics + labs = SCADA/MES/historian/CSV)."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER FIT (bulk biologics + labs = SCADA/MES/historian/CSV)."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER FIT (bulk biologics + labs = SCADA/MES/historian/CSV)."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER FIT (bulk biologics + labs = SCADA/MES/historian/CSV)."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.johnpaul.ie/case-studies/regeneron/",
+"publisher": "johnpaul.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.planningalerts.ie/application?pref=57EE7320250588E1748528D5EC79LK88025655",
+"publisher": "planningalerts.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pleanala.ie/anbordpleanala/media/abp/cases/reports/323/r323638.pdf",
+"publisher": "pleanala.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.limerickleader.ie/news/home/360556/hundreds-of-jobs-for-limerick-as-regeneron-to-pump-200m-into-plant-expansion.html",
+"publisher": "limerickleader.ie",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Process Science & Admin bldg (7,500 sqm, John Paul Construction, Jacobs architect) built; 3-storey 10,200 sqm admin/lab (10-yr permission) filed; construction-compound mod (ref 25/60480) REFUSED on appeal ACP-323638-25 (2 Sept 2025 grant overturned) on surface-water drainage Notes: TOP-TIER FIT (bulk biologics + labs = SCADA/MES/historian/CSV). PLANNING RISK: recurring objector Tom Ryan (also appealed Lilly) + An Coimisiun Plean refusal on drainage may delay works. Get the main 10,200 sqm building ref/decision. Jacobs & John Paul are delivery partners = relationship routes.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "novartis-divestment-api-site-transferred-to-sterling-pharma-solutions",
+"account": "Novartis",
+"site_name": "DIVESTMENT — API site transferred to Sterling Pharma Solutions",
+"city": "Ringaskiddy, Co. Cork",
+"state": "IE-CO",
+"lat": 51.83,
+"lon": -8.32,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule API"
+],
+"eur": null,
+"investment_display": "n/a (site divested to Sterling Pharma Solutions)",
+"jobs": null,
+"status": "divested",
+"expected_start": "Transfer agreed 2022, completed 2023; campus acquisition finalising about 2026",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "DIVESTMENT — API site transferred to Sterling Pharma Solutions. Modality: Small-molecule API (cardiology, immunology, oncology). Manufacturing-related: N.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research notes: NEGATIVE SIGNAL for Novartis as a direct account. (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: NEGATIVE SIGNAL for Novartis as a direct account. (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.novartis.com/ie-en/news/novartis-transfer-novartis-ringaskiddy-ireland-sterling-pharma-solutions",
+"publisher": "novartis.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.sterlingpharmasolutions.com/knowledge-hub/news/sterling-expands-global-api-manufacturing-capabilities-with-acquisition-of-novartis-facility-in-ringaskiddy-ireland/",
+"publisher": "sterlingpharmasolutions.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Transfer to Sterling agreed 2022, completed 2023; campus acquisition finalising ~2026 — Novartis EXITING own manufacturing here Notes: NEGATIVE SIGNAL for Novartis as a direct account. Opportunity now sits with STERLING PHARMA SOLUTIONS (CDMO, 111-acre site, ~350 staff) — a possible alternative Orise target outside the original list. Novartis Ireland now mainly commercial.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "gilead-sciences-drug-product-oral-solids-capacity-expansion",
+"account": "Gilead Sciences",
+"site_name": "Drug product / oral solids capacity expansion",
+"city": "Carrigtwohill, Co. Cork",
+"state": "IE-CO",
+"lat": 51.91,
+"lon": -8.26,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solids / packaging"
+],
+"eur": 45000000,
+"investment_display": "About €45 million (2023 reports)",
+"jobs": null,
+"status": "operational",
+"expected_start": "No new 2026-27 project found",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "Drug product / oral solids capacity expansion. Modality: Solid oral drug product manufacturing & packaging (HIV/HCV; 25% of Gilead global oral output). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Carrigtwohill is a significant oral-solids site (serialization/packaging relevant), but no fresh in-window capital confirmed."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.echolive.ie/corknews/arid-41084323.html",
+"publisher": "echolive.ie",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.gilead.com/global-operations/europe/ireland",
+"publisher": "gilead.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/gilead-sciences-expands-operations-in-ireland-with-%E2%82%AC7-million-investment-and-creation-of-140-new-job",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: EUR45m expansion referenced 2023; no confirmed NEW 2026-27 costed project found Notes: Carrigtwohill is a significant oral-solids site (serialization/packaging relevant), but no fresh in-window capital confirmed. Watch item — verify current capex directly.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "biomarin-new-qc-process-dev-lab-packaging-expansion",
+"account": "BioMarin",
+"site_name": "New QC/process-dev lab + packaging expansion",
+"city": "Shanbally, Co. Cork",
+"state": "IE-CO",
+"lat": 51.83,
+"lon": -8.37,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (DS, DP, fill-finish)",
+"QC / process development lab"
+],
+"eur": 90000000,
+"investment_display": "€60 million lab + more than €30 million packaging",
+"jobs": 40,
+"status": "under construction",
+"expected_start": "Active 2025-2027; exact go-live not confirmed",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "New QC/process-dev lab + packaging expansion. Modality: Bulk drug substance, drug product, fill-finish + QC/process development (only BioMarin site outside US). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG FIT."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG FIT."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG FIT."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.irishexaminer.com/business/companies/arid-41532926.html",
+"publisher": "irishexaminer.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/biomarin-plots-eu60m-expansion-irish-manufacturing-digs-new-lab",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.biopharminternational.com/view/biomarin-invests-60-million-expand-manufacturing-facility-ireland",
+"publisher": "biopharminternational.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: EUR60m 4-storey lab to raise capacity; packaging expansion + 40+ roles ongoing; ACTIVE 2025-2027 Notes: STRONG FIT. End-to-end biologics (DS->DP->fill-finish->packaging). New QC/PD lab = LIMS/data historian/CSV; packaging = serialization. In-window build + hiring. Confirm exact go-live.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "wuxi-biologics-conjugation-adc-drug-substance-drug-product-lines",
+"account": "WuXi Biologics",
+"site_name": "Conjugation (ADC) drug substance + drug product lines",
+"city": "Dundalk, Co. Louth",
+"state": "IE-LH",
+"lat": 54.0,
+"lon": -6.41,
+"project_type": "BROWNFIELD",
+"modality": [
+"ADC / conjugation",
+"biologics"
+],
+"eur": 325000000,
+"investment_display": "€325 million (original campus); new conjugation lines inside it",
+"jobs": null,
+"status": "commissioning",
+"expected_start": "Conjugation DS and DP lines to start GMP manufacturing in 2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Conjugation (ADC) drug substance + drug product lines. Modality: Monoclonal antibodies, recombinant proteins, + NEW conjugation/ADC drug substance & drug product. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT — ADC/conjugation explicitly in Orise's target modalities."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT — ADC/conjugation explicitly in Orise's target modalities."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B): STRONG MODALITY FIT — ADC/conjugation explicitly in Orise's target modalities."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.wuxibiologics.com/wuxi-biologics-to-invest-e325-million-to-build-largest-biomanufacturing-facility-using-single-use-bioreactors-in-ireland/",
+"publisher": "wuxibiologics.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.bioprocessintl.com/facilities-capacity/wuxi-biologics-gains-ema-approval-at-ireland-commercial-manufacturing-site",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pharmaceutical-technology.com/uncategorized/wuxi-biologics-dundalk-manufacturing-facility/",
+"publisher": "pharmaceutical-technology.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Campus built 2018-21; NEW conjugation DS & DP lines commence GMP manufacturing in 2026; EMA commercial approval Aug 2025 Notes: STRONG MODALITY FIT — ADC/conjugation explicitly in Orise's target modalities. New lines reaching GMP in 2026 = live CSV/qualification, automation, historian, IT/OT. 48,000L single-use capacity, 7,000+ staff. Note US BIOSECURE-related uncertainty around WuXi — verify commercial stability.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "alexion-astrazeneca-apicom-next-generation-drug-substance-api-facility",
+"account": "Alexion (AstraZeneca)",
+"site_name": "APICOM next-generation drug-substance/API facility (flagship)",
+"city": "Blanchardstown, Dublin",
+"state": "IE-D",
+"lat": 53.39,
+"lon": -6.38,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (bulk drug substance)"
+],
+"eur": 65000000,
+"investment_display": "€65 million (IDA); USD 360M (€326M) is the wider AstraZeneca Irish programme",
+"jobs": 105,
+"status": "operational",
+"expected_start": "Planning granted May 2023; IDA reported the facility opened in April 2026 (page not read)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "APICOM next-generation drug-substance/API facility (flagship). Modality: BIOLOGICS BULK DRUG SUBSTANCE (resolved — AstraZeneca/Alexion 'Bulk Drug Substance facility' per APICOM MES job spec + Building Control notice; earlier 'small-molecule API' press framing was inaccurate). Fingal refs FW22A/0300 + FW23A/0230. Phase 2 = 6 buildings 30,994 sqm; 5-storey production bldg c.10,315 sqm (41.2m) + 4-storey lab ext + 4-storey warehouse ext. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER, TIMING NOW."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER, TIMING NOW."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER, TIMING NOW."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): TOP-TIER, TIMING NOW."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.rte.ie/news/business/2023/0508/1382395-astrazeneca-plants-gets-approval/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://careers.astrazeneca.com/job/dublin/mes-specialist-apicom/7684/88569953696",
+"publisher": "careers.astrazeneca.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://nbco.localgov.ie/ga/bcms/notice/alexion-phase-2-bds-facility-college-park-blanchardstown",
+"publisher": "nbco.localgov.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.buildinginfo.com/project/e42m-alexion-pharma-intl-trading-ltd-extension-in-co-dublin/",
+"publisher": "buildinginfo.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Planning GRANTED ~8 May 2023 (Fingal, 19 conditions, EUR1.8m contribution); no ABP appeal; 25-month build; UPDATE Oct 2026: IDA release 'AstraZeneca announces opening of new API manufacturing facility in Dublin' (April 2026 per search summary; page 403, not read - so now OPEN, scope shifts to lifecycle/expansion; AZ quoted it as 'API' again, modality wording unverified); earlier: commissioning early 2026; art install Jan 2026 = near-complete; 105 jobs Notes: TOP-TIER, TIMING NOW. Confirmed biologics BDS. Stack: Korber PAS-X MES + DeltaV + OSI/AVEVA PI + LIMS + SAP S4/HANA. Commissioning early 2026 = CSV, historian, MES/eMBR, IT/OT live THIS YEAR. PM Group main contractor. Entry via careers.astrazeneca.com/apicomdublin + PM Group. AVEVA PI = Orise bullseye.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "sanofi-genzyme-genzyme-campus-investment-permitted-plant-extension",
+"account": "Sanofi (Genzyme)",
+"site_name": "Genzyme campus investment + permitted plant extension",
+"city": "Waterford",
+"state": "IE-WD",
+"lat": 52.26,
+"lon": -7.11,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics / rare disease (haemophilia)"
+],
+"eur": 44000000,
+"investment_display": "€44 million (campus); extension recently permitted",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Extension permitted 2024-25",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": null,
+"technical_scope": "Genzyme campus investment + permitted plant extension. Modality: Biologics + pharma (rare inherited disorders, haemophilia e.g. Altuviiio); primary distribution hub. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B-): Good fit — biologics site with active planning/expansion."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.pharmtech.com/view/sanofi-invests-eur-44-million-genzyme-campus",
+"publisher": "pharmtech.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.wlrfm.com/news/sanofi-granted-permission-for-expansion-to-waterford-plant-393825",
+"publisher": "wlrfm.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.fiercepharma.com/pharma/sanofi-unit-ireland-chided-fda-over-manufacturing-flubs-linked-altuviiio",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: EUR44m Genzyme campus investment; single-storey extension granted planning 2024-25; >EUR700m invested since 2011 Notes: Good fit — biologics site with active planning/expansion. ADDITIONAL ANGLE: FDA citation over Altuviiio manufacturing => potential data-integrity/CSV/quality-systems remediation opportunity (Part 11, GAMP5). Verify current capex scope and remediation status.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "abbott-new-kilkenny-plant-donegal-diabetes-care-expansion",
+"account": "Abbott",
+"site_name": "New Kilkenny plant + Donegal Diabetes Care expansion",
+"city": "Kilkenny",
+"state": "IE-KK",
+"lat": 52.65,
+"lon": -7.25,
+"project_type": "GREENFIELD",
+"modality": [
+"medtech / diagnostics (not biopharma GMP)"
+],
+"eur": 440000000,
+"investment_display": "€440 million (Kilkenny + Donegal)",
+"jobs": 1000,
+"status": "operational",
+"expected_start": "Kilkenny opened Nov 2024; ramping 2025-2026",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "New Kilkenny plant + Donegal Diabetes Care expansion. Modality: MEDTECH/diagnostics — FreeStyle Libre continuous glucose-monitoring sensors (device manufacturing, not biopharma). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C): DIFFERENT DOMAIN (medtech/device, not GMP biopharma) — but high-volume automated sensor manufacturing still needs SCADA/MES/automation/serialization + CSV-equivalent validation."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C): DIFFERENT DOMAIN (medtech/device, not GMP biopharma) — but high-volume automated sensor manufacturing still needs SCADA/MES/automation/serialization + CSV-equivalent validation."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C): DIFFERENT DOMAIN (medtech/device, not GMP biopharma) — but high-volume automated sensor manufacturing still needs SCADA/MES/automation/serialization + CSV-equivalent validation."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C): DIFFERENT DOMAIN (medtech/device, not GMP biopharma) — but high-volume automated sensor manufacturing still needs SCADA/MES/automation/serialization + CSV-equivalent validation."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.idaireland.com/latest-news/press-release/abbott-to-invest-440-million-in-new-facility-in-kilkenny-create-1,000-new-jobs-at-donegal-site",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.rte.ie/news/business/2024/1118/1481549-abbotts-440m-investment-to-create-1-000-jobs/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.ie.abbott/media-center/news/Abbott-Opens-State-of-the-Art-Global-Manufacturing-Facility-in-Kilkenny-Ireland.html",
+"publisher": "ie.abbott",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: Announced Aug 2023; Kilkenny (30,000 sqm) OPENED Nov 2024, ramping; Donegal expansion +200 jobs; 1,000 jobs total; ACTIVE 2025-2026 Notes: DIFFERENT DOMAIN (medtech/device, not GMP biopharma) — but high-volume automated sensor manufacturing still needs SCADA/MES/automation/serialization + CSV-equivalent validation. Large fresh capex, ramping in-window. Assess whether Orise wants to play in device/diagnostics.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "gsk-divestment-cork-api-plant-sold-to-thermo-fisher",
+"account": "GSK",
+"site_name": "DIVESTMENT — Cork API plant sold to Thermo Fisher",
+"city": "Cork / Dungarvan / Sligo",
+"state": "IE-CO",
+"lat": 51.8,
+"lon": -8.33,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule API"
+],
+"eur": null,
+"investment_display": "n/a (site divested to Thermo Fisher)",
+"jobs": null,
+"status": "divested",
+"expected_start": "No new in-window GSK build found",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "DIVESTMENT — Cork API plant sold to Thermo Fisher. Modality: Small-molecule API (Cork); respiratory/consumer (Dungarvan). Manufacturing-related: N.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research notes: NEGATIVE SIGNAL for GSK as a direct account (reducing Irish manufacturing). (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: NEGATIVE SIGNAL for GSK as a direct account (reducing Irish manufacturing). (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.genengnews.com/news/thermo-fisher-to-acquire-api-plant-in-cork-ireland-from-gsk/",
+"publisher": "genengnews.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.biopharmadive.com/news/thermo-fisher-to-buy-gsk-drug-plant-in-ireland/554947/",
+"publisher": "biopharmadive.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://ie.gsk.com/",
+"publisher": "ie.gsk.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: Thermo Fisher acquiring GSK Cork API plant; no new in-window GSK build found Notes: NEGATIVE SIGNAL for GSK as a direct account (reducing Irish manufacturing). Opportunity shifts to THERMO FISHER (CDMO) at the Cork API site — a potential alternative Orise target. Dungarvan remains for consumer/respiratory.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "novo-nordisk-tabletting-facility-for-oral-glp-1s-retrofit-new-capacity",
+"account": "Novo Nordisk",
+"site_name": "Tabletting facility for oral GLP-1s (retrofit + new capacity)",
+"city": "Monksland, Athlone, Co. Roscommon/Westmeath",
+"state": "IE-RN",
+"lat": 53.42,
+"lon": -7.97,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose (oral GLP-1 tablets)"
+],
+"eur": 432000000,
+"investment_display": "€432 million (USD 506M)",
+"jobs": 260,
+"status": "under construction",
+"expected_start": "Announced 2 Mar 2026; construction begun; completes end-2027 through 2028",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Tabletting facility for oral GLP-1s (retrofit + new capacity). Modality: Oral solid dose — oral GLP-1 tabletting (Wegovy/semaglutide pill); upgrade/retrofit + new capacity. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): TOP-TIER FIT + PERFECT TIMING."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): TOP-TIER FIT + PERFECT TIMING."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): TOP-TIER FIT + PERFECT TIMING."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research (plan grade A): TOP-TIER FIT + PERFECT TIMING."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.rte.ie/news/business/2026/0302/1561162-novo-nordisk-athlone-investment/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/novo-nordisk-announces-more-than-400-million-euro-expansion",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.pharmexec.com/view/novo-nordisk-invests-506-million-ireland-manufacturing-facility-expansion",
+"publisher": "pharmexec.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: ANNOUNCED 2 March 2026; construction already begun; finalised gradually end-2027 through 2028; 260 operational staff + up to 500-600 construction jobs Notes: TOP-TIER FIT + PERFECT TIMING. Announced INSIDE the window (Mar 2026) with construction live now through 2028 = greenfield-grade automation, MES, historian, serialization (oral solids), CSV/qualification all ahead. High-demand GLP-1 franchise. Prime Orise pursuit.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "roche-site-closure-remediation-sale-not-a-build",
+"account": "Roche",
+"site_name": "SITE CLOSURE / remediation + sale (not a build)",
+"city": "Clarecastle, Co. Clare",
+"state": "IE-CE",
+"lat": 52.82,
+"lon": -8.97,
+"project_type": "BROWNFIELD",
+"modality": [
+"former API site (remediation, sale)"
+],
+"eur": null,
+"investment_display": "n/a (€207.56M cumulative remediation spend; not a build)",
+"jobs": null,
+"status": "closed",
+"expected_start": "Plant closed 2016; first tranche of the 88-acre site available late 2027",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "SITE CLOSURE / remediation + sale (not a build). Modality: Former small-molecule API site — now decommissioned. Manufacturing-related: N.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: NOT a Roche opportunity — Roche has exited manufacturing in Ireland."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.rte.ie/news/business/2026/0624/1580105-roche-seeks-buyer-for-former-co-clare-manufacturing-site/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.clareecho.ie/clean-up-bill-for-roche-irelands-clare-manufacturing-site-now-totals-e207-56m-after-firm-spend-further-e57-6m-on-clean-up-last-year-one-of-largest-remediation-projects-of-its-type-in-europe/",
+"publisher": "clareecho.ie",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://rocheclarecastle.ie/",
+"publisher": "rocheclarecastle.ie",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: Plant closed 2016; remediation ongoing since 2020; 88-acre site being marketed, first tranche available late 2027 Notes: NOT a Roche opportunity — Roche has exited manufacturing in Ireland. FUTURE lead: whoever acquires the 88-acre Clarecastle site (masterplan with IDA/Clare Co Council) could be a greenfield Orise target from ~2027-28. Roche has no other Irish manufacturing site.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "merck-kgaa-milliporesigma-life-science-membrane-filtration-manufacturi",
+"account": "Merck KGaA (MilliporeSigma / Life Science)",
+"site_name": "Membrane + filtration manufacturing expansion (Cork)",
+"city": "Carrigtwohill & Blarney, Co. Cork",
+"state": "IE-CO",
+"lat": 51.91,
+"lon": -8.26,
+"project_type": "BROWNFIELD",
+"modality": [
+"bioprocessing consumables (membranes, filtration)"
+],
+"eur": 440000000,
+"investment_display": "€440 million (€290M Carrigtwohill + €150M Blarney)",
+"jobs": 370,
+"status": "under construction",
+"expected_start": "Blarney opened Sept 2025; Carrigtwohill first output 2026; programme completes 2027",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Membrane + filtration manufacturing expansion (Cork). Modality: Bioprocessing consumables — membranes (immersion casting for gene/novel therapies, virus filtration) + filtration products. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): STRONG FIT."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): STRONG FIT."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): STRONG FIT."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Ireland research (plan grade B+): STRONG FIT."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bioprocessintl.com/upstream-downstream-processing/milliporesigma-pumps-470m-into-ireland-filtration-plants",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.rte.ie/news/business/2025/0918/1534086-merck-opens-150m-climate-neutral-facility-in-cork/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.sigmaaldrich.com/US/en/collections/press/expansion-membrane-filtration-manufacturing-ireland",
+"publisher": "sigmaaldrich.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Blarney EUR150m climate-neutral facility opened Sept 2025 (production Q4 2025); Carrigtwohill EUR290m membrane plant first commercial output 2026; whole project wraps 2027; 370+ jobs Notes: STRONG FIT. New high-automation manufacturing lines reaching commercial output 2026-27 = SCADA/MES/historian/automation + CSV-grade validation. Adjacent to Orise's core (process manufacturing). NB separate NEGATIVE: Merck KGaA to mothball a different Irish API plant by end-2028 — clarify which site.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "ipsen-dublin-manufacturing-site-upgrade-capacity-increase",
+"account": "Ipsen",
+"site_name": "Dublin manufacturing site upgrade + capacity increase",
+"city": "Blanchardstown, Dublin",
+"state": "IE-D",
+"lat": 53.39,
+"lon": -6.38,
+"project_type": "BROWNFIELD",
+"modality": [
+"small molecule API (oncology)"
+],
+"eur": 67000000,
+"investment_display": "€52 million delivered + €15 million more to 2026",
+"jobs": null,
+"status": "operational",
+"expected_start": "€15M planned through 2026",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Dublin manufacturing site upgrade + capacity increase. Modality: Small-molecule API for oncology treatments; R&D. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C+): Modest but genuine in-window capex (EUR15m to 2026)."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C+): Modest but genuine in-window capex (EUR15m to 2026)."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Ireland research (plan grade C+): Modest but genuine in-window capex (EUR15m to 2026)."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.fiercepharma.com/manufacturing/ipsen-doles-out-eu52-million-upgrade-its-dublin-manufacturing-site-increase-api",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.ipsen.com/uk-ireland/press-releases/tanaiste-joins-ipsen-ireland-to-launch-upgraded-manufacturing-site-in-blanchardstown/",
+"publisher": "ipsen.com",
+"date": "",
+"confidence": "Med"
+},
+{
+"url": "https://www.siliconrepublic.com/business/ipsen-ireland-investment-biopharma-manufacturing",
+"publisher": "siliconrepublic.com",
+"date": "",
+"confidence": "Med"
+}
+],
+"notes": "Confidence in research file: Med. Status/timeline: EUR52m upgrade launched; additional EUR15m planned through 2026; API output +10% YoY; 175 staff Notes: Modest but genuine in-window capex (EUR15m to 2026). Oncology API site => automation, historian, CSV relevant at smaller scale. Good mid-market entry; lower deal size.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "servier-no-confirmed-in-window-project",
+"account": "Servier",
+"site_name": "No confirmed in-window project",
+"city": "Arklow, Co. Wicklow",
+"state": "IE-WW",
+"lat": 52.8,
+"lon": -6.16,
+"project_type": "BROWNFIELD",
+"modality": [
+"oral solid dose",
+"CDMO"
+],
+"eur": null,
+"investment_display": "Not found in public sources (last major capex €184M, 2006)",
+"jobs": null,
+"status": "Not confirmed in sources",
+"expected_start": "No 2026-27 project found",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "No confirmed in-window project. Modality: Small-molecule oral solid dose (high-volume; ~160m boxes/yr); now also CDMO. Manufacturing-related: N/A.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "From the Ireland research notes: No new capital project verified."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research notes: No new capital project verified."
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "From the Ireland research notes: No new capital project verified."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.servier-cdmo.com/locations/arklow/",
+"publisher": "servier-cdmo.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/servier-celebrates-30-years-of-manufacturing-in-arklow,-ireland",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://servier.ie/industries/",
+"publisher": "servier.ie",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: >No 2026-27 investment announcement found; Arklow is Servier's 2nd-largest site, ~500 staff Notes: No new capital project verified. Large established oral-solids/CDMO site = serialization/MES/historian potential if a modernisation programme emerges. Now runs as Servier CDMO — watch for CDMO capacity investments. Needs direct verification.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "astellas-tralee-biopharma-facility-eur-330m-new-facility-opening-early",
+"account": "Astellas",
+"site_name": "Tralee biopharma facility: EUR 330m new facility (opening early 2027) + second aseptic filling line (announced 14 Sep 2026)",
+"city": "Tralee, Co. Kerry",
+"state": "IE-KY",
+"lat": 52.27,
+"lon": -9.7,
+"project_type": "GREENFIELD",
+"modality": [
+"sterile fill-finish (aseptic drug product)"
+],
+"eur": 330000000,
+"investment_display": "€330 million (earlier commitment); second-line cost not disclosed",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Second aseptic line announced 14 Sep 2026; opening date contested (Q3 2027 vs 2028 vs early 2027); capacity targeted by 2029",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Tralee biopharma facility: EUR 330m new facility (opening early 2027) + second aseptic filling line (announced 14 Sep 2026). Modality: Drug product - sterile/aseptic filling for medicines for global markets; doubles site drug-product capacity; products not named. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Ireland research notes: NEW since July."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Ireland research notes: NEW since July."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Ireland research notes: NEW since July."
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Ireland research notes: NEW since July."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://pharmasource.global/content/manufacturing/manufacturing-news/astellas-expands-ireland-facility-with-second-aseptic-filling-line/",
+"publisher": "pharmasource.global",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.irishexaminer.com/business/companies/arid-41910307.html",
+"publisher": "irishexaminer.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.idaireland.com/latest-news/press-release/astellas-strengthens-commitment-to-ireland-with-expanded-investment",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Status/timeline: Second aseptic filling line announced 14 Sep 2026; opening date CONFLICTS: Sisk says first phase operational Q3 2027, Astellas 2023 release said 2028, Sept 2026 press says 'officially open early next year' (unclear which Kerry site); RTE says not yet commissioned; capacity and job creation targeted by 2029. Planning granted 19 Dec 2023 (Kerry CC, 10-yr, 20 conditions, no appeal; ref not found); construction manager John Sisk; see astellas-battlecard.md; IDA-supported. Groundbreaking March 2024 (per PharmaSource) Notes: NEW since July. Not on starter list. HIGH fit: facility opens early 2027 so CQV, MES/eBR, CSV and data-integrity decisions are live now; second line adds scope through 2029. Digital/automation scope not stated. 330m date: Irish Examiner says earlier commitment; one search summary said Sept 2023 (unverified). Jobs figure not disclosed.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "pci-pharma-services-citynorth-injectable-packaging-facility-dundalk-co",
+"account": "PCI Pharma Services",
+"site_name": "CityNorth injectable packaging facility + Dundalk commercial packaging site",
+"city": "Dublin and Dundalk",
+"state": "IE-D",
+"lat": 53.35,
+"lon": -6.26,
+"project_type": "BROWNFIELD",
+"modality": [
+"packaging (injectables, OSD)",
+"CDMO"
+],
+"eur": null,
+"investment_display": "Not found for Ireland (group-wide USD 365M)",
+"jobs": null,
+"status": "operational",
+"expected_start": "CityNorth due to begin Q3 2025; Dundalk operational",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "CityNorth injectable packaging facility + Dundalk commercial packaging site. Modality: Packaging / assembly of injectable drug products and OSD (CDMO packaging). Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Snippets only."
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Snippets only."
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Snippets only."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.idaireland.com/latest-news/press-release/pci-pharma-services-to-construct-new-pharmaceutical-packaging-facility-at-citynorth-business-campus",
+"publisher": "idaireland.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.businesswire.com/news/home/20240924192066/en/PCI-Pharma-Services-Invests-Over-%24365-Million-in-EU-US-Facilities-for-Clinical-and-Commercial-Supply-of-Advanced-Drug-Delivery-and-Drug-Device-Combination-Products",
+"publisher": "businesswire.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: CityNorth plant due to begin operations Q3 2025 (announced Sep 2024); Dundalk site HPRA-approved and operational for commercial packaging; no 2026-27 project found Notes: Snippets only. Tier 2 CDMO. Likely now in operation (lifecycle only). Serialization / packaging-line integration angle. Irish euro figure not found.",
+"country": "Ireland",
+"currency": "EUR"
+},
+{
+"id": "west-pharmaceutical-services-damastown-manufacturing-expansion-165-000",
+"account": "West Pharmaceutical Services",
+"site_name": "Damastown manufacturing expansion (165,000 sq ft) - 330 jobs",
+"city": "Damastown, Dublin 15",
+"state": "IE-D",
+"lat": 53.4,
+"lon": -6.43,
+"project_type": "BROWNFIELD",
+"modality": [
+"elastomer components (supplier)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": 330,
+"status": "operational",
+"expected_start": "Opened late March 2026",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Damastown manufacturing expansion (165,000 sq ft) - 330 jobs. Modality: Elastomer components for injectables (diabetes/obesity therapies) - component maker, not drug manufacturing. Manufacturing-related: Y.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Pre-July (opened Mar 2026)."
+},
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "From the Ireland research notes: Pre-July (opened Mar 2026)."
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.irishtimes.com/business/2026/03/31/west-pharma-opens-new-dublin-manufacturing-plant-with-330-extra-jobs",
+"publisher": "irishtimes.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.rte.ie/news/business/2026/0331/1566026-330-new-jobs-as-west-pharmaceuticals-expands-dublin-site/",
+"publisher": "rte.ie",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Status/timeline: Announced Nov 2024 (330 jobs); opened late March 2026 (Irish Times 31 Mar 2026, RTE 31 Mar 2026) Notes: Pre-July (opened Mar 2026). Borderline scope: supplier of packaging components, MES for plastics/elastomer production still possible but low priority. Investment amount not disclosed.",
+"country": "Ireland",
+"currency": "EUR"
+}
+],
+"gaps_html": "<h4 style=\"margin-top:0\">About the Ireland data</h4>\n<p>Built from the Ireland research files (29 records, 24 accounts; main pass 2 July 2026, refresh 15 October 2026): <code>ireland/projects.csv</code>, <code>territory-plan.md</code> and <code>sources.md</code>. Amounts, dates, notes and confidence are as written there. The county coordinates, the Orise fit ratings, the opportunity status and the account tiers were added when loading: fit strength follows the plan's overall grade (A+ to A- Strong, B+ to B- Moderate, C and watch Weak) and the areas are matched from the wording of each note. Tiers follow the plan's own groupings (Tier 1 anchors, Tier 2 mid-large, Tier 3 focused builds, Tier 4 watch, divesting or other domain). Open means grades A- to B or a high-fit refresh item; Closed/late marks divested sites and completed pre-window builds.</p>\n<ul><li><b>Totals are a floor.</b> The MSD Dundalk figure is an acquisition price; the Pfizer Ringaskiddy facility is part of the €1.2bn package; MSD's network jobs, Novartis, GSK, Roche, Servier, PCI and West have no counted amount. USD amounts are converted at 1 USD = 0.86 EUR.</li>\n<li><b>Figures that disagree in the files:</b> Alexion is €65M (IDA) in the plan but a USD 360M programme in the CSV (the €65M is counted); MSD Dundalk is \">€500M\" while USD 520M converts to about €447M; Regeneron is €100M confirmed against about €200M reported (€100M counted); Novo Athlone appears as €432M in the plan and as USD 372.5M in one source.</li>\n<li><b>Greenfield / brownfield</b> was not in the CSV. I classed Lilly Raheen, Pfizer DS2, Abbott Kilkenny and Astellas as greenfield and everything else as brownfield; check this.</li></ul>\n<h4>Gaps and next steps (from the territory plan)</h4>\n<ol><li>IDA Ireland press-release pages return 403 to the research tools. Open them in a browser to confirm quotes and figures (Pfizer, Alexion, Novo, MSD, Amgen, Abbott, AbbVie, Astellas).</li>\n<li>Alexion APICOM: confirm the April 2026 opening wording and whether the facility is API or biologics drug substance.</li>\n<li>Lilly Raheen: confirm whether biologics production started in 2026. Pfizer: confirm the current phase (design, construction or C&amp;Q).</li>\n<li>Astellas: automation and MES scope, EPC and integrator, and contacts. The referenced <code>astellas-battlecard.md</code> was not in the files provided.</li>\n<li>Planning portals (An Coimisiún Pleanála and the county registers) for J&amp;J Ringaskiddy land, Sanofi Waterford, Pfizer Ringaskiddy and Regeneron's main building.</li>\n<li>Add Sterling Pharma Solutions (ex-Novartis Ringaskiddy) and Thermo Fisher (ex-GSK Cork) as formal targets once their modernisation plans are researched. APC (Dublin) and other emerging CDMOs were not found.</li>\n<li>Earnings-call transcripts (MSD, Lilly, Pfizer, J&amp;J, Takeda, AbbVie) for Ireland capex commentary; Amgen's ex-Horizon divestment and the Merck KGaA mothballed API plant need site-level clarification.</li>\n<li>Decide whether Orise pursues device and diagnostics manufacturing (Abbott €440M) or biopharma GMP only.</li>\n<li>Technical buyers (automation and MES managers, CSV leads, historian owners) still need LinkedIn mapping; no emails, phone numbers or LinkedIn URLs were collected.</li></ol>",
+"as_of": "October 15, 2026",
+"region_names": {
+"IE-D": "Dublin",
+"IE-CO": "Cork",
+"IE-LK": "Limerick",
+"IE-LH": "Louth",
+"IE-MH": "Meath",
+"IE-CW": "Carlow",
+"IE-WD": "Waterford",
+"IE-KK": "Kilkenny",
+"IE-RN": "Roscommon",
+"IE-CE": "Clare",
+"IE-WW": "Wicklow",
+"IE-KY": "Kerry"
+}
+}

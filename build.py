@@ -15,10 +15,12 @@ MARKETS = [
     {"id": "DACH", "name": "DACH (Germany · Austria · Switzerland)", "short": "DACH", "file": "dach.json"},
     {"id": "CN", "name": "China", "short": "China", "file": "cn.json"},
     {"id": "IT", "name": "Italy", "short": "Italy", "file": "it.json"},
+    {"id": "IE", "name": "Ireland", "short": "Ireland", "file": "ie.json"},
 ]
 
 # Optional alias map: account name (lower-case, parenthetical stripped) -> canonical name
-ALIASES = {"roche": "Roche", "wuxi apptec": "WuXi AppTec", "johnson & johnson": "Johnson & Johnson Innovative Medicine"}
+ALIASES = {"roche": "Roche", "wuxi apptec": "WuXi AppTec", "johnson & johnson": "Johnson & Johnson Innovative Medicine",
+           "msd": "Merck & Co.", "alexion": "AstraZeneca"}
 
 
 def canon(name):
