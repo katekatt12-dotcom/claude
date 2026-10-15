@@ -18,7 +18,7 @@ MARKETS = [
 ]
 
 # Optional alias map: account name (lower-case, parenthetical stripped) -> canonical name
-ALIASES = {"roche": "Roche", "wuxi apptec": "WuXi AppTec"}
+ALIASES = {"roche": "Roche", "wuxi apptec": "WuXi AppTec", "johnson & johnson": "Johnson & Johnson Innovative Medicine"}
 
 
 def canon(name):
@@ -49,6 +49,7 @@ def main():
                 "strategy": a.get("investment_strategy_summary") or "",
                 "ownership": a.get("ownership_note") or "",
                 "incumbents": a.get("incumbent_vendors_general") or "",
+                "roles": a.get("roles") or "",
                 "source_name": a["name"],
             }
         for s in d["sites"]:

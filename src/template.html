@@ -536,7 +536,8 @@ function renderAccounts(){
           ${ma.strategy?`<div class="sub-h">Investment strategy</div><p>${esc(ma.strategy)}</p>`:''}
           ${ma.tier_reason?`<div class="sub-h">Why this priority</div><p>${esc(ma.tier_reason)}</p>`:''}
           ${ma.ownership?`<div class="sub-h">Ownership note</div><p>${esc(ma.ownership)}</p>`:''}
-          ${ma.incumbents?`<div class="sub-h">Incumbent vendors</div><p>${esc(ma.incumbents)}</p>`:''}
+          ${ma.incumbents?`<div class="sub-h">Incumbent vendors and stack signals</div><p>${esc(ma.incumbents)}</p>`:''}
+          ${ma.roles?`<div class="sub-h">Public roles and contacts (public web only)</div><p>${esc(ma.roles)}</p>`:''}
           <div class="sub-h">Sites</div>
           <table class="site-table"><thead><tr><th>Site</th><th>Region</th><th>Type</th><th>Investment</th><th>Status</th><th>Opportunity</th></tr></thead><tbody>
           ${ms.map(s=>`<tr class="row" data-site="${esc(s.id)}"><td>${esc(s.site_name)}</td><td>${esc(s.city)}, ${esc(regName(s.region))}</td><td><span class="tag ${s.project_type}">${s.project_type}</span></td><td>${fmtUSD(s.investment_usd)}</td><td>${esc(s.status)}</td><td><span class="tag ${oppClass(s.opportunity_status)}">${oppLabel(s.opportunity_status)}</span></td></tr>`).join('')}
