@@ -1,0 +1,1756 @@
+{
+"accounts": [
+{
+"id": "GSK",
+"name": "GSK",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Wavre, Belgium; Rixensart, Belgium; Wavre / Rixensart / Gembloux, Belgium.",
+"investment_strategy_summary": "NewLyo - freeze-drying (lyophilised vaccine) production unit and centre of excellence: 250,000,000+ (announced Aug 2023). Clinical vaccine laboratory (consolidated clinical sample analysis): 150,000,000 building plus unspecified automated equipment. Belgium restructuring (WATCH - not a capex project): n/a (up to 1,217 jobs threatened; mostly management and employees per press).",
+"priority_reason": "Rank 2, at risk. NewLyo (€250M+, freeze-dried vaccines, operational 2027) is exactly Orise's scope, but on 14 Oct 2026 GSK told its works council up to 1,217 Belgian jobs are threatened, and a new CEO reportedly wants only one vaccine among 5-6 priorities. Confirm NewLyo status before investing pursuit effort.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Pfizer",
+"name": "Pfizer",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Puurs, Belgium; Puurs-Sint-Amands, Belgium.",
+"investment_strategy_summary": "Puurs EUR 1.2bn expansion and modernisation (Isolator Facility Centre, Flexible Freezer Warehouse, Center for Secondary Packaging): 1,200,000,000+ (announced 8 Dec 2022, over three years). Puurs land expansion on 7.5 ha (Sportpark De Schans): Not found in public sources.",
+"priority_reason": "Rank 3. €1.2bn programme (isolators, mRNA freezer warehouse, packaging) announced Dec 2022 should be in late delivery. Next signal is the 7.5 ha land extension (zoning decision due end 2026).",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Johnson & Johnson (Innovative Medicine)",
+"name": "Johnson & Johnson (Innovative Medicine)",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Beerse and Geel, Belgium.",
+"investment_strategy_summary": "No in-window project found (past: Geel chemical development pilot plant 130m; Beerse continuous line 21m; Project LION lab 42.8m; 23m data infrastructure): Not found in public sources for 2026-27.",
+"priority_reason": "Rank 8, watch. Strong digital history (Factory of the Future) but nothing in window found at Beerse or Geel. Dutch-language local press is poorly indexed, so absence is not proof.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "MSD Animal Health",
+"name": "MSD Animal Health",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Boxmeer, Netherlands.",
+"investment_strategy_summary": "New production facility - formulation and filling of animal vaccines and medicines: Not found in public sources (company did not disclose).",
+"priority_reason": "Rank 4. Animal-vaccine formulation and filling facility (kickoff March 2025, about three years) with digitalisation and automation stated. Animal health, so confirm it fits Orise's scope.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": "Darcio Santos, site director (quoted March 2025; verify tenure)."
+},
+{
+"id": "MSD",
+"name": "MSD",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Oss, Netherlands.",
+"investment_strategy_summary": "Oss factory sold to Organon; MSD cancer-medicine production moved abroad: n/a.",
+"priority_reason": "Divested: the Oss plant was sold to Organon and MSD production closed 1 July 2025. The opportunity moves to Organon; its plans are not found.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "UCB",
+"name": "UCB",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Braine-l'Alleud, Belgium; Braine-l'Alleud, Belgium; Braine-l'Alleud, Belgium.",
+"investment_strategy_summary": "Genesis - gene therapy site (development, clinical production, QC) with Leuven transfer: 200,000,000+. Arkelia - R&D centre: 100,000,000 (2025 announcement, per Trends) or 200,000,000 (La Libre/L'Avenir Apr 2026) - sources differ. Biologics operations centre (3 x 10,000 L bioreactors; space for 3 more): 300,000,000.",
+"priority_reason": "Rank 1. Genesis is a new gene-therapy GMP site with a fully robotised filling line and a real-time digital ecosystem; first batches 2026-27, so CQV, MES/eBR and data integrity are live. Arkelia (R&D) and spare bioreactor capacity follow. UCB's biggest new capacity is in the US (USD 2bn, Georgia), which may slow further Belgian adds.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "argenx",
+"name": "argenx",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Ghent (Zwijnaarde), Belgium.",
+"investment_strategy_summary": "No manufacturing project - argenx outsources drug-substance manufacturing: Not found in public sources.",
+"priority_reason": "Rank 9. No manufacturing plant (outsourced); only a possible LIMS or GxP lab-systems angle.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Eli Lilly",
+"name": "Eli Lilly",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Katwijk (Leiden Bio Science Park, Zijlhoek-De Woerd), Netherlands.",
+"investment_strategy_summary": "Lilly Katwijk oral-medicines manufacturing plant: 2,600,000,000 (about USD 3bn).",
+"priority_reason": "Rank 0. Largest Benelux greenfield: a €2.6bn oral-medicines plant at Katwijk, with permits and a nitrogen-permit appeal as the timing risk. Start-up roles (OT/IT integration, QA/CSV, IT readiness) are already advertised, so engage while the OT/IT and CSV strategy is being set. See lilly-katwijk-battlecard.md.",
+"incumbent_vendors_general": "From job postings (a hypothesis, not confirmed for Katwijk): corporate postings name Emerson DeltaV; Ireland sites run DeltaV, Syncade and PI. Katwijk posts name DCS, SCADA, MES, historians, PLCs, GAMP 5 and data integrity. Developer RED Company; architect Powerhouse Company; permit consultant DGMR; Jacobs engineering unconfirmed; main contractor and automation integrator not public.",
+"ownership_note": "",
+"roles": "Marco Frenken, general manager / country manager, Lilly Nederland (titles vary by outlet). Nanne de Ru, owner of RED Company (developer). Katwijk site leader, engineering, automation, MES/IT and CSV leads not found publicly."
+},
+{
+"id": "Takeda",
+"name": "Takeda",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Lessines, Belgium.",
+"investment_strategy_summary": "Lessines plasma-derived therapies plant expansion (new manufacturing facility + net-zero warehouse): about 300,000,000 (announced 16 Sep 2022).",
+"priority_reason": "Rank 0b. Plasma plant start-up due around end 2026, so CQV, MES and digital integration are due now. At risk: the Renault restructuring (109 jobs, April 2026); confirm who owns the project.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Bristol Myers Squibb",
+"name": "Bristol Myers Squibb",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Leiden (Oegstgeest), Netherlands.",
+"investment_strategy_summary": "European CAR-T cell therapy manufacturing centre: Not found in public sources.",
+"priority_reason": "Built and producing CAR-T commercially, so lifecycle, periodic review, data integrity and MES/eBR optimisation rather than a new build.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Delpharm (ex-Astellas Meppel)",
+"name": "Delpharm (ex-Astellas Meppel)",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Meppel, Netherlands.",
+"investment_strategy_summary": "Meppel solid-dose plant transferred from Astellas to Delpharm: Not found in public sources.",
+"priority_reason": "Same pattern as Oss and Ireland: pursue the CDMO acquirer. Delpharm's plans for the Meppel site are not found.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Sanofi",
+"name": "Sanofi",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Geel, Belgium.",
+"investment_strategy_summary": "Geel biologics expansions (EUR 300m plant; EUR 120m hemophilia line): 120,000,000 (Oct 2022, line due 2024); earlier 300,000,000; cumulative 1.1bn since 2001 per Sanofi.",
+"priority_reason": "Watch: no 2026-27 project found at Geel.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Amgen",
+"name": "Amgen",
+"priority_tier": "Tier 1",
+"footprint_summary": "Sites in this research: Breda, Netherlands.",
+"investment_strategy_summary": "No manufacturing project found: Not found in public sources.",
+"priority_reason": "Breda is a packaging and distribution hub; no Dutch capital plan found.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "IRE",
+"name": "IRE",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Fleurus, Belgium.",
+"investment_strategy_summary": "IRE radiopharmaceutical CDMO facility: Not found in public sources.",
+"priority_reason": "Tier 2, rank 1. Company-confirmed GMP radiopharma CDMO: hot cells early 2027, operational H2 2027, so qualification follows within about 12 months. No investment figure.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": "Erich Kollegger, CEO (quoted in the release)."
+},
+{
+"id": "PanTera",
+"name": "PanTera",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Mol, Belgium.",
+"investment_strategy_summary": "Actinium Production Centre (Ac-225 photonuclear plant): Not found in public sources (EUR 93m Series A, ~2024, 'largely to support construction' - snippet).",
+"priority_reason": "Tier 2, rank 4. Actinium-225 plant under construction with permits granted; operational 2028. Permit dates conflict (2025 vs April 2026).",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Trasis",
+"name": "Trasis",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Flémalle (Liège), Belgium.",
+"investment_strategy_summary": "Takeover of former Mithra CDMO site for radiopharma/nuclear medicine production: Not disclosed (acquisition); strategic plan about 40m EUR.",
+"priority_reason": "Tier 2, rank 3. An existing GMP site (former Mithra) being adapted for radiopharma; move-in early 2027. New logo.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Legend Biotech",
+"name": "Legend Biotech",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Ghent, Belgium.",
+"investment_strategy_summary": "Ghent CAR-T (Carvykti) capacity expansion - Tech Lane/Obelisc plus new facility: about USD 150,000,000 additional (approved 2025).",
+"priority_reason": "Tier 2, rank 2. CAR-T capacity in Ghent to 2028. Confirm the 2026 status of the USD 150M project and how funds are split with J&J.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Galapagos",
+"name": "Galapagos",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Leiden (Netherlands) and Mechelen (Belgium).",
+"investment_strategy_summary": "Cell therapy wind-down - Leiden site closure: n/a (EUR 275m impact booked in 2025).",
+"priority_reason": "Closing its Leiden cell-therapy site; possible opportunity only if the GMP assets are sold.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Univercells",
+"name": "Univercells",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Gosselies, Jumet, Nivelles, Belgium.",
+"investment_strategy_summary": "Univercells group bankruptcy (Exothera CDMO in Jumet): n/a.",
+"priority_reason": "Bankrupt in Oct 2025 (Exothera, Jumet GMP site); watch for a buyer of the site.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Aspen",
+"name": "Aspen",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Oss, Netherlands.",
+"investment_strategy_summary": "Consolidation of laboratories in the Pivot Park 'Hodgkin' building: Not found in public sources.",
+"priority_reason": "Lab consolidation in the Pivot Park 'Hodgkin' building implies LIMS and lab-systems migration; first staff mid-2027 if on plan. Article dates unverified.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Fagron",
+"name": "Fagron",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Netherlands and USA.",
+"investment_strategy_summary": "Fagron expansion investments 2026: about 70,000,000 for 2026 (US + Netherlands combined, split not given).",
+"priority_reason": "Compounding and sterile services; named 2026 projects are in the US.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Synthon",
+"name": "Synthon",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Nijmegen, Netherlands.",
+"investment_strategy_summary": "No current project found: Not found in public sources.",
+"priority_reason": "No current project. A first search summary suggested one, but the fetched article is from 2016.",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+},
+{
+"id": "Ajinomoto Bio-Pharma",
+"name": "Ajinomoto Bio-Pharma",
+"priority_tier": "Tier 2",
+"footprint_summary": "Sites in this research: Wetteren and Leuven, Belgium; Delft, Netherlands.",
+"investment_strategy_summary": "No in-window project found for any of the three: Not found in public sources.",
+"priority_reason": "No in-window project found for Ajinomoto (Wetteren), Terumo (Leuven) or Centrient (Delft).",
+"incumbent_vendors_general": "",
+"ownership_note": "",
+"roles": ""
+}
+],
+"sites": [
+{
+"id": "gsk-newlyo-freeze-drying-lyophilised-vaccine-production-unit-and-centr",
+"account": "GSK",
+"site_name": "NewLyo - freeze-drying (lyophilised vaccine) production unit and centre of excellence",
+"city": "Wavre",
+"state": "BE-WBR",
+"lat": 50.72,
+"lon": 4.61,
+"project_type": "BROWNFIELD",
+"modality": [
+"lyophilised vaccines"
+],
+"eur": 250000000,
+"investment_display": "€250 million+ (announced Aug 2023)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Construction launched Aug 2023; operational H1 or H2 2027 (sources differ); status after the Oct 2026 restructuring not reported",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "NewLyo - freeze-drying (lyophilised vaccine) production unit and centre of excellence. Modality: Lyophilised vaccines (shingles, RSV); several tens of millions of doses a year from 2027. Digital / automation signals: Yes: 'digitalisation and robotisation' in the 2023 announcement; no vendors named.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Benelux research notes: commissioning window is 2027 (CQV, MES/eBR, CSV, data integrity). RISK: Oct 2026 restructuring and a CEO shift away from vaccines; project status not reported"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Benelux research notes: commissioning window is 2027 (CQV, MES/eBR, CSV, data integrity). RISK: Oct 2026 restructuring and a CEO shift away from vaccines; project status not reported"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Benelux research notes: commissioning window is 2027 (CQV, MES/eBR, CSV, data integrity). RISK: Oct 2026 restructuring and a CEO shift away from vaccines; project status not reported"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: commissioning window is 2027 (CQV, MES/eBR, CSV, data integrity). RISK: Oct 2026 restructuring and a CEO shift away from vaccines; project status not reported"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.lavenir.net/regions/brabantwallon/wavre/2023/08/30/gsk-investit-250-millions-pour-la-lyophilisation-de-vaccins-a-wavre-parce-quon-est-bon-dit-alexander-de-croo-E23LG7R25ZGK5HGEIDOTOZAHOI/",
+"publisher": "lavenir.net",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.medi-sphere.be/fr/actualites/gsk-wavre-lance-les-travaux-de-son-unite-de-lyophilisation-de-vaccins.html",
+"publisher": "medi-sphere.be",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://be.gsk.com/fr-be/medias/communiques-de-presse/construction-d-un-centre-de-production-de-vaccins-lyophilises/",
+"publisher": "be.gsk.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: GSK. Status/timeline: Construction launched 30 Aug 2023; operational H1 2027 (Medi-Sphere) or H2 2027 (L'Avenir) - sources differ; no 2026 progress report found Notes: Pre-window announcement, but build and commissioning run through the window. Press (La Libre, 13 Oct 2026) says freeze-dried vaccines are described as a weak area and GSK's new CEO wants only one vaccine among 5-6 priority projects - treat as an open question whether NewLyo timing or scope changes. Most details come from search results, only the La Libre article was opened. Greenfield/brownfield in research file: Brownfield (renovation of 9,000 m2 building + 7,200 m2 extension).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "gsk-clinical-vaccine-laboratory-consolidated-clinical-sample-analysis",
+"account": "GSK",
+"site_name": "Clinical vaccine laboratory (consolidated clinical sample analysis)",
+"city": "Rixensart",
+"state": "BE-WBR",
+"lat": 50.71,
+"lon": 4.53,
+"project_type": "BROWNFIELD",
+"modality": [
+"vaccine clinical laboratory"
+],
+"eur": 150000000,
+"investment_display": "€150 million building plus unspecified automated equipment",
+"jobs": null,
+"status": "operational",
+"expected_start": "Inaugurated 9 Jun 2026",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Clinical vaccine laboratory (consolidated clinical sample analysis). Modality: Clinical trial sample analysis for vaccines (flu, Covid-19, bacterial infections). Digital / automation signals: Yes: 'automation technologies and a robust digital infrastructure' (GSK).",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: lab LIMS, instrument and data-integrity scope; but site future in doubt"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: lab LIMS, instrument and data-integrity scope; but site future in doubt"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: lab LIMS, instrument and data-integrity scope; but site future in doubt"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: lab LIMS, instrument and data-integrity scope; but site future in doubt"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://be.gsk.com/en-be/media/in-focus/rixensart-gsk-inaugurates-its-new-clinical-vaccine-laboratory/",
+"publisher": "be.gsk.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.dhnet.be/regions/brabant/2026/06/10/gsk-inaugure-un-laboratoire-de-pointe-pour-les-vaccins-du-futur-a-rixensart-N5GTVUWYM5FLFJKWOOVPK5RG4E/",
+"publisher": "dhnet.be",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: GSK. Status/timeline: Inaugurated 9 Jun 2026, 6,000 m2 Notes: Opened four months before the Oct 2026 restructuring news. An unnamed source in La Libre says closure of Rixensart is 'likely in GSK's plans' - unconfirmed. Not a production plant. Greenfield/brownfield in research file: New build (on existing site).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "gsk-belgium-restructuring-watch-not-a-capex-project",
+"account": "GSK",
+"site_name": "Belgium restructuring (WATCH - not a capex project)",
+"city": "Wavre / Rixensart / Gembloux",
+"state": "BE-WBR",
+"lat": 50.72,
+"lon": 4.61,
+"project_type": "BROWNFIELD",
+"modality": [
+"restructuring (not capex)"
+],
+"eur": null,
+"investment_display": "n/a (up to 1,217 jobs threatened)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Works council 14 Oct 2026; unions blocked Rixensart and Wavre from 15 Oct",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Belgium restructuring (WATCH - not a capex project). Modality: n/a. Digital / automation signals: n/a.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: affects who the buyers are and which projects continue; gives an Oct 2026 timing reason to check NewLyo (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: affects who the buyers are and which projects continue; gives an Oct 2026 timing reason to check NewLyo (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.vrt.be/vrtnws/nl/2026/10/14/gsk-jobs-verloren/",
+"publisher": "vrt.be",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.biospace.com/business/gsk-plans-1-2k-layoffs-at-belgium-sites-as-2-5b-restructure-gains-momentum",
+"publisher": "biospace.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.lalibre.be/economie/entreprises-startup/2026/10/13/situation-tendue-chez-gsk-apres-lannonce-du-conseil-dentreprise-la-belgique-va-sentir-passer-cette-promesse-a-trump-I4XJOJNB6NADLOG3KJX3XZG7H4/",
+"publisher": "lalibre.be",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: GSK. Status/timeline: Extraordinary works council in Wavre 14 Oct 2026; unions blocked Rixensart and Wavre from 15 Oct; part of a three-year plan to shift resources to late-stage pipeline and R&D (spokesperson); Gembloux (Isnes) research centre closure announced 2025 Notes: The 1,217 figure is from the works-council briefing as reported (VRT, BioSpace, Entrevue); site split not published. Figures were still moving when searched. GSK says it stays Belgium's largest biopharma employer. Greenfield/brownfield in research file: n/a.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "pfizer-puurs-eur-1-2bn-expansion-and-modernisation-isolator-facility-c",
+"account": "Pfizer",
+"site_name": "Puurs EUR 1.2bn expansion and modernisation (Isolator Facility Centre, Flexible Freezer Warehouse, Center for Secondary Packaging)",
+"city": "Puurs",
+"state": "BE-VAN",
+"lat": 51.07,
+"lon": 4.29,
+"project_type": "BROWNFIELD",
+"modality": [
+"sterile fill-finish (isolators)",
+"mRNA cold storage",
+"packaging"
+],
+"eur": 1200000000,
+"investment_display": "€1.2 billion+ (announced 8 Dec 2022, over three years)",
+"jobs": 250,
+"status": "under construction",
+"expected_start": "Three-year programme from Dec 2022; completion by module not found",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": null,
+"technical_scope": "Puurs EUR 1.2bn expansion and modernisation (Isolator Facility Centre, Flexible Freezer Warehouse, Center for Secondary Packaging). Modality: Sterile fill-finish (isolators), mRNA cold storage, packaging. Digital / automation signals: Not mentioned in the announcement.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: sterile fill capacity (isolators), freezer warehouse for mRNA, 16 packaging cabins; likely late-stage CQV or already in operation"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.essenscia.be/farmabedrijf-pfizer-investeert-meer-dan-12-miljard-euro-in-productievestiging-in-puurs/",
+"publisher": "essenscia.be",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.despecialist.eu/nl/nieuws/pfizer-mag-uitbreiden-in-puurs.html",
+"publisher": "despecialist.eu",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Pfizer. Status/timeline: Announced Dec 2022; some projects underway, others to start early 2023; a building permit for a multifunctional building has been issued; completion status of each module NOT found Notes: Three-year programme from Dec 2022 means mostly delivered by end 2025; confirm which modules are still in CQV. 250 jobs estimated; site grew from 2,800 to 4,500 during the pandemic. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "pfizer-puurs-land-expansion-on-7-5-ha-sportpark-de-schans",
+"account": "Pfizer",
+"site_name": "Puurs land expansion on 7.5 ha (Sportpark De Schans)",
+"city": "Puurs-Sint-Amands",
+"state": "BE-VAN",
+"lat": 51.07,
+"lon": 4.3,
+"project_type": "GREENFIELD",
+"modality": [
+"production support (not stated)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "announced",
+"expected_start": "Zoning (RUP) approval hoped for by end 2026",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Puurs land expansion on 7.5 ha (Sportpark De Schans). Modality: Not stated (production-supporting activities only). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: future production-support buildings; no scope or capex yet"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.vrt.be/vrtnws/nl/2025/09/22/puurs-sint-amands-sportpark-de-schans-pfizer-beleidsplan/",
+"publisher": "vrt.be",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Pfizer. Status/timeline: Zoning (RUP) final approval hoped for by end 2026; municipality allowed the expansion Sept 2025 under strict conditions (low buildings, production-supporting only) Notes: Signals future capacity thinking but no investment announced. Watch RUP outcome and the Omgevingsloket for a Pfizer application. Greenfield/brownfield in research file: Greenfield (land).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "johnson-johnson-innovative-medicine-no-in-window-project-found-past-ge",
+"account": "Johnson & Johnson (Innovative Medicine)",
+"site_name": "No in-window project found (past: Geel chemical development pilot plant 130m; Beerse continuous line 21m; Project LION lab 42.8m; 23m data infrastructure)",
+"city": "Beerse and Geel",
+"state": "BE-VAN",
+"lat": 51.32,
+"lon": 4.86,
+"project_type": "BROWNFIELD",
+"modality": [
+"API (Geel)",
+"drug product (Beerse)"
+],
+"eur": null,
+"investment_display": "Not found in public sources for 2026-27 (past: Geel pilot plant €130M, Beerse line €21M)",
+"jobs": null,
+"status": "Not found in sources",
+"expected_start": "No in-window project found",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "No in-window project found (past: Geel chemical development pilot plant 130m; Beerse continuous line 21m; Project LION lab 42.8m; 23m data infrastructure). Modality: API (Geel) and drug product (Beerse); small molecules. Digital / automation signals: Yes historically: continuous manufacturing, 23m data infrastructure and supercomputers, 'Factory of the Future' (Geel).",
+"orise_fit": [
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Benelux research notes: nothing in window found; strong digital history (Factory of the Future award) makes this a watch account"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://engineeringnet.be/nl/nieuws/item/12227/johnson-johnson-investeert-428-miljoen-euro-in-beerse",
+"publisher": "engineeringnet.be",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.made-in.be/kempen/janssen-investeert-21-miljoen-in-innovatieve-productielijn/",
+"publisher": "made-in.be",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.dvo.be/artikel/31820-johnson-johnson-investeert-130-miljoen-euro-in-janssen-geel",
+"publisher": "dvo.be",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Johnson & Johnson (Innovative Medicine). Status/timeline: Past projects 2014-2020; one investor site says J&J 'recently' allocated more to Beerse for immunology, vaccines and cell therapy, no amount (non-primary); a cell therapy site in Ghent is reported under construction (snippet) Notes: Absence in search is not proof: Dutch-language local press is poorly indexed. The company dropped the 'Janssen' name. Pursue via J&J Belgian press room and Omgevingsloket. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "msd-animal-health-new-production-facility-formulation-and-filling-of-a",
+"account": "MSD Animal Health",
+"site_name": "New production facility - formulation and filling of animal vaccines and medicines",
+"city": "Boxmeer",
+"state": "NL-NB",
+"lat": 51.65,
+"lon": 5.95,
+"project_type": "BROWNFIELD",
+"modality": [
+"animal vaccines and medicines (formulation and filling)"
+],
+"eur": null,
+"investment_display": "Not disclosed",
+"jobs": 80,
+"status": "under construction",
+"expected_start": "Kickoff 27 Mar 2025; about three years (~2028); QC lab handed over Apr 2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "New production facility - formulation and filling of animal vaccines and medicines. Modality: Animal vaccines and medicines shipped to ~140 countries. Digital / automation signals: Yes: 'digitalisation, automation and energy-saving measures' (site director, Mar 2025).",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Benelux research notes: vaccine formulation/filling with 'digitalisation and automation' built in; construction through ~2028"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Benelux research notes: vaccine formulation/filling with 'digitalisation and automation' built in; construction through ~2028"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://bioprocessingnews.nl/news/expansion-of-msd-animal-health-with-new-production-facility-in-boxmeer",
+"publisher": "bioprocessingnews.nl",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://berghegeheerkens.nl/nieuws/msd-animal-health-boxmeer-opgeleverd/",
+"publisher": "berghegeheerkens.nl",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: MSD Animal Health. Status/timeline: Official construction kickoff 27 Mar 2025; build expected three years (~2028); ~80 new jobs; new quality-control lab handed over to MSD start-up team Apr 2026 (contractor article, snippet) Notes: Animal-health, not human pharma; confirm it fits Orise's scope. Site director quoted: Darcio Santos (Mar 2025). Contractor Berghege Heerkens appears on the QC lab and an expansion page (snippets) - scope not verified. Greenfield/brownfield in research file: Brownfield (expansion on existing site).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "msd-oss-factory-sold-to-organon-msd-cancer-medicine-production-moved-a",
+"account": "MSD",
+"site_name": "Oss factory sold to Organon; MSD cancer-medicine production moved abroad",
+"city": "Oss",
+"state": "NL-NB",
+"lat": 51.76,
+"lon": 5.52,
+"project_type": "BROWNFIELD",
+"modality": [
+"biotech / oncology (divested)"
+],
+"eur": null,
+"investment_display": "n/a (sold to Organon)",
+"jobs": null,
+"status": "divested",
+"expected_start": "Sale announced 1 Oct 2024; MSD production closed 1 Jul 2025",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "Oss factory sold to Organon; MSD cancer-medicine production moved abroad. Modality: Biotech/oncology drug production (previously). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: opportunity moves to the new owner Organon, plans unknown (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: opportunity moves to the new owner Organon, plans unknown (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.omroepbrabant.nl/nieuws/4562139/fabriek-van-msd-wordt-verkocht-200-banen-gaan-verloren",
+"publisher": "omroepbrabant.nl",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: MSD (human health). Status/timeline: Sale announced 1 Oct 2024; closure of MSD production took effect 1 Jul 2025; about 295 roles transfer to Organon; 200 jobs lost; about 120 MSD office roles stay Notes: Same pattern as the Irish divestments: MSD out, Organon in. Organon's plans for the Oss plant not found. An older MSD plan to expand cancer-medicine production in Oss (snippet) was overtaken. Greenfield/brownfield in research file: Brownfield (divestment).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "ucb-genesis-gene-therapy-site-development-clinical-production-qc-with-",
+"account": "UCB",
+"site_name": "Genesis - gene therapy site (development, clinical production, QC) with Leuven transfer",
+"city": "Braine-l'Alleud",
+"state": "BE-WBR",
+"lat": 50.68,
+"lon": 4.37,
+"project_type": "BROWNFIELD",
+"modality": [
+"gene therapy (clinical production, fill-finish)"
+],
+"eur": 200000000,
+"investment_display": "€200 million+",
+"jobs": 150,
+"status": "commissioning",
+"expected_start": "Inaugurated 24 Apr 2026; first production 2026 or first batches 2027 (sources differ)",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Genesis - gene therapy site (development, clinical production, QC) with Leuven transfer. Modality: Gene therapy (clinical production suites with bioreactors, QC and process-development labs, fill-finish). Digital / automation signals: Yes: filling line 'entirely robotised'; facility 'integrated into a digital ecosystem enabling real-time control' (L'Avenir, 24 Apr 2026).",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Benelux research notes: newly opened gene-therapy production, fully robotised fill-finish, real-time digital ecosystem; first batches 2026-27 so CQV, MES/eBR and data integrity are live"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Benelux research notes: newly opened gene-therapy production, fully robotised fill-finish, real-time digital ecosystem; first batches 2026-27 so CQV, MES/eBR and data integrity are live"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Benelux research notes: newly opened gene-therapy production, fully robotised fill-finish, real-time digital ecosystem; first batches 2026-27 so CQV, MES/eBR and data integrity are live"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: newly opened gene-therapy production, fully robotised fill-finish, real-time digital ecosystem; first batches 2026-27 so CQV, MES/eBR and data integrity are live"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.lavenir.net/regions/brabantwallon/2026/04/24/ucb-mise-200-millions-sur-la-therapie-genique-KVWDZSVTANF75EWFYY76IKIJXE/",
+"publisher": "lavenir.net",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.lalibre.be/economie/entreprises-startup/2026/04/24/la-princesse-astrid-special-guest-dune-inauguration-a-200-millions-deuros-ducb-a-braine-lalleud-2AQFIOONFJG7XHH25ROXXRYNZQ/",
+"publisher": "lalibre.be",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: UCB. Status/timeline: Inaugurated 24 Apr 2026; Leuven activities (process development, clinical production, storage) transfer by end 2026; first production planned in 2026 (L'Avenir) or first batches 2027 (Trends snippet) - sources differ; goal 15 batches a year; ~150 jobs Notes: One of the strongest Benelux targets. Part of a EUR 1bn UCB programme announced 2022. Campus about 3,000 staff, 100+ open positions. Greenfield/brownfield in research file: Brownfield (new 17,000 m2 building on campus).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "ucb-arkelia-r-d-centre",
+"account": "UCB",
+"site_name": "Arkelia - R&D centre",
+"city": "Braine-l'Alleud",
+"state": "BE-WBR",
+"lat": 50.68,
+"lon": 4.37,
+"project_type": "BROWNFIELD",
+"modality": [
+"R&D centre"
+],
+"eur": null,
+"investment_display": "€100M or €200M (sources differ; not counted)",
+"jobs": 170,
+"status": "under construction",
+"expected_start": "Completion 2028",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Arkelia - R&D centre. Modality: R&D (not specified). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: R&D centre: LIMS, lab data integrity, OT/IT; not production"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: R&D centre: LIMS, lab data integrity, OT/IT; not production"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: R&D centre: LIMS, lab data integrity, OT/IT; not production"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.lavenir.net/regions/brabantwallon/2026/04/24/ucb-mise-200-millions-sur-la-therapie-genique-KVWDZSVTANF75EWFYY76IKIJXE/",
+"publisher": "lavenir.net",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.lalibre.be/economie/entreprises-startup/2025/02/10/investissement-majeur-dans-le-brabant-wallon-par-la-firme-pharma-ucb-cest-notre-centre-nerveux-critique-7HMGLQ3R7VBZJPJSKYSKGSKZHQ/",
+"publisher": "lalibre.be",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: UCB. Status/timeline: Under construction; completion 2028 per L'Avenir/La Libre; about 170 extra jobs (La Libre snippet) Notes: Amount conflict unresolved (100m vs 200m). Do not quote either externally until checked with UCB. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "ucb-biologics-operations-centre-3-x-10-000-l-bioreactors-space-for-3-m",
+"account": "UCB",
+"site_name": "Biologics operations centre (3 x 10,000 L bioreactors; space for 3 more)",
+"city": "Braine-l'Alleud",
+"state": "BE-WBR",
+"lat": 50.68,
+"lon": 4.37,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (3 x 10,000 L bioreactors)"
+],
+"eur": 300000000,
+"investment_display": "€300 million",
+"jobs": 150,
+"status": "operational",
+"expected_start": "Inaugurated 26 Apr 2024; room for three more bioreactors (undated)",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "Biologics operations centre (3 x 10,000 L bioreactors; space for 3 more). Modality: Biologics (Bimzelx and other biotech medicines). Digital / automation signals: Not mentioned in the article.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: opened 2024 (pre-window); room for three more bioreactors implies future expansion; lifecycle and data-integrity support"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: opened 2024 (pre-window); room for three more bioreactors implies future expansion; lifecycle and data-integrity support"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.lespecialiste.be/fr/actualites/ucb-inaugure-a-braine-l-alleud-une-nouvelle-usine-biotechnologique-a-300-millions-d-euros.html",
+"publisher": "lespecialiste.be",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: UCB. Status/timeline: Inaugurated 26 Apr 2024; five floors of 5,000 m2; staffing to ~150; bioreactor expansion undated Notes: Part of the same EUR 1bn plan. Next-phase bioreactors undated. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "argenx-no-manufacturing-project-argenx-outsources-drug-substance-manuf",
+"account": "argenx",
+"site_name": "No manufacturing project - argenx outsources drug-substance manufacturing",
+"city": "Ghent",
+"state": "BE-VOV",
+"lat": 51.02,
+"lon": 3.71,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (outsourced manufacturing)"
+],
+"eur": null,
+"investment_display": "n/a (no plant)",
+"jobs": null,
+"status": "n/a",
+"expected_start": "Lab and office leases only",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "No manufacturing project - argenx outsources drug-substance manufacturing. Modality: Biologics (efgartigimod). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: no plant; lab and office leases only; supply via partners (Lonza, Fujifilm) (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: no plant; lab and office leases only; supply via partners (Lonza, Fujifilm) (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://financialfilings.com/filings/argenx-se/annual-report/2026/32984884/",
+"publisher": "financialfilings.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.fiercepharma.com/manufacturing/expansion-fujifilms-partnership-argenx-will-bring-vyvgart-production-us",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: argenx. Status/timeline: 2025 annual report: ~5,339 m2 lab/operations space (lease to 2031) and ~3,765 m2 offices (lease to 2036) in Zwijnaarde; Fujifilm expanding Vyvgart supply to Holly Springs, USA from 2028 (snippet) Notes: Not a manufacturing account. Possible LIMS/GxP lab systems angle only. Greenfield/brownfield in research file: n/a.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "eli-lilly-lilly-katwijk-oral-medicines-manufacturing-plant",
+"account": "Eli Lilly",
+"site_name": "Lilly Katwijk oral-medicines manufacturing plant",
+"city": "Katwijk",
+"state": "NL-ZH",
+"lat": 52.18,
+"lon": 4.42,
+"project_type": "GREENFIELD",
+"modality": [
+"oral solid dose (incl. spray-dried dispersion)"
+],
+"eur": 2600000000,
+"investment_display": "€2.6 billion (about USD 3bn)",
+"jobs": 500,
+"status": "announced",
+"expected_start": "Announced 3 Nov 2025; council approval 1 Oct 2026; main construction planned autumn 2026; first medicines hoped for 2030; production and wastewater permits pending",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Lilly Katwijk oral-medicines manufacturing plant. Modality: Oral solid dose including spray-dried dispersion (SDD); cardiometabolic (e.g. Mounjaro-related oral products), neuroscience, oncology, immunology; 'billions of pills'. Digital / automation signals: Yes (job posts): OT/IT System Integration, Plant Utilities, Data Historian and OT Platforms, QA automation (DCS, SCADA, MES, historians, PLCs, building management, GAMP5, data integrity - snippet), IT Systems Delivery Lead, Operational Readiness.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Benelux research notes: largest Benelux greenfield found; hiring OT/IT, CSV and operational-readiness roles now; start-up phase is when MES, historian, SCADA, CSV and OT-security scope is set"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Benelux research notes: largest Benelux greenfield found; hiring OT/IT, CSV and operational-readiness roles now; start-up phase is when MES, historian, SCADA, CSV and OT-security scope is set"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Benelux research notes: largest Benelux greenfield found; hiring OT/IT, CSV and operational-readiness roles now; start-up phase is when MES, historian, SCADA, CSV and OT-security scope is set"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: largest Benelux greenfield found; hiring OT/IT, CSV and operational-readiness roles now; start-up phase is when MES, historian, SCADA, CSV and OT-security scope is set"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.keyregionleiden.nl/eli-lilly-investeert-e26-miljard-in-productiefaciliteit-in-katwijk/",
+"publisher": "keyregionleiden.nl",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://nos.nl/artikel/2589064-grote-farmaceut-wil-fabriek-bouwen-in-nederland-miljarden-pillen-voor-de-hele-wereld",
+"publisher": "nos.nl",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.omroepwest.nl/politiek/5159837/katwijk-stemt-in-met-komst-miljardenfabriek-amerikaanse-farmaceut-eli-lilly",
+"publisher": "omroepwest.nl",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://careers.lilly.com/us/en/job/R-110728/Automation-Engineer-System-Integration-OT-IT",
+"publisher": "careers.lilly.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: Eli Lilly. Status/timeline: Announced 3 Nov 2025; Katwijk council approved the environmental permit 28-4 on 1 Oct 2026; Lilly still needs permits to produce and to discharge wastewater; a nature (nitrogen) permit is under appeal by Stichting MOB; grid has no spare capacity so own gas turbines planned meanwhile; first medicines hoped for 2030; ~500 production jobs, ~1,500 construction jobs; Rijk and province promised EUR 72m for accessibility Notes: Project and permit status verified on three fetched pages. Job postings on careers.lilly.com now show 'not accepting applications' (descriptions came from search summaries). Build size RESOLVED (DGMR, 28 Jul 2026): site 200,000 m2 (20 ha), facility about 80,000 m2, up to 40 m high. Deep dive: see lilly-katwijk-battlecard.md (developer RED Company; architect Powerhouse Company; DGMR permit consultant; Jacobs engineering unconfirmed; main contractor not public; main construction planned autumn 2026; Katwijk says building permit granted, nature permit appealed, production and wastewater permits pending). Construction start date NOT found; Lilly kept its schedule when the alderman asked for delay. Appeal on the nature permit does not automatically stop work. Final investment decision depended on permits (Nov 2025 wording). Greenfield/brownfield in research file: Greenfield (former greenhouse land).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "takeda-lessines-plasma-derived-therapies-plant-expansion-new-manufactu",
+"account": "Takeda",
+"site_name": "Lessines plasma-derived therapies plant expansion (new manufacturing facility + net-zero warehouse)",
+"city": "Lessines",
+"state": "BE-WHT",
+"lat": 50.71,
+"lon": 3.83,
+"project_type": "BROWNFIELD",
+"modality": [
+"plasma-derived therapies"
+],
+"eur": 300000000,
+"investment_display": "About €300 million (announced 16 Sep 2022)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Full production planned by end 2026 (2022 plan); 2025-26 status not found; Renault procedure Apr 2026",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Lessines plasma-derived therapies plant expansion (new manufacturing facility + net-zero warehouse). Modality: Plasma-derived therapies (immunoglobulins, Glassia/alpha-1). Digital / automation signals: Yes: investment meant to strengthen digitalisation; new facility 'more data- and digitally driven' (Takeda 2022).",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Benelux research notes: full production expected by end 2026 so CQV, MES and digital integration are due now; RISK: Renault restructuring announced Apr 2026"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Strong",
+"reason": "From the Benelux research notes: full production expected by end 2026 so CQV, MES and digital integration are due now; RISK: Renault restructuring announced Apr 2026"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: full production expected by end 2026 so CQV, MES and digital integration are due now; RISK: Renault restructuring announced Apr 2026"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.bioprocessintl.com/facilities-capacity/takeda-invests-nearly-300m-to-expand-belgium-plasma-derived-therapy-site",
+"publisher": "bioprocessintl.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.21news.be/coup-de-tonnerre-chez-takeda-lessines-procedure-renault-et-restructuration-lancees/",
+"publisher": "21news.be",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.dhnet.be/dernieres-depeches/2026/04/23/takeda-souhaite-reorganiser-ses-activites-a-lessines-menacant-109-emplois-2W7JZUJPSNEBFFV4Z7X5N2CIJM/",
+"publisher": "dhnet.be",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Takeda. Status/timeline: Building watertight by end 2023; full production by end 2026 (2022 plan); no 2025-26 progress report found; 23 Apr 2026: 'Renault' collective-dismissal procedure opened at Lessines, 109 jobs affected of about 1,200; article does not say the plant project changes Notes: Pre-window announcement; start-up falls in window. Takeda said it would upskill existing staff rather than hire. A separate older line (EUR 118m, about 2021) is not in scope. Whether the new plant is operating is the key question. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "bristol-myers-squibb-european-car-t-cell-therapy-manufacturing-centre",
+"account": "Bristol Myers Squibb",
+"site_name": "European CAR-T cell therapy manufacturing centre",
+"city": "Leiden",
+"state": "NL-ZH",
+"lat": 52.18,
+"lon": 4.47,
+"project_type": "GREENFIELD",
+"modality": [
+"CAR-T cell therapy"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "operational",
+"expected_start": "Commercial CAR-T for European patients since about Mar 2026",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "European CAR-T cell therapy manufacturing centre. Modality: CAR-T cell therapy (Breyanzi, Abecma). Digital / automation signals: Yes: 'advanced digital platforms' (2021 release); no vendors named.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: built; now producing commercially so lifecycle, periodic review, data-integrity and MES/eBR optimisation rather than new build"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: built; now producing commercially so lifecycle, periodic review, data-integrity and MES/eBR optimisation rather than new build"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: built; now producing commercially so lifecycle, periodic review, data-integrity and MES/eBR optimisation rather than new build"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: built; now producing commercially so lifecycle, periodic review, data-integrity and MES/eBR optimisation rather than new build"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://leidenbioscienceparkprojects.nl/en/projecten/bristol-myers-squibb",
+"publisher": "leidenbioscienceparkprojects.nl",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.pharmaceutical-technology.com/projects/bristol-myers-squibb-facility-leiden/",
+"publisher": "pharmaceutical-technology.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.bms.com/nl/en/car-t-production-centre-leiden.html",
+"publisher": "bms.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Bristol Myers Squibb. Status/timeline: 19,000 m2; completion 2024 (project page) or 2025 (BMS 10-K per search summary); commercial CAR-T for European patients since about March 2026; 100 patients served by April 2026 (BMS Leiden page per search summary) Notes: Architect KuiperCompagnons. At least 500 jobs estimated (2021). Investment never disclosed. Completion year differs by source. Greenfield/brownfield in research file: Greenfield (built 2021-2024/25).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "delpharm-ex-astellas-meppel-meppel-solid-dose-plant-transferred-from-a",
+"account": "Delpharm (ex-Astellas Meppel)",
+"site_name": "Meppel solid-dose plant transferred from Astellas to Delpharm",
+"city": "Meppel",
+"state": "NL-DR",
+"lat": 52.7,
+"lon": 6.19,
+"project_type": "BROWNFIELD",
+"modality": [
+"solid dosage forms (tablets, capsules, pellets)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "divested",
+"expected_start": "Astellas announced the sale 25 May 2023; Delpharm release 2 Apr 2024",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "Meppel solid-dose plant transferred from Astellas to Delpharm. Modality: Solid dosage forms (tablets, capsules, pellets), over 40 million packs a year. Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: new owner Delpharm (CDMO) inherits a 31,600 m2 site; modernisation and data-integrity programme plausible; no plan published"
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: new owner Delpharm (CDMO) inherits a 31,600 m2 site; modernisation and data-integrity programme plausible; no plan published"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.delpharm.com/en/the-group/news/article/delpharm-continues-its-growth-in-europe-with-the-acquisition-of-state-of-the",
+"publisher": "delpharm.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.astellas.com/en/news/27821",
+"publisher": "astellas.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Astellas / Delpharm. Status/timeline: Astellas announced 25 May 2023; Delpharm release dated 2 Apr 2024; Delpharm keeps supplying Astellas; about 410 staff; no investment plans found Notes: Same pattern as Oss (MSD to Organon) and Ireland: pursue the CDMO acquirer. Delpharm's plans for Meppel not found. Greenfield/brownfield in research file: Brownfield (divestment).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "sanofi-geel-biologics-expansions-eur-300m-plant-eur-120m-hemophilia-li",
+"account": "Sanofi",
+"site_name": "Geel biologics expansions (EUR 300m plant; EUR 120m hemophilia line)",
+"city": "Geel",
+"state": "BE-VAN",
+"lat": 51.16,
+"lon": 4.99,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics (hemophilia)"
+],
+"eur": 120000000,
+"investment_display": "€120 million (Oct 2022, line due 2024); earlier €300M",
+"jobs": null,
+"status": "operational",
+"expected_start": "Line due 2024; nothing newer found",
+"opportunity_status": "Monitor",
+"in_window": false,
+"technical_scope": "Geel biologics expansions (EUR 300m plant; EUR 120m hemophilia line). Modality: Biologics (hemophilia product and others). Digital / automation signals: Yes historically (factory-of-the-future coverage) - not verified.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Benelux research notes: no 2026-27 project found; strong biologics/digital history ('Toekomstfabriek' coverage)"
+},
+{
+"area": "Digitalization / Industry 4.0",
+"strength": "Weak",
+"reason": "From the Benelux research notes: no 2026-27 project found; strong biologics/digital history ('Toekomstfabriek' coverage)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.essenscia.be/sanofi-investeert-120-miljoen-in-productie-van-biologische-geneesmiddelen-in-geel/",
+"publisher": "essenscia.be",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.made-in.be/kempen/sanofi-investeert-300-miljoen-euro-in-genzyme-geel/",
+"publisher": "made-in.be",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Sanofi. Status/timeline: Line to be operational in 2024; nothing newer found Notes: Snippets only. Watch account. Greenfield/brownfield in research file: Brownfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "amgen-no-manufacturing-project-found",
+"account": "Amgen",
+"site_name": "No manufacturing project found",
+"city": "Breda",
+"state": "NL-NB",
+"lat": 51.59,
+"lon": 4.78,
+"project_type": "BROWNFIELD",
+"modality": [
+"biologics packaging / distribution"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "n/a",
+"expected_start": "No Dutch capital plan found",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "No manufacturing project found. Modality: Biologics (packaging/distribution). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Breda is a packaging, labelling and distribution hub; Amgen's 2026 US investments (Puerto Rico USD 300m etc.) are elsewhere (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Breda is a packaging, labelling and distribution hub; Amgen's 2026 US investments (Puerto Rico USD 300m etc.) are elsewhere (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.amgen.com/newsroom/press-releases/2026/05/amgen-announces-additional-300-million-us-manufacturing-investment-totaling-nearly-2-billion-over-the-last-year",
+"publisher": "amgen.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Amgen. Status/timeline: No Dutch capital plan found Notes: Absence in search only. Greenfield/brownfield in research file: n/a.",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "ire-ire-radiopharmaceutical-cdmo-facility",
+"account": "IRE",
+"site_name": "IRE radiopharmaceutical CDMO facility",
+"city": "Fleurus",
+"state": "BE-WHT",
+"lat": 50.48,
+"lon": 4.55,
+"project_type": "BROWNFIELD",
+"modality": [
+"radiopharmaceuticals (CDMO)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Hot cells installed early 2027; operational H2 2027",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "IRE radiopharmaceutical CDMO facility. Modality: Radiopharmaceuticals (radioisotope supply, production, QC, distribution). Digital / automation signals: Not mentioned in the release.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Strong",
+"reason": "From the Benelux research notes: GMP radiopharma CDMO due operational H2 2027; hot cells installed early 2027 then qualification and regulatory authorisation = MES/eBR, CSV, data integrity and OT scope lands in the next 12 months"
+},
+{
+"area": "MES implementation and integration",
+"strength": "Strong",
+"reason": "From the Benelux research notes: GMP radiopharma CDMO due operational H2 2027; hot cells installed early 2027 then qualification and regulatory authorisation = MES/eBR, CSV, data integrity and OT scope lands in the next 12 months"
+},
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Strong",
+"reason": "From the Benelux research notes: GMP radiopharma CDMO due operational H2 2027; hot cells installed early 2027 then qualification and regulatory authorisation = MES/eBR, CSV, data integrity and OT scope lands in the next 12 months"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://ire.eu/en/media-room/ire-selects-lemer-pax-to-equip-its-new-radiopharmaceutical-cdmo-facility-in-fleurus",
+"publisher": "ire.eu",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: IRE (Institut National des Radioéléments). Status/timeline: IRE selected Lemer Pax for shielded hot cells (13 Jan 2026); hot-cell installation early 2027; lab completion, qualification and authorisation follow; operational H2 2027 Notes: Company release fetched. Investment not disclosed. IRE CEO quoted: Erich Kollegger. A second PanTera/TerraPower Ac-225 production site at IRE Fleurus is reported (May 2026, snippet) as operational within ~18 months. Greenfield/brownfield in research file: Brownfield (new facility on existing site).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "pantera-actinium-production-centre-ac-225-photonuclear-plant",
+"account": "PanTera",
+"site_name": "Actinium Production Centre (Ac-225 photonuclear plant)",
+"city": "Mol",
+"state": "BE-VAN",
+"lat": 51.19,
+"lon": 5.12,
+"project_type": "GREENFIELD",
+"modality": [
+"actinium-225 (alpha therapy isotope)"
+],
+"eur": null,
+"investment_display": "Not found in public sources (€93M Series A, not counted)",
+"jobs": null,
+"status": "under construction",
+"expected_start": "Operational 2028, commercial supply 2029",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Actinium Production Centre (Ac-225 photonuclear plant). Modality: Actinium-225 (alpha therapy isotope). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: GMP radiopharma raw-material plant under construction; nuclear + environmental permits granted; operational 2028 (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: GMP radiopharma raw-material plant under construction; nuclear + environmental permits granted; operational 2028 (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.nucnet.org/news/belgium-s-pantera-begins-construction-of-dedicated-actinium-225-facility-10-5-2025",
+"publisher": "nucnet.org",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://tractebel-engie.com/en/references/permitting-medical-radioisotope-production-facility-pantera-mol-belgium/",
+"publisher": "tractebel-engie.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://pantera-life.com/our-actinium-225-supply/",
+"publisher": "pantera-life.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: PanTera (IBA / SCK CEN joint venture). Status/timeline: Environmental permit (Province of Antwerp) and nuclear permit (FANC/AFCN) granted (2025 per PanTera upload; one page lists 14 Apr 2026); under construction; operational 2028, commercial supply 2029; early supply via thorium-229 since May 2025 Notes: Search snippets only. Permit date conflict (2025 vs Apr 2026). Tractebel did permitting. Not on your starter list. Greenfield/brownfield in research file: Greenfield.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "trasis-takeover-of-former-mithra-cdmo-site-for-radiopharma-nuclear-med",
+"account": "Trasis",
+"site_name": "Takeover of former Mithra CDMO site for radiopharma/nuclear medicine production",
+"city": "Flémalle",
+"state": "BE-WLG",
+"lat": 50.6,
+"lon": 5.46,
+"project_type": "BROWNFIELD",
+"modality": [
+"radiopharmaceuticals"
+],
+"eur": null,
+"investment_display": "Not disclosed (acquisition); strategic plan about €40M",
+"jobs": 300,
+"status": "announced",
+"expected_start": "Announced 19 May 2026; first move-in early 2027; 300 jobs by 2030",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Takeover of former Mithra CDMO site for radiopharma/nuclear medicine production. Modality: Radiopharmaceutical synthesis, QC, administration devices; diagnostics and cancer/neurodegenerative therapy. Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: existing GMP clean rooms and labs to be adapted for radiopharmaceutical synthesis, QC and administration; move-in early 2027; plan 300 jobs by 2030 (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: existing GMP clean rooms and labs to be adapted for radiopharmaceutical synthesis, QC and administration; move-in early 2027; plan 300 jobs by 2030 (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.lalibre.be/economie/entreprises-startup/2026/05/19/trasis-reprend-lancien-site-de-production-pharmaceutique-de-mithra-a-flemalle-BZDIRVMBLZHLHHNLBAVCQ3ICEQ/",
+"publisher": "lalibre.be",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: Trasis. Status/timeline: Announced 19 May 2026; first move-in early 2027 after adaptation works; Trasis has ~470 staff; site has photovoltaic farm (2 GWh/yr) Notes: Fetched. Mithra went bankrupt in 2024 and the site was nearly empty. Trasis chose this over its planned 'Vitalis' site at Ans. Not on your starter list. Greenfield/brownfield in research file: Brownfield (acquired 17,000 m2 GMP complex on 6 ha).",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "legend-biotech-ghent-car-t-carvykti-capacity-expansion-tech-lane-obeli",
+"account": "Legend Biotech",
+"site_name": "Ghent CAR-T (Carvykti) capacity expansion - Tech Lane/Obelisc plus new facility",
+"city": "Ghent",
+"state": "BE-VOV",
+"lat": 51.05,
+"lon": 3.72,
+"project_type": "BROWNFIELD",
+"modality": [
+"CAR-T cell therapy (Carvykti)"
+],
+"eur": 129000000,
+"investment_display": "About USD 150 million additional (approved 2025)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Construction slated H2 2025, completion 2028; 2026 status not confirmed",
+"opportunity_status": "OPEN OPPORTUNITY",
+"in_window": true,
+"technical_scope": "Ghent CAR-T (Carvykti) capacity expansion - Tech Lane/Obelisc plus new facility. Modality: CAR-T cell therapy (Carvykti). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: CAR-T manufacturing: EU commercial production at Tech Lane began 2025-H1 2026; new capacity under construction to 2028 (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Moderate",
+"reason": "From the Benelux research notes: CAR-T manufacturing: EU commercial production at Tech Lane began 2025-H1 2026; new capacity under construction to 2028 (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.fiercepharma.com/pharma/jj-legend-invest-150m-belgium-cell-therapy-facility-new-carvykti-rival-looms",
+"publisher": "fiercepharma.com",
+"date": "",
+"confidence": "Medium"
+},
+{
+"url": "https://www.bioxconomy.com/clinical-and-research/legend-looks-to-belgium-plant-opening-as-car-t-expansions-loom",
+"publisher": "bioxconomy.com",
+"date": "",
+"confidence": "Medium"
+}
+],
+"notes": "Confidence in research file: Medium. Company in research file: Legend Biotech / Johnson & Johnson. Status/timeline: Construction slated to start H2 2025, completion 2028 (Legend CFO, 2025); EU commercial production at Tech Lane approved and starting; 2026 status of the $150m project not confirmed Notes: Fierce page 403 so facts come from search summaries of it; Legend's 6-K (Q2 2026) not opened. Split of funds between Legend and J&J unknown. Naming conflict Tech Lane vs Obelisc. Ties into the J&J account (the Janssen row found nothing in Beerse/Geel). Greenfield/brownfield in research file: Brownfield / New build.",
+"country": "Belgium",
+"currency": "USD"
+},
+{
+"id": "galapagos-cell-therapy-wind-down-leiden-site-closure",
+"account": "Galapagos",
+"site_name": "Cell therapy wind-down - Leiden site closure",
+"city": "Leiden and Mechelen",
+"state": "NL-ZH",
+"lat": 52.16,
+"lon": 4.49,
+"project_type": "BROWNFIELD",
+"modality": [
+"CAR-T cell therapy (closing)"
+],
+"eur": null,
+"investment_display": "n/a (€275M impact booked in 2025)",
+"jobs": null,
+"status": "closing",
+"expected_start": "Wind-down decided Jan 2026; substantially complete by end Q3 2026",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "Cell therapy wind-down - Leiden site closure. Modality: Cell therapy (CAR-T). Digital / automation signals: n/a.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Low as buyer; possible opportunity if the Leiden GMP assets are sold (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Low as buyer; possible opportunity if the Leiden GMP assets are sold (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.glpg.com/press-releases/galapagos-announces-board-decision-to-initiate-wind-down-of-cell-therapy-activities/",
+"publisher": "glpg.com",
+"date": "",
+"confidence": "High"
+},
+{
+"url": "https://www.fiercebiotech.com/biotech/galapagos-wind-down-cell-therapy-unit-threatening-365-jobs-and-5-facilities",
+"publisher": "fiercebiotech.com",
+"date": "",
+"confidence": "High"
+}
+],
+"notes": "Confidence in research file: High. Company in research file: Galapagos. Status/timeline: Wind-down decided Jan 2026 after consultations in BE/NL; sites in Leiden, Basel, Princeton, Pittsburgh, Shanghai closing; about 365 employees; substantially complete by end Q3 2026; Mechelen HQ stays Notes: Snippet-level reading of several reports. Fate of the Leiden facility not found. Greenfield/brownfield in research file: n/a.",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "univercells-univercells-group-bankruptcy-exothera-cdmo-in-jumet",
+"account": "Univercells",
+"site_name": "Univercells group bankruptcy (Exothera CDMO in Jumet)",
+"city": "Gosselies",
+"state": "BE-WHT",
+"lat": 50.45,
+"lon": 4.44,
+"project_type": "BROWNFIELD",
+"modality": [
+"bioprocess technology, cell and gene CDMO"
+],
+"eur": null,
+"investment_display": "n/a (group bankrupt Oct 2025)",
+"jobs": null,
+"status": "bankrupt",
+"expected_start": "Univercells bankrupt Oct 2025; fate of the Jumet GMP site unknown",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "Univercells group bankruptcy (Exothera CDMO in Jumet). Modality: Bioprocess technology and cell/gene CDMO. Digital / automation signals: n/a.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: group bankrupt Oct 2025; Quantoom survived (raised EUR 9.5m Dec 2025); fate of the 15,000 m2 Jumet GMP site unknown (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: group bankrupt Oct 2025; Quantoom survived (raised EUR 9.5m Dec 2025); fate of the 15,000 m2 Jumet GMP site unknown (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.dhnet.be/dernieres-depeches/2025/12/23/quantoom-filiale-dunivercells-rebondit-avec-la-levee-de-95-millions-deuros-ZK6YFJRURFHNZI6HYNAJZHJUSA/",
+"publisher": "dhnet.be",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://pitchbook.com/profiles/company/126207-10",
+"publisher": "pitchbook.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Univercells / Exothera / Quantoom. Status/timeline: Univercells declared bankrupt (Oct 2025, about 140 jobs); Exothera bankrupt (about 110 jobs); Quantoom aims at profitability by end 2026 Notes: Snippets only. Watch for a buyer of the Jumet site. Greenfield/brownfield in research file: n/a.",
+"country": "Belgium",
+"currency": "EUR"
+},
+{
+"id": "aspen-consolidation-of-laboratories-in-the-pivot-park-hodgkin-building",
+"account": "Aspen",
+"site_name": "Consolidation of laboratories in the Pivot Park 'Hodgkin' building",
+"city": "Oss",
+"state": "NL-NB",
+"lat": 51.76,
+"lon": 5.52,
+"project_type": "BROWNFIELD",
+"modality": [
+"API / pharmaceutical products (lab move)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "announced",
+"expected_start": "Letter of intent with Pivot Park; first staff mid-2027 if on plan",
+"opportunity_status": "Monitor",
+"in_window": null,
+"technical_scope": "Consolidation of laboratories in the Pivot Park 'Hodgkin' building. Modality: API / pharmaceutical products (Aspen Oss and BioChem Oss). Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "MES implementation and integration",
+"strength": "Weak",
+"reason": "From the Benelux research notes: lab centralisation implies LIMS and lab-systems migration; first staff move mid-2027 (date of source unclear)"
+},
+{
+"area": "Legacy system modernization and migration",
+"strength": "Weak",
+"reason": "From the Benelux research notes: lab centralisation implies LIMS and lab-systems migration; first staff move mid-2027 (date of source unclear)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.kliknieuwsoss.nl/nieuws/zakelijk/238165/aspen-oss-wil-met-verhuizing-naar-pivot-park-farmacluster-in-",
+"publisher": "kliknieuwsoss.nl",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://www.vnci.nl/chemie-magazine/actueel/artikel/aspen-oss-en-biochem-oss-realiseren-forse-drinkwaterbesparing",
+"publisher": "vnci.nl",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Aspen Oss. Status/timeline: Letter of intent with Pivot Park; first staff expected mid-2027 if on plan; an older closure of an outdated Aspen Oss plant cost 140 FTE (date unclear) Notes: Snippets only; article dates unverified. Organon is the other Oss pharma name. Greenfield/brownfield in research file: Brownfield (lab move).",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "fagron-fagron-expansion-investments-2026",
+"account": "Fagron",
+"site_name": "Fagron expansion investments 2026",
+"city": "Netherlands and USA",
+"state": "NL-ZH",
+"lat": 51.93,
+"lon": 4.58,
+"project_type": "BROWNFIELD",
+"modality": [
+"pharmaceutical compounding / sterile preparations"
+],
+"eur": null,
+"investment_display": "About €70 million for 2026 (US and Netherlands combined; not counted)",
+"jobs": null,
+"status": "announced",
+"expected_start": "Q3 2026 report; named projects are in the US",
+"opportunity_status": "Monitor",
+"in_window": true,
+"technical_scope": "Fagron expansion investments 2026. Modality: Pharmaceutical compounding / sterile preparations. Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "SCADA / process control and automation",
+"strength": "Weak",
+"reason": "From the Benelux research notes: compounding/sterile services; Dutch share and projects not identified"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://nl.investing.com/news/transcripts/fagron-q3-2026-omzet-stijgt-232-aandeel-daalt-48-93CH-933753",
+"publisher": "nl.investing.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Fagron. Status/timeline: Q3 2026 report: ~EUR 70m expansion capex for 2026; named projects are US (Tampa, Wichita, Las Vegas); a forum post mentions a EUR 15m Dutch sterile site by 2028 (Hoogeveen) - unofficial, not verified Notes: Fetched transcript summary. The Dutch project is not confirmed. Greenfield/brownfield in research file: Brownfield / New build.",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "synthon-no-current-project-found",
+"account": "Synthon",
+"site_name": "No current project found",
+"city": "Nijmegen",
+"state": "NL-GE",
+"lat": 51.84,
+"lon": 5.86,
+"project_type": "BROWNFIELD",
+"modality": [
+"generics"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "Not found in sources",
+"expected_start": "No current project found (the only article is from 2016)",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "No current project found. Modality: Generics. Digital / automation signals: Not found in public sources.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: the only expansion story found is from 2016 (sand conveyor dispute); ownership changes reported (BC Partners / Goldman Sachs) are unverified (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: the only expansion story found is from 2016 (sand conveyor dispute); ownership changes reported (BC Partners / Goldman Sachs) are unverified (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.gld.nl/nieuws/2117973/synthon-twijfelt-aan-investeringsplannen-door-zandtransport-voor-deur",
+"publisher": "gld.nl",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Synthon. Status/timeline: 2016 article only; do not use Notes: CORRECTION: a first search summary presented this as current; the fetched article is dated 3 Oct 2016. Greenfield/brownfield in research file: n/a.",
+"country": "Netherlands",
+"currency": "EUR"
+},
+{
+"id": "ajinomoto-bio-pharma-no-in-window-project-found-for-any-of-the-three",
+"account": "Ajinomoto Bio-Pharma",
+"site_name": "No in-window project found for any of the three",
+"city": "Wetteren and Leuven",
+"state": "BE-VOV",
+"lat": 51.0,
+"lon": 3.88,
+"project_type": "BROWNFIELD",
+"modality": [
+"API / chemistry",
+"medical devices (Terumo)",
+"antibiotic API (Centrient)"
+],
+"eur": null,
+"investment_display": "Not found in public sources",
+"jobs": null,
+"status": "Not found in sources",
+"expected_start": "No 2026-27 project found for Ajinomoto, Terumo or Centrient",
+"opportunity_status": "Closed/late",
+"in_window": false,
+"technical_scope": "No in-window project found for any of the three. Modality: API / chemistry (Wetteren); medical devices and pharma delivery (Leuven); antibiotic API (Delft). Digital / automation signals: Terumo Leuven: Factory of the Future recognition.",
+"orise_fit": [
+{
+"area": "Validation / CSV / data integrity",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Wetteren (680 staff) running with a footprint-halving plan to 2030; Terumo Leuven re-recognised 'Factory of the Future' 2026-2028 (Agoria/Sirris), older EUR 26m investment; Centrient Delft appointed a site director and chose SAP IBP (planning) (no specific offering area named)"
+},
+{
+"area": "Lifecycle support and managed services",
+"strength": "Weak",
+"reason": "From the Benelux research notes: Wetteren (680 staff) running with a footprint-halving plan to 2030; Terumo Leuven re-recognised 'Factory of the Future' 2026-2028 (Agoria/Sirris), older EUR 26m investment; Centrient Delft appointed a site director and chose SAP IBP (planning) (no specific offering area named)"
+}
+],
+"incumbent_vendors": "",
+"sources": [
+{
+"url": "https://www.voka.be/oost-vlaanderen/nieuws/ajinomoto-omnichem-introduceert-stapsgewijs-duurzame-investeringen-complexe-chemische",
+"publisher": "voka.be",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://invest.flandersinvestmentandtrade.com/en/news/terumo-jp-invests-new-production-lines-leuven-site",
+"publisher": "invest.flandersinvestmentandtrade.com",
+"date": "",
+"confidence": "Low"
+},
+{
+"url": "https://centrient.com/media/strengthening-our-future-delft-pierre-yves-dalla-libera-appointed-site-director",
+"publisher": "centrient.com",
+"date": "",
+"confidence": "Low"
+}
+],
+"notes": "Confidence in research file: Low. Company in research file: Ajinomoto Bio-Pharma (OmniChem) / Terumo / Centrient. Status/timeline: No 2026-27 capex found Notes: Snippets only. Rousselot (Ghent) and Eurofins Luxembourg: nothing relevant found. Dutch/French local press poorly indexed. Greenfield/brownfield in research file: n/a.",
+"country": "Belgium",
+"currency": "EUR"
+}
+],
+"gaps_html": "<h4 style=\"margin-top:0\">About the Benelux data</h4>\n<p>Built from the Benelux research files (28 records on the map, 23 accounts, researched 15 October 2026): <code>benelux/projects.csv</code>, <code>territory-plan.md</code>, <code>sources.md</code> and <code>lilly-katwijk-battlecard.md</code>. Amounts, dates, notes and confidence are as written there. The town coordinates, the Orise fit ratings and the opportunity status were added when loading: fit areas are matched from the wording of each row's \"Relevant to Orise\" note and the strength follows its High / Med / Low rating. Open means High and Med-High in or near the window; Monitor means Med, Low and watch items; Closed/late means divested, closed or bankrupt sites and nothing in window. No project was found in Luxembourg.</p>\n<ul><li><b>Totals are a floor.</b> Many projects have no disclosed amount (MSD Boxmeer, IRE, PanTera, Trasis). UCB Arkelia is €100M or €200M depending on the source, so neither is counted; Fagron's €70M is US and Netherlands combined; Galapagos's €275M is a wind-down charge, not capex. USD amounts are converted at 1 USD = 0.86 EUR.</li>\n<li><b>Left out:</b> the UCB US biologics campus (Georgia, USD 2bn) is in the CSV as context only and is not shown or counted.</li>\n<li><b>Dates that differ by source:</b> GSK NewLyo operational H1 or H2 2027; UCB Genesis first production 2026 or first batches 2027; Lilly Katwijk's municipality says the building permit is granted while press says permits are still missing (these are different permits: building, nature, environmental and water); PanTera permits dated 2025 or April 2026; BMS Leiden completion 2024 or 2025.</li>\n<li><b>Greenfield / brownfield</b> follows the CSV: Lilly Katwijk, BMS Leiden, PanTera and the Pfizer Puurs land are greenfield; the Chiesi-style conversions and expansions are brownfield. Rows with no project (n/a) default to brownfield.</li>\n<li><b>Account merging:</b> MSD and MSD Animal Health share the existing \"Merck &amp; Co.\" card; J&amp;J Innovative Medicine shares the J&amp;J card; Astellas Meppel is shown under its new owner Delpharm.</li></ul>\n<h4>Gaps and next steps (from the territory plan)</h4>\n<ol><li>GSK Wavre: confirm NewLyo schedule and scope after the 14 Oct 2026 works council; watch the final social plan and any pause.</li>\n<li>UCB: resolve Arkelia €100M vs €200M and Genesis first-batch timing.</li>\n<li>Pfizer Puurs: find which isolator and freezer modules are complete; watch the RUP outcome and the Omgevingsloket.</li>\n<li>MSD Boxmeer: investment amount and contractors. MSD Oss: Organon's plans. J&amp;J: Belgian press room and Omgevingsloket; check the reported Ghent cell-therapy site.</li>\n<li>Permitting: Omgevingsloket (Flanders), permis unique (Wallonia), officielebekendmakingen.nl (NL) and Luxembourg commodo-incommodo were not reachable by the research tools; a browser is needed.</li>\n<li>Lilly Katwijk: permit decision (gmb-2026-471169) and appeal deadlines, the nitrogen-permit appeal, the main contractor and EPCM, and site leadership. The battlecard refers to <code>ireland/lilly-battlecard.md</code>; that Ireland battlecard was not in the files provided.</li>\n<li>Takeda Lessines: is the new plant operating? Delpharm Meppel and Organon Oss: new owners' plans. IRE and Trasis: project values and automation scope. Legend: 2026 capex status. Galapagos Leiden and Univercells Jumet: buyers of the sites.</li>\n<li>Baxter, Novartis, AbbVie, AstraZeneca, Roche: nothing found in Belgium or the Netherlands; re-check with paid tools or company contact. Rousselot and Eurofins Luxembourg: nothing found.</li>\n<li>Agencies and trade press (FIT, AWEX, BioWin, NFIA, pharma.be, BioVox) were not read. Tech stacks and contacts beyond Lilly Katwijk are not researched; no emails, phone numbers or LinkedIn URLs were collected.</li></ol>",
+"as_of": "October 15, 2026",
+"region_names": {
+"BE-WBR": "Walloon Brabant",
+"BE-VAN": "Antwerp",
+"BE-WHT": "Hainaut",
+"BE-WLG": "Liège",
+"BE-VOV": "East Flanders",
+"NL-ZH": "South Holland",
+"NL-NB": "North Brabant",
+"NL-DR": "Drenthe",
+"NL-GE": "Gelderland"
+}
+}

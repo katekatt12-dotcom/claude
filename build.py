@@ -16,11 +16,12 @@ MARKETS = [
     {"id": "CN", "name": "China", "short": "China", "file": "cn.json"},
     {"id": "IT", "name": "Italy", "short": "Italy", "file": "it.json"},
     {"id": "IE", "name": "Ireland", "short": "Ireland", "file": "ie.json"},
+    {"id": "BX", "name": "Benelux (Belgium · Netherlands · Luxembourg)", "short": "Benelux", "file": "bx.json"},
 ]
 
 # Optional alias map: account name (lower-case, parenthetical stripped) -> canonical name
 ALIASES = {"roche": "Roche", "wuxi apptec": "WuXi AppTec", "johnson & johnson": "Johnson & Johnson Innovative Medicine",
-           "msd": "Merck & Co.", "alexion": "AstraZeneca"}
+           "msd": "Merck & Co.", "alexion": "AstraZeneca", "msd animal health": "Merck & Co."}
 
 
 def canon(name):
@@ -44,7 +45,7 @@ def main():
             cname, cid = canon(a["name"])
             id_map[a["id"]] = cid
             acc = accounts.setdefault(cid, {"id": cid, "name": cname, "markets": {}})
-            acc["markets"][m["id"]] = {
+            entry = {
                 "tier": a.get("priority_tier"),
                 "tier_reason": a.get("priority_reason"),
                 "footprint": a.get("us_footprint_summary") or a.get("footprint_summary") or "",
@@ -54,6 +55,14 @@ def main():
                 "roles": a.get("roles") or "",
                 "source_name": a["name"],
             }
+            prev = acc["markets"].get(m["id"])
+            if prev:  # two source accounts fold into one customer in this market (e.g. MSD + MSD Animal Health)
+                for k in ("tier_reason", "footprint", "strategy", "ownership", "incumbents", "roles"):
+                    if entry[k] and entry[k] not in prev[k]:
+                        prev[k] = (prev[k] + " | " + entry[k]) if prev[k] else entry[k]
+                prev["source_name"] += " + " + a["name"]
+            else:
+                acc["markets"][m["id"]] = entry
         for s in d["sites"]:
             if m["id"] == "US":
                 usd, cur, local, country, rcode = s.get("investment_usd"), "USD", s.get("investment_display"), "United States", "US-" + s["state"]
